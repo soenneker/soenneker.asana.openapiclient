@@ -87,6 +87,8 @@
       "TeamCompact",
       "TimePeriodResponse",
       "TimePeriodCompact",
+      "TimeTrackingCategoryResponse",
+      "TimeTrackingCategoryCompact",
       "UserTaskListResponse",
       "UserTaskListCompact",
       "UserResponse",
@@ -68447,6 +68449,16 @@
         "name": "time_period_gid",
         "in": "path",
         "description": "Globally unique identifier for the time period.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "example": "917392"
+      },
+      "time_tracking_category_path_gid": {
+        "name": "time_tracking_category_gid",
+        "in": "path",
+        "description": "Globally unique identifier for the time tracking category.",
         "required": true,
         "schema": {
           "type": "string"

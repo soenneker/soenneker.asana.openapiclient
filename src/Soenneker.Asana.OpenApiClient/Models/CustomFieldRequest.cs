@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public double? NumberValue { get; set; }
         /// <summary>*Allow-listed*. Instructs the API that this Custom Field is app-owned. This parameter is allow-listed to specific apps at this point in time. For apps that are not allow-listed, providing this parameter will result in a `403 Forbidden`.</summary>
         public bool? OwnedByApp { get; set; }
-        /// <summary>*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.</summary>
+        /// <summary>*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs, emails, or the string &quot;me&quot;, reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PeopleValue { get; set; }

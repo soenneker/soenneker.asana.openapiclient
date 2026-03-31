@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
             /// <summary>ISO 8601 date string.</summary>
             [QueryParameter("due_on%2Ebefore")]
             public Date? DueOnBefore { get; set; }
-            /// <summary>Comma-separated list of user identifiers to filter on as members.</summary>
+            /// <summary>Comma-separated list of user identifiers to filter on as members. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("members%2Eany")]
@@ -158,7 +158,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
             [QueryParameter("members%2Eany")]
             public string MembersAny { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers to exclude as members.</summary>
+            /// <summary>Comma-separated list of user identifiers to exclude as members. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("members%2Enot")]
@@ -189,7 +189,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search.GetOpt_fieldsQueryParameterType[] OptFieldsAsGetOptFieldsQueryParameterType { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers to filter on as project owners.</summary>
+            /// <summary>Comma-separated list of user identifiers to filter on as project owners. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("owner%2Eany")]

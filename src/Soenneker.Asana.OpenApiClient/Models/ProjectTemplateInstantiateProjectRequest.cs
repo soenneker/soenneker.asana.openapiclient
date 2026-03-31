@@ -37,7 +37,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates> RequestedDates { get; set; }
 #endif
-        /// <summary>Array of mappings of template roles to user ids</summary>
+        /// <summary>Array of mappings of template roles to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles>? RequestedRoles { get; set; }

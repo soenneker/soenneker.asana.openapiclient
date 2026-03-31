@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; set; }
 #endif
-        /// <summary>The user id that should be assigned to the template role.</summary>
+        /// <summary>A string identifying a user that should be assigned to the template role. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

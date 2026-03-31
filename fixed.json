@@ -14063,7 +14063,7 @@
         {
           "name": "owner.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers to filter on as project owners.",
+          "description": "Comma-separated list of user identifiers to filter on as project owners. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -14072,7 +14072,7 @@
         {
           "name": "members.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers to filter on as members.",
+          "description": "Comma-separated list of user identifiers to filter on as members. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -14081,7 +14081,7 @@
         {
           "name": "members.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers to exclude as members.",
+          "description": "Comma-separated list of user identifiers to exclude as members. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25300,7 +25300,7 @@
         {
           "name": "assignee.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25309,7 +25309,7 @@
         {
           "name": "assignee.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25417,7 +25417,7 @@
         {
           "name": "followers.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25426,7 +25426,7 @@
         {
           "name": "followers.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25435,7 +25435,7 @@
         {
           "name": "created_by.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25444,7 +25444,7 @@
         {
           "name": "created_by.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25453,7 +25453,7 @@
         {
           "name": "assigned_by.any",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25462,7 +25462,7 @@
         {
           "name": "assigned_by.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25471,7 +25471,7 @@
         {
           "name": "liked_by.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -25480,7 +25480,7 @@
         {
           "name": "commented_on_by.not",
           "in": "query",
-          "description": "Comma-separated list of user identifiers",
+          "description": "Comma-separated list of user identifiers. This can either be the string \"me\", an email, or the gid of a user.",
           "schema": {
             "type": "string"
           },
@@ -31485,9 +31485,9 @@
                     "type": "array",
                     "items": {
                       "type": "string",
-                      "description": "The GID of a user."
+                      "description": "A string identifying a user. This can either be the string \"me\", an email, or the gid of a user."
                     },
-                    "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.",
+                    "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs, emails, or the string \"me\", reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.",
                     "example": [
                       "12345"
                     ]
@@ -33947,9 +33947,9 @@
             "type": "array",
             "items": {
               "type": "string",
-              "description": "The GID of a user."
+              "description": "A string identifying a user. This can either be the string \"me\", an email, or the gid of a user."
             },
-            "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array."
+            "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs, emails, or the string \"me\", reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array."
           },
           "reference_value": {
             "type": "array",
@@ -34423,9 +34423,9 @@
             "type": "array",
             "items": {
               "type": "string",
-              "description": "The GID of a user."
+              "description": "A string identifying a user. This can either be the string \"me\", an email, or the gid of a user."
             },
-            "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array."
+            "description": "*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs, emails, or the string \"me\", reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array."
           },
           "reference_value": {
             "type": "array",
@@ -51009,12 +51009,12 @@
                 },
                 "value": {
                   "type": "string",
-                  "description": "The user id that should be assigned to the template role.",
+                  "description": "A string identifying a user that should be assigned to the template role. This can either be the string \"me\", an email, or the gid of a user.",
                   "example": "123"
                 }
               }
             },
-            "description": "Array of mappings of template roles to user ids"
+            "description": "Array of mappings of template roles to users."
           }
         }
       },
@@ -51068,7 +51068,7 @@
           },
           "value": {
             "type": "string",
-            "description": "The user id that should be assigned to the template role.",
+            "description": "A string identifying a user that should be assigned to the template role. This can either be the string \"me\", an email, or the gid of a user.",
             "example": "123"
           }
         }
@@ -57793,7 +57793,7 @@
           },
           "assignee": {
             "type": "string",
-            "description": "Gid of a user.",
+            "description": "A string identifying a user. This can either be the string \"me\", an email, or the gid of a user.",
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
@@ -57820,7 +57820,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "description": "Gid of a user."
+              "description": "A string identifying a user. This can either be the string \"me\", an email, or the gid of a user."
             },
             "description": "*Create-Only* An array of strings identifying users. These can either be the string \"me\", an email, or the gid of a user. In order to change followers on an existing task use `addFollowers` and `removeFollowers`."
           },

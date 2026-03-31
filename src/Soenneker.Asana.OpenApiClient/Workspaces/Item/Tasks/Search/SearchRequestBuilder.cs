@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assigned_by%2Eany")]
@@ -108,7 +108,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("assigned_by%2Eany")]
             public string AssignedByAny { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assigned_by%2Enot")]
@@ -118,7 +118,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("assigned_by%2Enot")]
             public string AssignedByNot { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee%2Eany")]
@@ -128,7 +128,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("assignee%2Eany")]
             public string AssigneeAny { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee%2Enot")]
@@ -138,7 +138,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("assignee%2Enot")]
             public string AssigneeNot { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("commented_on_by%2Enot")]
@@ -172,7 +172,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             /// <summary>ISO 8601 datetime string</summary>
             [QueryParameter("created_at%2Ebefore")]
             public DateTimeOffset? CreatedAtBefore { get; set; }
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("created_by%2Eany")]
@@ -182,7 +182,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("created_by%2Eany")]
             public string CreatedByAny { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("created_by%2Enot")]
@@ -216,7 +216,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             /// <summary>ISO 8601 date string</summary>
             [QueryParameter("due_on%2Ebefore")]
             public Date? DueOnBefore { get; set; }
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("followers%2Eany")]
@@ -226,7 +226,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("followers%2Eany")]
             public string FollowersAny { get; set; }
 #endif
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("followers%2Enot")]
@@ -248,7 +248,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             /// <summary>Filter to subtasks</summary>
             [QueryParameter("is_subtask")]
             public bool? IsSubtask { get; set; }
-            /// <summary>Comma-separated list of user identifiers</summary>
+            /// <summary>Comma-separated list of user identifiers. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("liked_by%2Enot")]

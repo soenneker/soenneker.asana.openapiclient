@@ -28,7 +28,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_assigned_by AssignedBy { get; private set; }
 #endif
-        /// <summary>Gid of a user.</summary>
+        /// <summary>A string identifying a user. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Assignee { get; set; }

@@ -27457,6 +27457,432 @@
         }
       ]
     },
+    "/time_tracking_categories/{time_tracking_category_gid}": {
+      "get": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Get a time tracking category",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:read</code>\n\nReturns the complete time tracking category record for a single time tracking category.\"",
+        "operationId": "getTimeTrackingCategory",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "color",
+                  "is_archived",
+                  "name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "color",
+              "is_archived",
+              "name"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/TimeTrackingCategoryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Update a time tracking category",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:write</code>\n\nUpdates the properties of a time tracking category. Only the fields provided in the\n`data` block will be updated; any unspecified fields will remain unchanged.\n\nReturns the complete updated time tracking category record.\"",
+        "operationId": "updateTimeTrackingCategory",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "color",
+                  "is_archived",
+                  "name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "color",
+              "is_archived",
+              "name"
+            ]
+          }
+        ],
+        "requestBody": {
+          "description": "The updated fields for the time tracking category.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "$ref": "#/components/schemas/TimeTrackingCategoryUpdateRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/TimeTrackingCategoryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Delete a time tracking category",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:delete</code>\n\nDeletes a specific, existing time tracking category.\n\nReturns an empty data record.\"",
+        "operationId": "deleteTimeTrackingCategory",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/EmptyResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/time_tracking_category_path_gid"
+        }
+      ]
+    },
+    "/time_tracking_categories/{time_tracking_category_gid}/time_tracking_entries": {
+      "get": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Get time tracking entries for a time tracking category",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:read</code>\n\nReturns a paginated list of time tracking entries filtered by a given time tracking category.\"",
+        "operationId": "getTimeTrackingEntriesForTimeTrackingCategory",
+        "parameters": [
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "The start date for filtering time tracking entries by their entry date.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "example": "2025-01-01"
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "The end date for filtering time tracking entries by their entry date.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "example": "2025-12-31"
+          },
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
+          },
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "attributable_to",
+                  "attributable_to.name",
+                  "created_by",
+                  "created_by.name",
+                  "duration_minutes",
+                  "entered_on",
+                  "offset",
+                  "path",
+                  "uri"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "attributable_to",
+              "attributable_to.name",
+              "created_by",
+              "created_by.name",
+              "duration_minutes",
+              "entered_on",
+              "offset",
+              "path",
+              "uri"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/TimeTrackingEntryCompactArray"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/time_tracking_category_path_gid"
+        }
+      ]
+    },
+    "/time_tracking_categories": {
+      "get": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Get time tracking categories for a workspace",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:read</code>\n\nReturns a paginated list of time tracking categories for a given workspace.\"",
+        "operationId": "getTimeTrackingCategories",
+        "parameters": [
+          {
+            "name": "workspace",
+            "in": "query",
+            "description": "Globally unique identifier for the workspace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "12345"
+          },
+          {
+            "name": "is_archived",
+            "in": "query",
+            "description": "Filter by archived status. If not provided, defaults to returning non-archived categories.",
+            "schema": {
+              "type": "boolean"
+            },
+            "example": false
+          },
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
+          },
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "color",
+                  "is_archived",
+                  "name",
+                  "offset",
+                  "path",
+                  "uri"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "color",
+              "is_archived",
+              "name",
+              "offset",
+              "path",
+              "uri"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/TimeTrackingCategoryResponseArray"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Time tracking categories"
+        ],
+        "summary": "Create a time tracking category",
+        "description": "\"<b>Required scope: </b><code>time_tracking_categories:write</code>\n\nCreates a new time tracking category in a given workspace.\n\nReturns the record of the newly created time tracking category.\"",
+        "operationId": "createTimeTrackingCategory",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "color",
+                  "is_archived",
+                  "name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "color",
+              "is_archived",
+              "name"
+            ]
+          }
+        ],
+        "requestBody": {
+          "description": "Information about the time tracking category.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "$ref": "#/components/schemas/TimeTrackingCategoryCreateRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/TimeTrackingCategoryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      }
+    },
     "/tasks/{task_gid}/time_tracking_entries": {
       "get": {
         "tags": [
@@ -27553,6 +27979,9 @@
                   "attributable_to",
                   "attributable_to.name",
                   "billable_status",
+                  "categories",
+                  "categories.color",
+                  "categories.name",
                   "created_at",
                   "created_by",
                   "created_by.name",
@@ -27573,6 +28002,9 @@
               "attributable_to",
               "attributable_to.name",
               "billable_status",
+              "categories",
+              "categories.color",
+              "categories.name",
               "created_at",
               "created_by",
               "created_by.name",
@@ -27650,6 +28082,9 @@
                   "attributable_to",
                   "attributable_to.name",
                   "billable_status",
+                  "categories",
+                  "categories.color",
+                  "categories.name",
                   "created_at",
                   "created_by",
                   "created_by.name",
@@ -27670,6 +28105,9 @@
               "attributable_to",
               "attributable_to.name",
               "billable_status",
+              "categories",
+              "categories.color",
+              "categories.name",
               "created_at",
               "created_by",
               "created_by.name",
@@ -27728,6 +28166,9 @@
                   "attributable_to",
                   "attributable_to.name",
                   "billable_status",
+                  "categories",
+                  "categories.color",
+                  "categories.name",
                   "created_at",
                   "created_by",
                   "created_by.name",
@@ -27748,6 +28189,9 @@
               "attributable_to",
               "attributable_to.name",
               "billable_status",
+              "categories",
+              "categories.color",
+              "categories.name",
               "created_at",
               "created_by",
               "created_by.name",
@@ -64336,6 +64780,13 @@
             "type": "string",
             "description": "*Optional*. The description of the entry.",
             "example": "My description of work done on this entry"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category."
           }
         }
       },
@@ -64373,6 +64824,13 @@
             "type": "string",
             "description": "*Optional*. The description of the entry.",
             "example": "My description of work done on this entry"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category."
           }
         }
       },
@@ -64647,11 +65105,293 @@
             "description": "*Optional*. The description of the entry.",
             "readOnly": true,
             "example": "My description of work done on this entry"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gid": {
+                  "type": "string",
+                  "description": "Globally unique identifier of the resource, as a string.",
+                  "readOnly": true,
+                  "example": "12345",
+                  "x-insert-after": false
+                },
+                "resource_type": {
+                  "type": "string",
+                  "description": "The base type of this resource.",
+                  "readOnly": true,
+                  "example": "task",
+                  "x-insert-after": "gid"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the time tracking category.",
+                  "example": "Development"
+                },
+                "color": {
+                  "enum": [
+                    "none",
+                    "red",
+                    "orange",
+                    "yellow-orange",
+                    "yellow",
+                    "yellow-green",
+                    "green",
+                    "blue-green",
+                    "aqua",
+                    "blue",
+                    "indigo",
+                    "purple",
+                    "magenta",
+                    "hot-pink",
+                    "pink",
+                    "cool-gray"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "The color associated with this category for display purposes.",
+                  "example": "blue"
+                }
+              },
+              "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *time tracking category* is a label that can be assigned to time tracking entries. Categories are workspace-scoped and allow users to classify logged time (e.g., 'Development', 'Meetings').",
+              "x-docs-overrides": {
+                "properties.resource_type.example": "time_tracking_category"
+              }
+            },
+            "description": "The categories linked to this time tracking entry.",
+            "readOnly": true
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.",
         "x-docs-overrides": {
           "properties.resource_type.example": "time_tracking_entry"
+        }
+      },
+      "TimeTrackingCategoryCompact": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the time tracking category.",
+            "example": "Development"
+          },
+          "color": {
+            "enum": [
+              "none",
+              "red",
+              "orange",
+              "yellow-orange",
+              "yellow",
+              "yellow-green",
+              "green",
+              "blue-green",
+              "aqua",
+              "blue",
+              "indigo",
+              "purple",
+              "magenta",
+              "hot-pink",
+              "pink",
+              "cool-gray"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The color associated with this category for display purposes.",
+            "example": "blue"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *time tracking category* is a label that can be assigned to time tracking entries. Categories are workspace-scoped and allow users to classify logged time (e.g., 'Development', 'Meetings').",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "time_tracking_category"
+        }
+      },
+      "TimeTrackingCategoryResponse": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the time tracking category.",
+            "example": "Development"
+          },
+          "color": {
+            "enum": [
+              "none",
+              "red",
+              "orange",
+              "yellow-orange",
+              "yellow",
+              "yellow-green",
+              "green",
+              "blue-green",
+              "aqua",
+              "blue",
+              "indigo",
+              "purple",
+              "magenta",
+              "hot-pink",
+              "pink",
+              "cool-gray"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The color associated with this category for display purposes.",
+            "example": "blue"
+          },
+          "is_archived": {
+            "type": "boolean",
+            "description": "Whether the category is archived. Archived categories cannot be assigned to new time entries but remain visible on existing entries.",
+            "example": false
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *time tracking category* is a label that can be assigned to time tracking entries. Categories are workspace-scoped and allow users to classify logged time (e.g., 'Development', 'Meetings').",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "time_tracking_category"
+        }
+      },
+      "TimeTrackingCategoryBaseRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the time tracking category (e.g., 'Development', 'Meetings').",
+            "example": "Development"
+          },
+          "color": {
+            "enum": [
+              "none",
+              "red",
+              "orange",
+              "yellow-orange",
+              "yellow",
+              "yellow-green",
+              "green",
+              "blue-green",
+              "aqua",
+              "blue",
+              "indigo",
+              "purple",
+              "magenta",
+              "hot-pink",
+              "pink",
+              "cool-gray"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The color associated with this category for display purposes.",
+            "example": "blue"
+          }
+        }
+      },
+      "TimeTrackingCategoryCreateRequest": {
+        "required": [
+          "workspace",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the time tracking category (e.g., 'Development', 'Meetings').",
+            "example": "Development"
+          },
+          "color": {
+            "enum": [
+              "none",
+              "red",
+              "orange",
+              "yellow-orange",
+              "yellow",
+              "yellow-green",
+              "green",
+              "blue-green",
+              "aqua",
+              "blue",
+              "indigo",
+              "purple",
+              "magenta",
+              "hot-pink",
+              "pink",
+              "cool-gray"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The color associated with this category for display purposes.",
+            "example": "blue"
+          },
+          "workspace": {
+            "type": "string",
+            "description": "Globally unique identifier for the workspace.",
+            "example": "12345"
+          }
+        }
+      },
+      "TimeTrackingCategoryUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the time tracking category (e.g., 'Development', 'Meetings').",
+            "example": "Development"
+          },
+          "color": {
+            "enum": [
+              "none",
+              "red",
+              "orange",
+              "yellow-orange",
+              "yellow",
+              "yellow-green",
+              "green",
+              "blue-green",
+              "aqua",
+              "blue",
+              "indigo",
+              "purple",
+              "magenta",
+              "hot-pink",
+              "pink",
+              "cool-gray"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The color associated with this category for display purposes.",
+            "example": "blue"
+          },
+          "is_archived": {
+            "type": "boolean",
+            "description": "*Optional*. Whether the category is archived. Archived categories cannot be assigned to new time entries but remain visible on existing entries.",
+            "example": false
+          }
         }
       },
       "CreateTimesheetApprovalStatusRequest": {
@@ -66862,6 +67602,17 @@
           }
         }
       },
+      "TimeTrackingCategoryResponseData": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/TimeTrackingCategoryResponse"
+          }
+        }
+      },
       "TimeTrackingEntryCompactArray": {
         "required": [
           "data"
@@ -66872,6 +67623,23 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TimeTrackingEntryCompact"
+            }
+          },
+          "next_page": {
+            "$ref": "#/components/schemas/NextPage"
+          }
+        }
+      },
+      "TimeTrackingCategoryResponseArray": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeTrackingCategoryResponse"
             }
           },
           "next_page": {
@@ -67939,12 +68707,32 @@
           }
         }
       },
+      "TimeTrackingCategoryResponseData": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/TimeTrackingCategoryResponseData"
+            }
+          }
+        }
+      },
       "TimeTrackingEntryCompactArray": {
         "description": null,
         "content": {
           "application/json; charset=UTF-8": {
             "schema": {
               "$ref": "#/components/schemas/TimeTrackingEntryCompactArray"
+            }
+          }
+        }
+      },
+      "TimeTrackingCategoryResponseArray": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/TimeTrackingCategoryResponseArray"
             }
           }
         }
@@ -68840,6 +69628,10 @@
     {
       "name": "Time periods",
       "description": "A time period is an object that represents a domain-scoped date range that can be set on [goals](/reference/goals)."
+    },
+    {
+      "name": "Time tracking categories",
+      "description": "A time tracking category is a label that can be assigned to time tracking entries to classify logged time. Categories are workspace-scoped and managed by admin users, allowing for more granular reporting and filtering of time entries (e.g., 'Development', 'Meetings')."
     },
     {
       "name": "Time tracking entries",

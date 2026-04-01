@@ -42,6 +42,7 @@ using Soenneker.Asana.OpenApiClient.Tasks;
 using Soenneker.Asana.OpenApiClient.Team_memberships;
 using Soenneker.Asana.OpenApiClient.Teams;
 using Soenneker.Asana.OpenApiClient.Time_periods;
+using Soenneker.Asana.OpenApiClient.Time_tracking_categories;
 using Soenneker.Asana.OpenApiClient.Time_tracking_entries;
 using Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses;
 using Soenneker.Asana.OpenApiClient.User_task_lists;
@@ -240,6 +241,11 @@ namespace Soenneker.Asana.OpenApiClient
         public global::Soenneker.Asana.OpenApiClient.Time_periods.Time_periodsRequestBuilder Time_periods
         {
             get => new global::Soenneker.Asana.OpenApiClient.Time_periods.Time_periodsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The time_tracking_categories property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Time_tracking_categories.Time_tracking_categoriesRequestBuilder Time_tracking_categories
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Time_tracking_categories.Time_tracking_categoriesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The time_tracking_entries property</summary>
         public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Time_tracking_entriesRequestBuilder Time_tracking_entries

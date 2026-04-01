@@ -28,6 +28,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>*Optional*. The current billable status of the entry.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_billable_status? BillableStatus { get; private set; }
+        /// <summary>The categories linked to this time tracking entry.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories>? Categories { get; private set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories> Categories { get; private set; }
+#endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
@@ -102,6 +110,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_approval_status>(); } },
                 { "attributable_to", n => { AttributableTo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_attributable_to>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_attributable_to.CreateFromDiscriminatorValue); } },
                 { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_billable_status>(); } },
+                { "categories", n => { Categories = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_created_by>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_created_by.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },

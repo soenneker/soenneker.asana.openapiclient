@@ -24,6 +24,18 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
         #pragma warning disable CS1591
         Billable_status,
         #pragma warning restore CS1591
+        [EnumMember(Value = "categories")]
+        #pragma warning disable CS1591
+        Categories,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "categories.color")]
+        #pragma warning disable CS1591
+        CategoriesColor,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "categories.name")]
+        #pragma warning disable CS1591
+        CategoriesName,
+        #pragma warning restore CS1591
         [EnumMember(Value = "created_at")]
         #pragma warning disable CS1591
         Created_at,

@@ -25,6 +25,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>*Optional*. The current billable status of the entry.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.CreateTimeTrackingEntryRequest_billable_status? BillableStatus { get; set; }
+        /// <summary>*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Categories { get; set; }
+#nullable restore
+#else
+        public List<string> Categories { get; set; }
+#endif
         /// <summary>*Optional*. The description of the entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +72,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "attributable_to", n => { AttributableTo = n.GetStringValue(); } },
                 { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CreateTimeTrackingEntryRequest_billable_status>(); } },
+                { "categories", n => { Categories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "duration_minutes", n => { DurationMinutes = n.GetIntValue(); } },
                 { "entered_on", n => { EnteredOn = n.GetDateValue(); } },
@@ -78,6 +87,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("attributable_to", AttributableTo);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CreateTimeTrackingEntryRequest_billable_status>("billable_status", BillableStatus);
+            writer.WriteCollectionOfPrimitiveValues<string>("categories", Categories);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("duration_minutes", DurationMinutes);
             writer.WriteDateValue("entered_on", EnteredOn);

@@ -328,6 +328,10 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
         #pragma warning disable CS1591
         Custom_fieldsType,
         #pragma warning restore CS1591
+        [EnumMember(Value = "default_access_level")]
+        #pragma warning disable CS1591
+        Default_access_level,
+        #pragma warning restore CS1591
         [EnumMember(Value = "due_on")]
         #pragma warning disable CS1591
         Due_on,
@@ -431,6 +435,10 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
         [EnumMember(Value = "owner.name")]
         #pragma warning disable CS1591
         OwnerName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "privacy_setting")]
+        #pragma warning disable CS1591
+        Privacy_setting,
         #pragma warning restore CS1591
         [EnumMember(Value = "start_on")]
         #pragma warning disable CS1591

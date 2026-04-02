@@ -39,6 +39,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings> CustomFieldSettings { get; set; }
 #endif
+        /// <summary>The default access level when inviting new members to the goal</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level? DefaultAccessLevel { get; set; }
         /// <summary>The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,6 +119,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner Owner { get; set; }
 #endif
+        /// <summary>The privacy setting of the goal.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting? PrivacySetting { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -193,6 +197,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level>(); } },
                 { "due_on", n => { DueOn = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -205,6 +210,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner.CreateFromDiscriminatorValue); } },
+                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -223,6 +229,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update>("current_status_update", CurrentStatusUpdate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields>("custom_fields", CustomFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings>("custom_field_settings", CustomFieldSettings);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level>("default_access_level", DefaultAccessLevel);
             writer.WriteStringValue("due_on", DueOn);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers>("followers", Followers);
             writer.WriteStringValue("html_notes", HtmlNotes);
@@ -232,6 +239,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner>("owner", Owner);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting>("privacy_setting", PrivacySetting);
             writer.WriteStringValue("start_on", StartOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team>("team", Team);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period>("time_period", TimePeriod);

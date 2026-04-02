@@ -24,6 +24,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to AttributableTo { get; set; }
 #endif
+        /// <summary>The categories linked to this time tracking entry.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories>? Categories { get; private set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories> Categories { get; private set; }
+#endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,6 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attributable_to", n => { AttributableTo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to.CreateFromDiscriminatorValue); } },
+                { "categories", n => { Categories = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by.CreateFromDiscriminatorValue); } },
                 { "duration_minutes", n => { DurationMinutes = n.GetIntValue(); } },
                 { "entered_on", n => { EnteredOn = n.GetDateValue(); } },

@@ -16,6 +16,18 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
         #pragma warning disable CS1591
         Attributable_toName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "categories")]
+        #pragma warning disable CS1591
+        Categories,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "categories.color")]
+        #pragma warning disable CS1591
+        CategoriesColor,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "categories.name")]
+        #pragma warning disable CS1591
+        CategoriesName,
+        #pragma warning restore CS1591
         [EnumMember(Value = "created_by")]
         #pragma warning disable CS1591
         Created_by,

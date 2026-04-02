@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
         {
         }
         /// <summary>
-        /// Deletes a story. A user can only delete stories they have created.Returns an empty data record.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a story. A user can only delete stories they have created.Returns an empty data record.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

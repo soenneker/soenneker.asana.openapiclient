@@ -13,6 +13,7 @@ using Soenneker.Asana.OpenApiClient.Goals.Item.RemoveFollowers;
 using Soenneker.Asana.OpenApiClient.Goals.Item.RemoveSupportingRelationship;
 using Soenneker.Asana.OpenApiClient.Goals.Item.SetMetric;
 using Soenneker.Asana.OpenApiClient.Goals.Item.SetMetricCurrentValue;
+using Soenneker.Asana.OpenApiClient.Goals.Item.Stories;
 using Soenneker.Asana.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -76,6 +77,11 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
         public global::Soenneker.Asana.OpenApiClient.Goals.Item.SetMetricCurrentValue.SetMetricCurrentValueRequestBuilder SetMetricCurrentValue
         {
             get => new global::Soenneker.Asana.OpenApiClient.Goals.Item.SetMetricCurrentValue.SetMetricCurrentValueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The stories property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Goals.Item.Stories.StoriesRequestBuilder Stories
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Goals.Item.Stories.StoriesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoal_gItemRequestBuilder"/> and sets the default values.

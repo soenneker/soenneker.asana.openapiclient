@@ -274,25 +274,14 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("modified_on%2Ebefore")]
             public Date? ModifiedOnBefore { get; set; }
             /// <summary>This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.</summary>
-            [Obsolete("This property is deprecated, use OptFieldsAsGetOptFieldsQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public string[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public string[] OptFields { get; set; }
-#endif
-            /// <summary>This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[]? OptFieldsAsGetOptFieldsQueryParameterType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[] OptFieldsAsGetOptFieldsQueryParameterType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
 #endif
             /// <summary>Comma-separated list of portfolio IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -335,19 +324,8 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             public string ProjectsNot { get; set; }
 #endif
             /// <summary>Filters results by the task&apos;s resource_subtype</summary>
-            [Obsolete("This property is deprecated, use ResourceSubtypeAsGetResourceSubtypeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("resource_subtype")]
-            public string? ResourceSubtype { get; set; }
-#nullable restore
-#else
-            [QueryParameter("resource_subtype")]
-            public string ResourceSubtype { get; set; }
-#endif
-            /// <summary>Filters results by the task&apos;s resource_subtype</summary>
-            [QueryParameter("resource_subtype")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetResource_subtypeQueryParameterType? ResourceSubtypeAsGetResourceSubtypeQueryParameterType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetResource_subtypeQueryParameterType? ResourceSubtype { get; set; }
             /// <summary>Comma-separated list of section or column IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -382,19 +360,8 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("sort_ascending")]
             public bool? SortAscending { get; set; }
             /// <summary>One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`</summary>
-            [Obsolete("This property is deprecated, use SortByAsGetSortByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-#endif
-            /// <summary>One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`</summary>
-            [QueryParameter("sort_by")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetSort_byQueryParameterType? SortByAsGetSortByQueryParameterType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetSort_byQueryParameterType? SortBy { get; set; }
             /// <summary>ISO 8601 date string or `null`</summary>
             [QueryParameter("start_on")]
             public Date? StartOn { get; set; }
@@ -454,14 +421,6 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("text")]
             public string Text { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SearchRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

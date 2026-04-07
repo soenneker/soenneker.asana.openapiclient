@@ -69748,6 +69748,16 @@
         },
         "example": "12345"
       },
+      "agent_path_gid": {
+        "name": "agent_gid",
+        "in": "path",
+        "description": "Globally unique identifier for the agent.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "example": "12345"
+      },
       "attachment_path_gid": {
         "name": "attachment_gid",
         "in": "path",

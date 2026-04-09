@@ -4,39 +4,52 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Asana.OpenApiClient.Models;
+using Soenneker.Asana.OpenApiClient.Ooo_entries.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
+namespace Soenneker.Asana.OpenApiClient.Ooo_entries
 {
     /// <summary>
-    /// Builds and executes requests for operations under \teams\{team_gid}\projects
+    /// Builds and executes requests for operations under \ooo_entries
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ProjectsRequestBuilder : BaseRequestBuilder
+    public partial class Ooo_entriesRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.ooo_entries.item collection</summary>
+        /// <param name="position">Globally unique identifier for the OOO entry.</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("ooo_entry_gid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/projects{?archived*,limit*,offset*,opt_fields}", pathParameters)
+        public Ooo_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ooo_entries?user={user}&workspace={workspace}{&end_date*,limit*,offset*,opt_fields,start_date*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/projects{?archived*,limit*,offset*,opt_fields}", rawUrl)
+        public Ooo_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ooo_entries?user={user}&workspace={workspace}{&end_date*,limit*,offset*,opt_fields,start_date*}", rawUrl)
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact project records for all projects in the team.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns a list of OOO entries for the specified user.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
@@ -46,11 +59,11 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray?> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseArray?> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseArray> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -62,12 +75,12 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a project shared with the given team.Returns the full record of the newly created project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;Creates a new OOO entry.Returns the full record of the newly created OOO entry.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,11 +91,11 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -95,20 +108,20 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact project records for all projects in the team.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns a list of OOO entries for the specified user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -117,22 +130,22 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a project shared with the given team.Returns the full record of the newly created project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;Creates a new OOO entry.Returns the full record of the newly created OOO entry.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/ooo_entries{?opt_fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
@@ -141,21 +154,21 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact project records for all projects in the team.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns a list of OOO entries for the specified user.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProjectsRequestBuilderGetQueryParameters 
+        public partial class Ooo_entriesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Only return projects whose `archived` field takes on the value of this parameter.</summary>
-            [QueryParameter("archived")]
-            public bool? Archived { get; set; }
+            /// <summary>An ISO 8601 date string. Filters to OOO entries that overlap with or start before this date.</summary>
+            [QueryParameter("end_date")]
+            public Date? EndDate { get; set; }
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
@@ -173,28 +186,51 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Projects
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+#endif
+            /// <summary>An ISO 8601 date string. Filters to OOO entries that overlap with or end after this date.</summary>
+            [QueryParameter("start_date")]
+            public Date? StartDate { get; set; }
+            /// <summary>Globally unique identifier for the user to filter OOO entries by.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("user")]
+            public string? User { get; set; }
+#nullable restore
+#else
+            [QueryParameter("user")]
+            public string User { get; set; }
+#endif
+            /// <summary>Globally unique identifier for the workspace.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("workspace")]
+            public string? Workspace { get; set; }
+#nullable restore
+#else
+            [QueryParameter("workspace")]
+            public string Workspace { get; set; }
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a project shared with the given team.Returns the full record of the newly created project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;Creates a new OOO entry.Returns the full record of the newly created OOO entry.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProjectsRequestBuilderPostQueryParameters 
+        public partial class Ooo_entriesRequestBuilderPostQueryParameters 
         {
             /// <summary>This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Projects.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
 #endif
         }
     }

@@ -6996,6 +6996,371 @@
         }
       ]
     },
+    "/ooo_entries/{ooo_entry_gid}": {
+      "get": {
+        "tags": [
+          "Ooo entries"
+        ],
+        "summary": "Get an OOO entry",
+        "description": "\"<b>Required scope: </b><code>ooo_entries:read</code>\n\nReturns the complete OOO entry record for a single OOO entry.\"",
+        "operationId": "getOooEntry",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "created_by",
+                  "created_by.name",
+                  "end_date",
+                  "start_date",
+                  "user",
+                  "user.name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "created_by",
+              "created_by.name",
+              "end_date",
+              "start_date",
+              "user",
+              "user.name"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/OooEntryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Ooo entries"
+        ],
+        "summary": "Update an OOO entry",
+        "description": "\"<b>Required scope: </b><code>ooo_entries:write</code>\n\nAn existing OOO entry can be updated by making a PUT request on the URL for\nthat OOO entry. Only the fields provided in the `data` block will be updated;\nany unspecified fields will remain unchanged.\n\nReturns the complete updated OOO entry record.\"",
+        "operationId": "updateOooEntry",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "created_by",
+                  "created_by.name",
+                  "end_date",
+                  "start_date",
+                  "user",
+                  "user.name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "created_by",
+              "created_by.name",
+              "end_date",
+              "start_date",
+              "user",
+              "user.name"
+            ]
+          }
+        ],
+        "requestBody": {
+          "description": "The updated fields for the OOO entry.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "$ref": "#/components/schemas/OooEntryUpdateRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/OooEntryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Ooo entries"
+        ],
+        "summary": "Delete an OOO entry",
+        "description": "\"<b>Required scope: </b><code>ooo_entries:delete</code>\n\nA specific, existing OOO entry can be deleted by making a DELETE request on the URL for that OOO entry.\n\nReturns an empty data record.\"",
+        "operationId": "deleteOooEntry",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/EmptyResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/ooo_entry_path_gid"
+        }
+      ]
+    },
+    "/ooo_entries": {
+      "get": {
+        "tags": [
+          "Ooo entries"
+        ],
+        "summary": "Get OOO entries for a user",
+        "description": "\"<b>Required scope: </b><code>ooo_entries:read</code>\n\nReturns a list of OOO entries for the specified user.\"",
+        "operationId": "getOooEntries",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "description": "Globally unique identifier for the user to filter OOO entries by.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "12345"
+          },
+          {
+            "name": "workspace",
+            "in": "query",
+            "description": "Globally unique identifier for the workspace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "98765"
+          },
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "An ISO 8601 date string. Filters to OOO entries that overlap with or end after this date.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "example": "2025-01-01"
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "An ISO 8601 date string. Filters to OOO entries that overlap with or start before this date.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "example": "2025-12-31"
+          },
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "created_by",
+                  "created_by.name",
+                  "end_date",
+                  "offset",
+                  "path",
+                  "start_date",
+                  "uri",
+                  "user",
+                  "user.name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "created_by",
+              "created_by.name",
+              "end_date",
+              "offset",
+              "path",
+              "start_date",
+              "uri",
+              "user",
+              "user.name"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/OooEntryResponseArray"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Ooo entries"
+        ],
+        "summary": "Create an OOO entry",
+        "description": "\"<b>Required scope: </b><code>ooo_entries:write</code>\n\nCreates a new OOO entry.\n\nReturns the full record of the newly created OOO entry.\"",
+        "operationId": "createOooEntry",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "created_by",
+                  "created_by.name",
+                  "end_date",
+                  "start_date",
+                  "user",
+                  "user.name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "created_by",
+              "created_by.name",
+              "end_date",
+              "start_date",
+              "user",
+              "user.name"
+            ]
+          }
+        ],
+        "requestBody": {
+          "description": "The OOO entry to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/createOooEntry"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/OooEntryResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      }
+    },
     "/organization_exports": {
       "post": {
         "tags": [
@@ -12776,6 +13141,321 @@
       ]
     },
     "/teams/{team_gid}/projects": {
+      "get": {
+        "tags": [
+          "Projects"
+        ],
+        "summary": "Get a team's projects",
+        "description": "\"<b>Required scope: </b><code>projects:read</code>\n\nReturns the compact project records for all projects in the team.\"",
+        "operationId": "getProjectsForTeam",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
+          },
+          {
+            "$ref": "#/components/parameters/archived_query_param"
+          },
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "archived",
+                  "color",
+                  "completed",
+                  "completed_at",
+                  "completed_by",
+                  "completed_by.name",
+                  "created_at",
+                  "created_from_template",
+                  "created_from_template.name",
+                  "current_status",
+                  "current_status.author",
+                  "current_status.author.name",
+                  "current_status.color",
+                  "current_status.created_at",
+                  "current_status.created_by",
+                  "current_status.created_by.name",
+                  "current_status.html_text",
+                  "current_status.modified_at",
+                  "current_status.text",
+                  "current_status.title",
+                  "current_status_update",
+                  "current_status_update.resource_subtype",
+                  "current_status_update.title",
+                  "custom_field_settings",
+                  "custom_field_settings.custom_field",
+                  "custom_field_settings.custom_field.asana_created_field",
+                  "custom_field_settings.custom_field.created_by",
+                  "custom_field_settings.custom_field.created_by.name",
+                  "custom_field_settings.custom_field.currency_code",
+                  "custom_field_settings.custom_field.custom_label",
+                  "custom_field_settings.custom_field.custom_label_position",
+                  "custom_field_settings.custom_field.date_value",
+                  "custom_field_settings.custom_field.date_value.date",
+                  "custom_field_settings.custom_field.date_value.date_time",
+                  "custom_field_settings.custom_field.default_access_level",
+                  "custom_field_settings.custom_field.description",
+                  "custom_field_settings.custom_field.display_value",
+                  "custom_field_settings.custom_field.enabled",
+                  "custom_field_settings.custom_field.enum_options",
+                  "custom_field_settings.custom_field.enum_options.color",
+                  "custom_field_settings.custom_field.enum_options.enabled",
+                  "custom_field_settings.custom_field.enum_options.name",
+                  "custom_field_settings.custom_field.enum_value",
+                  "custom_field_settings.custom_field.enum_value.color",
+                  "custom_field_settings.custom_field.enum_value.enabled",
+                  "custom_field_settings.custom_field.enum_value.name",
+                  "custom_field_settings.custom_field.format",
+                  "custom_field_settings.custom_field.has_notifications_enabled",
+                  "custom_field_settings.custom_field.id_prefix",
+                  "custom_field_settings.custom_field.input_restrictions",
+                  "custom_field_settings.custom_field.is_formula_field",
+                  "custom_field_settings.custom_field.is_global_to_workspace",
+                  "custom_field_settings.custom_field.is_value_read_only",
+                  "custom_field_settings.custom_field.multi_enum_values",
+                  "custom_field_settings.custom_field.multi_enum_values.color",
+                  "custom_field_settings.custom_field.multi_enum_values.enabled",
+                  "custom_field_settings.custom_field.multi_enum_values.name",
+                  "custom_field_settings.custom_field.name",
+                  "custom_field_settings.custom_field.number_value",
+                  "custom_field_settings.custom_field.people_value",
+                  "custom_field_settings.custom_field.people_value.name",
+                  "custom_field_settings.custom_field.precision",
+                  "custom_field_settings.custom_field.privacy_setting",
+                  "custom_field_settings.custom_field.reference_value",
+                  "custom_field_settings.custom_field.reference_value.name",
+                  "custom_field_settings.custom_field.representation_type",
+                  "custom_field_settings.custom_field.resource_subtype",
+                  "custom_field_settings.custom_field.text_value",
+                  "custom_field_settings.custom_field.type",
+                  "custom_field_settings.is_important",
+                  "custom_field_settings.parent",
+                  "custom_field_settings.parent.name",
+                  "custom_field_settings.project",
+                  "custom_field_settings.project.name",
+                  "custom_fields",
+                  "custom_fields.date_value",
+                  "custom_fields.date_value.date",
+                  "custom_fields.date_value.date_time",
+                  "custom_fields.display_value",
+                  "custom_fields.enabled",
+                  "custom_fields.enum_options",
+                  "custom_fields.enum_options.color",
+                  "custom_fields.enum_options.enabled",
+                  "custom_fields.enum_options.name",
+                  "custom_fields.enum_value",
+                  "custom_fields.enum_value.color",
+                  "custom_fields.enum_value.enabled",
+                  "custom_fields.enum_value.name",
+                  "custom_fields.id_prefix",
+                  "custom_fields.input_restrictions",
+                  "custom_fields.is_formula_field",
+                  "custom_fields.multi_enum_values",
+                  "custom_fields.multi_enum_values.color",
+                  "custom_fields.multi_enum_values.enabled",
+                  "custom_fields.multi_enum_values.name",
+                  "custom_fields.name",
+                  "custom_fields.number_value",
+                  "custom_fields.representation_type",
+                  "custom_fields.text_value",
+                  "custom_fields.type",
+                  "default_access_level",
+                  "default_view",
+                  "due_date",
+                  "due_on",
+                  "followers",
+                  "followers.name",
+                  "html_notes",
+                  "icon",
+                  "members",
+                  "members.name",
+                  "minimum_access_level_for_customization",
+                  "minimum_access_level_for_sharing",
+                  "modified_at",
+                  "name",
+                  "notes",
+                  "offset",
+                  "owner",
+                  "path",
+                  "permalink_url",
+                  "privacy_setting",
+                  "project_brief",
+                  "public",
+                  "start_on",
+                  "team",
+                  "team.name",
+                  "uri",
+                  "workspace",
+                  "workspace.name"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "archived",
+              "color",
+              "completed",
+              "completed_at",
+              "completed_by",
+              "completed_by.name",
+              "created_at",
+              "created_from_template",
+              "created_from_template.name",
+              "current_status",
+              "current_status.author",
+              "current_status.author.name",
+              "current_status.color",
+              "current_status.created_at",
+              "current_status.created_by",
+              "current_status.created_by.name",
+              "current_status.html_text",
+              "current_status.modified_at",
+              "current_status.text",
+              "current_status.title",
+              "current_status_update",
+              "current_status_update.resource_subtype",
+              "current_status_update.title",
+              "custom_field_settings",
+              "custom_field_settings.custom_field",
+              "custom_field_settings.custom_field.asana_created_field",
+              "custom_field_settings.custom_field.created_by",
+              "custom_field_settings.custom_field.created_by.name",
+              "custom_field_settings.custom_field.currency_code",
+              "custom_field_settings.custom_field.custom_label",
+              "custom_field_settings.custom_field.custom_label_position",
+              "custom_field_settings.custom_field.date_value",
+              "custom_field_settings.custom_field.date_value.date",
+              "custom_field_settings.custom_field.date_value.date_time",
+              "custom_field_settings.custom_field.default_access_level",
+              "custom_field_settings.custom_field.description",
+              "custom_field_settings.custom_field.display_value",
+              "custom_field_settings.custom_field.enabled",
+              "custom_field_settings.custom_field.enum_options",
+              "custom_field_settings.custom_field.enum_options.color",
+              "custom_field_settings.custom_field.enum_options.enabled",
+              "custom_field_settings.custom_field.enum_options.name",
+              "custom_field_settings.custom_field.enum_value",
+              "custom_field_settings.custom_field.enum_value.color",
+              "custom_field_settings.custom_field.enum_value.enabled",
+              "custom_field_settings.custom_field.enum_value.name",
+              "custom_field_settings.custom_field.format",
+              "custom_field_settings.custom_field.has_notifications_enabled",
+              "custom_field_settings.custom_field.id_prefix",
+              "custom_field_settings.custom_field.input_restrictions",
+              "custom_field_settings.custom_field.is_formula_field",
+              "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_value_read_only",
+              "custom_field_settings.custom_field.multi_enum_values",
+              "custom_field_settings.custom_field.multi_enum_values.color",
+              "custom_field_settings.custom_field.multi_enum_values.enabled",
+              "custom_field_settings.custom_field.multi_enum_values.name",
+              "custom_field_settings.custom_field.name",
+              "custom_field_settings.custom_field.number_value",
+              "custom_field_settings.custom_field.people_value",
+              "custom_field_settings.custom_field.people_value.name",
+              "custom_field_settings.custom_field.precision",
+              "custom_field_settings.custom_field.privacy_setting",
+              "custom_field_settings.custom_field.reference_value",
+              "custom_field_settings.custom_field.reference_value.name",
+              "custom_field_settings.custom_field.representation_type",
+              "custom_field_settings.custom_field.resource_subtype",
+              "custom_field_settings.custom_field.text_value",
+              "custom_field_settings.custom_field.type",
+              "custom_field_settings.is_important",
+              "custom_field_settings.parent",
+              "custom_field_settings.parent.name",
+              "custom_field_settings.project",
+              "custom_field_settings.project.name",
+              "custom_fields",
+              "custom_fields.date_value",
+              "custom_fields.date_value.date",
+              "custom_fields.date_value.date_time",
+              "custom_fields.display_value",
+              "custom_fields.enabled",
+              "custom_fields.enum_options",
+              "custom_fields.enum_options.color",
+              "custom_fields.enum_options.enabled",
+              "custom_fields.enum_options.name",
+              "custom_fields.enum_value",
+              "custom_fields.enum_value.color",
+              "custom_fields.enum_value.enabled",
+              "custom_fields.enum_value.name",
+              "custom_fields.id_prefix",
+              "custom_fields.input_restrictions",
+              "custom_fields.is_formula_field",
+              "custom_fields.multi_enum_values",
+              "custom_fields.multi_enum_values.color",
+              "custom_fields.multi_enum_values.enabled",
+              "custom_fields.multi_enum_values.name",
+              "custom_fields.name",
+              "custom_fields.number_value",
+              "custom_fields.representation_type",
+              "custom_fields.text_value",
+              "custom_fields.type",
+              "default_access_level",
+              "default_view",
+              "due_date",
+              "due_on",
+              "followers",
+              "followers.name",
+              "html_notes",
+              "icon",
+              "members",
+              "members.name",
+              "minimum_access_level_for_customization",
+              "minimum_access_level_for_sharing",
+              "modified_at",
+              "name",
+              "notes",
+              "offset",
+              "owner",
+              "path",
+              "permalink_url",
+              "privacy_setting",
+              "project_brief",
+              "public",
+              "start_on",
+              "team",
+              "team.name",
+              "uri",
+              "workspace",
+              "workspace.name"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ProjectResponseArray"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          { }
+        ]
+      },
       "post": {
         "tags": [
           "Projects"
@@ -67867,6 +68547,34 @@
           }
         }
       },
+      "OooEntryResponseData": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/OooEntryResponse"
+          }
+        }
+      },
+      "OooEntryResponseArray": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OooEntryResponse"
+            }
+          },
+          "next_page": {
+            "$ref": "#/components/schemas/NextPage"
+          }
+        }
+      },
       "OrganizationExportResponseData": {
         "required": [
           "data"
@@ -68718,6 +69426,28 @@
           }
         }
       },
+      "createOooEntry": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OooEntryCreateRequest"
+              },
+              {
+                "required": [
+                  "user",
+                  "workspace",
+                  "start_date",
+                  "end_date"
+                ],
+                "type": "object"
+              }
+            ]
+          }
+        }
+      },
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
@@ -69123,6 +69853,26 @@
           "application/json; charset=UTF-8": {
             "schema": {
               "$ref": "#/components/schemas/MembershipResponseData"
+            }
+          }
+        }
+      },
+      "OooEntryResponseData": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/OooEntryResponseData"
+            }
+          }
+        }
+      },
+      "OooEntryResponseArray": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/OooEntryResponseArray"
             }
           }
         }
@@ -70376,6 +71126,10 @@
     {
       "name": "Memberships",
       "description": "A membership object represents the relationship between a team or user and an object in Asana. Currently, the\nsupported types of memberships are for goals, projects, custom fields, custom types,and portfolios. For example, a project membership\ncan be used to add a user to a project."
+    },
+    {
+      "name": "Ooo entries",
+      "description": "An OOO entry represents a period of time during which a user is out of office."
     },
     {
       "name": "Organization exports",

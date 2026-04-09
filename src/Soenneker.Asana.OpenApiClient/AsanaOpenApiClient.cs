@@ -20,6 +20,7 @@ using Soenneker.Asana.OpenApiClient.Goal_relationships;
 using Soenneker.Asana.OpenApiClient.Goals;
 using Soenneker.Asana.OpenApiClient.Jobs;
 using Soenneker.Asana.OpenApiClient.Memberships;
+using Soenneker.Asana.OpenApiClient.Ooo_entries;
 using Soenneker.Asana.OpenApiClient.Organization_exports;
 using Soenneker.Asana.OpenApiClient.Portfolio_memberships;
 using Soenneker.Asana.OpenApiClient.Portfolios;
@@ -131,6 +132,11 @@ namespace Soenneker.Asana.OpenApiClient
         public global::Soenneker.Asana.OpenApiClient.Memberships.MembershipsRequestBuilder Memberships
         {
             get => new global::Soenneker.Asana.OpenApiClient.Memberships.MembershipsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ooo_entries property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder Ooo_entries
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The organization_exports property</summary>
         public global::Soenneker.Asana.OpenApiClient.Organization_exports.Organization_exportsRequestBuilder Organization_exports

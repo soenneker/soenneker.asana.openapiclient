@@ -169,7 +169,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Globally unique identifier for `team` or `user`. When used with `resource_subtype` and without `parent`, returns all memberships of the specified subtype for this member.</summary>
+            /// <summary>Globally unique identifier for `team` or `user`. When used with `resource_subtype` and without `parent`, `member` must be of type `team`. For user-type memberships `parent` parameter is required to disambiguate the workspace from which memberships should be retrieved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("member")]
@@ -199,7 +199,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Memberships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
 #endif
-            /// <summary>Globally unique identifier for `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. This parameter is optional when `resource_subtype` is provided along with `member`.</summary>
+            /// <summary>Globally unique identifier for `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. This parameter is optional when `resource_subtype` is provided along with `member` of type `team`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("parent")]

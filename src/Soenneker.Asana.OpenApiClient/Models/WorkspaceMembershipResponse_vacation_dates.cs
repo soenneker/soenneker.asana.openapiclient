@@ -8,14 +8,16 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// Contains keys `start_on` and `end_on` for the vacation dates for the user in this workspace. If `start_on` is null, the entire `vacation_dates` object will be null. If `end_on` is before today, the entire `vacation_dates` object will be null.
+    /// *Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. Contains keys `start_on` and `end_on` for the vacation dates for the user in this workspace. If `start_on` is null, the entire `vacation_dates` object will be null. If `end_on` is before today, the entire `vacation_dates` object will be null.
     /// </summary>
+    [Obsolete("")]
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkspaceMembershipResponse_vacation_dates : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The day on which the user&apos;s vacation in this workspace ends, or null if there is no end date. This is a date with `YYYY-MM-DD` format.</summary>
+        /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. The day on which the user&apos;s vacation in this workspace ends, or null if there is no end date. This is a date with `YYYY-MM-DD` format.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndOn { get; set; }
@@ -23,7 +25,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string EndOn { get; set; }
 #endif
-        /// <summary>The day on which the user&apos;s vacation in this workspace starts. This is a date with `YYYY-MM-DD` format.</summary>
+        /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. The day on which the user&apos;s vacation in this workspace starts. This is a date with `YYYY-MM-DD` format.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartOn { get; set; }

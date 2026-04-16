@@ -57,7 +57,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user_task_list UserTaskList { get; private set; }
 #endif
-        /// <summary>Contains keys `start_on` and `end_on` for the vacation dates for the user in this workspace. If `start_on` is null, the entire `vacation_dates` object will be null. If `end_on` is before today, the entire `vacation_dates` object will be null.</summary>
+        /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. Contains keys `start_on` and `end_on` for the vacation dates for the user in this workspace. If `start_on` is null, the entire `vacation_dates` object will be null. If `end_on` is before today, the entire `vacation_dates` object will be null.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates? VacationDates { get; private set; }

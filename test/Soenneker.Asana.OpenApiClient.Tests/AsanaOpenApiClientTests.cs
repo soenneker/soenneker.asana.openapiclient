@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Asana.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class AsanaOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class AsanaOpenApiClientTests : HostedUnitTest
 {
-    public AsanaOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public AsanaOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 

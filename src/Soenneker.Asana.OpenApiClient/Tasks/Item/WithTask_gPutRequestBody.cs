@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest? Data { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest Data { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTask_gPutRequestBody"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest>(global::Soenneker.Asana.OpenApiClient.Models.TaskRequest.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest>(global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

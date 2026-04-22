@@ -2,43 +2,51 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Soenneker.Asana.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks
+namespace Soenneker.Asana.OpenApiClient.Models
 {
+    /// <summary>
+    /// An object to represent a user&apos;s like.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class SubtasksPostRequestBody : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class TaskUpdateRequest_likes : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
+        /// <summary>Globally unique identifier of the object, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest? Data { get; set; }
+        public string? Gid { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest Data { get; set; }
+        public string Gid { get; private set; }
+#endif
+        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes_user? User { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes_user User { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks.SubtasksPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes"/> and sets the default values.
         /// </summary>
-        public SubtasksPostRequestBody()
+        public TaskUpdateRequest_likes()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks.SubtasksPostRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks.SubtasksPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks.SubtasksPostRequestBody();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,7 +56,8 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest.CreateFromDiscriminatorValue); } },
+                { "gid", n => { Gid = n.GetStringValue(); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes_user>(global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes_user.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_likes_user>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

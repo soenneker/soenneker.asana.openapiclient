@@ -9,7 +9,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TaskRequest_memberships : IAdditionalDataHolder, IParsable
+    public partial class TaskUpdateRequest_memberships : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -17,35 +17,35 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project Project { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_section? Section { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section? Section { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_section Section { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section Section { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships"/> and sets the default values.
         /// </summary>
-        public TaskRequest_memberships()
+        public TaskUpdateRequest_memberships()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_project>(global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_project.CreateFromDiscriminatorValue); } },
-                { "section", n => { Section = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_section>(global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_section.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project>(global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project.CreateFromDiscriminatorValue); } },
+                { "section", n => { Section = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section>(global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_project>("project", Project);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_memberships_section>("section", Section);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section>("section", Section);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

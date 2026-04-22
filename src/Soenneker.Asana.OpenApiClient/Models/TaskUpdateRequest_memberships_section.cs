@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// An object to represent a user&apos;s like.
+    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TaskRequest_likes : IAdditionalDataHolder, IParsable
+    public partial class TaskUpdateRequest_memberships_section : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Globally unique identifier of the object, as a string.</summary>
+        /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Gid { get; private set; }
@@ -23,30 +23,38 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
+        /// <summary>The name of the section (i.e. the text displayed as the section header).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes_user? User { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes_user User { get; set; }
+        public string Name { get; set; }
+#endif
+        /// <summary>The base type of this resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceType { get; private set; }
+#nullable restore
+#else
+        public string ResourceType { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section"/> and sets the default values.
         /// </summary>
-        public TaskRequest_likes()
+        public TaskUpdateRequest_memberships_section()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_section();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,7 +65,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes_user>(global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes_user.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,7 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_likes_user>("user", User);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

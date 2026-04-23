@@ -59980,12 +59980,12 @@
           "name": {
             "type": "string",
             "description": "The name of the role.",
-            "example": "Project Admin"
+            "example": "Developer"
           },
           "description": {
             "type": "string",
             "description": "The description of the role.",
-            "example": "This role has full access to the project."
+            "example": "This role has exclusive access to create app and PAT tokens."
           },
           "is_standard_role": {
             "type": "boolean",
@@ -60018,12 +60018,12 @@
           "name": {
             "type": "string",
             "description": "The name of the role.",
-            "example": "Project Admin"
+            "example": "Developer"
           },
           "description": {
             "type": "string",
             "description": "The description of the role.",
-            "example": "This role has full access to the project."
+            "example": "This role has exclusive access to create app and PAT tokens."
           },
           "is_standard_role": {
             "type": "boolean",
@@ -60084,12 +60084,12 @@
           "name": {
             "type": "string",
             "description": "The name of the role.",
-            "example": "Project Admin"
+            "example": "Developer"
           },
           "description": {
             "type": "string",
             "description": "The description of the role.",
-            "example": "This role has full access to the project."
+            "example": "This role has exclusive access to create app and PAT tokens."
           },
           "is_standard_role": {
             "type": "boolean",
@@ -60159,12 +60159,12 @@
           "name": {
             "type": "string",
             "description": "The name of the role.",
-            "example": "Project Admin"
+            "example": "Developer"
           },
           "description": {
             "type": "string",
             "description": "The description of the role.",
-            "example": "This role has full access to the project."
+            "example": "This role has exclusive access to create app and PAT tokens."
           },
           "is_standard_role": {
             "type": "boolean",
@@ -60230,12 +60230,12 @@
           "name": {
             "type": "string",
             "description": "The name of the role.",
-            "example": "Project Admin"
+            "example": "Developer"
           },
           "description": {
             "type": "string",
             "description": "The description of the role.",
-            "example": "This role has full access to the project."
+            "example": "This role has exclusive access to create app and PAT tokens."
           },
           "is_standard_role": {
             "type": "boolean",

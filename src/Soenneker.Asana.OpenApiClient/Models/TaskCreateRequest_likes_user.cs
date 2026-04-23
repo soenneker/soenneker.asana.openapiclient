@@ -11,7 +11,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TaskRequest_hearts_user : IAdditionalDataHolder, IParsable
+    public partial class TaskCreateRequest_likes_user : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -40,21 +40,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_hearts_user"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes_user"/> and sets the default values.
         /// </summary>
-        public TaskRequest_hearts_user()
+        public TaskCreateRequest_likes_user()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_hearts_user"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes_user"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_hearts_user CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes_user CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskRequest_hearts_user();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes_user();
         }
         /// <summary>
         /// The deserialization information for the current model

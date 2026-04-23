@@ -8,45 +8,53 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// *OAuth Required*. *Conditional*. This field is returned only if external values are set or included by using [Opt In](/docs/inputoutput-options).The external field allows you to store app-specific metadata on tasks, including a gid that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external gid is set, you can use the notation `external:custom_gid` to reference your object anywhere in the API where you may use the original object gid. See the page on Custom External Data for more details.
+    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TaskResponse_external : IAdditionalDataHolder, IParsable
+    public partial class TaskUpdateRequest_memberships_project : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The data property</summary>
+        /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get; set; }
+        public string? Gid { get; private set; }
 #nullable restore
 #else
-        public string Data { get; set; }
+        public string Gid { get; private set; }
 #endif
-        /// <summary>The gid property</summary>
+        /// <summary>Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Gid { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public string Gid { get; set; }
+        public string Name { get; set; }
+#endif
+        /// <summary>The base type of this resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ResourceType { get; private set; }
+#nullable restore
+#else
+        public string ResourceType { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project"/> and sets the default values.
         /// </summary>
-        public TaskResponse_external()
+        public TaskUpdateRequest_memberships_project()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequest_memberships_project();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +64,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("data", Data);
-            writer.WriteStringValue("gid", Gid);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

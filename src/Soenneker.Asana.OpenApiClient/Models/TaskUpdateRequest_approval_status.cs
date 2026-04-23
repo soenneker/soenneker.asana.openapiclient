@@ -5,7 +5,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>*Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum TaskRequest_approval_status
+    public enum TaskUpdateRequest_approval_status
     {
         [EnumMember(Value = "pending")]
         #pragma warning disable CS1591

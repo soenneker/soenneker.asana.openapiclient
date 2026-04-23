@@ -5,7 +5,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>*Deprecated* Scheduling status of this task for the user it is assigned to. This field can only be set if the assignee is non-null. Setting this field to &quot;inbox&quot; or &quot;upcoming&quot; inserts it at the top of the section, while the other options will insert at the bottom.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum TaskRequest_assignee_status
+    public enum TaskCreateRequest_assignee_status
     {
         [EnumMember(Value = "today")]
         #pragma warning disable CS1591

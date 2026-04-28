@@ -100,6 +100,10 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Custom_fields
         #pragma warning disable CS1591
         Has_notifications_enabled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "html_text_value")]
+        #pragma warning disable CS1591
+        Html_text_value,
+        #pragma warning restore CS1591
         [EnumMember(Value = "id_prefix")]
         #pragma warning disable CS1591
         Id_prefix,

@@ -104,6 +104,10 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Custom_field_settings
         #pragma warning disable CS1591
         Custom_fieldHas_notifications_enabled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field.html_text_value")]
+        #pragma warning disable CS1591
+        Custom_fieldHtml_text_value,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_field.id_prefix")]
         #pragma warning disable CS1591
         Custom_fieldId_prefix,

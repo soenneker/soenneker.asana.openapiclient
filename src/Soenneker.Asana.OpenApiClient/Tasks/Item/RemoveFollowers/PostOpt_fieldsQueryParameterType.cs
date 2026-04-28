@@ -164,6 +164,10 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers
         #pragma warning disable CS1591
         Custom_fieldsHas_notifications_enabled,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_fields.html_text_value")]
+        #pragma warning disable CS1591
+        Custom_fieldsHtml_text_value,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_fields.id_prefix")]
         #pragma warning disable CS1591
         Custom_fieldsId_prefix,

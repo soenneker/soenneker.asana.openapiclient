@@ -99,6 +99,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>*Conditional*. This flag describes whether a follower of a task with this field should receive inbox notifications from changes to this field.</summary>
         public bool? HasNotificationsEnabled { get; set; }
+        /// <summary>*Conditional*. Only relevant for custom fields of type `text`. This is the HTML representation of the text value of a custom field, corresponding to the `text_value` plain-text field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HtmlTextValue { get; private set; }
+#nullable restore
+#else
+        public string HtmlTextValue { get; private set; }
+#endif
         /// <summary>This field is the unique custom ID string for the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,6 +229,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_field_settings_custom_field_format>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "has_notifications_enabled", n => { HasNotificationsEnabled = n.GetBoolValue(); } },
+                { "html_text_value", n => { HtmlTextValue = n.GetStringValue(); } },
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
                 { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },

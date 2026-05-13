@@ -66059,148 +66059,120 @@
         "type": "object",
         "allOf": [
           {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
-                "example": "Stuff to buy"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "project"
-            }
-          },
-          {
             "type": "object"
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
+          }
+        },
         "description": "The project associated with this setting."
       },
       "ProjectPortfolioSettingCompactPortfolio": {
         "type": "object",
         "allOf": [
           {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the portfolio.",
-                "example": "Bug Portfolio"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.\nPortfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "portfolio"
-            }
-          },
-          {
             "type": "object"
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the portfolio.",
+            "example": "Bug Portfolio"
+          }
+        },
         "description": "The portfolio associated with this setting."
       },
       "ProjectPortfolioSettingResponseProject": {
         "type": "object",
         "allOf": [
           {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
-                "example": "Stuff to buy"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "project"
-            }
-          },
-          {
             "type": "object"
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
+          }
+        },
         "description": "The project associated with this setting."
       },
       "ProjectPortfolioSettingResponsePortfolio": {
         "type": "object",
         "allOf": [
           {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the portfolio.",
-                "example": "Bug Portfolio"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.\nPortfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "portfolio"
-            }
-          },
-          {
             "type": "object"
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the portfolio.",
+            "example": "Bug Portfolio"
+          }
+        },
         "description": "The portfolio associated with this setting."
       },
       "ProjectRequestCustomFields": {
@@ -66232,37 +66204,30 @@
         "allOf": [
           {
             "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
-          },
-          {
-            "type": "object",
             "nullable": true
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
+          }
+        },
         "description": "The current owner of the project, may be null."
       },
       "ProjectResponseTeam": {
@@ -66383,37 +66348,30 @@
         "allOf": [
           {
             "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
-          },
-          {
-            "type": "object",
             "nullable": true
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
+          }
+        },
         "description": "The current owner of the project template, may be null."
       },
       "ProjectTemplateBaseTeam": {
@@ -66449,37 +66407,30 @@
         "allOf": [
           {
             "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
-          },
-          {
-            "type": "object",
             "nullable": true
           }
         ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
+          }
+        },
         "description": "The current owner of the project template, may be null."
       },
       "ProjectTemplateResponseTeam": {
@@ -67830,36 +67781,31 @@
         "allOf": [
           {
             "type": "object",
-            "properties": {
-              "start_on": {
-                "type": "string",
-                "description": "The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.",
-                "format": "date",
-                "nullable": true,
-                "example": "2019-09-14"
-              },
-              "due_at": {
-                "type": "string",
-                "description": "The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.",
-                "format": "date-time",
-                "nullable": true,
-                "example": "2019-09-15T02:06:58.158Z"
-              },
-              "due_on": {
-                "type": "string",
-                "description": "The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.",
-                "format": "date",
-                "example": "2019-09-15"
-              }
-            },
-            "description": "*Conditional*",
-            "readOnly": true
-          },
-          {
-            "type": "object",
             "description": "*Conditional*. The old value of a date custom field story."
           }
         ],
+        "properties": {
+          "start_on": {
+            "type": "string",
+            "description": "The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.",
+            "format": "date",
+            "nullable": true,
+            "example": "2019-09-14"
+          },
+          "due_at": {
+            "type": "string",
+            "description": "The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2019-09-15T02:06:58.158Z"
+          },
+          "due_on": {
+            "type": "string",
+            "description": "The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.",
+            "format": "date",
+            "example": "2019-09-15"
+          }
+        },
         "readOnly": true
       },
       "StoryResponseNewDateValue": {
@@ -67867,36 +67813,31 @@
         "allOf": [
           {
             "type": "object",
-            "properties": {
-              "start_on": {
-                "type": "string",
-                "description": "The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.",
-                "format": "date",
-                "nullable": true,
-                "example": "2019-09-14"
-              },
-              "due_at": {
-                "type": "string",
-                "description": "The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.",
-                "format": "date-time",
-                "nullable": true,
-                "example": "2019-09-15T02:06:58.158Z"
-              },
-              "due_on": {
-                "type": "string",
-                "description": "The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.",
-                "format": "date",
-                "example": "2019-09-15"
-              }
-            },
-            "description": "*Conditional*",
-            "readOnly": true
-          },
-          {
-            "type": "object",
             "description": "*Conditional* The new value of a date custom field story."
           }
         ],
+        "properties": {
+          "start_on": {
+            "type": "string",
+            "description": "The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.",
+            "format": "date",
+            "nullable": true,
+            "example": "2019-09-14"
+          },
+          "due_at": {
+            "type": "string",
+            "description": "The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2019-09-15T02:06:58.158Z"
+          },
+          "due_on": {
+            "type": "string",
+            "description": "The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.",
+            "format": "date",
+            "example": "2019-09-15"
+          }
+        },
         "readOnly": true
       },
       "StoryResponseDuplicateOf": {
@@ -68156,550 +68097,527 @@
         "readOnly": true
       },
       "TaskTemplateResponseProject": {
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
-                "example": "Stuff to buy"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "project"
-            }
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
           }
-        ],
-        "description": "The project that this task template belongs to.",
-        "nullable": true
+        },
+        "description": "The project that this task template belongs to."
       },
       "TaskTemplateResponseTemplate": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "Name of the task that will be created from this template.",
-                "example": "Bug Report"
-              },
-              "task_resource_subtype": {
-                "enum": [
-                  "default_task",
-                  "milestone_task",
-                  "approval_task"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "The subtype of the task that will be created from this template.",
-                "example": "default_task"
-              },
-              "description": {
-                "type": "string",
-                "description": "Description of the task that will be created from this template.",
-                "example": "Please describe the bug you found and how to reproduce it."
-              },
-              "html_description": {
-                "type": "string",
-                "description": "HTML description of the task that will be created from this template.",
-                "example": "Please describe the bug you found and how to reproduce it."
-              },
-              "memberships": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "gid": {
-                      "type": "string",
-                      "description": "Globally unique identifier of the resource, as a string.",
-                      "readOnly": true,
-                      "example": "12345",
-                      "x-insert-after": false
-                    },
-                    "resource_type": {
-                      "type": "string",
-                      "description": "The base type of this resource.",
-                      "readOnly": true,
-                      "example": "task",
-                      "x-insert-after": "gid"
-                    },
-                    "name": {
-                      "type": "string",
-                      "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
-                      "example": "Stuff to buy"
-                    }
-                  },
-                  "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
-                  "x-docs-overrides": {
-                    "properties.resource_type.example": "project"
-                  }
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the task that will be created from this template.",
+            "example": "Bug Report"
+          },
+          "task_resource_subtype": {
+            "enum": [
+              "default_task",
+              "milestone_task",
+              "approval_task"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The subtype of the task that will be created from this template.",
+            "example": "default_task"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the task that will be created from this template.",
+            "example": "Please describe the bug you found and how to reproduce it."
+          },
+          "html_description": {
+            "type": "string",
+            "description": "HTML description of the task that will be created from this template.",
+            "example": "Please describe the bug you found and how to reproduce it."
+          },
+          "memberships": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gid": {
+                  "type": "string",
+                  "description": "Globally unique identifier of the resource, as a string.",
+                  "readOnly": true,
+                  "example": "12345",
+                  "x-insert-after": false
                 },
-                "description": "Array of projects that the task created from this template will be added to"
-              },
-              "relative_start_on": {
-                "type": "integer",
-                "description": "The number of days after the task has been instantiated on which that the task will start",
-                "nullable": true,
-                "example": 1
-              },
-              "relative_due_on": {
-                "type": "integer",
-                "description": "The number of days after the task has been instantiated on which that the task will be due",
-                "nullable": true,
-                "example": 2
-              },
-              "due_time": {
-                "type": "string",
-                "description": "The time of day that the task will be due",
-                "nullable": true,
-                "example": "13:15:00.000Z"
-              },
-              "dependencies": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "description": "Name of the task that will be created from this template.",
-                      "example": "Bug Report"
-                    },
-                    "task_resource_subtype": {
-                      "enum": [
-                        "default_task",
-                        "milestone_task",
-                        "approval_task"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "The subtype of the task that will be created from this template.",
-                      "example": "default_task"
-                    }
-                  }
+                "resource_type": {
+                  "type": "string",
+                  "description": "The base type of this resource.",
+                  "readOnly": true,
+                  "example": "task",
+                  "x-insert-after": "gid"
                 },
-                "description": "Array of task templates that the task created from this template will depend on"
+                "name": {
+                  "type": "string",
+                  "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+                  "example": "Stuff to buy"
+                }
               },
-              "dependents": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "description": "Name of the task that will be created from this template.",
-                      "example": "Bug Report"
-                    },
-                    "task_resource_subtype": {
-                      "enum": [
-                        "default_task",
-                        "milestone_task",
-                        "approval_task"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "The subtype of the task that will be created from this template.",
-                      "example": "default_task"
-                    }
-                  }
+              "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
+              "x-docs-overrides": {
+                "properties.resource_type.example": "project"
+              }
+            },
+            "description": "Array of projects that the task created from this template will be added to"
+          },
+          "relative_start_on": {
+            "type": "integer",
+            "description": "The number of days after the task has been instantiated on which that the task will start",
+            "nullable": true,
+            "example": 1
+          },
+          "relative_due_on": {
+            "type": "integer",
+            "description": "The number of days after the task has been instantiated on which that the task will be due",
+            "nullable": true,
+            "example": 2
+          },
+          "due_time": {
+            "type": "string",
+            "description": "The time of day that the task will be due",
+            "nullable": true,
+            "example": "13:15:00.000Z"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the task that will be created from this template.",
+                  "example": "Bug Report"
                 },
-                "description": "Array of task templates that will depend on the task created from this template"
-              },
-              "followers": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "gid": {
-                      "type": "string",
-                      "description": "Globally unique identifier of the resource, as a string.",
-                      "readOnly": true,
-                      "example": "12345",
-                      "x-insert-after": false
-                    },
-                    "resource_type": {
-                      "type": "string",
-                      "description": "The base type of this resource.",
-                      "readOnly": true,
-                      "example": "task",
-                      "x-insert-after": "gid"
-                    },
-                    "name": {
-                      "type": "string",
-                      "description": "*Read-only except when same user as requester*. The user's name.",
-                      "example": "Greg Sanchez"
-                    }
-                  },
-                  "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-                  "x-docs-overrides": {
-                    "properties.resource_type.example": "user"
-                  }
+                "task_resource_subtype": {
+                  "enum": [
+                    "default_task",
+                    "milestone_task",
+                    "approval_task"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "The subtype of the task that will be created from this template.",
+                  "example": "default_task"
+                }
+              }
+            },
+            "description": "Array of task templates that the task created from this template will depend on"
+          },
+          "dependents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the task that will be created from this template.",
+                  "example": "Bug Report"
                 },
-                "description": "Array of users that will be added as followers to the task created from this template"
-              },
-              "attachments": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "gid": {
-                      "type": "string",
-                      "description": "Globally unique identifier of the resource, as a string.",
-                      "readOnly": true,
-                      "example": "12345",
-                      "x-insert-after": false
-                    },
-                    "resource_type": {
-                      "type": "string",
-                      "description": "The base type of this resource.",
-                      "readOnly": true,
-                      "example": "task",
-                      "x-insert-after": "gid"
-                    },
-                    "name": {
-                      "type": "string",
-                      "description": "The name of the file.",
-                      "readOnly": true,
-                      "example": "Screenshot.png"
-                    },
-                    "resource_subtype": {
-                      "type": "string",
-                      "description": "The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, `vimeo`, and `external`.",
-                      "example": "dropbox"
-                    }
-                  },
-                  "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nAn *attachment* object represents any file attached to a task in Asana, whether it's an uploaded file or one associated via a third-party service such as Dropbox or Google Drive.",
-                  "x-docs-overrides": {
-                    "properties.resource_type.example": "attachment"
-                  }
+                "task_resource_subtype": {
+                  "enum": [
+                    "default_task",
+                    "milestone_task",
+                    "approval_task"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "The subtype of the task that will be created from this template.",
+                  "example": "default_task"
+                }
+              }
+            },
+            "description": "Array of task templates that will depend on the task created from this template"
+          },
+          "followers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gid": {
+                  "type": "string",
+                  "description": "Globally unique identifier of the resource, as a string.",
+                  "readOnly": true,
+                  "example": "12345",
+                  "x-insert-after": false
                 },
-                "description": "Array of attachments that will be added to the task created from this template"
-              },
-              "subtasks": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "description": "Name of the task that will be created from this template.",
-                      "example": "Bug Report"
-                    },
-                    "task_resource_subtype": {
-                      "enum": [
-                        "default_task",
-                        "milestone_task",
-                        "approval_task"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "The subtype of the task that will be created from this template.",
-                      "example": "default_task"
-                    }
-                  }
+                "resource_type": {
+                  "type": "string",
+                  "description": "The base type of this resource.",
+                  "readOnly": true,
+                  "example": "task",
+                  "x-insert-after": "gid"
                 },
-                "description": "Array of subtasks that will be added to the task created from this template"
+                "name": {
+                  "type": "string",
+                  "description": "*Read-only except when same user as requester*. The user's name.",
+                  "example": "Greg Sanchez"
+                }
               },
-              "custom_fields": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "gid": {
-                      "type": "string",
-                      "description": "Globally unique identifier of the resource, as a string.",
-                      "readOnly": true,
-                      "example": "12345",
-                      "x-insert-after": false
-                    },
-                    "resource_type": {
-                      "type": "string",
-                      "description": "The base type of this resource.",
-                      "readOnly": true,
-                      "example": "task",
-                      "x-insert-after": "gid"
-                    },
-                    "name": {
-                      "type": "string",
-                      "description": "The name of the custom field.",
-                      "example": "Status"
-                    },
-                    "type": {
-                      "enum": [
-                        "text",
-                        "enum",
-                        "multi_enum",
-                        "number",
-                        "date",
-                        "people"
-                      ],
-                      "type": "string",
-                      "additionalProperties": false,
-                      "description": "\"*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.\n\"",
-                      "readOnly": true
-                    },
-                    "enum_options": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "gid": {
-                            "type": "string",
-                            "description": "Globally unique identifier of the resource, as a string.",
-                            "readOnly": true,
-                            "example": "12345",
-                            "x-insert-after": false
-                          },
-                          "resource_type": {
-                            "type": "string",
-                            "description": "The base type of this resource.",
-                            "readOnly": true,
-                            "example": "task",
-                            "x-insert-after": "gid"
-                          },
-                          "name": {
-                            "type": "string",
-                            "description": "The name of the enum option.",
-                            "example": "Low"
-                          },
-                          "enabled": {
-                            "type": "boolean",
-                            "description": "Whether or not the enum option is a selectable value for the custom field.",
-                            "example": true
-                          },
-                          "color": {
-                            "type": "string",
-                            "description": "The color of the enum option. Defaults to `none`.",
-                            "example": "blue"
-                          }
-                        },
-                        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.",
-                        "x-docs-overrides": {
-                          "properties.resource_type.example": "enum_option"
-                        }
+              "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
+              "x-docs-overrides": {
+                "properties.resource_type.example": "user"
+              }
+            },
+            "description": "Array of users that will be added as followers to the task created from this template"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gid": {
+                  "type": "string",
+                  "description": "Globally unique identifier of the resource, as a string.",
+                  "readOnly": true,
+                  "example": "12345",
+                  "x-insert-after": false
+                },
+                "resource_type": {
+                  "type": "string",
+                  "description": "The base type of this resource.",
+                  "readOnly": true,
+                  "example": "task",
+                  "x-insert-after": "gid"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the file.",
+                  "readOnly": true,
+                  "example": "Screenshot.png"
+                },
+                "resource_subtype": {
+                  "type": "string",
+                  "description": "The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, `vimeo`, and `external`.",
+                  "example": "dropbox"
+                }
+              },
+              "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nAn *attachment* object represents any file attached to a task in Asana, whether it's an uploaded file or one associated via a third-party service such as Dropbox or Google Drive.",
+              "x-docs-overrides": {
+                "properties.resource_type.example": "attachment"
+              }
+            },
+            "description": "Array of attachments that will be added to the task created from this template"
+          },
+          "subtasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the task that will be created from this template.",
+                  "example": "Bug Report"
+                },
+                "task_resource_subtype": {
+                  "enum": [
+                    "default_task",
+                    "milestone_task",
+                    "approval_task"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "The subtype of the task that will be created from this template.",
+                  "example": "default_task"
+                }
+              }
+            },
+            "description": "Array of subtasks that will be added to the task created from this template"
+          },
+          "custom_fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gid": {
+                  "type": "string",
+                  "description": "Globally unique identifier of the resource, as a string.",
+                  "readOnly": true,
+                  "example": "12345",
+                  "x-insert-after": false
+                },
+                "resource_type": {
+                  "type": "string",
+                  "description": "The base type of this resource.",
+                  "readOnly": true,
+                  "example": "task",
+                  "x-insert-after": "gid"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The name of the custom field.",
+                  "example": "Status"
+                },
+                "type": {
+                  "enum": [
+                    "text",
+                    "enum",
+                    "multi_enum",
+                    "number",
+                    "date",
+                    "people"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "\"*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.\n\"",
+                  "readOnly": true
+                },
+                "enum_options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "gid": {
+                        "type": "string",
+                        "description": "Globally unique identifier of the resource, as a string.",
+                        "readOnly": true,
+                        "example": "12345",
+                        "x-insert-after": false
                       },
-                      "description": "*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield)."
+                      "resource_type": {
+                        "type": "string",
+                        "description": "The base type of this resource.",
+                        "readOnly": true,
+                        "example": "task",
+                        "x-insert-after": "gid"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the enum option.",
+                        "example": "Low"
+                      },
+                      "enabled": {
+                        "type": "boolean",
+                        "description": "Whether or not the enum option is a selectable value for the custom field.",
+                        "example": true
+                      },
+                      "color": {
+                        "type": "string",
+                        "description": "The color of the enum option. Defaults to `none`.",
+                        "example": "blue"
+                      }
+                    },
+                    "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.",
+                    "x-docs-overrides": {
+                      "properties.resource_type.example": "enum_option"
+                    }
+                  },
+                  "description": "*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield)."
+                },
+                "enabled": {
+                  "type": "boolean",
+                  "description": "*Conditional*. This field applies only to [custom field values](/docs/custom-fields-guide#/accessing-custom-field-values-on-tasks-or-projects) and is not available for [custom field definitions](/docs/custom-fields-guide#/accessing-custom-field-definitions).\nDetermines if the custom field is enabled or not. For more details, see the [Custom Fields documentation](/docs/custom-fields-guide#/enabled-and-disabled-values).",
+                  "readOnly": true,
+                  "example": true
+                },
+                "representation_type": {
+                  "enum": [
+                    "text",
+                    "enum",
+                    "multi_enum",
+                    "number",
+                    "date",
+                    "people",
+                    "formula",
+                    "custom_id"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "This field tells the type of the custom field.",
+                  "readOnly": true,
+                  "example": "number"
+                },
+                "id_prefix": {
+                  "type": "string",
+                  "description": "This field is the unique custom ID string for the custom field.",
+                  "nullable": true,
+                  "example": "ID"
+                },
+                "input_restrictions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
+                  "example": "task"
+                },
+                "is_formula_field": {
+                  "type": "boolean",
+                  "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+                  "example": false
+                },
+                "date_value": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string",
+                      "description": "A string representing the date in YYYY-MM-DD format.",
+                      "example": "2024-08-23"
+                    },
+                    "date_time": {
+                      "type": "string",
+                      "description": "A string representing the date in ISO 8601 format. If no time value is selected, the value of `date-time` will be `null`.",
+                      "example": "2024-08-23T22:00:00.000Z"
+                    }
+                  },
+                  "description": "*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.",
+                  "nullable": true
+                },
+                "enum_value": {
+                  "type": "object",
+                  "properties": {
+                    "gid": {
+                      "type": "string",
+                      "description": "Globally unique identifier of the resource, as a string.",
+                      "readOnly": true,
+                      "example": "12345",
+                      "x-insert-after": false
+                    },
+                    "resource_type": {
+                      "type": "string",
+                      "description": "The base type of this resource.",
+                      "readOnly": true,
+                      "example": "task",
+                      "x-insert-after": "gid"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the enum option.",
+                      "example": "Low"
                     },
                     "enabled": {
                       "type": "boolean",
-                      "description": "*Conditional*. This field applies only to [custom field values](/docs/custom-fields-guide#/accessing-custom-field-values-on-tasks-or-projects) and is not available for [custom field definitions](/docs/custom-fields-guide#/accessing-custom-field-definitions).\nDetermines if the custom field is enabled or not. For more details, see the [Custom Fields documentation](/docs/custom-fields-guide#/enabled-and-disabled-values).",
-                      "readOnly": true,
+                      "description": "Whether or not the enum option is a selectable value for the custom field.",
                       "example": true
                     },
-                    "representation_type": {
-                      "enum": [
-                        "text",
-                        "enum",
-                        "multi_enum",
-                        "number",
-                        "date",
-                        "people",
-                        "formula",
-                        "custom_id"
-                      ],
+                    "color": {
                       "type": "string",
-                      "additionalProperties": false,
-                      "description": "This field tells the type of the custom field.",
-                      "readOnly": true,
-                      "example": "number"
-                    },
-                    "id_prefix": {
-                      "type": "string",
-                      "description": "This field is the unique custom ID string for the custom field.",
-                      "nullable": true,
-                      "example": "ID"
-                    },
-                    "input_restrictions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
-                    },
-                    "is_formula_field": {
-                      "type": "boolean",
-                      "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
-                      "example": false
-                    },
-                    "date_value": {
-                      "type": "object",
-                      "properties": {
-                        "date": {
-                          "type": "string",
-                          "description": "A string representing the date in YYYY-MM-DD format.",
-                          "example": "2024-08-23"
-                        },
-                        "date_time": {
-                          "type": "string",
-                          "description": "A string representing the date in ISO 8601 format. If no time value is selected, the value of `date-time` will be `null`.",
-                          "example": "2024-08-23T22:00:00.000Z"
-                        }
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.",
-                      "nullable": true
-                    },
-                    "enum_value": {
-                      "type": "object",
-                      "properties": {
-                        "gid": {
-                          "type": "string",
-                          "description": "Globally unique identifier of the resource, as a string.",
-                          "readOnly": true,
-                          "example": "12345",
-                          "x-insert-after": false
-                        },
-                        "resource_type": {
-                          "type": "string",
-                          "description": "The base type of this resource.",
-                          "readOnly": true,
-                          "example": "task",
-                          "x-insert-after": "gid"
-                        },
-                        "name": {
-                          "type": "string",
-                          "description": "The name of the enum option.",
-                          "example": "Low"
-                        },
-                        "enabled": {
-                          "type": "boolean",
-                          "description": "Whether or not the enum option is a selectable value for the custom field.",
-                          "example": true
-                        },
-                        "color": {
-                          "type": "string",
-                          "description": "The color of the enum option. Defaults to `none`.",
-                          "example": "blue"
-                        }
-                      },
-                      "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.\n*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.",
-                      "nullable": true,
-                      "x-docs-overrides": {
-                        "properties.resource_type.example": "enum_option"
-                      }
-                    },
-                    "multi_enum_values": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "gid": {
-                            "type": "string",
-                            "description": "Globally unique identifier of the resource, as a string.",
-                            "readOnly": true,
-                            "example": "12345",
-                            "x-insert-after": false
-                          },
-                          "resource_type": {
-                            "type": "string",
-                            "description": "The base type of this resource.",
-                            "readOnly": true,
-                            "example": "task",
-                            "x-insert-after": "gid"
-                          },
-                          "name": {
-                            "type": "string",
-                            "description": "The name of the enum option.",
-                            "example": "Low"
-                          },
-                          "enabled": {
-                            "type": "boolean",
-                            "description": "Whether or not the enum option is a selectable value for the custom field.",
-                            "example": true
-                          },
-                          "color": {
-                            "type": "string",
-                            "description": "The color of the enum option. Defaults to `none`.",
-                            "example": "blue"
-                          }
-                        },
-                        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.",
-                        "x-docs-overrides": {
-                          "properties.resource_type.example": "enum_option"
-                        }
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field."
-                    },
-                    "number_value": {
-                      "type": "number",
-                      "description": "*Conditional*. This number is the value of a `number` custom field.",
-                      "nullable": true,
-                      "example": 5.2
-                    },
-                    "text_value": {
-                      "type": "string",
-                      "description": "*Conditional*. This string is the value of a `text` custom field.",
-                      "nullable": true,
-                      "example": "Some Value"
-                    },
-                    "display_value": {
-                      "type": "string",
-                      "description": "A string representation for the value of the custom field. Integrations that don't require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.",
-                      "nullable": true,
-                      "readOnly": true,
+                      "description": "The color of the enum option. Defaults to `none`.",
                       "example": "blue"
                     }
                   },
-                  "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nCustom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.\n\nUsers in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.",
+                  "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.\n*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.",
+                  "nullable": true,
                   "x-docs-overrides": {
-                    "properties.resource_type.example": "custom_field"
+                    "properties.resource_type.example": "enum_option"
                   }
                 },
-                "description": "Array of custom fields that will be added to the task created from this template"
+                "multi_enum_values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "gid": {
+                        "type": "string",
+                        "description": "Globally unique identifier of the resource, as a string.",
+                        "readOnly": true,
+                        "example": "12345",
+                        "x-insert-after": false
+                      },
+                      "resource_type": {
+                        "type": "string",
+                        "description": "The base type of this resource.",
+                        "readOnly": true,
+                        "example": "task",
+                        "x-insert-after": "gid"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the enum option.",
+                        "example": "Low"
+                      },
+                      "enabled": {
+                        "type": "boolean",
+                        "description": "Whether or not the enum option is a selectable value for the custom field.",
+                        "example": true
+                      },
+                      "color": {
+                        "type": "string",
+                        "description": "The color of the enum option. Defaults to `none`.",
+                        "example": "blue"
+                      }
+                    },
+                    "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nEnum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.\n\nYou can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.\n\n**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.\n\nOn creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.\n\nEnum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.\n\nAn enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.",
+                    "x-docs-overrides": {
+                      "properties.resource_type.example": "enum_option"
+                    }
+                  },
+                  "description": "*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field."
+                },
+                "number_value": {
+                  "type": "number",
+                  "description": "*Conditional*. This number is the value of a `number` custom field.",
+                  "nullable": true,
+                  "example": 5.2
+                },
+                "text_value": {
+                  "type": "string",
+                  "description": "*Conditional*. This string is the value of a `text` custom field.",
+                  "nullable": true,
+                  "example": "Some Value"
+                },
+                "display_value": {
+                  "type": "string",
+                  "description": "A string representation for the value of the custom field. Integrations that don't require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.",
+                  "nullable": true,
+                  "readOnly": true,
+                  "example": "blue"
+                }
+              },
+              "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nCustom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.\n\nUsers in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.",
+              "x-docs-overrides": {
+                "properties.resource_type.example": "custom_field"
               }
-            }
+            },
+            "description": "Array of custom fields that will be added to the task created from this template"
           }
-        ],
+        },
         "description": "The configuration for the task that will be created from this template."
       },
       "TaskTemplateResponseCreatedBy": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The user who created this task template."
       },
       "TaskRequestBaseCreatedBy": {
@@ -69117,281 +69035,209 @@
       },
       "UserTaskListBaseOwner": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.",
         "readOnly": true
       },
       "UserTaskListBaseWorkspace": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the workspace.",
-                "example": "My Company Workspace"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "workspace"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
           }
-        ],
+        },
         "description": "The workspace in which the user task list is located.",
         "readOnly": true
       },
       "UserTaskListCompactOwner": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.",
         "readOnly": true
       },
       "UserTaskListCompactWorkspace": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the workspace.",
-                "example": "My Company Workspace"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "workspace"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
           }
-        ],
+        },
         "description": "The workspace in which the user task list is located.",
         "readOnly": true
       },
       "UserTaskListRequestOwner": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.",
         "readOnly": true
       },
       "UserTaskListRequestWorkspace": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the workspace.",
-                "example": "My Company Workspace"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "workspace"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
           }
-        ],
+        },
         "description": "The workspace in which the user task list is located.",
         "readOnly": true
       },
       "UserTaskListResponseOwner": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.",
         "readOnly": true
       },
       "UserTaskListResponseWorkspace": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the workspace.",
-                "example": "My Company Workspace"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "workspace"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
           }
-        ],
+        },
         "description": "The workspace in which the user task list is located.",
         "readOnly": true
       },
@@ -71101,71 +70947,53 @@
       },
       "WorkspaceMembershipResponseUserTaskListOwner": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "*Read-only except when same user as requester*. The user's name.",
-                "example": "Greg Sanchez"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "user"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user's name.",
+            "example": "Greg Sanchez"
           }
-        ],
+        },
         "description": "The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.",
         "readOnly": true
       },
       "WorkspaceMembershipResponseUserTaskListWorkspace": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "properties": {
-              "gid": {
-                "type": "string",
-                "description": "Globally unique identifier of the resource, as a string.",
-                "readOnly": true,
-                "example": "12345",
-                "x-insert-after": false
-              },
-              "resource_type": {
-                "type": "string",
-                "description": "The base type of this resource.",
-                "readOnly": true,
-                "example": "task",
-                "x-insert-after": "gid"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the workspace.",
-                "example": "My Company Workspace"
-              }
-            },
-            "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.",
-            "x-docs-overrides": {
-              "properties.resource_type.example": "workspace"
-            }
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
           }
-        ],
+        },
         "description": "The workspace in which the user task list is located.",
         "readOnly": true
       },
@@ -71193,9 +71021,6 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/AllocationRequest"
-              },
-              {
                 "required": [
                   "assignee",
                   "end_date",
@@ -71204,7 +71029,64 @@
                 ],
                 "type": "object"
               }
-            ]
+            ],
+            "properties": {
+              "gid": {
+                "type": "string",
+                "description": "Globally unique identifier of the resource, as a string.",
+                "readOnly": true,
+                "example": "12345",
+                "x-insert-after": false
+              },
+              "resource_type": {
+                "type": "string",
+                "description": "The base type of this resource.",
+                "readOnly": true,
+                "example": "task",
+                "x-insert-after": "gid"
+              },
+              "start_date": {
+                "type": "string",
+                "description": "The localized day on which the allocation starts.",
+                "format": "date",
+                "example": "2024-02-28"
+              },
+              "end_date": {
+                "type": "string",
+                "description": "The localized day on which the allocation ends.",
+                "format": "date",
+                "example": "2024-02-28"
+              },
+              "effort": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "hours",
+                      "percent"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "The units used for tracking effort on an allocation, either \"hours\" or \"percent\"."
+                  },
+                  "value": {
+                    "type": "number",
+                    "description": "The numeric effort value on the allocation.",
+                    "example": 50
+                  }
+                },
+                "description": "The amount of time associated with the allocation, represented as a percentage or number of hours.",
+                "nullable": true
+              },
+              "assignee": {
+                "type": "string",
+                "description": "Globally unique identifier for the user or placeholder assigned to the allocation."
+              },
+              "parent": {
+                "type": "string",
+                "description": "Globally unique identifier for the project the allocation is on."
+              }
+            }
           }
         }
       },
@@ -71244,9 +71126,6 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/OooEntryCreateRequest"
-              },
-              {
                 "required": [
                   "user",
                   "workspace",
@@ -71255,7 +71134,44 @@
                 ],
                 "type": "object"
               }
-            ]
+            ],
+            "properties": {
+              "gid": {
+                "type": "string",
+                "description": "Globally unique identifier of the resource, as a string.",
+                "readOnly": true,
+                "example": "12345",
+                "x-insert-after": false
+              },
+              "resource_type": {
+                "type": "string",
+                "description": "The base type of this resource.",
+                "readOnly": true,
+                "example": "task",
+                "x-insert-after": "gid"
+              },
+              "start_date": {
+                "type": "string",
+                "description": "The day on which the OOO entry starts.",
+                "format": "date",
+                "example": "2024-01-01"
+              },
+              "end_date": {
+                "type": "string",
+                "description": "The day on which the OOO entry ends.",
+                "format": "date",
+                "example": "2024-01-15"
+              },
+              "user": {
+                "type": "string",
+                "description": "Globally unique identifier for the user who is out of office."
+              },
+              "workspace": {
+                "type": "string",
+                "description": "Globally unique identifier for the workspace.",
+                "example": "98765"
+              }
+            }
           }
         }
       },

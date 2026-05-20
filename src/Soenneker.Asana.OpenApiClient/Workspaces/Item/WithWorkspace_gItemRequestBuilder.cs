@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Asana.OpenApiClient.Models;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.AddUser;
+using Soenneker.Asana.OpenApiClient.Workspaces.Item.Agents;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Custom_fields;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Events;
@@ -33,6 +34,11 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.AddUser.AddUserRequestBuilder AddUser
         {
             get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.AddUser.AddUserRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agents property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Agents.AgentsRequestBuilder Agents
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The audit_log_events property</summary>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events.Audit_log_eventsRequestBuilder Audit_log_events

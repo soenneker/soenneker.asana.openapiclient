@@ -7,6 +7,7 @@ using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
 using Soenneker.Asana.OpenApiClient.Access_requests;
+using Soenneker.Asana.OpenApiClient.Agents;
 using Soenneker.Asana.OpenApiClient.Allocations;
 using Soenneker.Asana.OpenApiClient.Attachments;
 using Soenneker.Asana.OpenApiClient.Batch;
@@ -67,6 +68,11 @@ namespace Soenneker.Asana.OpenApiClient
         public global::Soenneker.Asana.OpenApiClient.Access_requests.Access_requestsRequestBuilder Access_requests
         {
             get => new global::Soenneker.Asana.OpenApiClient.Access_requests.Access_requestsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agents property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Agents.AgentsRequestBuilder Agents
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The allocations property</summary>
         public global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder Allocations

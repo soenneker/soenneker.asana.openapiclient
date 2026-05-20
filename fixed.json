@@ -292,6 +292,174 @@
         }
       }
     },
+    "/workspaces/{workspace_gid}/agents": {
+      "get": {
+        "tags": [
+          "Agents"
+        ],
+        "summary": "Get a list of agents in a workspace",
+        "description": "Returns the compact records of agents (AI Teammates) configured. Use `opt_fields` to request additional fields. in the workspace.",
+        "operationId": "getAgentsForWorkspace",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/offset"
+          },
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "behavior_guidance",
+                  "description",
+                  "name",
+                  "offset",
+                  "path",
+                  "photo",
+                  "photo.image_1024x1024",
+                  "photo.image_128x128",
+                  "photo.image_21x21",
+                  "photo.image_27x27",
+                  "photo.image_36x36",
+                  "photo.image_60x60",
+                  "resource_subtype",
+                  "uri",
+                  "workspace"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "behavior_guidance",
+              "description",
+              "name",
+              "offset",
+              "path",
+              "photo",
+              "photo.image_1024x1024",
+              "photo.image_128x128",
+              "photo.image_21x21",
+              "photo.image_27x27",
+              "photo.image_36x36",
+              "photo.image_60x60",
+              "resource_subtype",
+              "uri",
+              "workspace"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AgentResponseArray"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/workspace_path_gid"
+        }
+      ]
+    },
+    "/agents/{agent_gid}": {
+      "get": {
+        "tags": [
+          "Agents"
+        ],
+        "summary": "Get an agent",
+        "description": "Returns the complete record for a single agent (AI Teammate).",
+        "operationId": "getAgent",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "behavior_guidance",
+                  "description",
+                  "name",
+                  "photo",
+                  "photo.image_1024x1024",
+                  "photo.image_128x128",
+                  "photo.image_21x21",
+                  "photo.image_27x27",
+                  "photo.image_36x36",
+                  "photo.image_60x60",
+                  "resource_subtype",
+                  "workspace"
+                ],
+                "type": "string",
+                "additionalProperties": false
+              }
+            },
+            "example": [
+              "behavior_guidance",
+              "description",
+              "name",
+              "photo",
+              "photo.image_1024x1024",
+              "photo.image_128x128",
+              "photo.image_21x21",
+              "photo.image_27x27",
+              "photo.image_36x36",
+              "photo.image_60x60",
+              "resource_subtype",
+              "workspace"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/AgentResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/agent_path_gid"
+        }
+      ]
+    },
     "/allocations/{allocation_gid}": {
       "get": {
         "tags": [
@@ -17211,6 +17379,7 @@
                   "permissions.allowed_guest_invites",
                   "permissions.assign_roles",
                   "permissions.create_and_edit_ai_automations",
+                  "permissions.create_and_edit_ai_teammates",
                   "permissions.create_app_authorization",
                   "permissions.create_global_custom_fields",
                   "permissions.create_pat_authorization",
@@ -17246,6 +17415,7 @@
               "permissions.allowed_guest_invites",
               "permissions.assign_roles",
               "permissions.create_and_edit_ai_automations",
+              "permissions.create_and_edit_ai_teammates",
               "permissions.create_app_authorization",
               "permissions.create_global_custom_fields",
               "permissions.create_pat_authorization",
@@ -17317,6 +17487,7 @@
                   "permissions.allowed_guest_invites",
                   "permissions.assign_roles",
                   "permissions.create_and_edit_ai_automations",
+                  "permissions.create_and_edit_ai_teammates",
                   "permissions.create_app_authorization",
                   "permissions.create_global_custom_fields",
                   "permissions.create_pat_authorization",
@@ -17349,6 +17520,7 @@
               "permissions.allowed_guest_invites",
               "permissions.assign_roles",
               "permissions.create_and_edit_ai_automations",
+              "permissions.create_and_edit_ai_teammates",
               "permissions.create_app_authorization",
               "permissions.create_global_custom_fields",
               "permissions.create_pat_authorization",
@@ -17436,6 +17608,7 @@
                   "permissions.allowed_guest_invites",
                   "permissions.assign_roles",
                   "permissions.create_and_edit_ai_automations",
+                  "permissions.create_and_edit_ai_teammates",
                   "permissions.create_app_authorization",
                   "permissions.create_global_custom_fields",
                   "permissions.create_pat_authorization",
@@ -17468,6 +17641,7 @@
               "permissions.allowed_guest_invites",
               "permissions.assign_roles",
               "permissions.create_and_edit_ai_automations",
+              "permissions.create_and_edit_ai_teammates",
               "permissions.create_app_authorization",
               "permissions.create_global_custom_fields",
               "permissions.create_pat_authorization",
@@ -17538,6 +17712,7 @@
                   "permissions.allowed_guest_invites",
                   "permissions.assign_roles",
                   "permissions.create_and_edit_ai_automations",
+                  "permissions.create_and_edit_ai_teammates",
                   "permissions.create_app_authorization",
                   "permissions.create_global_custom_fields",
                   "permissions.create_pat_authorization",
@@ -17570,6 +17745,7 @@
               "permissions.allowed_guest_invites",
               "permissions.assign_roles",
               "permissions.create_and_edit_ai_automations",
+              "permissions.create_and_edit_ai_teammates",
               "permissions.create_app_authorization",
               "permissions.create_global_custom_fields",
               "permissions.create_pat_authorization",
@@ -30354,7 +30530,7 @@
           "Typeahead"
         ],
         "summary": "Get objects via typeahead",
-        "description": "\"<b>Required scope: </b><code>workspaces.typeahead:read</code>\n\nRetrieves objects in the workspace based via an auto-completion/typeahead\nsearch algorithm. This feature is meant to provide results quickly, so do\nnot rely on this API to provide extremely accurate search results. The\nresult set is limited to a single page of results with a maximum size, so\nyou won’t be able to fetch large numbers of results.\n\nThe typeahead search API provides search for objects from a single\nworkspace. This endpoint should be used to query for objects when\ncreating an auto-completion/typeahead search feature. This API is meant\nto provide results quickly and should not be relied upon for accurate or\nexhaustive search results. The results sets are limited in size and\ncannot be paginated.\n\nQueries return a compact representation of each object which is typically\nthe gid and name fields. Interested in a specific set of fields or all of\nthe fields?! Of course you are. Use field selectors to manipulate what\ndata is included in a response.\n\nResources with type `user` are returned in order of most contacted to\nleast contacted. This is determined by task assignments, adding the user\nto projects, and adding the user as a follower to tasks, messages,\netc.\n\nResources with type `project` are returned in order of recency. This is\ndetermined when the user visits the project, is added to the project, and\ncompletes tasks in the project.\n\nResources with type `task` are returned with priority placed on tasks\nthe user is following, but no guarantee on the order of those tasks.\n\nResources with type `project_template` are returned with priority\nplaced on favorited project templates.\n\nLeaving the `query` string empty or omitted will give you results, still\nfollowing the resource ordering above. This could be used to list users or\nprojects that are relevant for the requesting user's api token.\"",
+        "description": "\"<b>Required scope: </b><code>workspaces.typeahead:read</code>\n\nRetrieves objects in the workspace based via an auto-completion/typeahead\nsearch algorithm. This feature is meant to provide results quickly, so do\nnot rely on this API to provide extremely accurate search results. The\nresult set is limited to a single page of results with a maximum size, so\nyou won’t be able to fetch large numbers of results.\n\nThe typeahead search API provides search for objects from a single\nworkspace. This endpoint should be used to query for objects when\ncreating an auto-completion/typeahead search feature. This API is meant\nto provide results quickly and should not be relied upon for accurate or\nexhaustive search results. The results sets are limited in size and\ncannot be paginated.\n\nQueries return a compact representation of each object which is typically\nthe gid and name fields. Interested in a specific set of fields or all of\nthe fields?! Of course you are. Use field selectors to manipulate what\ndata is included in a response.\n\nResources with type `user` are returned in order of most contacted to\nleast contacted. This is determined by task assignments, adding the user\nto projects, and adding the user as a follower to tasks, messages,\netc.\n\nResources with type `project` are returned in order of recency. This is\ndetermined when the user visits the project, is added to the project, and\ncompletes tasks in the project.\n\nResources with type `task` are returned with priority placed on tasks\nthe user is following, but no guarantee on the order of those tasks.\n\nResources with type `project_template` are returned with priority\nplaced on favorited project templates.\n\nLeaving the `query` string empty or omitted will give you results, still\nfollowing the resource ordering above. This could be used to list users or\nprojects that are relevant for the requesting user's api token.\n\nThe `agent` type returns only agents, currently limited to AI Teammates, which are Asana's first-party agents. The `actor` type returns a combined set of users and agents.\"",
         "operationId": "typeaheadForWorkspace",
         "parameters": [
           {
@@ -30408,10 +30584,12 @@
         {
           "name": "resource_type",
           "in": "query",
-          "description": "The type of values the typeahead should return. You can choose from one of the following: `custom_field`, `goal`, `project`, `project_template`, `portfolio`, `tag`, `task`, `team`, and `user`. Note that unlike in the names of endpoints, the types listed here are in singular form (e.g. `task`). Using multiple types is not yet supported.",
+          "description": "The type of values the typeahead should return. You can choose from one of the following: `actor`, `agent`, `custom_field`, `goal`, `project`, `project_template`, `portfolio`, `tag`, `task`, `team`, and `user`. Note that unlike in the names of endpoints, the types listed here are in singular form (e.g. `task`). Using multiple types is not yet supported. The `agent` type returns only agents, currently limited to AI Teammates, which are Asana's first-party agents. The `actor` type returns a combined set of users and agents.",
           "required": true,
           "schema": {
             "enum": [
+              "actor",
+              "agent",
               "custom_field",
               "goal",
               "project",
@@ -32745,6 +32923,148 @@
   },
   "components": {
     "schemas": {
+      "AgentCompact": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "enum": [
+              "asana_teammate"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The subtype of the agent. `asana_teammate` is an Asana-built teammate.",
+            "readOnly": true,
+            "example": "asana_teammate"
+          },
+          "name": {
+            "type": "string",
+            "description": "The display name of the agent.",
+            "readOnly": true,
+            "example": "Developer Blog Writer"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "agent"
+        }
+      },
+      "AgentResponse": {
+        "required": [
+          "workspace"
+        ],
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "enum": [
+              "asana_teammate"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "The subtype of the agent. `asana_teammate` is an Asana-built teammate.",
+            "readOnly": true,
+            "example": "asana_teammate"
+          },
+          "name": {
+            "type": "string",
+            "description": "The display name of the agent.",
+            "readOnly": true,
+            "example": "Developer Blog Writer"
+          },
+          "description": {
+            "type": "string",
+            "description": "A brief description of what the agent does.",
+            "nullable": true,
+            "readOnly": true
+          },
+          "behavior_guidance": {
+            "type": "string",
+            "description": "A description of the agent's behavior.",
+            "nullable": true,
+            "readOnly": true
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/AgentResponseWorkspace"
+          },
+          "photo": {
+            "type": "object",
+            "properties": {
+              "image_21x21": {
+                "type": "string",
+                "description": "PNG image at 21x21 pixels.",
+                "format": "uri"
+              },
+              "image_27x27": {
+                "type": "string",
+                "description": "PNG image at 27x27 pixels.",
+                "format": "uri"
+              },
+              "image_36x36": {
+                "type": "string",
+                "description": "PNG image at 36x36 pixels.",
+                "format": "uri"
+              },
+              "image_60x60": {
+                "type": "string",
+                "description": "PNG image at 60x60 pixels.",
+                "format": "uri"
+              },
+              "image_128x128": {
+                "type": "string",
+                "description": "PNG image at 128x128 pixels.",
+                "format": "uri"
+              },
+              "image_1024x1024": {
+                "type": "string",
+                "description": "JPEG image at 1024x1024 pixels.",
+                "format": "uri"
+              }
+            },
+            "description": "A map of the agent's avatar image in various sizes, or null if no photo is set.",
+            "nullable": true,
+            "readOnly": true,
+            "example": {
+              "image_21x21": "https://...",
+              "image_27x27": "https://...",
+              "image_36x36": "https://...",
+              "image_60x60": "https://...",
+              "image_128x128": "https://...",
+              "image_1024x1024": "https://..."
+            }
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "agent"
+        }
+      },
       "AllocationBase": {
         "type": "object",
         "properties": {
@@ -60499,6 +60819,34 @@
           }
         }
       },
+      "AgentResponseArray": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AgentResponse"
+            }
+          },
+          "next_page": {
+            "$ref": "#/components/schemas/NextPage"
+          }
+        }
+      },
+      "AgentResponseData": {
+        "required": [
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AgentResponse"
+          }
+        }
+      },
       "AllocationResponseData": {
         "required": [
           "data"
@@ -61673,6 +62021,37 @@
             "$ref": "#/components/schemas/UserBaseResponse"
           }
         }
+      },
+      "AgentResponseWorkspace": {
+        "type": "object",
+        "allOf": [
+          {
+            "type": "object"
+          }
+        ],
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workspace.",
+            "example": "My Company Workspace"
+          }
+        },
+        "description": "The workspace this agent is instantiated within.",
+        "readOnly": true
       },
       "AllocationResponseAssignee": {
         "type": "object",
@@ -70493,6 +70872,11 @@
             "type": "boolean",
             "description": "Controls whether users with this role can use standard AI features",
             "example": true
+          },
+          "create_and_edit_ai_teammates": {
+            "type": "boolean",
+            "description": "Controls whether users with this role can create and edit AI teammates",
+            "example": true
           }
         },
         "description": "The permissions of the role."
@@ -70594,6 +70978,11 @@
           "standard_ai": {
             "type": "boolean",
             "description": "Controls whether users with this role can use standard AI features",
+            "example": true
+          },
+          "create_and_edit_ai_teammates": {
+            "type": "boolean",
+            "description": "Controls whether users with this role can create and edit AI teammates",
             "example": true
           }
         },
@@ -70726,6 +71115,11 @@
             "type": "boolean",
             "description": "Controls whether users with this role can use standard AI features",
             "example": true
+          },
+          "create_and_edit_ai_teammates": {
+            "type": "boolean",
+            "description": "Controls whether users with this role can create and edit AI teammates",
+            "example": true
           }
         },
         "description": "The permissions of the role."
@@ -70827,6 +71221,11 @@
           "standard_ai": {
             "type": "boolean",
             "description": "Controls whether users with this role can use standard AI features",
+            "example": true
+          },
+          "create_and_edit_ai_teammates": {
+            "type": "boolean",
+            "description": "Controls whether users with this role can create and edit AI teammates",
             "example": true
           }
         },
@@ -71330,6 +71729,26 @@
           "application/json; charset=UTF-8": {
             "schema": {
               "$ref": "#/components/schemas/EmptyResponseData"
+            }
+          }
+        }
+      },
+      "AgentResponseArray": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/AgentResponseArray"
+            }
+          }
+        }
+      },
+      "AgentResponseData": {
+        "description": null,
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/AgentResponseData"
             }
           }
         }
@@ -72797,6 +73216,10 @@
     {
       "name": "Access requests",
       "description": "An access request object represents a user's request to an item, such as a project or portfolio, that they do not have access to. The request is sent to the owner of the item for approval."
+    },
+    {
+      "name": "Agents",
+      "description": "An *agent* object represents a software program that can perceive its environment, reason, plan, and take autonomous actions to achieve specific goals. Agents may be built by Asana, provided by apps, or defined by the system."
     },
     {
       "name": "Allocations",

@@ -21,6 +21,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? AssignRoles { get; set; }
         /// <summary>Controls whether users with this role can create and edit AI automations</summary>
         public bool? CreateAndEditAiAutomations { get; set; }
+        /// <summary>Controls whether users with this role can create and edit AI teammates</summary>
+        public bool? CreateAndEditAiTeammates { get; set; }
         /// <summary>Controls whether users with this role can create app authorizations</summary>
         public bool? CreateAppAuthorization { get; set; }
         /// <summary>Controls whether users with this role can create global custom fields</summary>
@@ -77,6 +79,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "allowed_guest_invites", n => { AllowedGuestInvites = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions_allowed_guest_invites>(); } },
                 { "assign_roles", n => { AssignRoles = n.GetBoolValue(); } },
                 { "create_and_edit_ai_automations", n => { CreateAndEditAiAutomations = n.GetBoolValue(); } },
+                { "create_and_edit_ai_teammates", n => { CreateAndEditAiTeammates = n.GetBoolValue(); } },
                 { "create_app_authorization", n => { CreateAppAuthorization = n.GetBoolValue(); } },
                 { "create_global_custom_fields", n => { CreateGlobalCustomFields = n.GetBoolValue(); } },
                 { "create_pat_authorization", n => { CreatePatAuthorization = n.GetBoolValue(); } },
@@ -103,6 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions_allowed_guest_invites>("allowed_guest_invites", AllowedGuestInvites);
             writer.WriteBoolValue("assign_roles", AssignRoles);
             writer.WriteBoolValue("create_and_edit_ai_automations", CreateAndEditAiAutomations);
+            writer.WriteBoolValue("create_and_edit_ai_teammates", CreateAndEditAiTeammates);
             writer.WriteBoolValue("create_app_authorization", CreateAppAuthorization);
             writer.WriteBoolValue("create_global_custom_fields", CreateGlobalCustomFields);
             writer.WriteBoolValue("create_pat_authorization", CreatePatAuthorization);

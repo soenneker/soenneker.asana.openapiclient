@@ -56,6 +56,10 @@ namespace Soenneker.Asana.OpenApiClient.Roles
         #pragma warning disable CS1591
         PermissionsCreate_and_edit_ai_automations,
         #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.create_and_edit_ai_teammates")]
+        #pragma warning disable CS1591
+        PermissionsCreate_and_edit_ai_teammates,
+        #pragma warning restore CS1591
         [EnumMember(Value = "permissions.create_app_authorization")]
         #pragma warning disable CS1591
         PermissionsCreate_app_authorization,

@@ -15,6 +15,8 @@
     "version": "1.0",
     "x-public-description": "This is the interface for interacting with the [Asana Platform](https://developers.asana.com). Our API reference is generated from our [OpenAPI spec] (https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml).",
     "x-docs-schema-whitelist": [
+      "AgentCompact",
+      "AgentResponse",
       "AsanaResource",
       "AsanaNamedResource",
       "AuditLogEvent",
@@ -298,7 +300,7 @@
           "Agents"
         ],
         "summary": "Get a list of agents in a workspace",
-        "description": "Returns the compact records of agents (AI Teammates) configured. Use `opt_fields` to request additional fields. in the workspace.",
+        "description": "Returns the compact records of agents (AI Teammates) configured. Use `opt_fields` to request additional fields in the workspace.",
         "operationId": "getAgentsForWorkspace",
         "parameters": [
           {
@@ -34238,7 +34240,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -34302,7 +34305,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -34319,10 +34323,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -34685,7 +34695,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -34749,7 +34760,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -34766,10 +34778,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -34931,7 +34949,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -34995,7 +35014,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -35012,10 +35032,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -35407,7 +35433,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -35471,7 +35498,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -35488,10 +35516,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -35894,7 +35928,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -35976,10 +36011,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -38156,7 +38197,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -38220,7 +38262,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -38237,10 +38280,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -38484,7 +38533,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -38566,10 +38616,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -40070,7 +40126,8 @@
                       "multi_enum",
                       "number",
                       "date",
-                      "people"
+                      "people",
+                      "reference"
                     ],
                     "type": "string",
                     "additionalProperties": false,
@@ -40134,7 +40191,8 @@
                       "date",
                       "people",
                       "formula",
-                      "custom_id"
+                      "custom_id",
+                      "reference"
                     ],
                     "type": "string",
                     "additionalProperties": false,
@@ -40151,10 +40209,19 @@
                   "input_restrictions": {
                     "type": "array",
                     "items": {
-                      "type": "string"
+                      "enum": [
+                        "task",
+                        "project",
+                        "portfolio",
+                        "goal"
+                      ],
+                      "type": "string",
+                      "additionalProperties": false,
+                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
                     },
-                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                    "example": "task"
+                    "example": [
+                      "task"
+                    ]
                   },
                   "is_formula_field": {
                     "type": "boolean",
@@ -41650,7 +41717,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -41732,10 +41800,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -42290,7 +42364,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -42354,7 +42429,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -42371,10 +42447,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -43028,7 +43110,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -43110,10 +43193,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -44876,7 +44965,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -44958,10 +45048,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -45990,7 +46086,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -46072,10 +46169,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -47099,7 +47202,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -47181,10 +47285,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -47831,7 +47941,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -47895,7 +48006,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -47912,10 +48024,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -52590,7 +52708,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -52654,7 +52773,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -52671,10 +52791,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -54941,7 +55067,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -55023,10 +55150,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -56322,7 +56455,8 @@
                         "multi_enum",
                         "number",
                         "date",
-                        "people"
+                        "people",
+                        "reference"
                       ],
                       "type": "string",
                       "additionalProperties": false,
@@ -56404,10 +56538,16 @@
                     "input_restrictions": {
                       "type": "array",
                       "items": {
-                        "type": "string"
-                      },
-                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                      "example": "task"
+                        "enum": [
+                          "task",
+                          "project",
+                          "portfolio",
+                          "goal"
+                        ],
+                        "type": "string",
+                        "additionalProperties": false,
+                        "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                      }
                     },
                     "is_formula_field": {
                       "type": "boolean",
@@ -57528,7 +57668,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -57592,7 +57733,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -57609,10 +57751,16 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
-                  },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+                  }
                 },
                 "is_formula_field": {
                   "type": "boolean",
@@ -59210,7 +59358,8 @@
                       "multi_enum",
                       "number",
                       "date",
-                      "people"
+                      "people",
+                      "reference"
                     ],
                     "type": "string",
                     "additionalProperties": false,
@@ -59274,7 +59423,8 @@
                       "date",
                       "people",
                       "formula",
-                      "custom_id"
+                      "custom_id",
+                      "reference"
                     ],
                     "type": "string",
                     "additionalProperties": false,
@@ -59291,10 +59441,19 @@
                   "input_restrictions": {
                     "type": "array",
                     "items": {
-                      "type": "string"
+                      "enum": [
+                        "task",
+                        "project",
+                        "portfolio",
+                        "goal"
+                      ],
+                      "type": "string",
+                      "additionalProperties": false,
+                      "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
                     },
-                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                    "example": "task"
+                    "example": [
+                      "task"
+                    ]
                   },
                   "is_formula_field": {
                     "type": "boolean",
@@ -62179,7 +62338,8 @@
                   "multi_enum",
                   "number",
                   "date",
-                  "people"
+                  "people",
+                  "reference"
                 ],
                 "type": "string",
                 "additionalProperties": false,
@@ -62243,7 +62403,8 @@
                   "date",
                   "people",
                   "formula",
-                  "custom_id"
+                  "custom_id",
+                  "reference"
                 ],
                 "type": "string",
                 "additionalProperties": false,
@@ -62260,10 +62421,19 @@
               "input_restrictions": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "enum": [
+                    "task",
+                    "project",
+                    "portfolio",
+                    "goal"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
                 },
-                "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                "example": "task"
+                "example": [
+                  "task"
+                ]
               },
               "is_formula_field": {
                 "type": "boolean",
@@ -62963,7 +63133,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -63045,10 +63216,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -65222,7 +65399,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65286,7 +65464,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65303,10 +65482,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -65491,7 +65676,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65555,7 +65741,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65572,10 +65759,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -65760,7 +65953,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65824,7 +66018,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -65841,10 +66036,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -67862,7 +68063,8 @@
               "multi_enum",
               "number",
               "date",
-              "people"
+              "people",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -67926,7 +68128,8 @@
               "date",
               "people",
               "formula",
-              "custom_id"
+              "custom_id",
+              "reference"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -67943,10 +68146,16 @@
           "input_restrictions": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-            "example": "task"
+              "enum": [
+                "task",
+                "project",
+                "portfolio",
+                "goal"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
+            }
           },
           "is_formula_field": {
             "type": "boolean",
@@ -68755,7 +68964,8 @@
                     "multi_enum",
                     "number",
                     "date",
-                    "people"
+                    "people",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -68819,7 +69029,8 @@
                     "date",
                     "people",
                     "formula",
-                    "custom_id"
+                    "custom_id",
+                    "reference"
                   ],
                   "type": "string",
                   "additionalProperties": false,
@@ -68836,10 +69047,19 @@
                 "input_restrictions": {
                   "type": "array",
                   "items": {
-                    "type": "string"
+                    "enum": [
+                      "task",
+                      "project",
+                      "portfolio",
+                      "goal"
+                    ],
+                    "type": "string",
+                    "additionalProperties": false,
+                    "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value."
                   },
-                  "description": "*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.",
-                  "example": "task"
+                  "example": [
+                    "task"
+                  ]
                 },
                 "is_formula_field": {
                   "type": "boolean",

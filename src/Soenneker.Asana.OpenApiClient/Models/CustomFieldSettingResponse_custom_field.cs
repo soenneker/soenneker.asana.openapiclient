@@ -115,13 +115,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string IdPrefix { get; set; }
 #endif
-        /// <summary>*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.</summary>
+        /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_input_restrictions?>? InputRestrictions { get; set; }
 #nullable restore
 #else
-        public List<string> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_input_restrictions?> InputRestrictions { get; set; }
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
         public bool? IsFormulaField { get; set; }
@@ -231,7 +231,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "has_notifications_enabled", n => { HasNotificationsEnabled = n.GetBoolValue(); } },
                 { "html_text_value", n => { HtmlTextValue = n.GetStringValue(); } },
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
-                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_input_restrictions>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
                 { "is_global_to_workspace", n => { IsGlobalToWorkspace = n.GetBoolValue(); } },
                 { "is_value_read_only", n => { IsValueReadOnly = n.GetBoolValue(); } },
@@ -268,7 +268,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_format>("format", Format);
             writer.WriteBoolValue("has_notifications_enabled", HasNotificationsEnabled);
             writer.WriteStringValue("id_prefix", IdPrefix);
-            writer.WriteCollectionOfPrimitiveValues<string>("input_restrictions", InputRestrictions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_input_restrictions>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
             writer.WriteBoolValue("is_value_read_only", IsValueReadOnly);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field_multi_enum_values>("multi_enum_values", MultiEnumValues);

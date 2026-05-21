@@ -31,5 +31,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         People,
         #pragma warning restore CS1591
+        [EnumMember(Value = "reference")]
+        #pragma warning disable CS1591
+        Reference,
+        #pragma warning restore CS1591
     }
 }

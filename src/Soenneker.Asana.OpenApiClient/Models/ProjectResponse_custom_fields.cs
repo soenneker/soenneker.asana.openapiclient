@@ -65,13 +65,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string IdPrefix { get; set; }
 #endif
-        /// <summary>*Conditional*. Only relevant for custom fields of type `reference`. This array of strings reflects the allowed types of objects that can be written to a `reference` custom field value.</summary>
+        /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_input_restrictions?>? InputRestrictions { get; set; }
 #nullable restore
 #else
-        public List<string> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_input_restrictions?> InputRestrictions { get; set; }
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
         public bool? IsFormulaField { get; set; }
@@ -145,7 +145,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "enum_value", n => { EnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_enum_value>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_enum_value.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
-                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_input_restrictions>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
                 { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_multi_enum_values>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_multi_enum_values.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_enum_options>("enum_options", EnumOptions);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_enum_value>("enum_value", EnumValue);
             writer.WriteStringValue("id_prefix", IdPrefix);
-            writer.WriteCollectionOfPrimitiveValues<string>("input_restrictions", InputRestrictions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_input_restrictions>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_custom_fields_multi_enum_values>("multi_enum_values", MultiEnumValues);
             writer.WriteStringValue("name", Name);

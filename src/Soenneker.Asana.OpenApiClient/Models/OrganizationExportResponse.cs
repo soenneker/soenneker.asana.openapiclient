@@ -17,7 +17,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
-        /// <summary>Download this URL to retrieve the full export of the organizationin JSON format. It will be compressed in a gzip (.gz) container.*Note: May be null if the export is still in progress orfailed.  If present, this URL may only be valid for 1 hour fromthe time of retrieval. You should avoid persisting this URLsomewhere and rather refresh on demand to ensure you do not keepstale URLs.*</summary>
+        /// <summary>&quot;Download this URL to retrieve the full export of the organizationin JSON format. It will be compressed in a gzip (.gz) container.*Note: May be null if the export is still in progress orfailed.  If present, this URL may only be valid for 1 hour fromthe time of retrieval. You should avoid persisting this URLsomewhere and rather refresh on demand to ensure you do not keepstale URLs.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DownloadUrl { get; private set; }
@@ -36,10 +36,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_organization? Organization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization? Organization { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_organization Organization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization Organization { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "download_url", n => { DownloadUrl = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_organization>(global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_organization.CreateFromDiscriminatorValue); } },
+                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization>(global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_state>(); } },
             };
@@ -91,7 +91,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_organization>("organization", Organization);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization>("organization", Organization);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

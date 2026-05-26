@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.
+    /// &quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectStatusRequest : IAdditionalDataHolder, IParsable

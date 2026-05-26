@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:delete&lt;/code&gt;Deletes a story. A user can only delete stories they have created.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -185,7 +185,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -198,7 +198,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
             return new global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStory_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:read&lt;/code&gt;Returns the full record for a single story.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithStory_gItemRequestBuilderGetQueryParameters 
@@ -215,7 +215,7 @@ namespace Soenneker.Asana.OpenApiClient.Stories.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithStory_gItemRequestBuilderPutQueryParameters 

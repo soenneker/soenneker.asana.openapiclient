@@ -25,10 +25,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.The latest `status_update` posted to this portfolio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_owner? Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_owner Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner Owner { get; set; }
 #endif
         /// <summary>A url that points directly to the object within Asana.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string PermalinkUrl { get; private set; }
 #endif
-        /// <summary>The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
+        /// <summary>&quot;The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_privacy_setting? PrivacySetting { get; set; }
         /// <summary>Array of project templates that are in the portfolio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,15 +118,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*</summary>
+        /// <summary>&quot;The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*&quot;</summary>
         public Date? StartOn { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace or organization that the portfolio belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_workspace? Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace? Workspace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_workspace Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace Workspace { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse"/> and sets the default values.
@@ -156,7 +156,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_color>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_current_status_update>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_current_status_update.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_field_settings>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_field_settings.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -165,14 +165,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_members>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_members.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_owner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner.CreateFromDiscriminatorValue); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_privacy_setting>(); } },
                 { "project_templates", n => { ProjectTemplates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_project_templates>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_project_templates.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -184,18 +184,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_color>("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_current_status_update>("current_status_update", CurrentStatusUpdate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_fields>("custom_fields", CustomFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_custom_field_settings>("custom_field_settings", CustomFieldSettings);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_default_access_level>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_owner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner>("owner", Owner);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_privacy_setting>("privacy_setting", PrivacySetting);
             writer.WriteBoolValue("public", Public);
             writer.WriteDateValue("start_on", StartOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponse_workspace>("workspace", Workspace);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

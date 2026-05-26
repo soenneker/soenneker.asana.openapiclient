@@ -50,10 +50,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The permissions of the role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions? Permissions { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions? Permissions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions Permissions { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions Permissions { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace this role is associated with. Once created, roles cannot be moved to a different workspace. This attribute can only be specified at creation time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse"/> and sets the default values.
@@ -103,9 +103,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "is_standard_role", n => { IsStandardRole = n.GetBoolValue(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions>(global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions.CreateFromDiscriminatorValue); } },
+                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions>(global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -119,7 +119,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("is_standard_role", IsStandardRole);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponse_permissions>("permissions", Permissions);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions>("permissions", Permissions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

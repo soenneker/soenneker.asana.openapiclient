@@ -28,26 +28,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *member* object represents either a team or user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_member? Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember? Member { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_member Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember Member { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent Parent { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject Project { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,10 +60,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_user? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_user User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser User { get; set; }
 #endif
         /// <summary>Whether the member has full access or comment-only access to the project.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_write_access? WriteAccess { get; private set; }
@@ -94,11 +94,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_access_level>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_member>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_member.CreateFromDiscriminatorValue); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_parent.CreateFromDiscriminatorValue); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_project.CreateFromDiscriminatorValue); } },
+                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser.CreateFromDiscriminatorValue); } },
                 { "write_access", n => { WriteAccess = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_write_access>(); } },
             };
         }
@@ -109,11 +109,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_member>("member", Member);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_parent>("parent", Parent);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_project>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember>("member", Member);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject>("project", Project);
             writer.WriteStringValue("resource_type", ResourceType);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

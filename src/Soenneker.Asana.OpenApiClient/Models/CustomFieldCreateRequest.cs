@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string TextValue { get; set; }
 #endif
-        /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
+        /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldCreateRequest_type? Type { get; private set; }
         /// <summary>*Create-Only* The workspace to create a custom field in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

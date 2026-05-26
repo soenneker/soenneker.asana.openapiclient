@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
+    /// <summary>&quot;The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ProjectUpdateRequest_custom_field_settings_custom_field_privacy_setting
     {

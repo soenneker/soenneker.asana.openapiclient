@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `parent` field.* A *Goal* is an object in the goal-tracking system that helps your organization drive measurable results.
+    /// &quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `parent` field.* A *Goal* is an object in the goal-tracking system that helps your organization drive measurable results.&quot;
     /// </summary>
     [Obsolete("")]
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]

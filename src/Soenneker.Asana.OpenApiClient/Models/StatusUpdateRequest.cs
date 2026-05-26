@@ -49,7 +49,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.</summary>
+        /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_status_type? StatusType { get; set; }
         /// <summary>The text content of the status update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

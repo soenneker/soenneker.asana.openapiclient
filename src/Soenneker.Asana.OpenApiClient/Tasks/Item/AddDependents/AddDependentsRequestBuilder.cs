@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -69,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

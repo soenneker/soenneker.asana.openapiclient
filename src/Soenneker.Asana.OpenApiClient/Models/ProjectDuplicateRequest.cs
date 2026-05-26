@@ -14,7 +14,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A comma-separated list of elements to include when duplicating a project.Some elements are automatically included and cannot be excluded,while others are **optional** and must be explicitly specified in this field.**Auto-included fields (non-configurable)**- Tasks- [Project Views](https://asana.com/features/project-management/project-views)(i.e., tabs in a project such as List, Board, Dashboard, etc.)- [Rules](https://help.asana.com/s/article/rules)*Note: The Owner of the Rules copied to the new project is the user who performs the API call.If the duplication is performed using a [Service Account](/docs/authentication#/service-account),note that Service Accounts cannot access the UI to modify or pause Rules.To prevent unwanted automation behavior, consider pausing Rules in the source project before duplication —their active/paused state is preserved in the new project.***Optional fields (configurable)**- allocations- forms- members- notes- permissions- task_assignee- task_attachments- task_dates- task_dependencies- task_followers- task_notes- task_projects- task_subtasks- task_tags- task_templates- task_type_default</summary>
+        /// <summary>&quot;A comma-separated list of elements to include when duplicating a project.Some elements are automatically included and cannot be excluded,while others are **optional** and must be explicitly specified in this field.**Auto-included fields (non-configurable)**- Tasks- [Project Views](https://asana.com/features/project-management/project-views)(i.e., tabs in a project such as List, Board, Dashboard, etc.)- [Rules](https://help.asana.com/s/article/rules)*Note: The Owner of the Rules copied to the new project is the user who performs the API call.If the duplication is performed using a [Service Account](/docs/authentication#/service-account),note that Service Accounts cannot access the UI to modify or pause Rules.To prevent unwanted automation behavior, consider pausing Rules in the source project before duplication —their active/paused state is preserved in the new project.***Optional fields (configurable)**- allocations- forms- members- notes- permissions- task_assignee- task_attachments- task_dates- task_dependencies- task_followers- task_notes- task_projects- task_subtasks- task_tags- task_templates- task_type_default&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Include { get; set; }
@@ -33,10 +33,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires `should_skip_weekends` and either `start_on` or `due_on`, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest_schedule_dates? ScheduleDates { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates? ScheduleDates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest_schedule_dates ScheduleDates { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates ScheduleDates { get; set; }
 #endif
         /// <summary>Sets the team of the new project. If team is not defined, the new project will be in the same team as the the original project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "include", n => { Include = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "schedule_dates", n => { ScheduleDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest_schedule_dates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest_schedule_dates.CreateFromDiscriminatorValue); } },
+                { "schedule_dates", n => { ScheduleDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates.CreateFromDiscriminatorValue); } },
                 { "team", n => { Team = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("include", Include);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest_schedule_dates>("schedule_dates", ScheduleDates);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates>("schedule_dates", ScheduleDates);
             writer.WriteStringValue("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }

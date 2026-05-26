@@ -76,7 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -140,7 +140,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -177,7 +177,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -190,7 +190,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
             return new global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeam_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTeam_gItemRequestBuilderGetQueryParameters 

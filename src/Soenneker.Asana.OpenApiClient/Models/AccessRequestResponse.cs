@@ -36,10 +36,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_requester? Requester { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester? Requester { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_requester Requester { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester Requester { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -52,10 +52,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *target id* object represents the target resource that the requester wants access to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_target? Target { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseTarget? Target { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_target Target { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseTarget Target { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse"/> and sets the default values.
@@ -85,9 +85,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_approval_status>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "requester", n => { Requester = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_requester>(global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_requester.CreateFromDiscriminatorValue); } },
+                { "requester", n => { Requester = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester>(global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_target>(global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_target.CreateFromDiscriminatorValue); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseTarget>(global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseTarget.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

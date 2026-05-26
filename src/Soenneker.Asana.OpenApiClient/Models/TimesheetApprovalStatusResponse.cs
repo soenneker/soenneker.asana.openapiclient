@@ -43,18 +43,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_user? User { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseUser? User { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_user User { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseUser User { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse"/> and sets the default values.
@@ -87,8 +87,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_user.CreateFromDiscriminatorValue); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseUser.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

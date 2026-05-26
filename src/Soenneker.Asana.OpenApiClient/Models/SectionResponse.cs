@@ -36,10 +36,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject Project { get; set; }
 #endif
         /// <summary>*Deprecated - please use project instead*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_project.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject.CreateFromDiscriminatorValue); } },
                 { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_project>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject>("project", Project);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

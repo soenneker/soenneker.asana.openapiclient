@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_color? Color { get; set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*</summary>
+        /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_current_status? CurrentStatus { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_default_access_level? DefaultAccessLevel { get; set; }
         /// <summary>The default view (list, board, calendar, or timeline) of a project.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_default_view? DefaultView { get; set; }
-        /// <summary>*Deprecated: new integrations should prefer the `due_on` field.*</summary>
+        /// <summary>&quot;*Deprecated: new integrations should prefer the `due_on` field.*&quot;</summary>
         public Date? DueDate { get; set; }
         /// <summary>The day on which this project is due. This takes a date with format YYYY-MM-DD.</summary>
         public Date? DueOn { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_minimum_access_level_for_customization? MinimumAccessLevelForCustomization { get; set; }
         /// <summary>The minimum access level needed for project members to share the project and manage project memberships.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_minimum_access_level_for_sharing? MinimumAccessLevelForSharing { get; set; }
-        /// <summary>The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*</summary>
+        /// <summary>&quot;The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Owner { get; set; }
 #endif
-        /// <summary>The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.</summary>
+        /// <summary>&quot;The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest_privacy_setting? PrivacySetting { get; set; }
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
@@ -139,9 +139,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*</summary>
+        /// <summary>&quot;The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*&quot;</summary>
         public Date? StartOn { get; set; }
-        /// <summary>*Deprecated:* Updating the team a project is shared with is deprecated. Use `POST /memberships` with `{ parent: project, member: team }` instead to manage team sharing.</summary>
+        /// <summary>&quot;*Deprecated:* Updating the team a project is shared with is deprecated. Use `POST /memberships` with `{ parent: project, member: team }` instead to manage team sharing.&quot;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

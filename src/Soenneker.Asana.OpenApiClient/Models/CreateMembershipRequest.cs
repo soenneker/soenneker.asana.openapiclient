@@ -38,7 +38,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Parent { get; set; }
 #endif
-        /// <summary>*Deprecated: new integrations should use access_level* The role given to the member. Optional argument, will default to `commenter` for goals and the default project role for projects. Can be `editor` or `commenter` for goals. Can be `admin`,`editor` or `commenter` for projects.</summary>
+        /// <summary>&quot;*Deprecated: new integrations should use access_level* The role given to the member. Optional argument, will default to `commenter` for goals and the default project role for projects. Can be `editor` or `commenter` for goals. Can be `admin`,`editor` or `commenter` for projects.&quot;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

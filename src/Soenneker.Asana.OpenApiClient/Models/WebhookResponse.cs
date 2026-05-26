@@ -56,10 +56,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_resource? Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource? Resource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_resource Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource Resource { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "last_failure_content", n => { LastFailureContent = n.GetStringValue(); } },
                 { "last_success_at", n => { LastSuccessAt = n.GetDateTimeOffsetValue(); } },
                 { "next_attempt_after", n => { NextAttemptAfter = n.GetDateTimeOffsetValue(); } },
-                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_resource>(global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_resource.CreateFromDiscriminatorValue); } },
+                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource>(global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "target", n => { Target = n.GetStringValue(); } },
             };
@@ -125,7 +125,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters>("filters", Filters);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_resource>("resource", Resource);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource>("resource", Resource);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

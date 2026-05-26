@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddCustomFieldSetting
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddCustomFieldSetting
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddCustomFieldSetting
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

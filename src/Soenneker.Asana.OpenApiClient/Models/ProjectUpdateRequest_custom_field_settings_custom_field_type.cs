@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
+    /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ProjectUpdateRequest_custom_field_settings_custom_field_type
     {

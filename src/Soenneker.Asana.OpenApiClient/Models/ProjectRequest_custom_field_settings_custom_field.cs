@@ -157,7 +157,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>Only relevant for custom fields of type `Number`. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.The identifier format will always have a precision of 0.</summary>
         public int? Precision { get; set; }
-        /// <summary>The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
+        /// <summary>&quot;The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings_custom_field_privacy_setting? PrivacySetting { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `reference`. This array of objects reflects the values of a `reference` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,7 +187,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string TextValue { get; set; }
 #endif
-        /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
+        /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings_custom_field_type? Type { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings_custom_field"/> and sets the default values.

@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TagResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TagResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TagResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TagResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TagResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TagResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,7 +130,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -161,7 +161,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             return new global::Soenneker.Asana.OpenApiClient.Tags.TagsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderGetQueryParameters 
@@ -169,7 +169,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]
@@ -201,7 +201,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Creates a new tag in a workspace or organization.Every tag is required to be created in a specific workspace ororganization, and this cannot be changed once set. Note that you can usethe workspace parameter regardless of whether or not it is anorganization.Returns the full record of the newly created tag.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderPostQueryParameters 

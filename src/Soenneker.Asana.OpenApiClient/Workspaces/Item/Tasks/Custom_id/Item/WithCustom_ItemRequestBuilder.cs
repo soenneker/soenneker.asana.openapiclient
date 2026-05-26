@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns a task given a custom ID shortcode.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns a task given a custom ID shortcode.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns a task given a custom ID shortcode.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns a task given a custom ID shortcode.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

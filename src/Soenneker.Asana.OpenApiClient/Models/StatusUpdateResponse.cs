@@ -18,20 +18,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_author? Author { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseAuthor? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_author Author { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseAuthor Author { get; set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_likes> Likes { get; private set; }
 #endif
-        /// <summary>The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the status.*</summary>
+        /// <summary>&quot;The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the status.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>*Deprecated - please use likes instead* The number of users who have hearted this status.</summary>
         public int? NumHearts { get; private set; }
@@ -78,10 +78,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The parent of the status update. This can be a project, goal or portfolio, and indicates that this status was sent on that object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent Parent { get; set; }
 #endif
         /// <summary>Summary of emoji reactions on this status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,7 +101,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.</summary>
+        /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_status_type? StatusType { get; set; }
         /// <summary>The text content of the status update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,9 +144,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_author>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_author.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseAuthor>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseAuthor.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
                 { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -156,7 +156,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "num_hearts", n => { NumHearts = n.GetIntValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_parent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent.CreateFromDiscriminatorValue); } },
                 { "reaction_summary", n => { ReactionSummary = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_resource_subtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
@@ -172,11 +172,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_author>("author", Author);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseAuthor>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteBoolValue("liked", Liked);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_parent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent>("parent", Parent);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_status_type>("status_type", StatusType);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("title", Title);

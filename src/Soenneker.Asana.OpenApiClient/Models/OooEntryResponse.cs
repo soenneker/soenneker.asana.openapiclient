@@ -19,10 +19,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>The day on which the OOO entry ends.</summary>
         public Date? EndDate { get; set; }
@@ -47,10 +47,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_user? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_user User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse"/> and sets the default values.
@@ -77,12 +77,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -92,10 +92,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteDateValue("end_date", EndDate);
             writer.WriteDateValue("start_date", StartDate);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponse_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

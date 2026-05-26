@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Events
         {
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.
+        /// &quot;Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Events
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.
+        /// &quot;Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Events
             return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Events.EventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.
+        /// &quot;Returns the full record for all events that have occurred since the sync token was created.The response is a list of events and the schema of each event is as described [here](/reference/events).Asana limits a single sync token to 1000 events. If more than 1000 events exist for a given domain, `has_more: true` will be returned in the response, indicating that there are more events to pull.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 

@@ -26,10 +26,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_new_resource_export? NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport? NewResourceExport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_new_resource_export NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport NewResourceExport { get; set; }
 #endif
         /// <summary>A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_new_resource_export>(global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_new_resource_export.CreateFromDiscriminatorValue); } },
+                { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport>(global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_status>(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_new_resource_export>("new_resource_export", NewResourceExport);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport>("new_resource_export", NewResourceExport);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

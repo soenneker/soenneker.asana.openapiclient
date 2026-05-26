@@ -16,30 +16,30 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The entity that triggered the event. Will typically be a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_actor? Actor { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActor? Actor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_actor Actor { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActor Actor { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The context from which this event originated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_context? Context { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContext? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_context Context { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContext Context { get; set; }
 #endif
         /// <summary>The time the event was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Event specific details. The schema will vary depending on the `event_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_details? Details { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventDetails? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_details Details { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventDetails Details { get; set; }
 #endif
         /// <summary>The category that this `event_type` belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,10 +68,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The primary object that was affected by this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_resource? Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventResource? Resource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_resource Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventResource Resource { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent"/> and sets the default values.
@@ -98,14 +98,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_actor>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_actor.CreateFromDiscriminatorValue); } },
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_context>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_context.CreateFromDiscriminatorValue); } },
+                { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActor>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActor.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContext>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContext.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_details>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_details.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventDetails>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventDetails.CreateFromDiscriminatorValue); } },
                 { "event_category", n => { EventCategory = n.GetStringValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_resource>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_resource.CreateFromDiscriminatorValue); } },
+                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventResource>(global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventResource.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -115,14 +115,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_actor>("actor", Actor);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_context>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActor>("actor", Actor);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContext>("context", Context);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventDetails>("details", Details);
             writer.WriteStringValue("event_category", EventCategory);
             writer.WriteStringValue("event_type", EventType);
             writer.WriteStringValue("gid", Gid);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEvent_resource>("resource", Resource);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventResource>("resource", Resource);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

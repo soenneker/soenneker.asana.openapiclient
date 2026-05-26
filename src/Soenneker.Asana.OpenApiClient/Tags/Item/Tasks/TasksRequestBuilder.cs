@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item.Tasks
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item.Tasks
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item.Tasks
             return new global::Soenneker.Asana.OpenApiClient.Tags.Item.Tasks.TasksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TasksRequestBuilderGetQueryParameters 
@@ -101,7 +101,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item.Tasks
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]

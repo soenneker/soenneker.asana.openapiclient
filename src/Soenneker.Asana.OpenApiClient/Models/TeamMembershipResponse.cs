@@ -40,18 +40,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_team? Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_team Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam Team { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_user? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_user User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse"/> and sets the default values.
@@ -83,8 +83,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "is_guest", n => { IsGuest = n.GetBoolValue(); } },
                 { "is_limited_access", n => { IsLimitedAccess = n.GetBoolValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_team>(global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_team.CreateFromDiscriminatorValue); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_user.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -96,8 +96,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("is_admin", IsAdmin);
             writer.WriteBoolValue("is_guest", IsGuest);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_team>("team", Team);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

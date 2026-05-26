@@ -25,7 +25,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `parent` field.* A *Goal* is an object in the goal-tracking system that helps your organization drive measurable results.</summary>
+        /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `parent` field.* A *Goal* is an object in the goal-tracking system that helps your organization drive measurable results.&quot;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,10 +66,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; set; }
 #endif
-        /// <summary>*Deprecated: Describes if the member is a commenter or editor in goal.*</summary>
+        /// <summary>&quot;*Deprecated: Describes if the member is a commenter or editor in goal.*&quot;</summary>
         [Obsolete("")]
         public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseMember1_role? Role { get; set; }
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.*Deprecated: new integrations should prefer the `member` field.* A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
+        /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.*Deprecated: new integrations should prefer the `member` field.* A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.&quot;</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

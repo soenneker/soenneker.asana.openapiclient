@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:delete&lt;/code&gt;Deletes a specific, existing attachment.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:delete&lt;/code&gt;Deletes a specific, existing attachment.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:delete&lt;/code&gt;Deletes a specific, existing attachment.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:delete&lt;/code&gt;Deletes a specific, existing attachment.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -125,7 +125,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -153,7 +153,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments.Item
             return new global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachment_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;attachments:read&lt;/code&gt;Get the full record for a single attachment.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithAttachment_gItemRequestBuilderGetQueryParameters 

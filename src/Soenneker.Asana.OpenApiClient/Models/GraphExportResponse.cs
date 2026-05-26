@@ -26,10 +26,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *graph_export* object represents a request to export the data starting from a parent object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_new_graph_export? NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport? NewGraphExport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_new_graph_export NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport NewGraphExport { get; set; }
 #endif
         /// <summary>A *graph_export* object represents a request to export the data starting from a parent object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "new_graph_export", n => { NewGraphExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_new_graph_export>(global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_new_graph_export.CreateFromDiscriminatorValue); } },
+                { "new_graph_export", n => { NewGraphExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport>(global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_status>(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponse_new_graph_export>("new_graph_export", NewGraphExport);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport>("new_graph_export", NewGraphExport);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

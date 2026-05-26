@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
             return new global::Soenneker.Asana.OpenApiClient.Users.Item.User_task_list.User_task_listRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user&apos;s task list.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class User_task_listRequestBuilderGetQueryParameters 

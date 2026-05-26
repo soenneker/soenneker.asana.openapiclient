@@ -23,7 +23,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>*Conditional.* A whitelist of fields for events which will pass the filter when the resource is changed. These can be any combination of the fields on the resources themselves. This field is only valid for `action` of type `changed`*Note: Subscriptions created on higher-level resources such as a Workspace, Team, or Portfolio do not support fields.*</summary>
+        /// <summary>&quot;*Conditional.* A whitelist of fields for events which will pass the filter when the resource is changed. These can be any combination of the fields on the resources themselves. This field is only valid for `action` of type `changed`*Note: Subscriptions created on higher-level resources such as a Workspace, Team, or Portfolio do not support fields.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Fields { get; set; }

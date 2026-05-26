@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Users
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Users
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.UserResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.UserResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,12 +93,12 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Users
             return new global::Soenneker.Asana.OpenApiClient.Teams.Item.Users.UsersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the compact records for all users that are members of the team.Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]

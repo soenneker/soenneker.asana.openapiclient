@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.
+    /// &quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectStatusResponse : IAdditionalDataHolder, IParsable
@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_author? Author { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_author Author { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor Author { get; set; }
 #endif
         /// <summary>The color associated with the status update.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color? Color { get; set; }
@@ -30,10 +30,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,7 +51,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string HtmlText { get; set; }
 #endif
-        /// <summary>The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the project status.*</summary>
+        /// <summary>&quot;The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the project status.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,10 +102,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_author>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_author.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor.CreateFromDiscriminatorValue); } },
                 { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_text", n => { HtmlText = n.GetStringValue(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
@@ -121,9 +121,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_author>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor>("author", Author);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color>("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("title", Title);

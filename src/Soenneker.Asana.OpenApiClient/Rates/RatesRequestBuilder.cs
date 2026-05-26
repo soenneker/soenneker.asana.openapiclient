@@ -152,7 +152,7 @@ namespace Soenneker.Asana.OpenApiClient.Rates
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -173,7 +173,7 @@ namespace Soenneker.Asana.OpenApiClient.Rates
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]

@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.User_task_lists.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.User_task_lists.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,7 +99,7 @@ namespace Soenneker.Asana.OpenApiClient.User_task_lists.Item
             return new global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUser_task_list_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the full record for a user task list.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUser_task_list_gItemRequestBuilderGetQueryParameters 

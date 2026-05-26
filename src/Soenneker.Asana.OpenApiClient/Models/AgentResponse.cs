@@ -68,10 +68,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The workspace this agent is instantiated within.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AgentResponse"/> and sets the default values.
@@ -105,7 +105,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_resource_subtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

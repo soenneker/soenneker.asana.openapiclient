@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData"/></returns>
         /// <param name="body">The request body</param>
@@ -73,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -104,7 +104,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
             return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.Enum_optionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates an enum option and adds it to this custom field’s list of enum options. A custom field can have at most 500 enum options (including disabled options). By default new enum options are inserted at the end of a custom field’s list.Locked custom fields can only have enum options added by the user who locked the field.Returns the full record of the newly created enum option.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Enum_optionsRequestBuilderPostQueryParameters 

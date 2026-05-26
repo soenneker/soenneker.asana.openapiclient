@@ -24,7 +24,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.</summary>
+        /// <summary>&quot;The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_privacy_setting? PrivacySetting { get; set; }
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]

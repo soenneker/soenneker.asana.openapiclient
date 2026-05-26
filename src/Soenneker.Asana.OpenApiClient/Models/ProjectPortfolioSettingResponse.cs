@@ -30,18 +30,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The portfolio associated with this setting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_portfolio? Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio? Portfolio { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_portfolio Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio Portfolio { get; set; }
 #endif
         /// <summary>The project associated with this setting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject Project { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,8 +79,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "is_access_control_inherited", n => { IsAccessControlInherited = n.GetBoolValue(); } },
-                { "portfolio", n => { Portfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_portfolio>(global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_portfolio.CreateFromDiscriminatorValue); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_project.CreateFromDiscriminatorValue); } },
+                { "portfolio", n => { Portfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio>(global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -92,8 +92,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("is_access_control_inherited", IsAccessControlInherited);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_portfolio>("portfolio", Portfolio);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse_project>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio>("portfolio", Portfolio);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject>("project", Project);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

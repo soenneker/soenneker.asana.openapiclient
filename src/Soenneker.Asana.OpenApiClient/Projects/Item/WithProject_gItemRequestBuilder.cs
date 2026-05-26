@@ -130,7 +130,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:delete&lt;/code&gt;A specific, existing project can be deleted by making a DELETE request onthe URL for that project.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:delete&lt;/code&gt;A specific, existing project can be deleted by making a DELETE request onthe URL for that project.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -161,7 +161,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -192,7 +192,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -225,7 +225,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:delete&lt;/code&gt;A specific, existing project can be deleted by making a DELETE request onthe URL for that project.Returns an empty data record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:delete&lt;/code&gt;A specific, existing project can be deleted by making a DELETE request onthe URL for that project.Returns an empty data record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -244,7 +244,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -263,7 +263,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -281,7 +281,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -294,7 +294,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
             return new global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProject_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete project record for a single project.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProject_gItemRequestBuilderGetQueryParameters 
@@ -311,7 +311,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing project can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated project record.**Deprecation notice:** Updating the `team` field is deprecated. When thisfield is included in the request, the `Asana-Change` response header willindicate an affected deprecation. Clients should switch to using`POST /memberships` with `{ parent: project, member: team }` to share aproject with a team.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProject_gItemRequestBuilderPutQueryParameters 

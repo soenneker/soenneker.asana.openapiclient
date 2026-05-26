@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string TextValue { get; set; }
 #endif
-        /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
+        /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields_type? Type { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields"/> and sets the default values.

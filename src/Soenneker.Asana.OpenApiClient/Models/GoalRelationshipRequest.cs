@@ -38,18 +38,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The goal that the supporting resource supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supported_goal? SupportedGoal { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportedGoal? SupportedGoal { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supported_goal SupportedGoal { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportedGoal SupportedGoal { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The supporting resource that supports the goal. This can be either a project, task, portfolio, or goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supporting_resource? SupportingResource { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportingResource? SupportingResource { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supporting_resource SupportingResource { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportingResource SupportingResource { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest"/> and sets the default values.
@@ -80,8 +80,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_resource_subtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "supported_goal", n => { SupportedGoal = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supported_goal>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supported_goal.CreateFromDiscriminatorValue); } },
-                { "supporting_resource", n => { SupportingResource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supporting_resource>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequest_supporting_resource.CreateFromDiscriminatorValue); } },
+                { "supported_goal", n => { SupportedGoal = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportedGoal>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportedGoal.CreateFromDiscriminatorValue); } },
+                { "supporting_resource", n => { SupportingResource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportingResource>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipRequestSupportingResource.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

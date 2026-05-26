@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Enum_options.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Enum_options.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Enum_options.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Enum_options.Item
             return new global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnum_option_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Updates an existing enum option. Enum custom fields require at least one enabled enum option.Locked custom fields can only be updated by the user who locked the field.Returns the full record of the updated enum option.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithEnum_option_gItemRequestBuilderPutQueryParameters 

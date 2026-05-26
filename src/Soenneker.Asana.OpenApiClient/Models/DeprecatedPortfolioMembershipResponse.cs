@@ -28,10 +28,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.Portfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_portfolio? Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio? Portfolio { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_portfolio Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio Portfolio { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,10 +44,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_user? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_user User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse"/> and sets the default values.
@@ -76,9 +76,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_access_level>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "portfolio", n => { Portfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_portfolio>(global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_portfolio.CreateFromDiscriminatorValue); } },
+                { "portfolio", n => { Portfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio>(global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,8 +88,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_portfolio>("portfolio", Portfolio);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio>("portfolio", Portfolio);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

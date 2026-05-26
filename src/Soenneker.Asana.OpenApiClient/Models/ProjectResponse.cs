@@ -42,7 +42,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_created_from_template CreatedFromTemplate { get; set; }
 #endif
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*</summary>
+        /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_current_status? CurrentStatus { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_default_access_level? DefaultAccessLevel { get; set; }
         /// <summary>The default view (list, board, calendar, or timeline) of a project.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_default_view? DefaultView { get; set; }
-        /// <summary>*Deprecated: new integrations should prefer the `due_on` field.*</summary>
+        /// <summary>&quot;*Deprecated: new integrations should prefer the `due_on` field.*&quot;</summary>
         public Date? DueDate { get; set; }
         /// <summary>The day on which this project is due. This takes a date with format YYYY-MM-DD.</summary>
         public Date? DueOn { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_minimum_access_level_for_customization? MinimumAccessLevelForCustomization { get; set; }
         /// <summary>The minimum access level needed for project members to share the project and manage project memberships.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_minimum_access_level_for_sharing? MinimumAccessLevelForSharing { get; set; }
-        /// <summary>The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*</summary>
+        /// <summary>&quot;The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The current owner of the project, may be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_owner? Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_owner Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseOwner Owner { get; set; }
 #endif
         /// <summary>A url that points directly to the object within Asana.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -154,7 +154,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string PermalinkUrl { get; private set; }
 #endif
-        /// <summary>The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.</summary>
+        /// <summary>&quot;The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.&quot;</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_privacy_setting? PrivacySetting { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *Project Brief* allows you to explain the what and why of the project to your team.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *Project Brief* allows you to explain the what and why of the project to your team.[Opt In](/docs/inputoutput-options). The project brief associated with this project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,23 +175,23 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*</summary>
+        /// <summary>&quot;The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*&quot;</summary>
         public Date? StartOn { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.The team that this project is shared with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_team? Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_team Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam Team { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time. If the workspace for your project is an organization, you must also supply a `team` in the request body.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse"/> and sets the default values.
@@ -243,15 +243,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_owner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseOwner.CreateFromDiscriminatorValue); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_privacy_setting>(); } },
                 { "project_brief", n => { ProjectBrief = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_project_brief>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_project_brief.CreateFromDiscriminatorValue); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_team>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_team.CreateFromDiscriminatorValue); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -276,12 +276,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_minimum_access_level_for_sharing>("minimum_access_level_for_sharing", MinimumAccessLevelForSharing);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_owner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseOwner>("owner", Owner);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_privacy_setting>("privacy_setting", PrivacySetting);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_project_brief>("project_brief", ProjectBrief);
             writer.WriteBoolValue("public", Public);
             writer.WriteDateValue("start_on", StartOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponse_team>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam>("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

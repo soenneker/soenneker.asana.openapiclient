@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_created_by? CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseCreatedBy? CreatedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_created_by CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseCreatedBy CreatedBy { get; private set; }
 #endif
         /// <summary>The currency code of the rate, set at the domain level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,20 +42,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseParent Parent { get; set; }
 #endif
         /// <summary>The monetary value of the rate.</summary>
         public double? Rate { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_resource? Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseResource? Resource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RateResponse_resource Resource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateResponseResource Resource { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,12 +90,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.RateResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.RateResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.RateResponse_parent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.RateResponseParent.CreateFromDiscriminatorValue); } },
                 { "rate", n => { Rate = n.GetDoubleValue(); } },
-                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponse_resource>(global::Soenneker.Asana.OpenApiClient.Models.RateResponse_resource.CreateFromDiscriminatorValue); } },
+                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponseResource>(global::Soenneker.Asana.OpenApiClient.Models.RateResponseResource.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -106,9 +106,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponse_parent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponseParent>("parent", Parent);
             writer.WriteDoubleValue("rate", Rate);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponse_resource>("resource", Resource);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateResponseResource>("resource", Resource);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

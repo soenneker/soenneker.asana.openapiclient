@@ -17,10 +17,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.EmptyResponse? Data { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.EmptyResponse Data { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData_data Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponse>(global::Soenneker.Asana.OpenApiClient.Models.EmptyResponse.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData_data>(global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponse>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData_data>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

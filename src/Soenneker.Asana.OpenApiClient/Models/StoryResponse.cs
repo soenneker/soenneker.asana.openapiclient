@@ -18,60 +18,60 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_assignee? Assignee { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee? Assignee { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_assignee Assignee { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee Assignee { get; private set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_custom_field? CustomField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField? CustomField { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_custom_field CustomField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField CustomField { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_dependency? Dependency { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDependency? Dependency { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_dependency Dependency { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDependency Dependency { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicated_from? DuplicatedFrom { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicatedFrom? DuplicatedFrom { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicated_from DuplicatedFrom { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicatedFrom DuplicatedFrom { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicate_of? DuplicateOf { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf? DuplicateOf { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicate_of DuplicateOf { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf DuplicateOf { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_follower? Follower { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseFollower? Follower { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_follower Follower { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseFollower Follower { get; private set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,26 +126,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_dates? NewDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDates? NewDates { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_dates NewDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDates NewDates { get; private set; }
 #endif
         /// <summary>The new_date_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_date_value? NewDateValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDateValue? NewDateValue { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_date_value NewDateValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDateValue NewDateValue { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_enum_value? NewEnumValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewEnumValue? NewEnumValue { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_enum_value NewEnumValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewEnumValue NewEnumValue { get; private set; }
 #endif
         /// <summary>*Conditional*. The new value of a multi-enum custom field story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,10 +184,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_section? NewSection { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewSection? NewSection { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_section NewSection { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewSection NewSection { get; private set; }
 #endif
         /// <summary>*Conditional* The new value of a text-type field after it was updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -212,26 +212,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_dates? OldDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDates? OldDates { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_dates OldDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDates OldDates { get; private set; }
 #endif
         /// <summary>The old_date_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_date_value? OldDateValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDateValue? OldDateValue { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_date_value OldDateValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDateValue OldDateValue { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_enum_value? OldEnumValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldEnumValue? OldEnumValue { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_enum_value OldEnumValue { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldEnumValue OldEnumValue { get; private set; }
 #endif
         /// <summary>*Conditional*. The old value of a multi-enum custom field story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -270,10 +270,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_section? OldSection { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldSection? OldSection { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_section OldSection { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldSection OldSection { get; private set; }
 #endif
         /// <summary>*Conditional* The previous value of a text-type field before it was updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -283,7 +283,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string OldTextValue { get; private set; }
 #endif
-        /// <summary>*Conditional*. A collection of previews to be displayed in the story.*Note: This property only exists for comment stories.*</summary>
+        /// <summary>&quot;*Conditional*. A collection of previews to be displayed in the story.*Note: This property only exists for comment stories.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_previews>? Previews { get; private set; }
@@ -294,10 +294,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_project? Project { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseProject? Project { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_project Project { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseProject Project { get; private set; }
 #endif
         /// <summary>Summary of emoji reactions on this story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -330,34 +330,34 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A story represents an activity associated with an object in the Asana system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_story? Story { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStory? Story { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_story Story { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStory Story { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_tag? Tag { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTag? Tag { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_tag Tag { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTag Tag { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.The object this story is associated with. Currently may only be a task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_target? Target { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTarget? Target { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_target Target { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTarget Target { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_task? Task { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTask? Task { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_task Task { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTask Task { get; private set; }
 #endif
         /// <summary>The plain text of the comment to add. Cannot be used with html_text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -394,14 +394,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_assignee>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_assignee.CreateFromDiscriminatorValue); } },
+                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_created_by.CreateFromDiscriminatorValue); } },
-                { "custom_field", n => { CustomField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_custom_field>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_custom_field.CreateFromDiscriminatorValue); } },
-                { "dependency", n => { Dependency = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_dependency>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_dependency.CreateFromDiscriminatorValue); } },
-                { "duplicate_of", n => { DuplicateOf = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicate_of>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicate_of.CreateFromDiscriminatorValue); } },
-                { "duplicated_from", n => { DuplicatedFrom = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicated_from>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_duplicated_from.CreateFromDiscriminatorValue); } },
-                { "follower", n => { Follower = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_follower>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_follower.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy.CreateFromDiscriminatorValue); } },
+                { "custom_field", n => { CustomField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField.CreateFromDiscriminatorValue); } },
+                { "dependency", n => { Dependency = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDependency>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDependency.CreateFromDiscriminatorValue); } },
+                { "duplicate_of", n => { DuplicateOf = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf.CreateFromDiscriminatorValue); } },
+                { "duplicated_from", n => { DuplicatedFrom = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicatedFrom>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicatedFrom.CreateFromDiscriminatorValue); } },
+                { "follower", n => { Follower = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseFollower>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseFollower.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
                 { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_hearts>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_hearts.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -412,40 +412,40 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "liked", n => { Liked = n.GetBoolValue(); } },
                 { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_likes>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_likes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "new_approval_status", n => { NewApprovalStatus = n.GetStringValue(); } },
-                { "new_date_value", n => { NewDateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_date_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_date_value.CreateFromDiscriminatorValue); } },
-                { "new_dates", n => { NewDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_dates>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_dates.CreateFromDiscriminatorValue); } },
-                { "new_enum_value", n => { NewEnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_enum_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_enum_value.CreateFromDiscriminatorValue); } },
+                { "new_date_value", n => { NewDateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDateValue>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDateValue.CreateFromDiscriminatorValue); } },
+                { "new_dates", n => { NewDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDates>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDates.CreateFromDiscriminatorValue); } },
+                { "new_enum_value", n => { NewEnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewEnumValue>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewEnumValue.CreateFromDiscriminatorValue); } },
                 { "new_multi_enum_values", n => { NewMultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_multi_enum_values>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_multi_enum_values.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "new_name", n => { NewName = n.GetStringValue(); } },
                 { "new_number_value", n => { NewNumberValue = n.GetIntValue(); } },
                 { "new_people_value", n => { NewPeopleValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_people_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_people_value.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "new_resource_subtype", n => { NewResourceSubtype = n.GetStringValue(); } },
-                { "new_section", n => { NewSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_section>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_new_section.CreateFromDiscriminatorValue); } },
+                { "new_section", n => { NewSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewSection>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewSection.CreateFromDiscriminatorValue); } },
                 { "new_text_value", n => { NewTextValue = n.GetStringValue(); } },
                 { "num_hearts", n => { NumHearts = n.GetIntValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
                 { "old_approval_status", n => { OldApprovalStatus = n.GetStringValue(); } },
-                { "old_date_value", n => { OldDateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_date_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_date_value.CreateFromDiscriminatorValue); } },
-                { "old_dates", n => { OldDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_dates>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_dates.CreateFromDiscriminatorValue); } },
-                { "old_enum_value", n => { OldEnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_enum_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_enum_value.CreateFromDiscriminatorValue); } },
+                { "old_date_value", n => { OldDateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDateValue>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDateValue.CreateFromDiscriminatorValue); } },
+                { "old_dates", n => { OldDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDates>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDates.CreateFromDiscriminatorValue); } },
+                { "old_enum_value", n => { OldEnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldEnumValue>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldEnumValue.CreateFromDiscriminatorValue); } },
                 { "old_multi_enum_values", n => { OldMultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_multi_enum_values>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_multi_enum_values.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "old_name", n => { OldName = n.GetStringValue(); } },
                 { "old_number_value", n => { OldNumberValue = n.GetIntValue(); } },
                 { "old_people_value", n => { OldPeopleValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_people_value>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_people_value.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "old_resource_subtype", n => { OldResourceSubtype = n.GetStringValue(); } },
-                { "old_section", n => { OldSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_section>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_old_section.CreateFromDiscriminatorValue); } },
+                { "old_section", n => { OldSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldSection>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldSection.CreateFromDiscriminatorValue); } },
                 { "old_text_value", n => { OldTextValue = n.GetStringValue(); } },
                 { "previews", n => { Previews = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_previews>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_previews.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_project.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseProject.CreateFromDiscriminatorValue); } },
                 { "reaction_summary", n => { ReactionSummary = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_reaction_summary>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_reaction_summary.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_source>(); } },
                 { "sticker_name", n => { StickerName = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_sticker_name>(); } },
-                { "story", n => { Story = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_story>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_story.CreateFromDiscriminatorValue); } },
-                { "tag", n => { Tag = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_tag>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_tag.CreateFromDiscriminatorValue); } },
-                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_target>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_target.CreateFromDiscriminatorValue); } },
-                { "task", n => { Task = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_task>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_task.CreateFromDiscriminatorValue); } },
+                { "story", n => { Story = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStory>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStory.CreateFromDiscriminatorValue); } },
+                { "tag", n => { Tag = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTag>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTag.CreateFromDiscriminatorValue); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTarget>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTarget.CreateFromDiscriminatorValue); } },
+                { "task", n => { Task = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTask>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseTask.CreateFromDiscriminatorValue); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_type>(); } },
             };
@@ -457,7 +457,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteBoolValue("is_pinned", IsPinned);
             writer.WriteStringValue("old_name", OldName);

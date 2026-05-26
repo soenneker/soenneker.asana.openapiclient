@@ -73,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -123,7 +123,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -151,7 +151,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item
             return new global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProject_template_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_templates:read&lt;/code&gt;Returns the complete project template record for a single project template.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProject_template_gItemRequestBuilderGetQueryParameters 

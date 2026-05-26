@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.ParentGoals
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.ParentGoals
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.GoalResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -95,7 +95,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.ParentGoals
             return new global::Soenneker.Asana.OpenApiClient.Goals.Item.ParentGoals.ParentGoalsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns a compact representation of all of the parent goals of a goal.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ParentGoalsRequestBuilderGetQueryParameters 

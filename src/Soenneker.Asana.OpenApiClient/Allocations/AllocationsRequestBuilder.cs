@@ -94,11 +94,11 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -141,18 +141,18 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsPostRequestBody body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -183,7 +183,7 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]

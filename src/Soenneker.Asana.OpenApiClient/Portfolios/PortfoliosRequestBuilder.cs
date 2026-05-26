@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,7 +130,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/portfolios{?opt_fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -161,7 +161,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return new global::Soenneker.Asana.OpenApiClient.Portfolios.PortfoliosRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation that are owned by the current API user.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PortfoliosRequestBuilderGetQueryParameters 
@@ -169,7 +169,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]
@@ -211,7 +211,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Creates a new portfolio in the given workspace with the supplied name.Note that portfolios created in the Asana UI may have some state(like the “Priority” custom field) which is automatically addedto the portfolio when it is created. Portfolios created via ourAPI will *not* be created with the same initial state to allowintegrations to create their own starting state on a portfolio.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PortfoliosRequestBuilderPostQueryParameters 

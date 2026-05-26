@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.The custom field that is applied to the `parent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field? CustomField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomField? CustomField { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field CustomField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomField CustomField { get; private set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -36,18 +36,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The parent to which the custom field is applied. This can be a project or portfolio and indicates that the tasks or projects that the parent contains may be given custom field values for this custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_parent? Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParent? Parent { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_parent Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParent Parent { get; private set; }
 #endif
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.*Deprecated: new integrations should prefer the `parent` field.* The id of the project that this custom field settings refers to.</summary>
+        /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.*Deprecated: new integrations should prefer the `parent` field.* The id of the project that this custom field settings refers to.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_project? Project { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseProject? Project { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_project Project { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseProject Project { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,11 +82,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_field", n => { CustomField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_custom_field.CreateFromDiscriminatorValue); } },
+                { "custom_field", n => { CustomField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomField>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomField.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "is_important", n => { IsImportant = n.GetBoolValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_parent.CreateFromDiscriminatorValue); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponse_project.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParent.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }

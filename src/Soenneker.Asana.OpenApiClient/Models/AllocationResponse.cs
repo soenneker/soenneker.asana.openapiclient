@@ -19,18 +19,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.The user or placeholder assigned to the allocation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_assignee? Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee? Assignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_assignee Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee Assignee { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>The amount of time associated with the allocation, represented as a percentage or number of hours.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,10 +53,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent Parent { get; set; }
 #endif
         /// <summary>The subtype of the allocation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,12 +101,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_assignee>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_assignee.CreateFromDiscriminatorValue); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "effort", n => { Effort = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_parent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
@@ -119,11 +119,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_assignee>("assignee", Assignee);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee>("assignee", Assignee);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort>("effort", Effort);
             writer.WriteDateValue("end_date", EndDate);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_parent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent>("parent", Parent);
             writer.WriteStringValue("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_date", StartDate);
             writer.WriteAdditionalData(AdditionalData);

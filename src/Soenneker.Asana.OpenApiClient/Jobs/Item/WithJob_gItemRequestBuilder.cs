@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Jobs.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.JobResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Jobs.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.JobResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.JobResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Jobs.Item
             return new global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJob_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;jobs:read&lt;/code&gt;Returns the full record for a job.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithJob_gItemRequestBuilderGetQueryParameters 

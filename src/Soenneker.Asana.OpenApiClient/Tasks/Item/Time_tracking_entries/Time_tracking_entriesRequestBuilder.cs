@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -135,7 +135,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries.Time_tracking_entriesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns time tracking entries for a given task.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Time_tracking_entriesRequestBuilderGetQueryParameters 
@@ -156,7 +156,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
+            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]

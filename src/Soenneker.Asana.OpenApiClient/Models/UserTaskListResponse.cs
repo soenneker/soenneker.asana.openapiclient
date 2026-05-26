@@ -34,10 +34,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_owner? Owner { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseOwner? Owner { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_owner Owner { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseOwner Owner { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The workspace in which the user task list is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse"/> and sets the default values.
@@ -82,9 +82,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_owner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseOwner.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.UserTaskListResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

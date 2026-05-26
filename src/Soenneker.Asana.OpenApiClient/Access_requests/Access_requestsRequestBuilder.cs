@@ -152,7 +152,7 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/access_requests", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -100,7 +100,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -137,7 +137,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -150,7 +150,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
             return new global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheet_approval_status_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns the complete timesheet approval status record for a single timesheet approval status.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTimesheet_approval_status_gItemRequestBuilderGetQueryParameters 
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Updates the approval status of a timesheet approval status. The update supports state transitions such as submitting, recalling submission, approving, and rejecting. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchanged. Invalid transitions will result in a 400 error.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTimesheet_approval_status_gItemRequestBuilderPutQueryParameters 

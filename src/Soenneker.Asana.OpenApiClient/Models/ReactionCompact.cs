@@ -34,10 +34,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ReactionCompact_user? User { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ReactionCompactUser? User { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ReactionCompact_user User { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ReactionCompactUser User { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ReactionCompact"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "emoji", n => { Emoji = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ReactionCompact_user>(global::Soenneker.Asana.OpenApiClient.Models.ReactionCompact_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ReactionCompactUser>(global::Soenneker.Asana.OpenApiClient.Models.ReactionCompactUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>

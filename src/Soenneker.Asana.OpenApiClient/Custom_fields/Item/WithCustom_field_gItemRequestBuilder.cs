@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +173,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -191,7 +191,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -204,7 +204,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
             return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustom_field_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:read&lt;/code&gt;Get the complete definition of a custom field’s metadata.Since custom fields can be defined for one of a number of types, andthese types have different data and behaviors, there are fields that arerelevant to a particular type. For instance, as noted above, enum_optionsis only relevant for the enum type and defines the set of choices thatthe enum could represent. The examples below show some of thesetype-specific custom field definitions.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCustom_field_gItemRequestBuilderGetQueryParameters 
@@ -221,7 +221,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;A specific, existing custom field can be updated by making a PUT request on the URL for that custom field. Only the fields provided in the `data` block will be updated; any unspecified fields will remain unchangedWhen using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the custom field.A custom field’s `type` cannot be updated.An enum custom field’s `enum_options` cannot be updated with this endpoint. Instead see “Work With Enum Options” for information on how to update `enum_options`.Locked custom fields can only be updated by the user who locked the field.Returns the complete updated custom field record.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCustom_field_gItemRequestBuilderPutQueryParameters 

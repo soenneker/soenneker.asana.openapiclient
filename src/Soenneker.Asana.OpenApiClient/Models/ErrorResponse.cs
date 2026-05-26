@@ -25,7 +25,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse_errors> Errors { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
+        public override string Message { get => MessageEscaped ?? string.Empty; }
+        /// <summary>The primary error message.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MessageEscaped { get; set; }
+#nullable restore
+#else
+        public string MessageEscaped { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse"/> and sets the default values.
         /// </summary>
@@ -52,6 +60,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse_errors>(global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "message", n => { MessageEscaped = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -62,6 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse_errors>("errors", Errors);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

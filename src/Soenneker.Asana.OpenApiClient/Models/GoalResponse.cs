@@ -164,10 +164,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_workspace? Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace? Workspace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_workspace Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace Workspace { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalResponse"/> and sets the default values.
@@ -216,7 +216,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team.CreateFromDiscriminatorValue); } },
                 { "time_period", n => { TimePeriod = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period.CreateFromDiscriminatorValue); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -243,7 +243,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("start_on", StartOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team>("team", Team);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period>("time_period", TimePeriod);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_workspace>("workspace", Workspace);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

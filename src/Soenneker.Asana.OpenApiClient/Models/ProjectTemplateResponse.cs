@@ -52,10 +52,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The current owner of the project template, may be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_owner? Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_owner Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner Owner { get; set; }
 #endif
         /// <summary>True if the project template is public to its team.</summary>
         public bool? Public { get; set; }
@@ -86,10 +86,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_team? Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_team Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam Team { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse"/> and sets the default values.
@@ -121,12 +121,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_description", n => { HtmlDescription = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_owner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner.CreateFromDiscriminatorValue); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
                 { "requested_dates", n => { RequestedDates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "requested_roles", n => { RequestedRoles = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_team>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_team.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -140,10 +140,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("html_description", HtmlDescription);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_owner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner>("owner", Owner);
             writer.WriteBoolValue("public", Public);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles>("requested_roles", RequestedRoles);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_team>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam>("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

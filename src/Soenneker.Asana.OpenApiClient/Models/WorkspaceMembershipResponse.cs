@@ -44,18 +44,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser User { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A user task list represents the tasks assigned to a particular user. It provides API access to a user’s [My tasks](https://asana.com/guide/help/fundamentals/my-tasks) view in Asana.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user_task_list? UserTaskList { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList? UserTaskList { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user_task_list UserTaskList { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList UserTaskList { get; private set; }
 #endif
         /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. Contains keys `start_on` and `end_on` for the vacation dates for the user in this workspace. If `start_on` is null, the entire `vacation_dates` object will be null. If `end_on` is before today, the entire `vacation_dates` object will be null.</summary>
         [Obsolete("")]
@@ -69,10 +69,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_workspace? Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace? Workspace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_workspace Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace Workspace { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse"/> and sets the default values.
@@ -106,10 +106,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "is_guest", n => { IsGuest = n.GetBoolValue(); } },
                 { "is_view_only", n => { IsViewOnly = n.GetBoolValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user.CreateFromDiscriminatorValue); } },
-                { "user_task_list", n => { UserTaskList = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user_task_list>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user_task_list.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser.CreateFromDiscriminatorValue); } },
+                { "user_task_list", n => { UserTaskList = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList.CreateFromDiscriminatorValue); } },
                 { "vacation_dates", n => { VacationDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates.CreateFromDiscriminatorValue); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -119,8 +119,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_user>("user", User);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_workspace>("workspace", Workspace);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -63,10 +63,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>[Opt In](/docs/inputoutput-options). A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_created_by? CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy? CreatedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_created_by CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy CreatedBy { get; private set; }
 #endif
         /// <summary>Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an `enum_value` property for custom fields of type `enum`, a `text_value` property for custom fields of type `text`, and so on. Please note that the `gid` returned on each custom field value *is identical* to the `gid` of the custom field, which allows referencing the custom field metadata through the `/custom_fields/custom_field_gid` endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,10 +115,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*OAuth Required*. *Conditional*. This field is returned only if external values are set or included by using [Opt In](/docs/inputoutput-options).The external field allows you to store app-specific metadata on tasks, including a gid that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external gid is set, you can use the notation `external:custom_gid` to reference your object anywhere in the API where you may use the original object gid. See the page on Custom External Data for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external? External { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal? External { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external External { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal External { get; set; }
 #endif
         /// <summary>Array of users following this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -232,9 +232,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.*Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*</summary>
+        /// <summary>&quot;Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.*Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*&quot;</summary>
         public DateTimeOffset? StartAt { get; set; }
-        /// <summary>The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.*Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*</summary>
+        /// <summary>&quot;The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.*Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*&quot;</summary>
         public Date? StartOn { get; set; }
         /// <summary>Array of tags associated with this task. In order to change tags on an existing task use `addTag` and `removeTag`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,10 +247,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace this task is associated with. Once created, task cannot be moved to a different workspace. This attribute can only be specified at creation time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_workspace? Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace? Workspace { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_workspace Workspace { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace Workspace { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponse"/> and sets the default values.
@@ -287,7 +287,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "completed_at", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_type", n => { CustomType = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type.CreateFromDiscriminatorValue); } },
                 { "custom_type_status_option", n => { CustomTypeStatusOption = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option.CreateFromDiscriminatorValue); } },
@@ -295,7 +295,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
-                { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external.CreateFromDiscriminatorValue); } },
+                { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal.CreateFromDiscriminatorValue); } },
                 { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
@@ -319,7 +319,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "start_at", n => { StartAt = n.GetDateTimeOffsetValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -338,7 +338,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option>("custom_type_status_option", CustomTypeStatusOption);
             writer.WriteDateTimeOffsetValue("due_at", DueAt);
             writer.WriteDateValue("due_on", DueOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_external>("external", External);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>("external", External);
             writer.WriteStringValue("html_notes", HtmlNotes);
             writer.WriteBoolValue("liked", Liked);
             writer.WriteStringValue("name", Name);

@@ -70,10 +70,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.The organization/workspace the team belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_organization? Organization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization? Organization { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_organization Organization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization Organization { get; set; }
 #endif
         /// <summary>A url that points directly to the object within Asana.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "join_request_management_access_level", n => { JoinRequestManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_join_request_management_access_level>(); } },
                 { "member_invite_management_access_level", n => { MemberInviteManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_member_invite_management_access_level>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_organization>(global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_organization.CreateFromDiscriminatorValue); } },
+                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization>(global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization.CreateFromDiscriminatorValue); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "team_content_management_access_level", n => { TeamContentManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_content_management_access_level>(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_join_request_management_access_level>("join_request_management_access_level", JoinRequestManagementAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_member_invite_management_access_level>("member_invite_management_access_level", MemberInviteManagementAccessLevel);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_organization>("organization", Organization);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization>("organization", Organization);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_content_management_access_level>("team_content_management_access_level", TeamContentManagementAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_member_removal_access_level>("team_member_removal_access_level", TeamMemberRemovalAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_visibility>("visibility", Visibility);

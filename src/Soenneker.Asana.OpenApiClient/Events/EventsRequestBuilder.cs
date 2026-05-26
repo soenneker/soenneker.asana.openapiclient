@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Events
         {
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*
+        /// &quot;Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Events
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Events.EventResponseArray412Error">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.GetEvents412">When receiving a 412 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,13 +61,13 @@ namespace Soenneker.Asana.OpenApiClient.Events
                 { "401", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Asana.OpenApiClient.Events.EventResponseArray412Error.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Asana.OpenApiClient.Models.GetEvents412.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*
+        /// &quot;Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -95,7 +95,7 @@ namespace Soenneker.Asana.OpenApiClient.Events
             return new global::Soenneker.Asana.OpenApiClient.Events.EventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*
+        /// &quot;Returns the full record for all events that have occurred since the synctoken was created.A `GET` request to the endpoint `/[path_to_resource]/events` can be made inlieu of including the resource ID in the data for the request.Asana limits a single sync token to 100 events. If more than 100 events existfor a given resource, `has_more: true` will be returned in the response, indicatingthat there are more events to pull.*Note: The resource returned will be the resource that triggered theevent. This may be different from the one that the events were requestedfor. For example, a subscription to a project will contain events fortasks contained within the project.*&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 

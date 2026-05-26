@@ -70,10 +70,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TagResponse_workspace? Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace? Workspace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TagResponse_workspace Workspace { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace Workspace { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TagResponse"/> and sets the default values.
@@ -108,7 +108,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_workspace>(global::Soenneker.Asana.OpenApiClient.Models.TagResponse_workspace.CreateFromDiscriminatorValue); } },
+                { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_color>("color", Color);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_workspace>("workspace", Workspace);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.</summary>
+    /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StatusUpdateRequest_status_type
     {

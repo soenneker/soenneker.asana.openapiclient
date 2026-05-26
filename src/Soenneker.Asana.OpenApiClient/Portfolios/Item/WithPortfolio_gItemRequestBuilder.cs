@@ -131,7 +131,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -162,7 +162,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -214,7 +214,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -233,7 +233,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -251,7 +251,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -264,7 +264,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
             return new global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolio_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns the complete portfolio record for a single portfolio.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPortfolio_gItemRequestBuilderGetQueryParameters 
@@ -281,7 +281,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;An existing portfolio can be updated by making a PUT request on the URL forthat portfolio. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated portfolio record.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPortfolio_gItemRequestBuilderPutQueryParameters 

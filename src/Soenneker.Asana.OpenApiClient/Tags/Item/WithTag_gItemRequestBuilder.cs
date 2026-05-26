@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TagResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TagResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TagResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TagResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +173,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -191,7 +191,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -204,7 +204,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
             return new global::Soenneker.Asana.OpenApiClient.Tags.Item.WithTag_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:read&lt;/code&gt;Returns the complete tag record for a single tag.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTag_gItemRequestBuilderGetQueryParameters 
@@ -221,7 +221,7 @@ namespace Soenneker.Asana.OpenApiClient.Tags.Item
 #endif
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tags:write&lt;/code&gt;Updates the properties of a tag. Only the fields provided in the `data`block will be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the tag.Returns the complete updated tag record.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTag_gItemRequestBuilderPutQueryParameters 

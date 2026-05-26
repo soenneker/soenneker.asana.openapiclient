@@ -20,10 +20,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The user who created this task template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,10 +44,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The project that this task template belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseProject? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseProject Project { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,10 +60,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The configuration for the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_template? Template { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate? Template { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_template Template { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate Template { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse"/> and sets the default values.
@@ -91,12 +91,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_project.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_template>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_template.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -107,10 +107,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_project>("project", Project);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponse_template>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseProject>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate>("template", Template);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

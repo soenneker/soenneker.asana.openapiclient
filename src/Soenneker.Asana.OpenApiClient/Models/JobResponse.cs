@@ -26,42 +26,42 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *graph_export* object represents a request to export the data starting from a parent object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_graph_export? NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport? NewGraphExport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_graph_export NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport NewGraphExport { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.Portfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_portfolio? NewPortfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio? NewPortfolio { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_portfolio NewPortfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio NewPortfolio { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project? NewProject { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject? NewProject { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project NewProject { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject NewProject { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project template* is an object that allows new projects to be created with a predefined setup, which may include tasks, sections, Rules, etc. It simplifies the process of running a workflow that involves a similar set of work every time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project_template? NewProjectTemplate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate? NewProjectTemplate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project_template NewProjectTemplate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate NewProjectTemplate { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_resource_export? NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport? NewResourceExport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_resource_export NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport NewResourceExport { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,11 +115,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "new_graph_export", n => { NewGraphExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_graph_export>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_graph_export.CreateFromDiscriminatorValue); } },
-                { "new_portfolio", n => { NewPortfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_portfolio>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_portfolio.CreateFromDiscriminatorValue); } },
-                { "new_project", n => { NewProject = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project.CreateFromDiscriminatorValue); } },
-                { "new_project_template", n => { NewProjectTemplate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project_template>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project_template.CreateFromDiscriminatorValue); } },
-                { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_resource_export>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_resource_export.CreateFromDiscriminatorValue); } },
+                { "new_graph_export", n => { NewGraphExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport.CreateFromDiscriminatorValue); } },
+                { "new_portfolio", n => { NewPortfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio.CreateFromDiscriminatorValue); } },
+                { "new_project", n => { NewProject = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject.CreateFromDiscriminatorValue); } },
+                { "new_project_template", n => { NewProjectTemplate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate.CreateFromDiscriminatorValue); } },
+                { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport.CreateFromDiscriminatorValue); } },
                 { "new_task", n => { NewTask = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
@@ -133,11 +133,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_graph_export>("new_graph_export", NewGraphExport);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_portfolio>("new_portfolio", NewPortfolio);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project>("new_project", NewProject);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_project_template>("new_project_template", NewProjectTemplate);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_resource_export>("new_resource_export", NewResourceExport);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport>("new_graph_export", NewGraphExport);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio>("new_portfolio", NewPortfolio);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject>("new_project", NewProject);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate>("new_project_template", NewProjectTemplate);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport>("new_resource_export", NewResourceExport);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task>("new_task", NewTask);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -28,18 +28,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *member* object represents either a team or user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_member? Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember? Member { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_member Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember Member { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent Parent { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,8 +76,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_access_level>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_member>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_member.CreateFromDiscriminatorValue); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_parent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_parent.CreateFromDiscriminatorValue); } },
+                { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -88,8 +88,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_member>("member", Member);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_parent>("parent", Parent);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember>("member", Member);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent>("parent", Parent);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

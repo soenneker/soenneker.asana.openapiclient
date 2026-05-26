@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.RemoveCustomFieldSetting
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Removes a custom field setting from a project.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Removes a custom field setting from a project.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.RemoveCustomFieldSetting
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Removes a custom field setting from a project.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Removes a custom field setting from a project.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.RemoveCustomFieldSetting
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

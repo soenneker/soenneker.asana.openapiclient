@@ -42,10 +42,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The project with which this project brief is associated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponse_project? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponseProject? Project { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponse_project Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponseProject Project { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,7 +99,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_text", n => { HtmlText = n.GetStringValue(); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
-                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponse_project>(global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponse_project.CreateFromDiscriminatorValue); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -113,7 +113,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("html_text", HtmlText);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponse_project>("project", Project);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefResponseProject>("project", Project);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

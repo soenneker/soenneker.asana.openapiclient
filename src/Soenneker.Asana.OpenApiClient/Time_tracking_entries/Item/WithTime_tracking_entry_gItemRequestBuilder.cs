@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -185,7 +185,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
@@ -198,7 +198,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return new global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTime_tracking_entry_gItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_entries:read&lt;/code&gt;Returns the complete time tracking entry record for a single time tracking entry.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTime_tracking_entry_gItemRequestBuilderGetQueryParameters 

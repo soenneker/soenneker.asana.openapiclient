@@ -19,10 +19,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The attributable to project specifies which project&apos;s budget a time entry should be counted toward, if the task belongs to more than one project. If it only belongs to one project, it should be that project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to? AttributableTo { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactAttributableTo? AttributableTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to AttributableTo { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactAttributableTo AttributableTo { get; set; }
 #endif
         /// <summary>The categories linked to this time tracking entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by? CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactCreatedBy? CreatedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by CreatedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactCreatedBy CreatedBy { get; private set; }
 #endif
         /// <summary>Time in minutes tracked by the entry.</summary>
         public int? DurationMinutes { get; set; }
@@ -85,9 +85,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributable_to", n => { AttributableTo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to.CreateFromDiscriminatorValue); } },
+                { "attributable_to", n => { AttributableTo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactAttributableTo>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactAttributableTo.CreateFromDiscriminatorValue); } },
                 { "categories", n => { Categories = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_categories.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactCreatedBy.CreateFromDiscriminatorValue); } },
                 { "duration_minutes", n => { DurationMinutes = n.GetIntValue(); } },
                 { "entered_on", n => { EnteredOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -101,7 +101,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompact_attributable_to>("attributable_to", AttributableTo);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactAttributableTo>("attributable_to", AttributableTo);
             writer.WriteIntValue("duration_minutes", DurationMinutes);
             writer.WriteDateValue("entered_on", EnteredOn);
             writer.WriteAdditionalData(AdditionalData);

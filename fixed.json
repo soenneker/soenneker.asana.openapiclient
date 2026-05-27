@@ -7934,7 +7934,7 @@
           "Portfolios"
         ],
         "summary": "Get multiple portfolios",
-        "description": "\"<b>Required scope: </b><code>portfolios:read</code>\n\nReturns a list of the portfolios in compact representation that are owned by the current API user.\"",
+        "description": "\"<b>Required scope: </b><code>portfolios:read</code>\n\nReturns a list of the portfolios in compact representation.\nThe portfolios are filtered based on the following criteria:\n- If the request is made from a regular API user (PAT or OAuth), then only portfolios owned by the current API user are returned.\n- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.\n- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.\"",
         "operationId": "getPortfolios",
         "parameters": [
           {

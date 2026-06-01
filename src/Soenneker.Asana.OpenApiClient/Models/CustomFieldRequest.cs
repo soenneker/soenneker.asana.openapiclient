@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. A unique identifier to associate this field with the template source of truth.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_asana_created_field? AsanaCreatedField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestAsanaCreatedField? AsanaCreatedField { get; private set; }
         /// <summary>ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,14 +34,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string CustomLabel { get; set; }
 #endif
         /// <summary>Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_custom_label_position? CustomLabelPosition { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestCustomLabelPosition? CustomLabelPosition { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_date_value? DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestDateValue? DateValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_date_value DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestDateValue DateValue { get; set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The description of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,21 +64,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_options>? EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumOptionsItem>? EnumOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_options> EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumOptionsItem> EnumOptions { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_value? EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumValue? EnumValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_value EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumValue EnumValue { get; set; }
 #endif
         /// <summary>The format of this custom field.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_format? Format { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestFormat? Format { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,10 +100,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_input_restrictions?>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestInputRestrictionsItem?>? InputRestrictions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_input_restrictions?> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestInputRestrictionsItem?> InputRestrictions { get; set; }
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
         public bool? IsFormulaField { get; set; }
@@ -112,10 +112,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_multi_enum_values>? MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestMultiEnumValuesItem>? MultiEnumValues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_multi_enum_values> MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestMultiEnumValuesItem> MultiEnumValues { get; set; }
 #endif
         /// <summary>The name of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<string> ReferenceValue { get; set; }
 #endif
         /// <summary>This field tells the type of the custom field.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_representation_type? RepresentationType { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestRepresentationType? RepresentationType { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,7 +166,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string TextValue { get; set; }
 #endif
         /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_type? Type { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestType? Type { get; private set; }
         /// <summary>*Create-Only* The workspace to create a custom field in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,34 +200,34 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "asana_created_field", n => { AsanaCreatedField = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_asana_created_field>(); } },
+                { "asana_created_field", n => { AsanaCreatedField = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestAsanaCreatedField>(); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "custom_label", n => { CustomLabel = n.GetStringValue(); } },
-                { "custom_label_position", n => { CustomLabelPosition = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_custom_label_position>(); } },
-                { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_date_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_date_value.CreateFromDiscriminatorValue); } },
+                { "custom_label_position", n => { CustomLabelPosition = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestCustomLabelPosition>(); } },
+                { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestDateValue>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestDateValue.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "display_value", n => { DisplayValue = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "enum_options", n => { EnumOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_options>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_options.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "enum_value", n => { EnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_value.CreateFromDiscriminatorValue); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_format>(); } },
+                { "enum_options", n => { EnumOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumOptionsItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "enum_value", n => { EnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumValue>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumValue.CreateFromDiscriminatorValue); } },
+                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestFormat>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "has_notifications_enabled", n => { HasNotificationsEnabled = n.GetBoolValue(); } },
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
-                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_input_restrictions>()?.AsList(); } },
+                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestInputRestrictionsItem>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
                 { "is_global_to_workspace", n => { IsGlobalToWorkspace = n.GetBoolValue(); } },
-                { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_multi_enum_values>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_multi_enum_values.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestMultiEnumValuesItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestMultiEnumValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number_value", n => { NumberValue = n.GetDoubleValue(); } },
                 { "owned_by_app", n => { OwnedByApp = n.GetBoolValue(); } },
                 { "people_value", n => { PeopleValue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "precision", n => { Precision = n.GetIntValue(); } },
                 { "reference_value", n => { ReferenceValue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "representation_type", n => { RepresentationType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_representation_type>(); } },
+                { "representation_type", n => { RepresentationType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestRepresentationType>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "text_value", n => { TextValue = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestType>(); } },
                 { "workspace", n => { Workspace = n.GetStringValue(); } },
             };
         }
@@ -240,17 +240,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteStringValue("custom_label", CustomLabel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_custom_label_position>("custom_label_position", CustomLabelPosition);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_date_value>("date_value", DateValue);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestCustomLabelPosition>("custom_label_position", CustomLabelPosition);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestDateValue>("date_value", DateValue);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_options>("enum_options", EnumOptions);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_enum_value>("enum_value", EnumValue);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_format>("format", Format);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumOptionsItem>("enum_options", EnumOptions);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestEnumValue>("enum_value", EnumValue);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestFormat>("format", Format);
             writer.WriteBoolValue("has_notifications_enabled", HasNotificationsEnabled);
             writer.WriteStringValue("id_prefix", IdPrefix);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_input_restrictions>("input_restrictions", InputRestrictions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestInputRestrictionsItem>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequest_multi_enum_values>("multi_enum_values", MultiEnumValues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldRequestMultiEnumValuesItem>("multi_enum_values", MultiEnumValues);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("number_value", NumberValue);
             writer.WriteBoolValue("owned_by_app", OwnedByApp);

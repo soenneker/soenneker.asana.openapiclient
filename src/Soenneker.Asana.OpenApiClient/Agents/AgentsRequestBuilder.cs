@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Agents
     public partial class AgentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.agents.item collection</summary>
-        /// <param name="position">Globally unique identifier for the agent.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgent_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgent_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgentGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgentGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("agent_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgent_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("agentGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgentGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

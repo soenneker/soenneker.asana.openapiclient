@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
     public partial class Timesheet_approval_statusesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.timesheet_approval_statuses.item collection</summary>
-        /// <param name="position">Globally unique identifier for the timesheet approval status.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheet_approval_status_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheet_approval_status_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheetApprovalStatusGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheetApprovalStatusGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("timesheet_approval_status_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheet_approval_status_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("timesheetApprovalStatusGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheetApprovalStatusGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -198,11 +198,11 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimesheetApprovalStatusesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimesheetApprovalStatusesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The end date for filtering timesheet approval statuses.</summary>
             [QueryParameter("to_date")]
@@ -238,11 +238,11 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTimesheetApprovalStatusOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTimesheetApprovalStatusOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

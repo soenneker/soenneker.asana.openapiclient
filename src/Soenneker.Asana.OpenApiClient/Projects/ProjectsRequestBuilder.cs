@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Projects
     public partial class ProjectsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.projects.item collection</summary>
-        /// <param name="position">Globally unique identifier for the project.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProject_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProject_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProjectGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProjectGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProject_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Projects.Item.WithProjectGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -186,11 +186,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>&quot;**Deprecated.** The team to filter projects on. Please use `GET /memberships` with `{ member: team, resource_subtype: project_membership }` instead.&quot;</summary>
             [Obsolete("")]
@@ -224,11 +224,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

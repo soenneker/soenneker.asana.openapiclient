@@ -50,7 +50,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The current state of the export.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_state? State { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseState? State { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse"/> and sets the default values.
         /// </summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization>(global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseOrganization.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponse_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.OrganizationExportResponseState>(); } },
             };
         }
         /// <summary>

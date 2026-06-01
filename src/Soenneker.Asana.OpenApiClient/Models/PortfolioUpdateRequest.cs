@@ -19,17 +19,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>[Opt In](/docs/inputoutput-options). True if the portfolio is archived, false if not. Archived portfolios do not show in the UI by default and may be treated differently for queries.</summary>
         public bool? Archived { get; set; }
         /// <summary>Color of the portfolio.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestColor? Color { get; set; }
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_custom_fields? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestCustomFieldsProperty? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_custom_fields CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
         /// <summary>The default access level when inviting new members to the portfolio</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_default_access_level? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The day on which this portfolio is due. This takes a date with format YYYY-MM-DD.</summary>
         public Date? DueOn { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -84,9 +84,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_color>(); } },
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_custom_fields.CreateFromDiscriminatorValue); } },
-                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_default_access_level>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestColor>(); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel>(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -102,9 +102,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_color>("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_custom_fields>("custom_fields", CustomFields);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequest_default_access_level>("default_access_level", DefaultAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestColor>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestCustomFieldsProperty>("custom_fields", CustomFields);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("name", Name);
             writer.WriteDateValue("start_on", StartOn);

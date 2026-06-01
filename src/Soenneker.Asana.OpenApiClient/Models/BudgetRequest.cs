@@ -24,7 +24,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the budget, in &quot;cost&quot; or &quot;time&quot;. The value of this property will dictate how the corresponding values for actual, estimate, and total are interpreted.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequest_budget_type? BudgetType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType? BudgetType { get; set; }
         /// <summary>&quot;Defines how the estimate portion of a budget is configured. This object controls whether the estimate is enabled, what data source it uses, and which tasks (by billable status) are included in calculating the estimate value. When disabled (enabled: false and source: none), the estimate is hidden and the API response will return `value: null` and `units: null` for this field.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actual", n => { Actual = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual>(global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual.CreateFromDiscriminatorValue); } },
-                { "budget_type", n => { BudgetType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequest_budget_type>(); } },
+                { "budget_type", n => { BudgetType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType>(); } },
                 { "estimate", n => { Estimate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate>(global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },
@@ -107,7 +107,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual>("actual", Actual);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequest_budget_type>("budget_type", BudgetType);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType>("budget_type", BudgetType);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate>("estimate", Estimate);
             writer.WriteStringValue("parent", Parent);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal>("total", Total);

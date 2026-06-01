@@ -17,14 +17,14 @@ namespace Soenneker.Asana.OpenApiClient.Enum_options
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.enum_options.item collection</summary>
         /// <param name="position">Globally unique identifier for the enum option.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnum_option_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnum_option_gItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnumOptionGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnumOptionGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("enum_option_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnum_option_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("enumOptionGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Enum_options.Item.WithEnumOptionGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

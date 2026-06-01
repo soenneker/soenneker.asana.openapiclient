@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
     public partial class Time_tracking_entriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.time_tracking_entries.item collection</summary>
-        /// <param name="position">Globally unique identifier for the time tracking entry.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTime_tracking_entry_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTime_tracking_entry_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTimeTrackingEntryGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTimeTrackingEntryGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("time_tracking_entry_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTime_tracking_entry_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("timeTrackingEntryGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTimeTrackingEntryGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -146,11 +146,11 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimeTrackingEntriesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimeTrackingEntriesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for the portfolio to filter time tracking entries by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

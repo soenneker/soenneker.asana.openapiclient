@@ -42,13 +42,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponseParent? Parent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponseParent Parent { get; set; }
 #endif
         /// <summary>The cadence and index of the time period.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_period? Period { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponsePeriod? Period { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,8 +93,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "end_on", n => { EndOn = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_parent.CreateFromDiscriminatorValue); } },
-                { "period", n => { Period = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_period>(); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponseParent.CreateFromDiscriminatorValue); } },
+                { "period", n => { Period = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponsePeriod>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetStringValue(); } },
             };
@@ -108,8 +108,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("end_on", EndOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_parent>("parent", Parent);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponse_period>("period", Period);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponseParent>("parent", Parent);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimePeriodResponsePeriod>("period", Period);
             writer.WriteStringValue("start_on", StartOn);
             writer.WriteAdditionalData(AdditionalData);
         }

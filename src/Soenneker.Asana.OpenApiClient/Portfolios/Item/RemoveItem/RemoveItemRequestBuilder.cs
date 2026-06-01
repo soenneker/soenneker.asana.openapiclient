@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.RemoveItem
 {
     /// <summary>
-    /// Builds and executes requests for operations under \portfolios\{portfolio_gid}\removeItem
+    /// Builds and executes requests for operations under \portfolios\{portfolioGid}\removeItem
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RemoveItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.RemoveItem
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolio_gid}/removeItem", pathParameters)
+        public RemoveItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolioGid}/removeItem", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.RemoveItem
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolio_gid}/removeItem", rawUrl)
+        public RemoveItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolioGid}/removeItem", rawUrl)
         {
         }
         /// <summary>

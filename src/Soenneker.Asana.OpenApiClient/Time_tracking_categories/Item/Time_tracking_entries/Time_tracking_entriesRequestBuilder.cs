@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_tracking_entries
 {
     /// <summary>
-    /// Builds and executes requests for operations under \time_tracking_categories\{time_tracking_category_gid}\time_tracking_entries
+    /// Builds and executes requests for operations under \time_tracking_categories\{timeTrackingCategoryGid}\time_tracking_entries
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Time_tracking_entriesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_track
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Time_tracking_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_categories/{time_tracking_category_gid}/time_tracking_entries{?end_date*,limit*,offset*,opt_fields,start_date*}", pathParameters)
+        public Time_tracking_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_categories/{timeTrackingCategoryGid}/time_tracking_entries{?end_date*,limit*,offset*,opt_fields,start_date*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_track
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Time_tracking_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_categories/{time_tracking_category_gid}/time_tracking_entries{?end_date*,limit*,offset*,opt_fields,start_date*}", rawUrl)
+        public Time_tracking_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_categories/{timeTrackingCategoryGid}/time_tracking_entries{?end_date*,limit*,offset*,opt_fields,start_date*}", rawUrl)
         {
         }
         /// <summary>
@@ -118,11 +118,11 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_track
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_tracking_entries.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimeTrackingEntriesForTimeTrackingCategoryOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.Time_tracking_entries.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimeTrackingEntriesForTimeTrackingCategoryOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The start date for filtering time tracking entries by their entry date.</summary>
             [QueryParameter("start_date")]

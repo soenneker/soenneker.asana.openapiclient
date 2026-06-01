@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships
 {
     /// <summary>
-    /// Builds and executes requests for operations under \teams\{team_gid}\team_memberships
+    /// Builds and executes requests for operations under \teams\{teamGid}\team_memberships
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Team_membershipsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Team_membershipsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/team_memberships{?limit*,offset*,opt_fields}", pathParameters)
+        public Team_membershipsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamGid}/team_memberships{?limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Team_membershipsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/team_memberships{?limit*,offset*,opt_fields}", rawUrl)
+        public Team_membershipsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamGid}/team_memberships{?limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -115,11 +115,11 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTeamMembershipsForTeamOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.Team_memberships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTeamMembershipsForTeamOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

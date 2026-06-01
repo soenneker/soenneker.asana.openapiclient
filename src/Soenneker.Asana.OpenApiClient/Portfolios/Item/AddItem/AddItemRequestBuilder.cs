@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddItem
 {
     /// <summary>
-    /// Builds and executes requests for operations under \portfolios\{portfolio_gid}\addItem
+    /// Builds and executes requests for operations under \portfolios\{portfolioGid}\addItem
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddItem
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolio_gid}/addItem", pathParameters)
+        public AddItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolioGid}/addItem", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.AddItem
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolio_gid}/addItem", rawUrl)
+        public AddItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios/{portfolioGid}/addItem", rawUrl)
         {
         }
         /// <summary>

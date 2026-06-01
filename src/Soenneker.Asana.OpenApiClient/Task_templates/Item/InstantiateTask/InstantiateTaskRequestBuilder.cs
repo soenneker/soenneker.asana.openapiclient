@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask
 {
     /// <summary>
-    /// Builds and executes requests for operations under \task_templates\{task_template_gid}\instantiateTask
+    /// Builds and executes requests for operations under \task_templates\{taskTemplateGid}\instantiateTask
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InstantiateTaskRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstantiateTaskRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/task_templates/{task_template_gid}/instantiateTask{?opt_fields}", pathParameters)
+        public InstantiateTaskRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/task_templates/{taskTemplateGid}/instantiateTask{?opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstantiateTaskRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/task_templates/{task_template_gid}/instantiateTask{?opt_fields}", rawUrl)
+        public InstantiateTaskRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/task_templates/{taskTemplateGid}/instantiateTask{?opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -107,11 +107,11 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.InstantiateTaskOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Task_templates.Item.InstantiateTask.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.InstantiateTaskOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

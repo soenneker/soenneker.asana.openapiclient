@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspace_gid}\tasks\custom_id
+    /// Builds and executes requests for operations under \workspaces\{workspaceGid}\tasks\custom_id
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Custom_idRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspaces.item.tasks.custom_id.item collection</summary>
-        /// <param name="position">Generated custom ID for a task.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustom_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustom_ItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustomItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustomItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("custom_id", position);
-                return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustom_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("customId", position);
+                return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustomItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Custom_idRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/tasks/custom_id", pathParameters)
+        public Custom_idRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/tasks/custom_id", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Custom_idRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/tasks/custom_id", rawUrl)
+        public Custom_idRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/tasks/custom_id", rawUrl)
         {
         }
     }

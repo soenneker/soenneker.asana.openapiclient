@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Stories
     public partial class StoriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.stories.item collection</summary>
-        /// <param name="position">Globally unique identifier for the story.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStory_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStory_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStoryGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStoryGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("story_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStory_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("storyGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Stories.Item.WithStoryGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

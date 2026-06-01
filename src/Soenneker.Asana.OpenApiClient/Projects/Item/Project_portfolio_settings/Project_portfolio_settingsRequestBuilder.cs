@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings
 {
     /// <summary>
-    /// Builds and executes requests for operations under \projects\{project_gid}\project_portfolio_settings
+    /// Builds and executes requests for operations under \projects\{projectGid}\project_portfolio_settings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Project_portfolio_settingsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_portfolio_settingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_portfolio_settings{?limit*,offset*,opt_fields}", pathParameters)
+        public Project_portfolio_settingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_portfolio_settings{?limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_portfolio_settingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_portfolio_settings{?limit*,offset*,opt_fields}", rawUrl)
+        public Project_portfolio_settingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_portfolio_settings{?limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -115,11 +115,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectPortfolioSettingsForProjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_portfolio_settings.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectPortfolioSettingsForProjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

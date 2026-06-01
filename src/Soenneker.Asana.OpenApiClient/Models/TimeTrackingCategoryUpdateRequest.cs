@@ -15,7 +15,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The color associated with this category for display purposes.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequest_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequestColor? Color { get; set; }
         /// <summary>*Optional*. Whether the category is archived. Archived categories cannot be assigned to new time entries but remain visible on existing entries.</summary>
         public bool? IsArchived { get; set; }
         /// <summary>The name of the time tracking category (e.g., &apos;Development&apos;, &apos;Meetings&apos;).</summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequest_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequestColor>(); } },
                 { "is_archived", n => { IsArchived = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
@@ -63,7 +63,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequest_color>("color", Color);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryUpdateRequestColor>("color", Color);
             writer.WriteBoolValue("is_archived", IsArchived);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependencies
 {
     /// <summary>
-    /// Builds and executes requests for operations under \tasks\{task_gid}\addDependencies
+    /// Builds and executes requests for operations under \tasks\{taskGid}\addDependencies
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddDependenciesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependencies
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddDependenciesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/addDependencies", pathParameters)
+        public AddDependenciesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/addDependencies", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependencies
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddDependenciesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/addDependencies", rawUrl)
+        public AddDependenciesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/addDependencies", rawUrl)
         {
         }
         /// <summary>

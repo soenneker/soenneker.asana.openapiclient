@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Events
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.GetEvents412">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.GetEvents412Response">When receiving a 412 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.Asana.OpenApiClient.Events
                 { "401", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Asana.OpenApiClient.Models.GetEvents412.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Asana.OpenApiClient.Models.GetEvents412Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EventResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -104,11 +104,11 @@ namespace Soenneker.Asana.OpenApiClient.Events
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Events.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetEventsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Events.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetEventsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>A resource ID to subscribe to. The resource can be a task, project, or goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
     public partial class AllocationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.allocations.item collection</summary>
-        /// <param name="position">Globally unique identifier for the allocation.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocation_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocation_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocationGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocationGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("allocation_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocation_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("allocationGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocationGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -141,11 +141,11 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocation body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Allocations.AllocationsRequestBuilder.AllocationsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -197,11 +197,11 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Allocations.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAllocationsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Allocations.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAllocationsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for the project to filter allocations by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -234,11 +234,11 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Allocations.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Allocations.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateAllocationOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

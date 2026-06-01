@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs
 {
     /// <summary>
-    /// Builds and executes requests for operations under \projects\{project_gid}\project_briefs
+    /// Builds and executes requests for operations under \projects\{projectGid}\project_briefs
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Project_briefsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_briefsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_briefs{?opt_fields}", pathParameters)
+        public Project_briefsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_briefs{?opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_briefsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_briefs{?opt_fields}", rawUrl)
+        public Project_briefsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_briefs{?opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -109,11 +109,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectBriefOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_briefs.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectBriefOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

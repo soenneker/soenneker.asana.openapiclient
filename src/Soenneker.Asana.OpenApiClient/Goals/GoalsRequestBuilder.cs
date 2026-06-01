@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Goals
     public partial class GoalsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.goals.item collection</summary>
-        /// <param name="position">Globally unique identifier for the goal.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoal_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoal_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("goal_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoal_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("goalGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -190,11 +190,11 @@ namespace Soenneker.Asana.OpenApiClient.Goals
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goals.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetGoalsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goals.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetGoalsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for supporting portfolio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -267,11 +267,11 @@ namespace Soenneker.Asana.OpenApiClient.Goals
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goals.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateGoalOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goals.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateGoalOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

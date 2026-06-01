@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Sections.Item.AddTask
 {
     /// <summary>
-    /// Builds and executes requests for operations under \sections\{section_gid}\addTask
+    /// Builds and executes requests for operations under \sections\{sectionGid}\addTask
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddTaskRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item.AddTask
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddTaskRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/sections/{section_gid}/addTask", pathParameters)
+        public AddTaskRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/sections/{sectionGid}/addTask", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item.AddTask
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddTaskRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/sections/{section_gid}/addTask", rawUrl)
+        public AddTaskRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/sections/{sectionGid}/addTask", rawUrl)
         {
         }
         /// <summary>

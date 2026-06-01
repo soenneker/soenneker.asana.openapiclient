@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The desired approval status to transition to. Valid transitions depend on the current status of the timesheet approval status.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequest_approval_status? ApprovalStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequestApprovalStatus? ApprovalStatus { get; set; }
         /// <summary>Optional message to include with the transition (e.g., reason for approval or rejection).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequest_approval_status>(); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequestApprovalStatus>(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequest_approval_status>("approval_status", ApprovalStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimesheetApprovalStatusRequestApprovalStatus>("approval_status", ApprovalStatus);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

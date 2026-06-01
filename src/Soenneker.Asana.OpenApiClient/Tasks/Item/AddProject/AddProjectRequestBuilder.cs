@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddProject
 {
     /// <summary>
-    /// Builds and executes requests for operations under \tasks\{task_gid}\addProject
+    /// Builds and executes requests for operations under \tasks\{taskGid}\addProject
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddProjectRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddProject
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddProjectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/addProject", pathParameters)
+        public AddProjectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/addProject", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddProject
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddProjectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/addProject", rawUrl)
+        public AddProjectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/addProject", rawUrl)
         {
         }
         /// <summary>

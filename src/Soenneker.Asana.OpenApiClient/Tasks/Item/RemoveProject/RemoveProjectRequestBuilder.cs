@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveProject
 {
     /// <summary>
-    /// Builds and executes requests for operations under \tasks\{task_gid}\removeProject
+    /// Builds and executes requests for operations under \tasks\{taskGid}\removeProject
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RemoveProjectRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveProject
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveProjectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/removeProject", pathParameters)
+        public RemoveProjectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/removeProject", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveProject
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveProjectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/removeProject", rawUrl)
+        public RemoveProjectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/removeProject", rawUrl)
         {
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
 {
     /// <summary>
-    /// Builds and executes requests for operations under \tasks\{task_gid}\setParent
+    /// Builds and executes requests for operations under \tasks\{taskGid}\setParent
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetParentRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetParentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/setParent{?opt_fields}", pathParameters)
+        public SetParentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/setParent{?opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetParentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{task_gid}/setParent{?opt_fields}", rawUrl)
+        public SetParentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/setParent{?opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -107,11 +107,11 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SetParentForTaskOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SetParentForTaskOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

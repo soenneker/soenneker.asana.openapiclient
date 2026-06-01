@@ -19,14 +19,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_approval_status? ApprovalStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestApprovalStatus? ApprovalStatus { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.The user who assigned the task. This field is only returned when requesting it via opt_fields, and will be null if the task has no specific assigner (e.g., tasks created without an explicit assigner).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assigned_by? AssignedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssignedBy? AssignedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assigned_by AssignedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssignedBy AssignedBy { get; private set; }
 #endif
         /// <summary>A string identifying a user. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,7 +45,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string AssigneeSection { get; set; }
 #endif
         /// <summary>*Deprecated* Scheduling status of this task for the user it is assigned to. This field can only be set if the assignee is non-null. Setting this field to &quot;inbox&quot; or &quot;upcoming&quot; inserts it at the top of the section, while the other options will insert at the bottom.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assignee_status? AssigneeStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssigneeStatus? AssigneeStatus { get; set; }
         /// <summary>True if the task is currently marked complete, false if not.</summary>
         public bool? Completed { get; set; }
         /// <summary>The time at which this task was completed, or null if the task is incomplete.</summary>
@@ -53,10 +53,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_completed_by? CompletedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCompletedBy? CompletedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_completed_by CompletedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCompletedBy CompletedBy { get; private set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
@@ -71,26 +71,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_custom_fields? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_custom_fields CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependencies>? Dependencies { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem>? Dependencies { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependencies> Dependencies { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem> Dependencies { get; private set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that depend on this task. The objects contain only the ID of the dependent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependents>? Dependents { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem>? Dependents { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependents> Dependents { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem> Dependents { get; private set; }
 #endif
         /// <summary>The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.</summary>
         public DateTimeOffset? DueAt { get; set; }
@@ -125,10 +125,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated - please use likes instead* Array of likes for users who have hearted this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_hearts>? Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem>? Hearts { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_hearts> Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem> Hearts { get; private set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,18 +145,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of likes for users who have liked this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes>? Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestLikesItem>? Likes { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes> Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestLikesItem> Likes { get; private set; }
 #endif
         /// <summary>*Create-only*. Array of projects this task is associated with and the section it is in. At task creation time, this array can be used to add the task to specific sections. After task creation, these associations can be modified using the `addProject` and `removeProject` endpoints. Note that over time, more types of memberships may be added to this property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_memberships>? Memberships { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestMembershipsItem>? Memberships { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_memberships> Memberships { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestMembershipsItem> Memberships { get; private set; }
 #endif
         /// <summary>The time at which this task was last modified.The following conditions will change `modified_at`:- story is created on a task- story is trashed on a task- attachment is trashed on a task- task is assigned or unassigned- custom field value is changed- the task itself is trashed- Or if any of the following fields are updated:  - completed  - name  - due_date  - description  - attachments  - items  - schedule_statusThe following conditions will _not_ change `modified_at`:- moving to a new container (project, portfolio, etc)- comments being added to the task (but the stories they generate  _will_ affect `modified_at`)</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
@@ -199,7 +199,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<string> Projects { get; set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_resource_subtype? ResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -254,31 +254,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actual_time_minutes", n => { ActualTimeMinutes = n.GetDoubleValue(); } },
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_approval_status>(); } },
-                { "assigned_by", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assigned_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assigned_by.CreateFromDiscriminatorValue); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestApprovalStatus>(); } },
+                { "assigned_by", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssignedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssignedBy.CreateFromDiscriminatorValue); } },
                 { "assignee", n => { Assignee = n.GetStringValue(); } },
                 { "assignee_section", n => { AssigneeSection = n.GetStringValue(); } },
-                { "assignee_status", n => { AssigneeStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assignee_status>(); } },
+                { "assignee_status", n => { AssigneeStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssigneeStatus>(); } },
                 { "completed", n => { Completed = n.GetBoolValue(); } },
                 { "completed_at", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_completed_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_completed_by.CreateFromDiscriminatorValue); } },
+                { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCompletedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCompletedBy.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCreatedBy.CreateFromDiscriminatorValue); } },
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_custom_fields.CreateFromDiscriminatorValue); } },
-                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependencies>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependencies.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependents>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_dependents.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal.CreateFromDiscriminatorValue); } },
                 { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
-                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_hearts>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_hearts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
                 { "is_rendered_as_separator", n => { IsRenderedAsSeparator = n.GetBoolValue(); } },
                 { "liked", n => { Liked = n.GetBoolValue(); } },
-                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_likes.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_memberships>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_memberships.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestLikesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestLikesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestMembershipsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestMembershipsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
@@ -287,7 +287,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "num_subtasks", n => { NumSubtasks = n.GetIntValue(); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },
                 { "projects", n => { Projects = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_resource_subtype>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_at", n => { StartAt = n.GetDateTimeOffsetValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
@@ -302,12 +302,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_approval_status>("approval_status", ApprovalStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestApprovalStatus>("approval_status", ApprovalStatus);
             writer.WriteStringValue("assignee", Assignee);
             writer.WriteStringValue("assignee_section", AssigneeSection);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_assignee_status>("assignee_status", AssigneeStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssigneeStatus>("assignee_status", AssigneeStatus);
             writer.WriteBoolValue("completed", Completed);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_custom_fields>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty>("custom_fields", CustomFields);
             writer.WriteDateTimeOffsetValue("due_at", DueAt);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal>("external", External);
@@ -318,7 +318,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("notes", Notes);
             writer.WriteStringValue("parent", Parent);
             writer.WriteCollectionOfPrimitiveValues<string>("projects", Projects);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequest_resource_subtype>("resource_subtype", ResourceSubtype);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateTimeOffsetValue("start_at", StartAt);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);

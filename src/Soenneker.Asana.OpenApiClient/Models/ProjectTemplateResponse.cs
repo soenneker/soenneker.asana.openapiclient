@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Color of the project template.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor? Color { get; set; }
         /// <summary>Free-form textual information associated with the project template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,18 +62,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of date variables in this project template. Calendar dates must be provided for these variables when instantiating a project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates>? RequestedDates { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedDatesItem>? RequestedDates { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates> RequestedDates { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedDatesItem> RequestedDates { get; private set; }
 #endif
         /// <summary>Array of template roles in this project template. User Ids can be provided for these variables when instantiating a project to assign template tasks to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles>? RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedRolesItem>? RequestedRoles { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles> RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedRolesItem> RequestedRoles { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,15 +116,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_description", n => { HtmlDescription = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner.CreateFromDiscriminatorValue); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
-                { "requested_dates", n => { RequestedDates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_dates.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "requested_roles", n => { RequestedRoles = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "requested_dates", n => { RequestedDates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedDatesItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedDatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "requested_roles", n => { RequestedRoles = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedRolesItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedRolesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam.CreateFromDiscriminatorValue); } },
             };
@@ -136,13 +136,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_color>("color", Color);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>("color", Color);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("html_description", HtmlDescription);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseOwner>("owner", Owner);
             writer.WriteBoolValue("public", Public);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponse_requested_roles>("requested_roles", RequestedRoles);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseRequestedRolesItem>("requested_roles", RequestedRoles);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseTeam>("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }

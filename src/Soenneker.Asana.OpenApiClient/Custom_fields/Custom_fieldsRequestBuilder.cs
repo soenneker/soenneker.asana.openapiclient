@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
     public partial class Custom_fieldsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.custom_fields.item collection</summary>
-        /// <param name="position">Globally unique identifier for the custom field.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustom_field_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustom_field_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustomFieldGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustomFieldGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("custom_field_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustom_field_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("customFieldGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustomFieldGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -120,11 +120,11 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Custom_fields.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateCustomFieldOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Custom_fields.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateCustomFieldOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

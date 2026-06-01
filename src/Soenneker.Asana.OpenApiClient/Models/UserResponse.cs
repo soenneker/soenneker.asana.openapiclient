@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of Custom Fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields>? CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponseCustomFieldsItem>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields> CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponseCustomFieldsItem> CustomFields { get; set; }
 #endif
         /// <summary>The user&apos;s email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A map of the user&apos;s profile photo in various sizes, or null if no photo is set. Sizes provided are 21, 27, 36, 60, 128, and 1024. All images are in PNG format, except for 1024 (which is in JPEG format).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserResponse_photo? Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto? Photo { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserResponse_photo Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto Photo { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>&quot;Workspaces and organizations this user may access.Note\: The API will only return workspaces and organizations that also contain the authenticated user.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_workspaces>? Workspaces { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponseWorkspacesItem>? Workspaces { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_workspaces> Workspaces { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponseWorkspacesItem> Workspaces { get; private set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserResponse"/> and sets the default values.
@@ -96,13 +96,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.UserResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_photo>(global::Soenneker.Asana.OpenApiClient.Models.UserResponse_photo.CreateFromDiscriminatorValue); } },
+                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto>(global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "workspaces", n => { Workspaces = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_workspaces>(global::Soenneker.Asana.OpenApiClient.Models.UserResponse_workspaces.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "workspaces", n => { Workspaces = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponseWorkspacesItem>(global::Soenneker.Asana.OpenApiClient.Models.UserResponseWorkspacesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -112,7 +112,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponse_custom_fields>("custom_fields", CustomFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.UserResponseCustomFieldsItem>("custom_fields", CustomFields);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -15,10 +15,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The dynamic keys and values of the request. These fields are intended to be used in the action for the rule associated with this trigger.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequest_action_data? ActionData { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty? ActionData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequest_action_data ActionData { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty ActionData { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action_data", n => { ActionData = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequest_action_data>(global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequest_action_data.CreateFromDiscriminatorValue); } },
+                { "action_data", n => { ActionData = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty>(global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty.CreateFromDiscriminatorValue); } },
                 { "resource", n => { Resource = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequest_action_data>("action_data", ActionData);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty>("action_data", ActionData);
             writer.WriteStringValue("resource", Resource);
             writer.WriteAdditionalData(AdditionalData);
         }

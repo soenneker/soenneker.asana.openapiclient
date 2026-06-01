@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Teams
     public partial class TeamsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.teams.item collection</summary>
-        /// <param name="position">Globally unique identifier for the team.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeam_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeam_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeamGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeamGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("team_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeam_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("teamGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeamGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -120,11 +120,11 @@ namespace Soenneker.Asana.OpenApiClient.Teams
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTeamOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTeamOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces
     public partial class WorkspacesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspaces.item collection</summary>
-        /// <param name="position">Globally unique identifier for the workspace or organization.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspace_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspace_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspaceGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspaceGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("workspace_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspace_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("workspaceGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspaceGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,11 +128,11 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetWorkspacesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetWorkspacesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

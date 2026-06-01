@@ -16,11 +16,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Billable status filter applied to the estimate when `source` is `tasks`. Ignored when `source` is `capacity_plans` or `none`. When not provided, defaults to `billable`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_billable_status_filter? BillableStatusFilter { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateBillableStatusFilter? BillableStatusFilter { get; set; }
         /// <summary>&quot;Controls whether the estimate is displayed in the budget. This flag primarily affects UI presentation and the response payload. When `false` (and `source` is `none`), the estimate is hidden and the API response will return `value: null` and `units: null` for this field.&quot;</summary>
         public bool? Enabled { get; set; }
         /// <summary>&quot;The data source for the estimate. `tasks`: use task-level estimated time attributed to the parent. `capacity_plans`: use capacity plan estimates attributed to the parent. `none`: disables the estimate; only valid when `enabled` is `false`. When `enabled` is `true`, `source` must not be `none`.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_source? Source { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateSource? Source { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate"/> and sets the default values.
         /// </summary>
@@ -46,9 +46,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_billable_status_filter>(); } },
+                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateBillableStatusFilter>(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_source>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateSource>(); } },
             };
         }
         /// <summary>
@@ -58,9 +58,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_billable_status_filter>("billable_status_filter", BillableStatusFilter);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateBillableStatusFilter>("billable_status_filter", BillableStatusFilter);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate_source>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimateSource>("source", Source);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

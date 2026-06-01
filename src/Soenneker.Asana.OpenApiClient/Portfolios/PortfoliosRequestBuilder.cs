@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
     public partial class PortfoliosRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.portfolios.item collection</summary>
-        /// <param name="position">Globally unique identifier for the portfolio.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolio_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolio_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolioGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolioGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("portfolio_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolio_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("portfolioGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Portfolios.Item.WithPortfolioGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -183,11 +183,11 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Portfolios.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetPortfoliosOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Portfolios.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetPortfoliosOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The user who owns the portfolio. Currently, API users can only get a list of portfolios that they themselves own, unless the request is made from a Service Account. In the case of a Service Account, if this parameter is specified, then all portfolios owned by this parameter are returned. Otherwise, all portfolios across the workspace are returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -220,11 +220,11 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Portfolios.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreatePortfolioOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Portfolios.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreatePortfolioOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Tasks
     public partial class TasksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.tasks.item collection</summary>
-        /// <param name="position">The task to operate on.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTask_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTask_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("task_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTask_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("taskGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -199,11 +199,11 @@ namespace Soenneker.Asana.OpenApiClient.Tasks
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTasksOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTasksOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The project to filter tasks on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -246,11 +246,11 @@ namespace Soenneker.Asana.OpenApiClient.Tasks
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTaskOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Tasks.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateTaskOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

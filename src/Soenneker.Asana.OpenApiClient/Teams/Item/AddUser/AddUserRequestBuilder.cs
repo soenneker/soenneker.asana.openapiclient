@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Teams.Item.AddUser
 {
     /// <summary>
-    /// Builds and executes requests for operations under \teams\{team_gid}\addUser
+    /// Builds and executes requests for operations under \teams\{teamGid}\addUser
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddUserRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.AddUser
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddUserRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/addUser{?opt_fields}", pathParameters)
+        public AddUserRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamGid}/addUser{?opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.AddUser
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddUserRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{team_gid}/addUser{?opt_fields}", rawUrl)
+        public AddUserRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/teams/{teamGid}/addUser{?opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -107,11 +107,11 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item.AddUser
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.AddUser.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.AddUserForTeamOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Teams.Item.AddUser.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.AddUserForTeamOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

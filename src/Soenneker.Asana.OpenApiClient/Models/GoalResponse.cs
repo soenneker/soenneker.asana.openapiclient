@@ -18,29 +18,29 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.The latest `status_update` posted to this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update? CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate? CurrentStatusUpdate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate CurrentStatusUpdate { get; set; }
 #endif
         /// <summary>Array of custom field values applied directly to the goal itself. These represent the values set on the goal, not the fields available for items in the goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields>? CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields> CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem> CustomFields { get; set; }
 #endif
         /// <summary>Array of custom field definitions that are enabled for the goal. These represent which custom fields are available to be used on items within the goal, but do not include any values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings>? CustomFieldSettings { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>? CustomFieldSettings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings> CustomFieldSettings { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem> CustomFieldSettings { get; set; }
 #endif
         /// <summary>The default access level when inviting new members to the goal</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,10 +52,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of users who are members of this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers>? Followers { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>? Followers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers> Followers { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem> Followers { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,18 +80,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of likes for users who have liked this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_likes>? Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseLikesItem>? Likes { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_likes> Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseLikesItem> Likes { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_metric? Metric { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric? Metric { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_metric Metric { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric Metric { get; set; }
 #endif
         /// <summary>The name of the goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,13 +114,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner? Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner Owner { get; set; }
 #endif
         /// <summary>The privacy setting of the goal.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting? PrivacySetting { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -148,18 +148,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.*Conditional*. This property is only present when the `workspace` provided is an organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team? Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam? Team { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam Team { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period? TimePeriod { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod? TimePeriod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period TimePeriod { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod TimePeriod { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -194,28 +194,28 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update.CreateFromDiscriminatorValue); } },
-                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level>(); } },
+                { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
+                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel>(); } },
                 { "due_on", n => { DueOn = n.GetStringValue(); } },
-                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
                 { "is_workspace_level", n => { IsWorkspaceLevel = n.GetBoolValue(); } },
                 { "liked", n => { Liked = n.GetBoolValue(); } },
-                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_likes>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_likes.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "metric", n => { Metric = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_metric>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_metric.CreateFromDiscriminatorValue); } },
+                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseLikesItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseLikesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "metric", n => { Metric = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner.CreateFromDiscriminatorValue); } },
-                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting>(); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner.CreateFromDiscriminatorValue); } },
+                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team.CreateFromDiscriminatorValue); } },
-                { "time_period", n => { TimePeriod = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period.CreateFromDiscriminatorValue); } },
+                { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam.CreateFromDiscriminatorValue); } },
+                { "time_period", n => { TimePeriod = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod.CreateFromDiscriminatorValue); } },
                 { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
@@ -226,23 +226,23 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_current_status_update>("current_status_update", CurrentStatusUpdate);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_fields>("custom_fields", CustomFields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_custom_field_settings>("custom_field_settings", CustomFieldSettings);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_default_access_level>("default_access_level", DefaultAccessLevel);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>("custom_fields", CustomFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>("custom_field_settings", CustomFieldSettings);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteStringValue("due_on", DueOn);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_followers>("followers", Followers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>("followers", Followers);
             writer.WriteStringValue("html_notes", HtmlNotes);
             writer.WriteBoolValue("is_workspace_level", IsWorkspaceLevel);
             writer.WriteBoolValue("liked", Liked);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_metric>("metric", Metric);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric>("metric", Metric);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_owner>("owner", Owner);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_privacy_setting>("privacy_setting", PrivacySetting);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner>("owner", Owner);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteStringValue("start_on", StartOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_team>("team", Team);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponse_time_period>("time_period", TimePeriod);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam>("team", Team);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod>("time_period", TimePeriod);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }

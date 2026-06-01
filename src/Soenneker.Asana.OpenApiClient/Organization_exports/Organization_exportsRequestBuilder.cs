@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Organization_exports
     public partial class Organization_exportsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.organization_exports.item collection</summary>
-        /// <param name="position">Globally unique identifier for the organization export.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganization_export_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganization_export_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganizationExportGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganizationExportGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("organization_export_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganization_export_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("organizationExportGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganizationExportGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -120,11 +120,11 @@ namespace Soenneker.Asana.OpenApiClient.Organization_exports
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Organization_exports.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateOrganizationExportOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Organization_exports.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateOrganizationExportOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

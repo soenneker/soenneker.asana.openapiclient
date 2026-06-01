@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
 {
     /// <summary>
-    /// Builds and executes requests for operations under \custom_fields\{custom_field_gid}\enum_options
+    /// Builds and executes requests for operations under \custom_fields\{customFieldGid}\enum_options
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Enum_optionsRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Enum_optionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_fields/{custom_field_gid}/enum_options{?opt_fields}", pathParameters)
+        public Enum_optionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_fields/{customFieldGid}/enum_options{?opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Enum_optionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_fields/{custom_field_gid}/enum_options{?opt_fields}", rawUrl)
+        public Enum_optionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_fields/{customFieldGid}/enum_options{?opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -113,11 +113,11 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateEnumOptionForCustomFieldOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateEnumOptionForCustomFieldOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspace_gid}\projects\search
+    /// Builds and executes requests for operations under \workspaces\{workspaceGid}\projects\search
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/projects/search{?completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,members%2Eany*,members%2Enot*,opt_fields,owner%2Eany*,portfolios%2Eany*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,teams%2Eany*,text*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/projects/search{?completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,members%2Eany*,members%2Enot*,opt_fields,owner%2Eany*,portfolios%2Eany*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,teams%2Eany*,text*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/projects/search{?completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,members%2Eany*,members%2Enot*,opt_fields,owner%2Eany*,portfolios%2Eany*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,teams%2Eany*,text*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/projects/search{?completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,members%2Eany*,members%2Enot*,opt_fields,owner%2Eany*,portfolios%2Eany*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,teams%2Eany*,text*}", rawUrl)
         {
         }
         /// <summary>
@@ -172,11 +172,11 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SearchProjectsForWorkspaceOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SearchProjectsForWorkspaceOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Comma-separated list of user identifiers to filter on as project owners. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -203,7 +203,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
             public bool? SortAscending { get; set; }
             /// <summary>One of `due_date`, `created_at`, `completed_at`, or `modified_at`, defaults to `modified_at`.</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidProjectsSearchSortBy? SortBy { get; set; }
             /// <summary>ISO 8601 date string or `null`.</summary>
             [QueryParameter("start_on")]
             public Date? StartOn { get; set; }

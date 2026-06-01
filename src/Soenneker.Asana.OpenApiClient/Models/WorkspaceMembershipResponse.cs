@@ -61,10 +61,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates? VacationDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates? VacationDates { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates VacationDates { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates VacationDates { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUser.CreateFromDiscriminatorValue); } },
                 { "user_task_list", n => { UserTaskList = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseUserTaskList.CreateFromDiscriminatorValue); } },
-                { "vacation_dates", n => { VacationDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponse_vacation_dates.CreateFromDiscriminatorValue); } },
+                { "vacation_dates", n => { VacationDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates.CreateFromDiscriminatorValue); } },
                 { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }

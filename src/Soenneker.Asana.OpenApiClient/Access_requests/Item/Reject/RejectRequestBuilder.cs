@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Access_requests.Item.Reject
 {
     /// <summary>
-    /// Builds and executes requests for operations under \access_requests\{access_request_gid}\reject
+    /// Builds and executes requests for operations under \access_requests\{accessRequestGid}\reject
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RejectRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests.Item.Reject
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RejectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access_requests/{access_request_gid}/reject", pathParameters)
+        public RejectRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access_requests/{accessRequestGid}/reject", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests.Item.Reject
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RejectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access_requests/{access_request_gid}/reject", rawUrl)
+        public RejectRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/access_requests/{accessRequestGid}/reject", rawUrl)
         {
         }
         /// <summary>

@@ -14,7 +14,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public partial class DeprecatedPortfolioMembershipResponse : IAdditionalDataHolder, IParsable
     {
         /// <summary>Whether the member has admin, editor, or viewer access to the portfolio. Portfolios do not support commenter access yet.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_access_level? AccessLevel { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseAccessLevel? AccessLevel { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -74,7 +74,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse_access_level>(); } },
+                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseAccessLevel>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "portfolio", n => { Portfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio>(global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },

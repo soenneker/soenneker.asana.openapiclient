@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspace_gid}\typeahead
+    /// Builds and executes requests for operations under \workspaces\{workspaceGid}\typeahead
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TypeaheadRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TypeaheadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/typeahead?resource_type={resource_type}{&count*,opt_fields,query*,type*}", pathParameters)
+        public TypeaheadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/typeahead?resource_type={resource_type}{&count*,opt_fields,query*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TypeaheadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/typeahead?resource_type={resource_type}{&count*,opt_fields,query*,type*}", rawUrl)
+        public TypeaheadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/typeahead?resource_type={resource_type}{&count*,opt_fields,query*,type*}", rawUrl)
         {
         }
         /// <summary>
@@ -105,11 +105,11 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.TypeaheadForWorkspaceOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.TypeaheadForWorkspaceOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The string that will be used to search for relevant objects. If an empty string is passed in, the API will return results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead
 #endif
             /// <summary>The type of values the typeahead should return. You can choose from one of the following: `actor`, `agent`, `custom_field`, `goal`, `project`, `project_template`, `portfolio`, `tag`, `task`, `team`, and `user`. Note that unlike in the names of endpoints, the types listed here are in singular form (e.g. `task`). Using multiple types is not yet supported. The `agent` type returns only agents, currently limited to AI Teammates, which are Asana&apos;s first-party agents. The `actor` type returns a combined set of users and agents.</summary>
             [QueryParameter("resource_type")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead.GetResource_typeQueryParameterType? ResourceType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidTypeaheadResourceType? ResourceType { get; set; }
             /// <summary>*Deprecated: new integrations should prefer the resource_type field.*</summary>
             [QueryParameter("type")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Typeahead.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidTypeaheadType? Type { get; set; }
         }
     }
 }

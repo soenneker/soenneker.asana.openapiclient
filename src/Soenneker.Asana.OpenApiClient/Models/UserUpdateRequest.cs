@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequest_custom_fields? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequest_custom_fields CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequest_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequest_custom_fields.CreateFromDiscriminatorValue); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequest_custom_fields>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty>("custom_fields", CustomFields);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

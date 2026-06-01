@@ -66,10 +66,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task? NewTask { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask? NewTask { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task NewTask { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask NewTask { get; set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The current status of this job.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponse_status? Status { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseStatus? Status { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.JobResponse"/> and sets the default values.
         /// </summary>
@@ -120,10 +120,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "new_project", n => { NewProject = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject.CreateFromDiscriminatorValue); } },
                 { "new_project_template", n => { NewProjectTemplate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate.CreateFromDiscriminatorValue); } },
                 { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport.CreateFromDiscriminatorValue); } },
-                { "new_task", n => { NewTask = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task>(global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task.CreateFromDiscriminatorValue); } },
+                { "new_task", n => { NewTask = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -138,7 +138,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject>("new_project", NewProject);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate>("new_project_template", NewProjectTemplate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport>("new_resource_export", NewResourceExport);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponse_new_task>("new_task", NewTask);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask>("new_task", NewTask);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

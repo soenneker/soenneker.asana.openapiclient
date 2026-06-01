@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current approval status of the request.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_approval_status? ApprovalStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseApprovalStatus? ApprovalStatus { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_approval_status>(); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseApprovalStatus>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "requester", n => { Requester = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester>(global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseRequester.CreateFromDiscriminatorValue); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponse_approval_status>("approval_status", ApprovalStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AccessRequestResponseApprovalStatus>("approval_status", ApprovalStatus);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

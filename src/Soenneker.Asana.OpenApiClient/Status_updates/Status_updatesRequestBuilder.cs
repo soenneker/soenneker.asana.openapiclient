@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Status_updates
     public partial class Status_updatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.status_updates.item collection</summary>
-        /// <param name="position">The status update to get.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatus_update_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatus_update_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatusUpdateGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatusUpdateGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("status_update_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatus_update_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("statusUpdateGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatusUpdateGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -186,11 +186,11 @@ namespace Soenneker.Asana.OpenApiClient.Status_updates
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Status_updates.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetStatusesForObjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Status_updates.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetStatusesForObjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for object to fetch statuses from. Must be a GID for a project, portfolio, or goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -226,11 +226,11 @@ namespace Soenneker.Asana.OpenApiClient.Status_updates
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Status_updates.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateStatusForObjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Status_updates.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateStatusForObjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

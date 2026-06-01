@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Users
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.users.item collection</summary>
-        /// <param name="position">A string identifying a user. This can either be the string &quot;me&quot;, an email, or the gid of a user.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Users.Item.WithUser_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Users.Item.WithUser_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Users.Item.WithUserGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Users.Item.WithUserGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Users.Item.WithUser_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Users.Item.WithUserGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,11 +128,11 @@ namespace Soenneker.Asana.OpenApiClient.Users
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetUsersOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetUsersOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The team ID to filter users on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

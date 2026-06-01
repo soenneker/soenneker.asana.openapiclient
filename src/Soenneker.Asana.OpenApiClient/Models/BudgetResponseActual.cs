@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Billable status filter applied to time tracking entries contributing to the actual value. Determines which entries are included in aggregation. When not provided, defaults to `billable`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActual_billable_status_filter? BillableStatusFilter { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter? BillableStatusFilter { get; set; }
         /// <summary>The units of the actual value. * When `budget_type` is `time`, units are `&quot;minutes&quot;`. * When `budget_type` is `cost`, units are the ISO 4217 currency code configured at the domain level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,7 +52,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActual_billable_status_filter>(); } },
+                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter>(); } },
                 { "units", n => { Units = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
@@ -64,7 +64,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActual_billable_status_filter>("billable_status_filter", BillableStatusFilter);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter>("billable_status_filter", BillableStatusFilter);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

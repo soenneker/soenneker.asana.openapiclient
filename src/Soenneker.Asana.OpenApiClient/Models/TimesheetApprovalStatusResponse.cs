@@ -17,7 +17,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current approval status of the timesheet.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_approval_status? ApprovalStatus { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseApprovalStatus? ApprovalStatus { get; private set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>The end date of the timesheet week.</summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponse_approval_status>(); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseApprovalStatus>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },

@@ -18,34 +18,34 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of attachments that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_attachments> Attachments { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem> Attachments { get; set; }
 #endif
         /// <summary>Array of custom fields that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_custom_fields>? CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_custom_fields> CustomFields { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem> CustomFields { get; set; }
 #endif
         /// <summary>Array of task templates that the task created from this template will depend on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependencies>? Dependencies { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>? Dependencies { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependencies> Dependencies { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem> Dependencies { get; set; }
 #endif
         /// <summary>Array of task templates that will depend on the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependents>? Dependents { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>? Dependents { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependents> Dependents { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem> Dependents { get; set; }
 #endif
         /// <summary>Description of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of users that will be added as followers to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_followers>? Followers { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>? Followers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_followers> Followers { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem> Followers { get; set; }
 #endif
         /// <summary>HTML description of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of projects that the task created from this template will be added to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_memberships>? Memberships { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>? Memberships { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_memberships> Memberships { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem> Memberships { get; set; }
 #endif
         /// <summary>Name of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,13 +102,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of subtasks that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_subtasks>? Subtasks { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>? Subtasks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_subtasks> Subtasks { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem> Subtasks { get; set; }
 #endif
         /// <summary>The subtype of the task that will be created from this template.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_task_resource_subtype? TaskResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype? TaskResourceSubtype { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate"/> and sets the default values.
         /// </summary>
@@ -134,20 +134,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_attachments>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependencies>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependencies.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependents>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependents.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "due_time", n => { DueTime = n.GetStringValue(); } },
-                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_followers>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_followers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "html_description", n => { HtmlDescription = n.GetStringValue(); } },
-                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_memberships>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_memberships.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "relative_due_on", n => { RelativeDueOn = n.GetIntValue(); } },
                 { "relative_start_on", n => { RelativeStartOn = n.GetIntValue(); } },
-                { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_subtasks>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_subtasks.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "task_resource_subtype", n => { TaskResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_task_resource_subtype>(); } },
+                { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "task_resource_subtype", n => { TaskResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype>(); } },
             };
         }
         /// <summary>
@@ -157,20 +157,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_attachments>("attachments", Attachments);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_custom_fields>("custom_fields", CustomFields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependencies>("dependencies", Dependencies);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_dependents>("dependents", Dependents);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>("custom_fields", CustomFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>("dependencies", Dependencies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>("dependents", Dependents);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("due_time", DueTime);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_followers>("followers", Followers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>("followers", Followers);
             writer.WriteStringValue("html_description", HtmlDescription);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_memberships>("memberships", Memberships);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>("memberships", Memberships);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("relative_due_on", RelativeDueOn);
             writer.WriteIntValue("relative_start_on", RelativeStartOn);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_subtasks>("subtasks", Subtasks);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate_task_resource_subtype>("task_resource_subtype", TaskResourceSubtype);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>("subtasks", Subtasks);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype>("task_resource_subtype", TaskResourceSubtype);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

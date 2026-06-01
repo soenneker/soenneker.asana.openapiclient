@@ -17,10 +17,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An array of WebhookFilter objects to specify a whitelist of filters to apply to events from this webhook. If a webhook event passes any of the filters the event will be delivered; otherwise no event will be sent to the receiving server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequest_filters>? Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequestFiltersItem>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequest_filters> Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequestFiltersItem> Filters { get; set; }
 #endif
         /// <summary>A resource ID to subscribe to. Many Asana resources are valid to create webhooks on, but higher-level resources require filters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequest_filters>(global::Soenneker.Asana.OpenApiClient.Models.WebhookRequest_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequestFiltersItem>(global::Soenneker.Asana.OpenApiClient.Models.WebhookRequestFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource", n => { Resource = n.GetStringValue(); } },
                 { "target", n => { Target = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequest_filters>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookRequestFiltersItem>("filters", Filters);
             writer.WriteStringValue("resource", Resource);
             writer.WriteStringValue("target", Target);
             writer.WriteAdditionalData(AdditionalData);

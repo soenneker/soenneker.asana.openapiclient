@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses
     public partial class Project_statusesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.project_statuses.item collection</summary>
-        /// <param name="position">The project status update to get.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProject_status_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProject_status_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProjectStatusGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProjectStatusGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_status_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProject_status_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectStatusGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProjectStatusGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

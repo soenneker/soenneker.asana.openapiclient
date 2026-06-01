@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections.Insert
 {
     /// <summary>
-    /// Builds and executes requests for operations under \projects\{project_gid}\sections\insert
+    /// Builds and executes requests for operations under \projects\{projectGid}\sections\insert
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsertRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections.Insert
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InsertRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/sections/insert", pathParameters)
+        public InsertRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/sections/insert", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections.Insert
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InsertRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/sections/insert", rawUrl)
+        public InsertRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/sections/insert", rawUrl)
         {
         }
         /// <summary>

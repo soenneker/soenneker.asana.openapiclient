@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Color of the tag.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequest_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequestColor? Color { get; set; }
         /// <summary>An array of strings identifying users. These can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequest_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequestColor>(); } },
                 { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequest_color>("color", Color);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagCreateRequestColor>("color", Color);
             writer.WriteCollectionOfPrimitiveValues<string>("followers", Followers);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);

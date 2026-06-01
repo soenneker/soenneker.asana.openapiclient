@@ -24,7 +24,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor Author { get; set; }
 #endif
         /// <summary>The color associated with the status update.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseColor? Color { get; set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
@@ -103,7 +103,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor.CreateFromDiscriminatorValue); } },
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseColor>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseAuthor>("author", Author);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponse_color>("color", Color);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseColor>("color", Color);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteStringValue("text", Text);

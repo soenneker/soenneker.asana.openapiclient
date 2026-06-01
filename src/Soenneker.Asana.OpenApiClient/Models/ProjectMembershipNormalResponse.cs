@@ -14,7 +14,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public partial class ProjectMembershipNormalResponse : IAdditionalDataHolder, IParsable
     {
         /// <summary>Whether the member has admin, editor, commenter, or viewer access to the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_access_level? AccessLevel { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseAccessLevel? AccessLevel { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -66,7 +66,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser User { get; set; }
 #endif
         /// <summary>Whether the member has full access or comment-only access to the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_write_access? WriteAccess { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseWriteAccess? WriteAccess { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse"/> and sets the default values.
         /// </summary>
@@ -92,14 +92,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_access_level>(); } },
+                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseAccessLevel>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseMember.CreateFromDiscriminatorValue); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseParent.CreateFromDiscriminatorValue); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseProject.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseUser.CreateFromDiscriminatorValue); } },
-                { "write_access", n => { WriteAccess = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponse_write_access>(); } },
+                { "write_access", n => { WriteAccess = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipNormalResponseWriteAccess>(); } },
             };
         }
         /// <summary>

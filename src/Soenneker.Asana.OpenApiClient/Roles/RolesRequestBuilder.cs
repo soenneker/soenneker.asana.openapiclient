@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Roles
     public partial class RolesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.roles.item collection</summary>
-        /// <param name="position">Globally unique identifier for the role.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRole_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRole_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("role_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRole_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("roleGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -186,11 +186,11 @@ namespace Soenneker.Asana.OpenApiClient.Roles
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Roles.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetRolesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Roles.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetRolesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The workspace or organization to filter roles on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -213,11 +213,11 @@ namespace Soenneker.Asana.OpenApiClient.Roles
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Roles.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateRoleOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Roles.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateRoleOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

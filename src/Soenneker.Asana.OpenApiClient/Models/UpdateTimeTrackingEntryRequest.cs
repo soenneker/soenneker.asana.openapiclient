@@ -24,7 +24,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string AttributableTo { get; set; }
 #endif
         /// <summary>*Optional*. The current billable status of the entry.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequest_billable_status? BillableStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequestBillableStatus? BillableStatus { get; set; }
         /// <summary>*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attributable_to", n => { AttributableTo = n.GetStringValue(); } },
-                { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequest_billable_status>(); } },
+                { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequestBillableStatus>(); } },
                 { "categories", n => { Categories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "duration_minutes", n => { DurationMinutes = n.GetIntValue(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("attributable_to", AttributableTo);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequest_billable_status>("billable_status", BillableStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequestBillableStatus>("billable_status", BillableStatus);
             writer.WriteCollectionOfPrimitiveValues<string>("categories", Categories);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("duration_minutes", DurationMinutes);

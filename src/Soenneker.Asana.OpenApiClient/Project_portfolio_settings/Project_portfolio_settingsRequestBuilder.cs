@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings
     public partial class Project_portfolio_settingsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.project_portfolio_settings.item collection</summary>
-        /// <param name="position">Globally unique identifier for the project portfolio setting.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProject_portfolio_setting_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProject_portfolio_setting_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProjectPortfolioSettingGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProjectPortfolioSettingGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_portfolio_setting_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProject_portfolio_setting_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectPortfolioSettingGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProjectPortfolioSettingGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequest_custom_fields? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequest_custom_fields CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
         /// <summary>The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequest_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequest_custom_fields.CreateFromDiscriminatorValue); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "due_on", n => { DueOn = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequest_custom_fields>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty>("custom_fields", CustomFields);
             writer.WriteStringValue("due_on", DueOn);
             writer.WriteStringValue("html_notes", HtmlNotes);
             writer.WriteBoolValue("is_workspace_level", IsWorkspaceLevel);

@@ -20,14 +20,14 @@ namespace Soenneker.Asana.OpenApiClient.Team_memberships
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.team_memberships.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeam_membership_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeam_membership_gItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeamMembershipGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeamMembershipGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("team_membership_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeam_membership_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("teamMembershipGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeamMembershipGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,11 +128,11 @@ namespace Soenneker.Asana.OpenApiClient.Team_memberships
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Team_memberships.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTeamMembershipsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Team_memberships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTeamMembershipsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -48,9 +48,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for goal metrics of type `Number`. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.</summary>
         public int? Precision { get; set; }
         /// <summary>This field defines how the progress value of a goal metric is being calculated. A goal&apos;s progress can be provided manually by the user, calculated automatically from contributing subgoals, projects, or tasks, or managed by an integration with an external data source, such as Salesforce.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_progress_source? ProgressSource { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestProgressSource? ProgressSource { get; set; }
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>This number is the end value of a goal metric of type number. This number cannot equal `initial_number_value`.</summary>
         public double? TargetNumberValue { get; set; }
         /// <summary>A supported unit of measure for the goal metric, or none.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_unit? Unit { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestUnit? Unit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest"/> and sets the default values.
         /// </summary>
@@ -95,11 +95,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "initial_number_value", n => { InitialNumberValue = n.GetDoubleValue(); } },
                 { "is_custom_weight", n => { IsCustomWeight = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetIntValue(); } },
-                { "progress_source", n => { ProgressSource = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_progress_source>(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_resource_subtype>(); } },
+                { "progress_source", n => { ProgressSource = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestProgressSource>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "target_number_value", n => { TargetNumberValue = n.GetDoubleValue(); } },
-                { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_unit>(); } },
+                { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestUnit>(); } },
             };
         }
         /// <summary>
@@ -114,9 +114,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteDoubleValue("initial_number_value", InitialNumberValue);
             writer.WriteBoolValue("is_custom_weight", IsCustomWeight);
             writer.WriteIntValue("precision", Precision);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_progress_source>("progress_source", ProgressSource);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestProgressSource>("progress_source", ProgressSource);
             writer.WriteDoubleValue("target_number_value", TargetNumberValue);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequest_unit>("unit", Unit);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestUnit>("unit", Unit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

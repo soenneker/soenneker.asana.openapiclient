@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspace_gid}\audit_log_events
+    /// Builds and executes requests for operations under \workspaces\{workspaceGid}\audit_log_events
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Audit_log_eventsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Audit_log_eventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/audit_log_events{?actor_gid*,actor_type*,end_at*,event_type*,limit*,offset*,resource_gid*,start_at*}", pathParameters)
+        public Audit_log_eventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/audit_log_events{?actor_gid*,actor_type*,end_at*,event_type*,limit*,offset*,resource_gid*,start_at*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Audit_log_eventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/audit_log_events{?actor_gid*,actor_type*,end_at*,event_type*,limit*,offset*,resource_gid*,start_at*}", rawUrl)
+        public Audit_log_eventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/audit_log_events{?actor_gid*,actor_type*,end_at*,event_type*,limit*,offset*,resource_gid*,start_at*}", rawUrl)
         {
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events
 #endif
             /// <summary>Filter to events with an actor of this type.This only needs to be included if querying for actor types without an ID. If `actor_gid` is included, this should be excluded.</summary>
             [QueryParameter("actor_type")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events.GetActor_typeQueryParameterType? ActorType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.AuditLogActorType? ActorType { get; set; }
             /// <summary>Filter to events created before this time (exclusive).</summary>
             [QueryParameter("end_at")]
             public DateTimeOffset? EndAt { get; set; }

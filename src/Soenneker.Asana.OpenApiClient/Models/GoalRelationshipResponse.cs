@@ -26,7 +26,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponse_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "contribution_weight", n => { ContributionWeight = n.GetDoubleValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponse_resource_subtype>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "supported_goal", n => { SupportedGoal = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal.CreateFromDiscriminatorValue); } },
                 { "supporting_resource", n => { SupportingResource = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportingResource>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportingResource.CreateFromDiscriminatorValue); } },

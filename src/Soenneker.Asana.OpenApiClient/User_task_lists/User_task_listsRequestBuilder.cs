@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.User_task_lists
     public partial class User_task_listsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.user_task_lists.item collection</summary>
-        /// <param name="position">Globally unique identifier for the user task list.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUser_task_list_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUser_task_list_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUserTaskListGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUserTaskListGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_task_list_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUser_task_list_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userTaskListGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUserTaskListGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

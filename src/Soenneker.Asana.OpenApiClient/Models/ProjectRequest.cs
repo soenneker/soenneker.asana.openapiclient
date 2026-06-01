@@ -19,45 +19,45 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>True if the project is archived, false if not. Archived projects do not show in the UI by default and may be treated differently for queries.</summary>
         public bool? Archived { get; set; }
         /// <summary>Color of the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestColor? Color { get; set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>&quot;A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: \&quot;green\&quot; for projects that are on track, \&quot;yellow\&quot; for projects at risk, and \&quot;red\&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status? CurrentStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatus? CurrentStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status CurrentStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatus CurrentStatus { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.The latest `status_update` posted to this project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status_update? CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatusUpdate? CurrentStatusUpdate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status_update CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatusUpdate CurrentStatusUpdate { get; set; }
 #endif
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_fields? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldsProperty? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_fields CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
         /// <summary>Array of custom field definitions that are enabled for the project. These represent which custom fields are available to be used on tasks within the project, but do not include any values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings>? CustomFieldSettings { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldSettingsItem>? CustomFieldSettings { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings> CustomFieldSettings { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldSettingsItem> CustomFieldSettings { get; private set; }
 #endif
         /// <summary>The default access for users or teams who join or are added as members to the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_access_level? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The default view (list, board, calendar, or timeline) of a project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_view? DefaultView { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultView? DefaultView { get; set; }
         /// <summary>&quot;*Deprecated: new integrations should prefer the `due_on` field.*&quot;</summary>
         public Date? DueDate { get; set; }
         /// <summary>The day on which this project is due. This takes a date with format YYYY-MM-DD.</summary>
@@ -87,19 +87,19 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string HtmlNotes { get; set; }
 #endif
         /// <summary>The icon for a project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_icon? Icon { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestIcon? Icon { get; set; }
         /// <summary>Array of users who are members of this project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_members>? Members { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMembersItem>? Members { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_members> Members { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMembersItem> Members { get; private set; }
 #endif
         /// <summary>The minimum access level needed for project members to modify this project&apos;s workflow and appearance.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_customization? MinimumAccessLevelForCustomization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForCustomization? MinimumAccessLevelForCustomization { get; set; }
         /// <summary>The minimum access level needed for project members to share the project and manage project memberships.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_sharing? MinimumAccessLevelForSharing { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForSharing? MinimumAccessLevelForSharing { get; set; }
         /// <summary>&quot;The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
@@ -127,7 +127,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Owner { get; set; }
 #endif
         /// <summary>&quot;The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_privacy_setting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestPrivacySetting? PrivacySetting { get; set; }
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
         public bool? Public { get; set; }
@@ -184,28 +184,28 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestColor>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "current_status", n => { CurrentStatus = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status.CreateFromDiscriminatorValue); } },
-                { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status_update>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status_update.CreateFromDiscriminatorValue); } },
-                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_field_settings.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_fields.CreateFromDiscriminatorValue); } },
-                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_access_level>(); } },
-                { "default_view", n => { DefaultView = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_view>(); } },
+                { "current_status", n => { CurrentStatus = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatus>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatus.CreateFromDiscriminatorValue); } },
+                { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
+                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultAccessLevel>(); } },
+                { "default_view", n => { DefaultView = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultView>(); } },
                 { "due_date", n => { DueDate = n.GetDateValue(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "followers", n => { Followers = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
-                { "icon", n => { Icon = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_icon>(); } },
-                { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_members>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_members.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "minimum_access_level_for_customization", n => { MinimumAccessLevelForCustomization = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_customization>(); } },
-                { "minimum_access_level_for_sharing", n => { MinimumAccessLevelForSharing = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_sharing>(); } },
+                { "icon", n => { Icon = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestIcon>(); } },
+                { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMembersItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMembersItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "minimum_access_level_for_customization", n => { MinimumAccessLevelForCustomization = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForCustomization>(); } },
+                { "minimum_access_level_for_sharing", n => { MinimumAccessLevelForSharing = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForSharing>(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "owner", n => { Owner = n.GetStringValue(); } },
-                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_privacy_setting>(); } },
+                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestPrivacySetting>(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
@@ -221,23 +221,23 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_color>("color", Color);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status>("current_status", CurrentStatus);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_current_status_update>("current_status_update", CurrentStatusUpdate);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_custom_fields>("custom_fields", CustomFields);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_access_level>("default_access_level", DefaultAccessLevel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_default_view>("default_view", DefaultView);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestColor>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatus>("current_status", CurrentStatus);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestCustomFieldsProperty>("custom_fields", CustomFields);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestDefaultView>("default_view", DefaultView);
             writer.WriteDateValue("due_date", DueDate);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("followers", Followers);
             writer.WriteStringValue("html_notes", HtmlNotes);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_icon>("icon", Icon);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_customization>("minimum_access_level_for_customization", MinimumAccessLevelForCustomization);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_minimum_access_level_for_sharing>("minimum_access_level_for_sharing", MinimumAccessLevelForSharing);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestIcon>("icon", Icon);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForCustomization>("minimum_access_level_for_customization", MinimumAccessLevelForCustomization);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestMinimumAccessLevelForSharing>("minimum_access_level_for_sharing", MinimumAccessLevelForSharing);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
             writer.WriteStringValue("owner", Owner);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequest_privacy_setting>("privacy_setting", PrivacySetting);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestPrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteBoolValue("public", Public);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteStringValue("team", Team);

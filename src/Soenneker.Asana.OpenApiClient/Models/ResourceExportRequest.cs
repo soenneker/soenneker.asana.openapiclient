@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object containing the parameters for the export request. The keys of this object are the GIDs of the resources to be exported. The values are objects with additional parameters for each resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequest_export_request_parameters>? ExportRequestParameters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>? ExportRequestParameters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequest_export_request_parameters> ExportRequestParameters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem> ExportRequestParameters { get; set; }
 #endif
         /// <summary>Gid of a workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "export_request_parameters", n => { ExportRequestParameters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequest_export_request_parameters>(global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequest_export_request_parameters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "export_request_parameters", n => { ExportRequestParameters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>(global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "workspace", n => { Workspace = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequest_export_request_parameters>("export_request_parameters", ExportRequestParameters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>("export_request_parameters", ExportRequestParameters);
             writer.WriteStringValue("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);
         }

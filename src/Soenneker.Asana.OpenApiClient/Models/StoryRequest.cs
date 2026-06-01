@@ -52,7 +52,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The name of the sticker in this story. `null` if there is no sticker.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryRequest_sticker_name? StickerName { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryRequestStickerName? StickerName { get; set; }
         /// <summary>The plain text of the comment to add. Cannot be used with html_text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "is_pinned", n => { IsPinned = n.GetBoolValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "sticker_name", n => { StickerName = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryRequest_sticker_name>(); } },
+                { "sticker_name", n => { StickerName = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryRequestStickerName>(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
             };
         }
@@ -105,7 +105,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteBoolValue("is_pinned", IsPinned);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryRequest_sticker_name>("sticker_name", StickerName);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryRequestStickerName>("sticker_name", StickerName);
             writer.WriteStringValue("text", Text);
             writer.WriteAdditionalData(AdditionalData);
         }

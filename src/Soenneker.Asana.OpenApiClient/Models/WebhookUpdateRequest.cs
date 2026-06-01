@@ -17,10 +17,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An array of WebhookFilter objects to specify a whitelist of filters to apply to events from this webhook. If a webhook event passes any of the filters the event will be delivered; otherwise no event will be sent to the receiving server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest_filters>? Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequestFiltersItem>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest_filters> Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequestFiltersItem> Filters { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest_filters>(global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequestFiltersItem>(global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequestFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequest_filters>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookUpdateRequestFiltersItem>("filters", Filters);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

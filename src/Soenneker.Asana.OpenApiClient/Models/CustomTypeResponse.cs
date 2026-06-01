@@ -42,10 +42,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The available options for the custom type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse_status_options>? StatusOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseStatusOptionsItem>? StatusOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse_status_options> StatusOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseStatusOptionsItem> StatusOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse"/> and sets the default values.
@@ -75,7 +75,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "status_options", n => { StatusOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse_status_options>(global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse_status_options.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "status_options", n => { StatusOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseStatusOptionsItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseStatusOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse_status_options>("status_options", StatusOptions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseStatusOptionsItem>("status_options", StatusOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Billable status filter applied to time tracking entries contributing to the actual value. Determines which entries are included in aggregation. When not provided, defaults to `billable`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual_billable_status_filter? BillableStatusFilter { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActualBillableStatusFilter? BillableStatusFilter { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual"/> and sets the default values.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual_billable_status_filter>(); } },
+                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActualBillableStatusFilter>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual_billable_status_filter>("billable_status_filter", BillableStatusFilter);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActualBillableStatusFilter>("billable_status_filter", BillableStatusFilter);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,14 +17,14 @@ namespace Soenneker.Asana.OpenApiClient.Workspace_memberships
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspace_memberships.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspace_membership_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspace_membership_gItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspaceMembershipGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspaceMembershipGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("workspace_membership_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspace_membership_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("workspaceMembershipGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Workspace_memberships.Item.WithWorkspaceMembershipGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

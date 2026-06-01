@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
     public partial class Ooo_entriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.ooo_entries.item collection</summary>
-        /// <param name="position">Globally unique identifier for the OOO entry.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ooo_entry_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOoo_entry_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("oooEntryGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -91,11 +91,11 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntry body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData?> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntry body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData> PostAsync(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -137,11 +137,11 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntry body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntry body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryRequest body, Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -186,11 +186,11 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetOooEntriesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetOooEntriesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>An ISO 8601 date string. Filters to OOO entries that overlap with or end after this date.</summary>
             [QueryParameter("start_date")]
@@ -226,11 +226,11 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Ooo_entries.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateOooEntryOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

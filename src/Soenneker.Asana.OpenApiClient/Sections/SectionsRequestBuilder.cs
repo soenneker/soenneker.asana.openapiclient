@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Sections
     public partial class SectionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.sections.item collection</summary>
-        /// <param name="position">The globally unique identifier for the section.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSection_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSection_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("section_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSection_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sectionGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

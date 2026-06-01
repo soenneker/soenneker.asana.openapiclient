@@ -18,18 +18,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The JSON body that the invoked endpoint returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_body? Body { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponseBodyProperty? Body { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_body Body { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponseBodyProperty Body { get; set; }
 #endif
         /// <summary>A map of HTTP headers specific to this result. This is primarily used for returning a `Location` header to accompany a `201 Created` result.  The parent HTTP response will contain all common headers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_headers? Headers { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponseHeadersProperty? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_headers Headers { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.BatchResponseHeadersProperty Headers { get; set; }
 #endif
         /// <summary>The HTTP status code that the invoked endpoint returned.</summary>
         public int? StatusCode { get; set; }
@@ -58,8 +58,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "body", n => { Body = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_body>(global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_body.CreateFromDiscriminatorValue); } },
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_headers>(global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_headers.CreateFromDiscriminatorValue); } },
+                { "body", n => { Body = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponseBodyProperty>(global::Soenneker.Asana.OpenApiClient.Models.BatchResponseBodyProperty.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponseHeadersProperty>(global::Soenneker.Asana.OpenApiClient.Models.BatchResponseHeadersProperty.CreateFromDiscriminatorValue); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
             };
         }
@@ -70,8 +70,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_body>("body", Body);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponse_headers>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponseBodyProperty>("body", Body);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchResponseHeadersProperty>("headers", Headers);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteAdditionalData(AdditionalData);
         }

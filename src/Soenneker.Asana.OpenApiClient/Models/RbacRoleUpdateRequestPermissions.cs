@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls what type of email users with this role are allowed to invite</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_allowed_guest_invites? AllowedGuestInvites { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsAllowedGuestInvites? AllowedGuestInvites { get; set; }
         /// <summary>Controls whether users with this role can assign guest, member, and admin roles to other users</summary>
         public bool? AssignRoles { get; set; }
         /// <summary>Controls whether users with this role can create and edit AI automations</summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Controls whether users with this role can use standard AI features</summary>
         public bool? StandardAi { get; set; }
         /// <summary>Determines what tasks users with this role are allowed to delete</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_task_deletion_policy? TaskDeletionPolicy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsTaskDeletionPolicy? TaskDeletionPolicy { get; set; }
         /// <summary>Controls whether users with this role can upload attachments</summary>
         public bool? UploadAttachments { get; set; }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_guest_invites", n => { AllowedGuestInvites = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_allowed_guest_invites>(); } },
+                { "allowed_guest_invites", n => { AllowedGuestInvites = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsAllowedGuestInvites>(); } },
                 { "assign_roles", n => { AssignRoles = n.GetBoolValue(); } },
                 { "create_and_edit_ai_automations", n => { CreateAndEditAiAutomations = n.GetBoolValue(); } },
                 { "create_and_edit_ai_teammates", n => { CreateAndEditAiTeammates = n.GetBoolValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "share_goal_with_domain", n => { ShareGoalWithDomain = n.GetBoolValue(); } },
                 { "share_portfolios_with_org", n => { SharePortfoliosWithOrg = n.GetBoolValue(); } },
                 { "standard_ai", n => { StandardAi = n.GetBoolValue(); } },
-                { "task_deletion_policy", n => { TaskDeletionPolicy = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_task_deletion_policy>(); } },
+                { "task_deletion_policy", n => { TaskDeletionPolicy = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsTaskDeletionPolicy>(); } },
                 { "upload_attachments", n => { UploadAttachments = n.GetBoolValue(); } },
             };
         }
@@ -103,7 +103,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_allowed_guest_invites>("allowed_guest_invites", AllowedGuestInvites);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsAllowedGuestInvites>("allowed_guest_invites", AllowedGuestInvites);
             writer.WriteBoolValue("assign_roles", AssignRoles);
             writer.WriteBoolValue("create_and_edit_ai_automations", CreateAndEditAiAutomations);
             writer.WriteBoolValue("create_and_edit_ai_teammates", CreateAndEditAiTeammates);
@@ -119,7 +119,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("share_goal_with_domain", ShareGoalWithDomain);
             writer.WriteBoolValue("share_portfolios_with_org", SharePortfoliosWithOrg);
             writer.WriteBoolValue("standard_ai", StandardAi);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissions_task_deletion_policy>("task_deletion_policy", TaskDeletionPolicy);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsTaskDeletionPolicy>("task_deletion_policy", TaskDeletionPolicy);
             writer.WriteBoolValue("upload_attachments", UploadAttachments);
             writer.WriteAdditionalData(AdditionalData);
         }

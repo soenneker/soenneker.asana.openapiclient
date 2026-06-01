@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Goals.Item.RemoveSupportingRelationship
 {
     /// <summary>
-    /// Builds and executes requests for operations under \goals\{goal_gid}\removeSupportingRelationship
+    /// Builds and executes requests for operations under \goals\{goalGid}\removeSupportingRelationship
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RemoveSupportingRelationshipRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.RemoveSupportingRelationship
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveSupportingRelationshipRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goal_gid}/removeSupportingRelationship", pathParameters)
+        public RemoveSupportingRelationshipRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/removeSupportingRelationship", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.RemoveSupportingRelationship
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveSupportingRelationshipRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goal_gid}/removeSupportingRelationship", rawUrl)
+        public RemoveSupportingRelationshipRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/removeSupportingRelationship", rawUrl)
         {
         }
         /// <summary>

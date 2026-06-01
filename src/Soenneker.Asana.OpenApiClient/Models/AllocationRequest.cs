@@ -27,10 +27,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The amount of time associated with the allocation, represented as a percentage or number of hours.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationRequest_effort? Effort { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationRequestEffort? Effort { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationRequest_effort Effort { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationRequestEffort Effort { get; set; }
 #endif
         /// <summary>The localized day on which the allocation ends.</summary>
         public Date? EndDate { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assignee", n => { Assignee = n.GetStringValue(); } },
-                { "effort", n => { Effort = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationRequest_effort>(global::Soenneker.Asana.OpenApiClient.Models.AllocationRequest_effort.CreateFromDiscriminatorValue); } },
+                { "effort", n => { Effort = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationRequestEffort>(global::Soenneker.Asana.OpenApiClient.Models.AllocationRequestEffort.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignee", Assignee);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationRequest_effort>("effort", Effort);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationRequestEffort>("effort", Effort);
             writer.WriteDateValue("end_date", EndDate);
             writer.WriteStringValue("parent", Parent);
             writer.WriteDateValue("start_date", StartDate);

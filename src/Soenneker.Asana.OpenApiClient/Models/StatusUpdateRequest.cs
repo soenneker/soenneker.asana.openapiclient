@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Parent { get; set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The `resource_subtype`s for `status` objects represent the type of their parent.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequestResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_status_type? StatusType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequestStatusType? StatusType { get; set; }
         /// <summary>The text content of the status update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,9 +95,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_text", n => { HtmlText = n.GetStringValue(); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_resource_subtype>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequestResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "status_type", n => { StatusType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_status_type>(); } },
+                { "status_type", n => { StatusType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequestStatusType>(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteStringValue("parent", Parent);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequest_status_type>("status_type", StatusType);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateRequestStatusType>("status_type", StatusType);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

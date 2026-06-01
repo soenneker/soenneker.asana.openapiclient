@@ -8,26 +8,26 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddCustomFieldSettingRequestCustomField : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1? AddCustomFieldSettingRequestCustomFieldBranch1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1? AddCustomFieldSettingRequestCustomFieldBranch1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1 AddCustomFieldSettingRequestCustomFieldBranch1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1 AddCustomFieldSettingRequestCustomFieldBranch1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1? AddCustomFieldSettingRequestCustomFieldMember1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2? AddCustomFieldSettingRequestCustomFieldOneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1 AddCustomFieldSettingRequestCustomFieldMember1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2 AddCustomFieldSettingRequestCustomFieldOneOf2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,11 +41,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
             var result = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField();
             if("AddCustomFieldSettingRequestCustomField_1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AddCustomFieldSettingRequestCustomFieldBranch1 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1();
+                result.AddCustomFieldSettingRequestCustomFieldBranch1 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1();
             }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("AddCustomFieldSettingRequestCustomFieldOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AddCustomFieldSettingRequestCustomFieldMember1 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1();
+                result.AddCustomFieldSettingRequestCustomFieldOneOf2 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2();
             }
             return result;
         }
@@ -59,9 +59,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 return AddCustomFieldSettingRequestCustomFieldBranch1.GetFieldDeserializers();
             }
-            else if(AddCustomFieldSettingRequestCustomFieldMember1 != null)
+            else if(AddCustomFieldSettingRequestCustomFieldOneOf2 != null)
             {
-                return AddCustomFieldSettingRequestCustomFieldMember1.GetFieldDeserializers();
+                return AddCustomFieldSettingRequestCustomFieldOneOf2.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -74,11 +74,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AddCustomFieldSettingRequestCustomFieldBranch1 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField_Branch1>(null, AddCustomFieldSettingRequestCustomFieldBranch1);
+                writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1>(null, AddCustomFieldSettingRequestCustomFieldBranch1);
             }
-            else if(AddCustomFieldSettingRequestCustomFieldMember1 != null)
+            else if(AddCustomFieldSettingRequestCustomFieldOneOf2 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldMember1>(null, AddCustomFieldSettingRequestCustomFieldMember1);
+                writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2>(null, AddCustomFieldSettingRequestCustomFieldOneOf2);
             }
         }
     }

@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf_resource_subtype? ResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOfResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOfCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOfCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf_resource_subtype>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOfResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -89,7 +89,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOf_resource_subtype>("resource_subtype", ResourceSubtype);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseDuplicateOfResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

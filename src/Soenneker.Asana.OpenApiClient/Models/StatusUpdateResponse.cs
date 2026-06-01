@@ -46,10 +46,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated - please use likes instead* Array of likes for users who have hearted this status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts>? Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseHeartsItem>? Hearts { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts> Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseHeartsItem> Hearts { get; private set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,10 +64,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of likes for users who have liked this status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_likes>? Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseLikesItem>? Likes { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_likes> Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseLikesItem> Likes { get; private set; }
 #endif
         /// <summary>&quot;The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the status.*&quot;</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
@@ -86,13 +86,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Summary of emoji reactions on this status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary>? ReactionSummary { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseReactionSummaryItem>? ReactionSummary { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary> ReactionSummary { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseReactionSummaryItem> ReactionSummary { get; private set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The `resource_subtype`s for `status` objects represent the type of their parent.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,7 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_status_type? StatusType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseStatusType? StatusType { get; set; }
         /// <summary>The text content of the status update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,18 +149,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
-                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_hearts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseHeartsItem>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseHeartsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "html_text", n => { HtmlText = n.GetStringValue(); } },
                 { "liked", n => { Liked = n.GetBoolValue(); } },
-                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_likes>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_likes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseLikesItem>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseLikesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "num_hearts", n => { NumHearts = n.GetIntValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent.CreateFromDiscriminatorValue); } },
-                { "reaction_summary", n => { ReactionSummary = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_reaction_summary.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_resource_subtype>(); } },
+                { "reaction_summary", n => { ReactionSummary = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseReactionSummaryItem>(global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseReactionSummaryItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "status_type", n => { StatusType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_status_type>(); } },
+                { "status_type", n => { StatusType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseStatusType>(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -177,7 +177,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("html_text", HtmlText);
             writer.WriteBoolValue("liked", Liked);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseParent>("parent", Parent);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponse_status_type>("status_type", StatusType);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseStatusType>("status_type", StatusType);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

@@ -18,10 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of Custom Field Settings applied to the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_custom_field_settings>? CustomFieldSettings { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseCustomFieldSettingsItem>? CustomFieldSettings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_custom_field_settings> CustomFieldSettings { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseCustomFieldSettingsItem> CustomFieldSettings { get; set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The description of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,9 +32,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>Controls who can edit team name and description</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_name_or_description_access_level? EditTeamNameOrDescriptionAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamNameOrDescriptionAccessLevel? EditTeamNameOrDescriptionAccessLevel { get; set; }
         /// <summary>Controls who can edit team visibility and trash teams</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_visibility_or_trash_team_access_level? EditTeamVisibilityOrTrashTeamAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamVisibilityOrTrashTeamAccessLevel? EditTeamVisibilityOrTrashTeamAccessLevel { get; set; }
         /// <summary>Whether the team has been endorsed</summary>
         public bool? Endorsed { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -46,7 +46,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>Controls who can accept or deny guest invites for a given team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_guest_invite_management_access_level? GuestInviteManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseGuestInviteManagementAccessLevel? GuestInviteManagementAccessLevel { get; set; }
         /// <summary>[Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,9 +56,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string HtmlDescription { get; set; }
 #endif
         /// <summary>Controls who can accept or deny join team requests for a Membership by Request team. This field can only be updated when the team&apos;s `visibility` field is `request_to_join`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_join_request_management_access_level? JoinRequestManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseJoinRequestManagementAccessLevel? JoinRequestManagementAccessLevel { get; set; }
         /// <summary>Controls who can accept or deny member invites for a given team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_member_invite_management_access_level? MemberInviteManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseMemberInviteManagementAccessLevel? MemberInviteManagementAccessLevel { get; set; }
         /// <summary>The name of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,11 +92,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>Controls who can create and share content with the team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_content_management_access_level? TeamContentManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamContentManagementAccessLevel? TeamContentManagementAccessLevel { get; set; }
         /// <summary>Controls who can remove team members</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_member_removal_access_level? TeamMemberRemovalAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamMemberRemovalAccessLevel? TeamMemberRemovalAccessLevel { get; set; }
         /// <summary>The visibility of the team to users in the same organization</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_visibility? Visibility { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseVisibility? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamResponse"/> and sets the default values.
         /// </summary>
@@ -122,23 +122,23 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_custom_field_settings>(global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_custom_field_settings.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.TeamResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "edit_team_name_or_description_access_level", n => { EditTeamNameOrDescriptionAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_name_or_description_access_level>(); } },
-                { "edit_team_visibility_or_trash_team_access_level", n => { EditTeamVisibilityOrTrashTeamAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_visibility_or_trash_team_access_level>(); } },
+                { "edit_team_name_or_description_access_level", n => { EditTeamNameOrDescriptionAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamNameOrDescriptionAccessLevel>(); } },
+                { "edit_team_visibility_or_trash_team_access_level", n => { EditTeamVisibilityOrTrashTeamAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamVisibilityOrTrashTeamAccessLevel>(); } },
                 { "endorsed", n => { Endorsed = n.GetBoolValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "guest_invite_management_access_level", n => { GuestInviteManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_guest_invite_management_access_level>(); } },
+                { "guest_invite_management_access_level", n => { GuestInviteManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseGuestInviteManagementAccessLevel>(); } },
                 { "html_description", n => { HtmlDescription = n.GetStringValue(); } },
-                { "join_request_management_access_level", n => { JoinRequestManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_join_request_management_access_level>(); } },
-                { "member_invite_management_access_level", n => { MemberInviteManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_member_invite_management_access_level>(); } },
+                { "join_request_management_access_level", n => { JoinRequestManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseJoinRequestManagementAccessLevel>(); } },
+                { "member_invite_management_access_level", n => { MemberInviteManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseMemberInviteManagementAccessLevel>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization>(global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization.CreateFromDiscriminatorValue); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "team_content_management_access_level", n => { TeamContentManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_content_management_access_level>(); } },
-                { "team_member_removal_access_level", n => { TeamMemberRemovalAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_member_removal_access_level>(); } },
-                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_visibility>(); } },
+                { "team_content_management_access_level", n => { TeamContentManagementAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamContentManagementAccessLevel>(); } },
+                { "team_member_removal_access_level", n => { TeamMemberRemovalAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamMemberRemovalAccessLevel>(); } },
+                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseVisibility>(); } },
             };
         }
         /// <summary>
@@ -148,20 +148,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_custom_field_settings>("custom_field_settings", CustomFieldSettings);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseCustomFieldSettingsItem>("custom_field_settings", CustomFieldSettings);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_name_or_description_access_level>("edit_team_name_or_description_access_level", EditTeamNameOrDescriptionAccessLevel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_edit_team_visibility_or_trash_team_access_level>("edit_team_visibility_or_trash_team_access_level", EditTeamVisibilityOrTrashTeamAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamNameOrDescriptionAccessLevel>("edit_team_name_or_description_access_level", EditTeamNameOrDescriptionAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseEditTeamVisibilityOrTrashTeamAccessLevel>("edit_team_visibility_or_trash_team_access_level", EditTeamVisibilityOrTrashTeamAccessLevel);
             writer.WriteBoolValue("endorsed", Endorsed);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_guest_invite_management_access_level>("guest_invite_management_access_level", GuestInviteManagementAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseGuestInviteManagementAccessLevel>("guest_invite_management_access_level", GuestInviteManagementAccessLevel);
             writer.WriteStringValue("html_description", HtmlDescription);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_join_request_management_access_level>("join_request_management_access_level", JoinRequestManagementAccessLevel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_member_invite_management_access_level>("member_invite_management_access_level", MemberInviteManagementAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseJoinRequestManagementAccessLevel>("join_request_management_access_level", JoinRequestManagementAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseMemberInviteManagementAccessLevel>("member_invite_management_access_level", MemberInviteManagementAccessLevel);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseOrganization>("organization", Organization);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_content_management_access_level>("team_content_management_access_level", TeamContentManagementAccessLevel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_team_member_removal_access_level>("team_member_removal_access_level", TeamMemberRemovalAccessLevel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponse_visibility>("visibility", Visibility);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamContentManagementAccessLevel>("team_content_management_access_level", TeamContentManagementAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseTeamMemberRemovalAccessLevel>("team_member_removal_access_level", TeamMemberRemovalAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseVisibility>("visibility", Visibility);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

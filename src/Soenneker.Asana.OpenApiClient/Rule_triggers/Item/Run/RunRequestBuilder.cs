@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Rule_triggers.Item.Run
 {
     /// <summary>
-    /// Builds and executes requests for operations under \rule_triggers\{rule_trigger_gid}\run
+    /// Builds and executes requests for operations under \rule_triggers\{ruleTriggerGid}\run
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RunRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Rule_triggers.Item.Run
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RunRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rule_triggers/{rule_trigger_gid}/run", pathParameters)
+        public RunRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rule_triggers/{ruleTriggerGid}/run", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Rule_triggers.Item.Run
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RunRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rule_triggers/{rule_trigger_gid}/run", rawUrl)
+        public RunRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rule_triggers/{ruleTriggerGid}/run", rawUrl)
         {
         }
         /// <summary>

@@ -8,26 +8,26 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember2"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf2"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RateOrPlaceholderCompact : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1? RateOrPlaceholderCompactMember1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1? RateOrPlaceholderCompactAnyOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1 RateOrPlaceholderCompactMember1 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1 RateOrPlaceholderCompactAnyOf1 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember2? RateOrPlaceholderCompactMember2 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf2? RateOrPlaceholderCompactAnyOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember2 RateOrPlaceholderCompactMember2 { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf2 RateOrPlaceholderCompactAnyOf2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompact();
-            result.RateOrPlaceholderCompactMember1 = new global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1();
-            result.RateOrPlaceholderCompactMember2 = new global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember2();
+            result.RateOrPlaceholderCompactAnyOf1 = new global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1();
+            result.RateOrPlaceholderCompactAnyOf2 = new global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf2();
             return result;
         }
         /// <summary>
@@ -48,9 +48,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(RateOrPlaceholderCompactMember1 != null || RateOrPlaceholderCompactMember2 != null)
+            if(RateOrPlaceholderCompactAnyOf1 != null || RateOrPlaceholderCompactAnyOf2 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RateOrPlaceholderCompactMember1, RateOrPlaceholderCompactMember2);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RateOrPlaceholderCompactAnyOf1, RateOrPlaceholderCompactAnyOf2);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactMember1>(null, RateOrPlaceholderCompactMember1, RateOrPlaceholderCompactMember2);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RateOrPlaceholderCompactAnyOf1>(null, RateOrPlaceholderCompactAnyOf1, RateOrPlaceholderCompactAnyOf2);
         }
     }
 }

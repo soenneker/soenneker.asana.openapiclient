@@ -26,10 +26,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Whitelist of filters to apply to events from this webhook. If a webhook event passes any of the filters the event will be delivered; otherwise no event will be sent to the receiving server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters>? Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseFiltersItem>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters> Filters { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseFiltersItem> Filters { get; set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "delivery_retry_count", n => { DeliveryRetryCount = n.GetIntValue(); } },
                 { "failure_deletion_timestamp", n => { FailureDeletionTimestamp = n.GetDateTimeOffsetValue(); } },
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters>(global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseFiltersItem>(global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "last_failure_at", n => { LastFailureAt = n.GetDateTimeOffsetValue(); } },
                 { "last_failure_content", n => { LastFailureContent = n.GetStringValue(); } },
@@ -124,7 +124,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponse_filters>("filters", Filters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseFiltersItem>("filters", Filters);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseResource>("resource", Resource);
             writer.WriteAdditionalData(AdditionalData);
         }

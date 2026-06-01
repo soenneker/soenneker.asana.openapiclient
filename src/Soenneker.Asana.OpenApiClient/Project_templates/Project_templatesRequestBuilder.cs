@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates
     public partial class Project_templatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.project_templates.item collection</summary>
-        /// <param name="position">Globally unique identifier for the project template.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProject_template_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProject_template_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProjectTemplateGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProjectTemplateGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_template_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProject_template_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectTemplateGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProjectTemplateGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,11 +128,11 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Project_templates.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectTemplatesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Project_templates.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectTemplatesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The team to filter projects on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -48,7 +48,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The current status of this job.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_status? Status { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseStatus? Status { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse"/> and sets the default values.
         /// </summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "new_resource_export", n => { NewResourceExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport>(global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport.CreateFromDiscriminatorValue); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseStatus>(); } },
             };
         }
         /// <summary>

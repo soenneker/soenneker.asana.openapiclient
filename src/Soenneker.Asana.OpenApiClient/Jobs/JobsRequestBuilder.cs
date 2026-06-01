@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Jobs
     public partial class JobsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.jobs.item collection</summary>
-        /// <param name="position">Globally unique identifier for the job.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJob_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJob_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJobGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJobGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("job_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJob_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("jobGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Jobs.Item.WithJobGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships
 {
     /// <summary>
-    /// Builds and executes requests for operations under \projects\{project_gid}\project_memberships
+    /// Builds and executes requests for operations under \projects\{projectGid}\project_memberships
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Project_membershipsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_membershipsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_memberships{?limit*,offset*,opt_fields,user*}", pathParameters)
+        public Project_membershipsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_memberships{?limit*,offset*,opt_fields,user*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_membershipsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_memberships{?limit*,offset*,opt_fields,user*}", rawUrl)
+        public Project_membershipsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_memberships{?limit*,offset*,opt_fields,user*}", rawUrl)
         {
         }
         /// <summary>
@@ -115,11 +115,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectMembershipsForProjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_memberships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectMembershipsForProjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>A string identifying a user. This can either be the string &quot;me&quot;, an email, or the gid of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

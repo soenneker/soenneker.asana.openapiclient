@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Goal_relationships
     public partial class Goal_relationshipsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.goal_relationships.item collection</summary>
-        /// <param name="position">Globally unique identifier for the goal relationship.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoal_relationship_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoal_relationship_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoalRelationshipGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoalRelationshipGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("goal_relationship_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoal_relationship_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("goalRelationshipGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Goal_relationships.Item.WithGoalRelationshipGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -128,11 +128,11 @@ namespace Soenneker.Asana.OpenApiClient.Goal_relationships
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goal_relationships.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetGoalRelationshipsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Goal_relationships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetGoalRelationshipsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>If provided, filter to goal relationships with a given resource_subtype.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

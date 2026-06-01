@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses
 {
     /// <summary>
-    /// Builds and executes requests for operations under \projects\{project_gid}\project_statuses
+    /// Builds and executes requests for operations under \projects\{projectGid}\project_statuses
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Project_statusesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_statusesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_statuses{?limit*,offset*,opt_fields}", pathParameters)
+        public Project_statusesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_statuses{?limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Project_statusesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{project_gid}/project_statuses{?limit*,offset*,opt_fields}", rawUrl)
+        public Project_statusesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects/{projectGid}/project_statuses{?limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -170,11 +170,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectStatusesForProjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetProjectStatusesForProjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
         /// <summary>
@@ -187,11 +187,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectStatusForProjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateProjectStatusForProjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Rates
     public partial class RatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.rates.item collection</summary>
-        /// <param name="position">Globally unique identifier for the rate.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRate_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRate_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRateGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRateGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("rate_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRate_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("rateGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Rates.Item.WithRateGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -187,11 +187,11 @@ namespace Soenneker.Asana.OpenApiClient.Rates
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Rates.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetRatesOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Rates.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetRatesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for `project`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -224,11 +224,11 @@ namespace Soenneker.Asana.OpenApiClient.Rates
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Rates.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateRateOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Rates.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateRateOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

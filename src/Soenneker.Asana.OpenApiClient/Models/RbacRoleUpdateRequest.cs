@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base role type of the role.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequest_base_role_type? BaseRoleType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestBaseRoleType? BaseRoleType { get; set; }
         /// <summary>The time at which this role was created.</summary>
         public DateTimeOffset? CreationTime { get; private set; }
         /// <summary>The description of the role.</summary>
@@ -88,7 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "base_role_type", n => { BaseRoleType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequest_base_role_type>(); } },
+                { "base_role_type", n => { BaseRoleType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestBaseRoleType>(); } },
                 { "creation_time", n => { CreationTime = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequest_base_role_type>("base_role_type", BaseRoleType);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestBaseRoleType>("base_role_type", BaseRoleType);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("is_standard_role", IsStandardRole);
             writer.WriteStringValue("name", Name);

@@ -14,7 +14,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public partial class ProjectMembershipCompact : IAdditionalDataHolder, IParsable
     {
         /// <summary>Whether the member has admin, editor, commenter, or viewer access to the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_access_level? AccessLevel { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactAccessLevel? AccessLevel { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -74,7 +74,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompact_access_level>(); } },
+                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactAccessLevel>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactMember.CreateFromDiscriminatorValue); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent>(global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipCompactParent.CreateFromDiscriminatorValue); } },

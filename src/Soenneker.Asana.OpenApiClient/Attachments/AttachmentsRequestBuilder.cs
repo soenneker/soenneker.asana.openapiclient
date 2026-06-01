@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Attachments
     public partial class AttachmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.attachments.item collection</summary>
-        /// <param name="position">Globally unique identifier for the attachment.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachment_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachment_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachmentGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachmentGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("attachment_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachment_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("attachmentGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachmentGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -183,11 +183,11 @@ namespace Soenneker.Asana.OpenApiClient.Attachments
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Attachments.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAttachmentsForObjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Attachments.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAttachmentsForObjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for object to fetch statuses from. Must be a GID for a `project`, `project_brief`, or `task`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -210,11 +210,11 @@ namespace Soenneker.Asana.OpenApiClient.Attachments
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Attachments.PostOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateAttachmentForObjectOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Attachments.PostOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.CreateAttachmentForObjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
         }
     }

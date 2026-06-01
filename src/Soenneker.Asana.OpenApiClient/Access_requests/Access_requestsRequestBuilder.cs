@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests
     public partial class Access_requestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.access_requests.item collection</summary>
-        /// <param name="position">Globally unique identifier for the access request.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccess_request_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccess_request_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccessRequestGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccessRequestGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("access_request_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccess_request_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("accessRequestGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccessRequestGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -174,11 +174,11 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Access_requests.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAccessRequestsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Access_requests.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetAccessRequestsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for the target object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

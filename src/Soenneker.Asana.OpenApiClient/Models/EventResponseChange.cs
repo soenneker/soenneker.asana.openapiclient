@@ -24,10 +24,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `added` _and_ the `added_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_added_value? AddedValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeAddedValue? AddedValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_added_value AddedValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeAddedValue AddedValue { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -42,18 +42,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `changed` _and_ the `new_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_new_value? NewValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeNewValue? NewValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_new_value NewValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeNewValue NewValue { get; set; }
 #endif
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `removed` _and_ the `removed_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_removed_value? RemovedValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeRemovedValue? RemovedValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_removed_value RemovedValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeRemovedValue RemovedValue { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange"/> and sets the default values.
@@ -81,10 +81,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetStringValue(); } },
-                { "added_value", n => { AddedValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_added_value>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_added_value.CreateFromDiscriminatorValue); } },
+                { "added_value", n => { AddedValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeAddedValue>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeAddedValue.CreateFromDiscriminatorValue); } },
                 { "field", n => { Field = n.GetStringValue(); } },
-                { "new_value", n => { NewValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_new_value>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_new_value.CreateFromDiscriminatorValue); } },
-                { "removed_value", n => { RemovedValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_removed_value>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_removed_value.CreateFromDiscriminatorValue); } },
+                { "new_value", n => { NewValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeNewValue>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeNewValue.CreateFromDiscriminatorValue); } },
+                { "removed_value", n => { RemovedValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeRemovedValue>(global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeRemovedValue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -94,9 +94,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_added_value>("added_value", AddedValue);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_new_value>("new_value", NewValue);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChange_removed_value>("removed_value", RemovedValue);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeAddedValue>("added_value", AddedValue);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeNewValue>("new_value", NewValue);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.EventResponseChangeRemovedValue>("removed_value", RemovedValue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

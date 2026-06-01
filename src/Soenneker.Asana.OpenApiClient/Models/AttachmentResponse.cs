@@ -54,10 +54,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.The task this attachment is attached to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponse_parent? Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseParent? Parent { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponse_parent Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseParent Parent { get; private set; }
 #endif
         /// <summary>A stable URL for accessing the attachment through the Asana web application. This URL redirects to the file download location (e.g., an S3 link) if the user is authenticated and authorized to view the parent object (e.g., a task). Unauthorized users will receive a `403 Forbidden` response. This link is persistent and does not expire, but requires an active session to resolve.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,7 +124,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "host", n => { Host = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponse_parent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.AttachmentResponseParent.CreateFromDiscriminatorValue); } },
                 { "permanent_url", n => { PermanentUrl = n.GetStringValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },

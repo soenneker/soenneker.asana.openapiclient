@@ -42,10 +42,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A map of the user&apos;s profile photo in various sizes, or null if no photo is set. Sizes provided are 21, 27, 36, 60, 128, and 1024. All images are in PNG format, except for 1024 (which is in JPEG format).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponse_photo? Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponsePhoto? Photo { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponse_photo Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponsePhoto Photo { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponse_photo>(global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponse_photo.CreateFromDiscriminatorValue); } },
+                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponsePhoto>(global::Soenneker.Asana.OpenApiClient.Models.UserBaseResponsePhoto.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }

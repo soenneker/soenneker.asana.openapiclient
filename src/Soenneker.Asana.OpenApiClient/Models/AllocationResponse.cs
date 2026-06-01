@@ -35,10 +35,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The amount of time associated with the allocation, represented as a percentage or number of hours.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort? Effort { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseEffort? Effort { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort Effort { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseEffort Effort { get; set; }
 #endif
         /// <summary>The localized day on which the allocation ends.</summary>
         public Date? EndDate { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee.CreateFromDiscriminatorValue); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy.CreateFromDiscriminatorValue); } },
-                { "effort", n => { Effort = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort.CreateFromDiscriminatorValue); } },
+                { "effort", n => { Effort = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseEffort>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseEffort.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent.CreateFromDiscriminatorValue); } },
@@ -121,7 +121,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseAssignee>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseCreatedBy>("created_by", CreatedBy);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponse_effort>("effort", Effort);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseEffort>("effort", Effort);
             writer.WriteDateValue("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AllocationResponseParent>("parent", Parent);
             writer.WriteStringValue("resource_subtype", ResourceSubtype);

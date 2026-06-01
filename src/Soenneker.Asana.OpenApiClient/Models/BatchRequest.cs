@@ -16,10 +16,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.BatchRequest_actions>? Actions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItem>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.BatchRequest_actions> Actions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItem> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.BatchRequest_actions>(global::Soenneker.Asana.OpenApiClient.Models.BatchRequest_actions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItem>(global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.BatchRequest_actions>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItem>("actions", Actions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

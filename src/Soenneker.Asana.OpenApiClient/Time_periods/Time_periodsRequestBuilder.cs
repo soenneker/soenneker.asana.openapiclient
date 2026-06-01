@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Time_periods
     public partial class Time_periodsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.time_periods.item collection</summary>
-        /// <param name="position">Globally unique identifier for the time period.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTime_period_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTime_period_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTimePeriodGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTimePeriodGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("time_period_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTime_period_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("timePeriodGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTimePeriodGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -131,11 +131,11 @@ namespace Soenneker.Asana.OpenApiClient.Time_periods
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_periods.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimePeriodsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Time_periods.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetTimePeriodsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>ISO 8601 date string</summary>
             [QueryParameter("start_on")]

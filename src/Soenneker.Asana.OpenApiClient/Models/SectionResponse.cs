@@ -44,10 +44,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated - please use project instead*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects>? Projects { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProjectsItem>? Projects { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects> Projects { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProjectsItem> Projects { get; private set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProject.CreateFromDiscriminatorValue); } },
-                { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponse_projects.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProjectsItem>(global::Soenneker.Asana.OpenApiClient.Models.SectionResponseProjectsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }

@@ -17,7 +17,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Optional*. The current approval status of the entry.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_approval_status? ApprovalStatus { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseApprovalStatus? ApprovalStatus { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.The attributable to project specifies which project&apos;s budget a time entry should be counted toward, if the task belongs to more than one project. If it only belongs to one project, it should be that project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,14 +27,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAttributableTo AttributableTo { get; set; }
 #endif
         /// <summary>*Optional*. The current billable status of the entry.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_billable_status? BillableStatus { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseBillableStatus? BillableStatus { get; private set; }
         /// <summary>The categories linked to this time tracking entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories>? Categories { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCategoriesItem>? Categories { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories> Categories { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCategoriesItem> Categories { get; private set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
@@ -107,10 +107,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_approval_status>(); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseApprovalStatus>(); } },
                 { "attributable_to", n => { AttributableTo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAttributableTo>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAttributableTo.CreateFromDiscriminatorValue); } },
-                { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_billable_status>(); } },
-                { "categories", n => { Categories = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBase_categories.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseBillableStatus>(); } },
+                { "categories", n => { Categories = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCategoriesItem>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCategoriesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },

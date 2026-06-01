@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspace_gid}\tasks\search
+    /// Builds and executes requests for operations under \workspaces\{workspaceGid}\tasks\search
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/tasks/search{?assigned_by%2Eany*,assigned_by%2Enot*,assignee%2Eany*,assignee%2Enot*,commented_on_by%2Enot*,completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_by%2Eany*,created_by%2Enot*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,followers%2Eany*,followers%2Enot*,has_attachment*,is_blocked*,is_blocking*,is_subtask*,liked_by%2Enot*,modified_at%2Eafter*,modified_at%2Ebefore*,modified_on*,modified_on%2Eafter*,modified_on%2Ebefore*,opt_fields,portfolios%2Eany*,projects%2Eall*,projects%2Eany*,projects%2Enot*,resource_subtype*,sections%2Eall*,sections%2Eany*,sections%2Enot*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,tags%2Eall*,tags%2Eany*,tags%2Enot*,teams%2Eany*,text*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/tasks/search{?assigned_by%2Eany*,assigned_by%2Enot*,assignee%2Eany*,assignee%2Enot*,commented_on_by%2Enot*,completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_by%2Eany*,created_by%2Enot*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,followers%2Eany*,followers%2Enot*,has_attachment*,is_blocked*,is_blocking*,is_subtask*,liked_by%2Enot*,modified_at%2Eafter*,modified_at%2Ebefore*,modified_on*,modified_on%2Eafter*,modified_on%2Ebefore*,opt_fields,portfolios%2Eany*,projects%2Eall*,projects%2Eany*,projects%2Enot*,resource_subtype*,sections%2Eall*,sections%2Eany*,sections%2Enot*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,tags%2Eall*,tags%2Eany*,tags%2Enot*,teams%2Eany*,text*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspace_gid}/tasks/search{?assigned_by%2Eany*,assigned_by%2Enot*,assignee%2Eany*,assignee%2Enot*,commented_on_by%2Enot*,completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_by%2Eany*,created_by%2Enot*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,followers%2Eany*,followers%2Enot*,has_attachment*,is_blocked*,is_blocking*,is_subtask*,liked_by%2Enot*,modified_at%2Eafter*,modified_at%2Ebefore*,modified_on*,modified_on%2Eafter*,modified_on%2Ebefore*,opt_fields,portfolios%2Eany*,projects%2Eall*,projects%2Eany*,projects%2Enot*,resource_subtype*,sections%2Eall*,sections%2Eany*,sections%2Enot*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,tags%2Eall*,tags%2Eany*,tags%2Enot*,teams%2Eany*,text*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceGid}/tasks/search{?assigned_by%2Eany*,assigned_by%2Enot*,assignee%2Eany*,assignee%2Enot*,commented_on_by%2Enot*,completed*,completed_at%2Eafter*,completed_at%2Ebefore*,completed_on*,completed_on%2Eafter*,completed_on%2Ebefore*,created_at%2Eafter*,created_at%2Ebefore*,created_by%2Eany*,created_by%2Enot*,created_on*,created_on%2Eafter*,created_on%2Ebefore*,due_at%2Eafter*,due_at%2Ebefore*,due_on*,due_on%2Eafter*,due_on%2Ebefore*,followers%2Eany*,followers%2Enot*,has_attachment*,is_blocked*,is_blocking*,is_subtask*,liked_by%2Enot*,modified_at%2Eafter*,modified_at%2Ebefore*,modified_on*,modified_on%2Eafter*,modified_on%2Ebefore*,opt_fields,portfolios%2Eany*,projects%2Eall*,projects%2Eany*,projects%2Enot*,resource_subtype*,sections%2Eall*,sections%2Eany*,sections%2Enot*,sort_ascending*,sort_by*,start_on*,start_on%2Eafter*,start_on%2Ebefore*,tags%2Eall*,tags%2Eany*,tags%2Enot*,teams%2Eany*,text*}", rawUrl)
         {
         }
         /// <summary>
@@ -277,11 +277,11 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SearchTasksForWorkspaceOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.SearchTasksForWorkspaceOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Comma-separated list of portfolio IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -325,7 +325,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
 #endif
             /// <summary>Filters results by the task&apos;s resource_subtype</summary>
             [QueryParameter("resource_subtype")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetResource_subtypeQueryParameterType? ResourceSubtype { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidTasksSearchResourceSubtype? ResourceSubtype { get; set; }
             /// <summary>Comma-separated list of section or column IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -361,7 +361,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             public bool? SortAscending { get; set; }
             /// <summary>One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidTasksSearchSortBy? SortBy { get; set; }
             /// <summary>ISO 8601 date string or `null`</summary>
             [QueryParameter("start_on")]
             public Date? StartOn { get; set; }

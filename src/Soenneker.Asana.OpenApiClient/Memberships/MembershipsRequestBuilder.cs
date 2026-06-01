@@ -19,15 +19,15 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
     public partial class MembershipsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.memberships.item collection</summary>
-        /// <param name="position">Globally unique identifier for the membership.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembership_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembership_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembershipGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembershipGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("membership_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembership_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("membershipGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembershipGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -193,11 +193,11 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Memberships.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetMembershipsOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Memberships.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetMembershipsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>Globally unique identifier for `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. This parameter is optional when `resource_subtype` is provided along with `member` of type `team`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -211,7 +211,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
 #endif
             /// <summary>The type of membership to return. Required when `parent` is absent. Currently supported value is `project_membership` (when `member` is a team GID, returns all project memberships for that team).</summary>
             [QueryParameter("resource_subtype")]
-            public global::Soenneker.Asana.OpenApiClient.Memberships.GetResource_subtypeQueryParameterType? ResourceSubtype { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetMembershipsResourceSubtypeParameter? ResourceSubtype { get; set; }
         }
     }
 }

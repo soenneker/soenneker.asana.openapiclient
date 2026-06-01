@@ -16,14 +16,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. A unique identifier to associate this field with the template source of truth.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_asana_created_field? AsanaCreatedField { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseAsanaCreatedField? AsanaCreatedField { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_created_by CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,17 +42,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string CustomLabel { get; set; }
 #endif
         /// <summary>Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_custom_label_position? CustomLabelPosition { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCustomLabelPosition? CustomLabelPosition { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_date_value? DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDateValue? DateValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_date_value DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDateValue DateValue { get; set; }
 #endif
         /// <summary>The default access level when inviting new members to the custom field. This isn&apos;t applied when the `privacy_setting` is `private`, or the user is a guest. For local fields in a project or portfolio, the user must additionally have permission to modify the container itself.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_default_access_level? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>[Opt In](/docs/inputoutput-options). The description of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,21 +74,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_options>? EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumOptionsItem>? EnumOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_options> EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumOptionsItem> EnumOptions { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_value? EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumValue? EnumValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_value EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumValue EnumValue { get; set; }
 #endif
         /// <summary>The format of this custom field.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_format? Format { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseFormat? Format { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,10 +118,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_input_restrictions?>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseInputRestrictionsItem?>? InputRestrictions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_input_restrictions?> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseInputRestrictionsItem?> InputRestrictions { get; set; }
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
         public bool? IsFormulaField { get; set; }
@@ -132,10 +132,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_multi_enum_values>? MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseMultiEnumValuesItem>? MultiEnumValues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_multi_enum_values> MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseMultiEnumValuesItem> MultiEnumValues { get; set; }
 #endif
         /// <summary>The name of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,27 +150,27 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `people`. This array of [compact user](/reference/users) objects reflects the values of a `people` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_people_value>? PeopleValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePeopleValueItem>? PeopleValue { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_people_value> PeopleValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePeopleValueItem> PeopleValue { get; set; }
 #endif
         /// <summary>Only relevant for custom fields of type `Number`. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.The identifier format will always have a precision of 0.</summary>
         public int? Precision { get; set; }
         /// <summary>&quot;The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_privacy_setting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePrivacySetting? PrivacySetting { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `reference`. This array of objects reflects the values of a `reference` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_reference_value>? ReferenceValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseReferenceValueItem>? ReferenceValue { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_reference_value> ReferenceValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseReferenceValueItem> ReferenceValue { get; set; }
 #endif
         /// <summary>This field tells the type of the custom field.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_representation_type? RepresentationType { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseRepresentationType? RepresentationType { get; private set; }
         /// <summary>The type of the custom field. Must be one of the given values.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,7 +188,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string TextValue { get; set; }
 #endif
         /// <summary>&quot;*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_type? Type { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseType? Type { get; private set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse"/> and sets the default values.
         /// </summary>
@@ -214,39 +214,39 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "asana_created_field", n => { AsanaCreatedField = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_asana_created_field>(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_created_by>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_created_by.CreateFromDiscriminatorValue); } },
+                { "asana_created_field", n => { AsanaCreatedField = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseAsanaCreatedField>(); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "custom_label", n => { CustomLabel = n.GetStringValue(); } },
-                { "custom_label_position", n => { CustomLabelPosition = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_custom_label_position>(); } },
-                { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_date_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_date_value.CreateFromDiscriminatorValue); } },
-                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_default_access_level>(); } },
+                { "custom_label_position", n => { CustomLabelPosition = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCustomLabelPosition>(); } },
+                { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDateValue>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDateValue.CreateFromDiscriminatorValue); } },
+                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDefaultAccessLevel>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "display_value", n => { DisplayValue = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "enum_options", n => { EnumOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_options>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_options.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "enum_value", n => { EnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_value.CreateFromDiscriminatorValue); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_format>(); } },
+                { "enum_options", n => { EnumOptions = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumOptionsItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "enum_value", n => { EnumValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumValue>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumValue.CreateFromDiscriminatorValue); } },
+                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseFormat>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "has_notifications_enabled", n => { HasNotificationsEnabled = n.GetBoolValue(); } },
                 { "html_text_value", n => { HtmlTextValue = n.GetStringValue(); } },
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
-                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_input_restrictions>()?.AsList(); } },
+                { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseInputRestrictionsItem>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
                 { "is_global_to_workspace", n => { IsGlobalToWorkspace = n.GetBoolValue(); } },
                 { "is_value_read_only", n => { IsValueReadOnly = n.GetBoolValue(); } },
-                { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_multi_enum_values>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_multi_enum_values.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseMultiEnumValuesItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseMultiEnumValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number_value", n => { NumberValue = n.GetDoubleValue(); } },
-                { "people_value", n => { PeopleValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_people_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_people_value.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "people_value", n => { PeopleValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePeopleValueItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePeopleValueItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "precision", n => { Precision = n.GetIntValue(); } },
-                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_privacy_setting>(); } },
-                { "reference_value", n => { ReferenceValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_reference_value>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_reference_value.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "representation_type", n => { RepresentationType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_representation_type>(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_resource_subtype>(); } },
+                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePrivacySetting>(); } },
+                { "reference_value", n => { ReferenceValue = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseReferenceValueItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseReferenceValueItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "representation_type", n => { RepresentationType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseRepresentationType>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "text_value", n => { TextValue = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseType>(); } },
             };
         }
         /// <summary>
@@ -256,28 +256,28 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteStringValue("custom_label", CustomLabel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_custom_label_position>("custom_label_position", CustomLabelPosition);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_date_value>("date_value", DateValue);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_default_access_level>("default_access_level", DefaultAccessLevel);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseCustomLabelPosition>("custom_label_position", CustomLabelPosition);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDateValue>("date_value", DateValue);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_options>("enum_options", EnumOptions);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_enum_value>("enum_value", EnumValue);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_format>("format", Format);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumOptionsItem>("enum_options", EnumOptions);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseEnumValue>("enum_value", EnumValue);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseFormat>("format", Format);
             writer.WriteBoolValue("has_notifications_enabled", HasNotificationsEnabled);
             writer.WriteStringValue("id_prefix", IdPrefix);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_input_restrictions>("input_restrictions", InputRestrictions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseInputRestrictionsItem>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
             writer.WriteBoolValue("is_value_read_only", IsValueReadOnly);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_multi_enum_values>("multi_enum_values", MultiEnumValues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseMultiEnumValuesItem>("multi_enum_values", MultiEnumValues);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("number_value", NumberValue);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_people_value>("people_value", PeopleValue);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePeopleValueItem>("people_value", PeopleValue);
             writer.WriteIntValue("precision", Precision);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_privacy_setting>("privacy_setting", PrivacySetting);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponse_reference_value>("reference_value", ReferenceValue);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponsePrivacySetting>("privacy_setting", PrivacySetting);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseReferenceValueItem>("reference_value", ReferenceValue);
             writer.WriteStringValue("text_value", TextValue);
             writer.WriteAdditionalData(AdditionalData);
         }

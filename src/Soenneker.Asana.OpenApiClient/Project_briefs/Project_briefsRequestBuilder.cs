@@ -16,15 +16,15 @@ namespace Soenneker.Asana.OpenApiClient.Project_briefs
     public partial class Project_briefsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.project_briefs.item collection</summary>
-        /// <param name="position">Globally unique identifier for the project brief.</param>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProject_brief_gItemRequestBuilder"/></returns>
-        public global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProject_brief_gItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProjectBriefGItemRequestBuilder"/></returns>
+        public global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProjectBriefGItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_brief_gid", position);
-                return new global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProject_brief_gItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectBriefGid", position);
+                return new global::Soenneker.Asana.OpenApiClient.Project_briefs.Item.WithProjectBriefGItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

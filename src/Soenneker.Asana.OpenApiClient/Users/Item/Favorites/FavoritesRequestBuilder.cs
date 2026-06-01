@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Users.Item.Favorites
 {
     /// <summary>
-    /// Builds and executes requests for operations under \users\{user_gid}\favorites
+    /// Builds and executes requests for operations under \users\{userGid}\favorites
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FavoritesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.Favorites
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FavoritesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{user_gid}/favorites?resource_type={resource_type}&workspace={workspace}{&limit*,offset*,opt_fields}", pathParameters)
+        public FavoritesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{userGid}/favorites?resource_type={resource_type}&workspace={workspace}{&limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.Favorites
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FavoritesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{user_gid}/favorites?resource_type={resource_type}&workspace={workspace}{&limit*,offset*,opt_fields}", rawUrl)
+        public FavoritesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{userGid}/favorites?resource_type={resource_type}&workspace={workspace}{&limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -115,15 +115,15 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.Favorites
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.Item.Favorites.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetFavoritesForUserOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.Item.Favorites.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetFavoritesForUserOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The resource type of favorites to be returned.</summary>
             [QueryParameter("resource_type")]
-            public global::Soenneker.Asana.OpenApiClient.Users.Item.Favorites.GetResource_typeQueryParameterType? ResourceType { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.UsersUserGidFavoritesResourceType? ResourceType { get; set; }
             /// <summary>The workspace in which to get favorites.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

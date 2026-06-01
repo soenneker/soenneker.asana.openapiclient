@@ -25,25 +25,25 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>&quot;The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.&quot;</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_privacy_setting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting? PrivacySetting { get; set; }
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
         public bool? Public { get; set; }
         /// <summary>*Conditional*. Array of mappings of date variables to calendar dates. This property is required in the instantiation request if the project template includes dates (e.g., a start date on a task).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates>? RequestedDates { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>? RequestedDates { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates> RequestedDates { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem> RequestedDates { get; set; }
 #endif
         /// <summary>Array of mappings of template roles to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles>? RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>? RequestedRoles { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles> RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem> RequestedRoles { get; set; }
 #endif
         /// <summary>*Optional*. Sets the team of the new project. If the project template exists in an _organization_, you may specify a value for `team`. If no value is provided then it defaults to the same team as the project template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,10 +80,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "is_strict", n => { IsStrict = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_privacy_setting>(); } },
+                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting>(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
-                { "requested_dates", n => { RequestedDates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "requested_roles", n => { RequestedRoles = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "requested_dates", n => { RequestedDates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "requested_roles", n => { RequestedRoles = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "team", n => { Team = n.GetStringValue(); } },
             };
         }
@@ -96,10 +96,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("is_strict", IsStrict);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_privacy_setting>("privacy_setting", PrivacySetting);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteBoolValue("public", Public);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_dates>("requested_dates", RequestedDates);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest_requested_roles>("requested_roles", RequestedRoles);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>("requested_dates", RequestedDates);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>("requested_roles", RequestedRoles);
             writer.WriteStringValue("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }

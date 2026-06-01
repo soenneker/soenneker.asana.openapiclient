@@ -50,13 +50,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A map of the agent&apos;s avatar image in various sizes, or null if no photo is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo? Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponsePhoto? Photo { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo Photo { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponsePhoto Photo { get; private set; }
 #endif
         /// <summary>The subtype of the agent. `asana_teammate` is an Asana-built teammate.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_resource_subtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AgentResponseResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,8 +102,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_photo.CreateFromDiscriminatorValue); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponse_resource_subtype>(); } },
+                { "photo", n => { Photo = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponsePhoto>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponsePhoto.CreateFromDiscriminatorValue); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.AgentResponseWorkspace.CreateFromDiscriminatorValue); } },
             };

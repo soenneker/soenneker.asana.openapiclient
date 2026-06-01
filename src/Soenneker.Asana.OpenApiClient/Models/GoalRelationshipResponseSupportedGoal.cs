@@ -34,10 +34,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal_owner? Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoalOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal_owner Owner { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoalOwner Owner { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal_owner>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal_owner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoalOwner>(global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoalOwner.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoal_owner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalRelationshipResponseSupportedGoalOwner>("owner", Owner);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

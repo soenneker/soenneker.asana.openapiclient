@@ -19,33 +19,33 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_approval_status? ApprovalStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus? ApprovalStatus { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.The user who assigned the task. This field is only returned when requesting it via opt_fields, and will be null if the task has no specific assigner (e.g., tasks created without an explicit assigner).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assigned_by? AssignedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignedBy? AssignedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assigned_by AssignedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignedBy AssignedBy { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee? Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee? Assignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee Assignee { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.The *assignee section* is a subdivision of a project that groups tasks together in the assignee&apos;s &quot;My tasks&quot; list. It can either be a header above a list of tasks in a list view or a column in a board view of &quot;My tasks.&quot;The `assignee_section` property will be returned in the response only if the request was sent by the user who is the assignee of the task. Note that you can only write to `assignee_section` with the gid of an existing section visible in the user&apos;s &quot;My tasks&quot; list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_section? AssigneeSection { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection? AssigneeSection { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_section AssigneeSection { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection AssigneeSection { get; set; }
 #endif
         /// <summary>*Deprecated* Scheduling status of this task for the user it is assigned to. This field can only be set if the assignee is non-null. Setting this field to &quot;inbox&quot; or &quot;upcoming&quot; inserts it at the top of the section, while the other options will insert at the bottom.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_status? AssigneeStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus? AssigneeStatus { get; set; }
         /// <summary>True if the task is currently marked complete, false if not.</summary>
         public bool? Completed { get; set; }
         /// <summary>The time at which this task was completed, or null if the task is incomplete.</summary>
@@ -53,10 +53,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by? CompletedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCompletedBy? CompletedBy { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by CompletedBy { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCompletedBy CompletedBy { get; private set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
@@ -71,42 +71,42 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an `enum_value` property for custom fields of type `enum`, a `text_value` property for custom fields of type `text`, and so on. Please note that the `gid` returned on each custom field value *is identical* to the `gid` of the custom field, which allows referencing the custom field metadata through the `/custom_fields/custom_field_gid` endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields>? CustomFields { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomFieldsItem>? CustomFields { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields> CustomFields { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomFieldsItem> CustomFields { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects, currently only Custom Tasks are supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type? CustomType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType? CustomType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type CustomType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType CustomType { get; set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option? CustomTypeStatusOption { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption? CustomTypeStatusOption { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option CustomTypeStatusOption { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption CustomTypeStatusOption { get; set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependencies>? Dependencies { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependenciesItem>? Dependencies { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependencies> Dependencies { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependenciesItem> Dependencies { get; private set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that depend on this task. The objects contain only the ID of the dependent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents>? Dependents { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem>? Dependents { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents> Dependents { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem> Dependents { get; private set; }
 #endif
         /// <summary>The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.</summary>
         public DateTimeOffset? DueAt { get; set; }
@@ -123,10 +123,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of users following this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers>? Followers { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem>? Followers { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers> Followers { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem> Followers { get; private set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated - please use likes instead* Array of likes for users who have hearted this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_hearts>? Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem>? Hearts { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_hearts> Hearts { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem> Hearts { get; private set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -161,18 +161,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of likes for users who have liked this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_likes>? Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseLikesItem>? Likes { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_likes> Likes { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseLikesItem> Likes { get; private set; }
 #endif
         /// <summary>*Create-only*. Array of projects this task is associated with and the section it is in. At task creation time, this array can be used to add the task to specific sections. After task creation, these associations can be modified using the `addProject` and `removeProject` endpoints. Note that over time, more types of memberships may be added to this property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_memberships>? Memberships { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseMembershipsItem>? Memberships { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_memberships> Memberships { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseMembershipsItem> Memberships { get; private set; }
 #endif
         /// <summary>The time at which this task was last modified.The following conditions will change `modified_at`:- story is created on a task- story is trashed on a task- attachment is trashed on a task- task is assigned or unassigned- custom field value is changed- the task itself is trashed- Or if any of the following fields are updated:  - completed  - name  - due_date  - description  - attachments  - items  - schedule_statusThe following conditions will _not_ change `modified_at`:- moving to a new container (project, portfolio, etc)- comments being added to the task (but the stories they generate  _will_ affect `modified_at`)</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
@@ -201,10 +201,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.The parent of this task, or `null` if this is not a subtask. This property cannot be modified using a PUT request but you can change it with the `setParent` endpoint. You can create subtasks by using the subtasks endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_parent? Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseParent? Parent { get; private set; }
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_parent Parent { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseParent Parent { get; private set; }
 #endif
         /// <summary>A url that points directly to the object within Asana.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,13 +217,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Create-only.* Array of projects this task is associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the addProject and removeProject endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_projects>? Projects { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem>? Projects { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_projects> Projects { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem> Projects { get; private set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_resource_subtype? ResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -239,10 +239,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of tags associated with this task. In order to change tags on an existing task use `addTag` and `removeTag`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags>? Tags { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseTagsItem>? Tags { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags> Tags { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseTagsItem> Tags { get; private set; }
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace this task is associated with. Once created, task cannot be moved to a different workspace. This attribute can only be specified at creation time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -278,47 +278,47 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actual_time_minutes", n => { ActualTimeMinutes = n.GetDoubleValue(); } },
-                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_approval_status>(); } },
-                { "assigned_by", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assigned_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assigned_by.CreateFromDiscriminatorValue); } },
-                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee.CreateFromDiscriminatorValue); } },
-                { "assignee_section", n => { AssigneeSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_section>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_section.CreateFromDiscriminatorValue); } },
-                { "assignee_status", n => { AssigneeStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_status>(); } },
+                { "approval_status", n => { ApprovalStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus>(); } },
+                { "assigned_by", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignedBy.CreateFromDiscriminatorValue); } },
+                { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee.CreateFromDiscriminatorValue); } },
+                { "assignee_section", n => { AssigneeSection = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection.CreateFromDiscriminatorValue); } },
+                { "assignee_status", n => { AssigneeStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus>(); } },
                 { "completed", n => { Completed = n.GetBoolValue(); } },
                 { "completed_at", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
-                { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_completed_by.CreateFromDiscriminatorValue); } },
+                { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCompletedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCompletedBy.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy.CreateFromDiscriminatorValue); } },
-                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "custom_type", n => { CustomType = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type.CreateFromDiscriminatorValue); } },
-                { "custom_type_status_option", n => { CustomTypeStatusOption = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option.CreateFromDiscriminatorValue); } },
-                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependencies>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependencies.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_dependents.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_type", n => { CustomType = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType.CreateFromDiscriminatorValue); } },
+                { "custom_type_status_option", n => { CustomTypeStatusOption = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption.CreateFromDiscriminatorValue); } },
+                { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependenciesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal.CreateFromDiscriminatorValue); } },
-                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_followers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
-                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_hearts>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_hearts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
                 { "is_rendered_as_separator", n => { IsRenderedAsSeparator = n.GetBoolValue(); } },
                 { "liked", n => { Liked = n.GetBoolValue(); } },
-                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_likes>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_likes.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_memberships>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_memberships.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "likes", n => { Likes = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseLikesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseLikesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "memberships", n => { Memberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseMembershipsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseMembershipsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "num_hearts", n => { NumHearts = n.GetIntValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
                 { "num_subtasks", n => { NumSubtasks = n.GetIntValue(); } },
-                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_parent>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_parent.CreateFromDiscriminatorValue); } },
+                { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseParent>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseParent.CreateFromDiscriminatorValue); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
-                { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_projects>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_projects.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_resource_subtype>(); } },
+                { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_at", n => { StartAt = n.GetDateTimeOffsetValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
-                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_tags.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseTagsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseTagsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseWorkspace.CreateFromDiscriminatorValue); } },
             };
         }
@@ -329,13 +329,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_approval_status>("approval_status", ApprovalStatus);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee>("assignee", Assignee);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_section>("assignee_section", AssigneeSection);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_assignee_status>("assignee_status", AssigneeStatus);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus>("approval_status", ApprovalStatus);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee>("assignee", Assignee);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection>("assignee_section", AssigneeSection);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus>("assignee_status", AssigneeStatus);
             writer.WriteBoolValue("completed", Completed);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type>("custom_type", CustomType);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_custom_type_status_option>("custom_type_status_option", CustomTypeStatusOption);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType>("custom_type", CustomType);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption>("custom_type_status_option", CustomTypeStatusOption);
             writer.WriteDateTimeOffsetValue("due_at", DueAt);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>("external", External);
@@ -343,7 +343,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("liked", Liked);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponse_resource_subtype>("resource_subtype", ResourceSubtype);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateTimeOffsetValue("start_at", StartAt);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteAdditionalData(AdditionalData);

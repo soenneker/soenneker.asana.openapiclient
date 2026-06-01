@@ -16,16 +16,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Color of the tag.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TagResponse_color? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TagResponseColor? Color { get; set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>Array of users following this tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_followers>? Followers { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TagResponseFollowersItem>? Followers { get; private set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_followers> Followers { get; private set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TagResponseFollowersItem> Followers { get; private set; }
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,9 +100,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_color>(); } },
+                { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponseColor>(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_followers>(global::Soenneker.Asana.OpenApiClient.Models.TagResponse_followers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TagResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.TagResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
@@ -118,7 +118,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponse_color>("color", Color);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponseColor>("color", Color);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("notes", Notes);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TagResponseWorkspace>("workspace", Workspace);

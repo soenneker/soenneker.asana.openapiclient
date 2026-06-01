@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
 {
     /// <summary>
-    /// Builds and executes requests for operations under \users\{user_gid}\user_task_list
+    /// Builds and executes requests for operations under \users\{userGid}\user_task_list
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class User_task_listRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public User_task_listRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{user_gid}/user_task_list?workspace={workspace}{&opt_fields}", pathParameters)
+        public User_task_listRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{userGid}/user_task_list?workspace={workspace}{&opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public User_task_listRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{user_gid}/user_task_list?workspace={workspace}{&opt_fields}", rawUrl)
+        public User_task_listRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/users/{userGid}/user_task_list?workspace={workspace}{&opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -102,11 +102,11 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item.User_task_list
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.Item.User_task_list.GetOpt_fieldsQueryParameterType[]? OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetUserTaskListForUserOptFieldsParameterItem[]? OptFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("opt_fields")]
-            public global::Soenneker.Asana.OpenApiClient.Users.Item.User_task_list.GetOpt_fieldsQueryParameterType[] OptFields { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.GetUserTaskListForUserOptFieldsParameterItem[] OptFields { get; set; }
 #endif
             /// <summary>The workspace in which to get the user task list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

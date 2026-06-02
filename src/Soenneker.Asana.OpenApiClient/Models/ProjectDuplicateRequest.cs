@@ -38,14 +38,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates ScheduleDates { get; set; }
 #endif
-        /// <summary>Sets the team of the new project. If team is not defined, the new project will be in the same team as the the original project.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Team { get; set; }
-#nullable restore
-#else
-        public string Team { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequest"/> and sets the default values.
         /// </summary>
@@ -74,7 +66,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "include", n => { Include = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "schedule_dates", n => { ScheduleDates = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates>(global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates.CreateFromDiscriminatorValue); } },
-                { "team", n => { Team = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +78,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("include", Include);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates>("schedule_dates", ScheduleDates);
-            writer.WriteStringValue("team", Team);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -201,7 +201,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.Search
             /// <summary>Default `false`.</summary>
             [QueryParameter("sort_ascending")]
             public bool? SortAscending { get; set; }
-            /// <summary>One of `due_date`, `created_at`, `completed_at`, or `modified_at`, defaults to `modified_at`.</summary>
+            /// <summary>One of `due_date`, `created_at`, `completed_at`, `relevance`, or `modified_at`, defaults to `modified_at`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidProjectsSearchSortBy? SortBy { get; set; }
             /// <summary>ISO 8601 date string or `null`.</summary>

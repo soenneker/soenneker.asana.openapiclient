@@ -24,5 +24,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         ModifiedAt,
         #pragma warning restore CS1591
+        [EnumMember(Value = "relevance")]
+        #pragma warning disable CS1591
+        Relevance,
+        #pragma warning restore CS1591
     }
 }

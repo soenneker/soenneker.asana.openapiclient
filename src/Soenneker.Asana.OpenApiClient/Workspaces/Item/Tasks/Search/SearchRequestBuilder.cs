@@ -359,7 +359,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             /// <summary>Default `false`</summary>
             [QueryParameter("sort_ascending")]
             public bool? SortAscending { get; set; }
-            /// <summary>One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`</summary>
+            /// <summary>One of `due_date`, `created_at`, `completed_at`, `likes`, `relevance`, or `modified_at`, defaults to `modified_at`</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Asana.OpenApiClient.Models.WorkspacesWorkspaceGidTasksSearchSortBy? SortBy { get; set; }
             /// <summary>ISO 8601 date string or `null`</summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PortfoliosRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios?workspace={workspace}{&limit*,offset*,opt_fields,owner*}", pathParameters)
+        public PortfoliosRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PortfoliosRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/portfolios?workspace={workspace}{&limit*,offset*,opt_fields,owner*}", rawUrl)
+        public PortfoliosRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -124,7 +124,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Portfolios.PortfoliosRequestBuilder.PortfoliosRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/portfolios?workspace={workspace}{&limit*,offset*,opt_fields,owner*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;

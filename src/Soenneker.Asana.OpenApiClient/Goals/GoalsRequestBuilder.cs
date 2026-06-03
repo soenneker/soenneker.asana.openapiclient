@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GoalsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals{?is_workspace_level*,limit*,offset*,opt_fields,portfolio*,project*,task*,team*,time_periods*,workspace*}", pathParameters)
+        public GoalsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GoalsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals{?is_workspace_level*,limit*,offset*,opt_fields,portfolio*,project*,task*,team*,time_periods*,workspace*}", rawUrl)
+        public GoalsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

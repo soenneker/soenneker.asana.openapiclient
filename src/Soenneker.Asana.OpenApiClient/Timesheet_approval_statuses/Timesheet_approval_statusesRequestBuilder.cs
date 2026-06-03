@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Timesheet_approval_statusesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/timesheet_approval_statuses?workspace={workspace}{&approval_statuses*,from_date*,limit*,offset*,opt_fields,to_date*,user*}", pathParameters)
+        public Timesheet_approval_statusesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Timesheet_approval_statusesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/timesheet_approval_statuses?workspace={workspace}{&approval_statuses*,from_date*,limit*,offset*,opt_fields,to_date*,user*}", rawUrl)
+        public Timesheet_approval_statusesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -126,7 +126,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Timesheet_approval_statusesRequestBuilder.Timesheet_approval_statusesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/timesheet_approval_statuses?workspace={workspace}{&approval_statuses*,from_date*,limit*,offset*,opt_fields,to_date*,user*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;

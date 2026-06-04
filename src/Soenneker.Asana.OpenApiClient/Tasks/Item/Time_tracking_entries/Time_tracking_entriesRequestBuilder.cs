@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries.Time_tracking_entriesRequestBuilder.Time_tracking_entriesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/tasks/{taskGid}/time_tracking_entries{?limit*,offset*,opt_fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;
@@ -132,7 +132,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/tasks/{taskGid}/time_tracking_entries{?opt_fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -68,9 +68,25 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         PermissionsCreateGlobalCustomFields,
         #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.create_goal")]
+        #pragma warning disable CS1591
+        PermissionsCreateGoal,
+        #pragma warning restore CS1591
         [EnumMember(Value = "permissions.create_pat_authorization")]
         #pragma warning disable CS1591
         PermissionsCreatePatAuthorization,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.create_portfolio")]
+        #pragma warning disable CS1591
+        PermissionsCreatePortfolio,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.create_project")]
+        #pragma warning disable CS1591
+        PermissionsCreateProject,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.create_read_only_link")]
+        #pragma warning disable CS1591
+        PermissionsCreateReadOnlyLink,
         #pragma warning restore CS1591
         [EnumMember(Value = "permissions.create_team")]
         #pragma warning disable CS1591
@@ -104,6 +120,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         PermissionsSharePortfoliosWithOrg,
         #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.share_teams_with_org")]
+        #pragma warning disable CS1591
+        PermissionsShareTeamsWithOrg,
+        #pragma warning restore CS1591
         [EnumMember(Value = "permissions.standard_ai")]
         #pragma warning disable CS1591
         PermissionsStandardAi,
@@ -115,6 +135,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "permissions.upload_attachments")]
         #pragma warning disable CS1591
         PermissionsUploadAttachments,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.view_public_teams")]
+        #pragma warning disable CS1591
+        PermissionsViewPublicTeams,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.view_shared_with_org_portfolios")]
+        #pragma warning disable CS1591
+        PermissionsViewSharedWithOrgPortfolios,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.view_shared_with_org_projects")]
+        #pragma warning disable CS1591
+        PermissionsViewSharedWithOrgProjects,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "permissions.view_shared_with_org_tasks")]
+        #pragma warning disable CS1591
+        PermissionsViewSharedWithOrgTasks,
         #pragma warning restore CS1591
         [EnumMember(Value = "uri")]
         #pragma warning disable CS1591

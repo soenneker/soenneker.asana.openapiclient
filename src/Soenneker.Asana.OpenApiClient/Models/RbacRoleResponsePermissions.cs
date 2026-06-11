@@ -27,8 +27,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? CreateAppAuthorization { get; set; }
         /// <summary>Controls whether users with this role can create global custom fields</summary>
         public bool? CreateGlobalCustomFields { get; set; }
+        /// <summary>Controls whether users with this role can create goals</summary>
+        public bool? CreateGoal { get; set; }
         /// <summary>Controls whether users with this role can create PAT authorizations</summary>
         public bool? CreatePatAuthorization { get; set; }
+        /// <summary>Controls whether users with this role can create portfolios</summary>
+        public bool? CreatePortfolio { get; set; }
+        /// <summary>Controls whether users with this role can create projects</summary>
+        public bool? CreateProject { get; set; }
+        /// <summary>Controls whether users with this role can create read-only links</summary>
+        public bool? CreateReadOnlyLink { get; set; }
         /// <summary>Controls whether users with this role can create teams</summary>
         public bool? CreateTeam { get; set; }
         /// <summary>Controls whether users with this role can download attachments from mobile app</summary>
@@ -45,12 +53,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? ShareGoalWithDomain { get; set; }
         /// <summary>Controls whether users with this role can create portfolios that are shared with the organization and share existing portfolios to the organization</summary>
         public bool? SharePortfoliosWithOrg { get; set; }
+        /// <summary>Controls whether users with this role can share teams with the organization</summary>
+        public bool? ShareTeamsWithOrg { get; set; }
         /// <summary>Controls whether users with this role can use standard AI features</summary>
         public bool? StandardAi { get; set; }
         /// <summary>Determines what tasks users with this role are allowed to delete</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissionsTaskDeletionPolicy? TaskDeletionPolicy { get; set; }
         /// <summary>Controls whether users with this role can upload attachments</summary>
         public bool? UploadAttachments { get; set; }
+        /// <summary>Controls whether users with this role can view public teams</summary>
+        public bool? ViewPublicTeams { get; set; }
+        /// <summary>Controls whether users with this role can view portfolios shared with the organization</summary>
+        public bool? ViewSharedWithOrgPortfolios { get; set; }
+        /// <summary>Controls whether users with this role can view projects shared with the organization</summary>
+        public bool? ViewSharedWithOrgProjects { get; set; }
+        /// <summary>Controls whether users with this role can view tasks shared with the organization</summary>
+        public bool? ViewSharedWithOrgTasks { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissions"/> and sets the default values.
         /// </summary>
@@ -82,7 +100,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "create_and_edit_ai_teammates", n => { CreateAndEditAiTeammates = n.GetBoolValue(); } },
                 { "create_app_authorization", n => { CreateAppAuthorization = n.GetBoolValue(); } },
                 { "create_global_custom_fields", n => { CreateGlobalCustomFields = n.GetBoolValue(); } },
+                { "create_goal", n => { CreateGoal = n.GetBoolValue(); } },
                 { "create_pat_authorization", n => { CreatePatAuthorization = n.GetBoolValue(); } },
+                { "create_portfolio", n => { CreatePortfolio = n.GetBoolValue(); } },
+                { "create_project", n => { CreateProject = n.GetBoolValue(); } },
+                { "create_read_only_link", n => { CreateReadOnlyLink = n.GetBoolValue(); } },
                 { "create_team", n => { CreateTeam = n.GetBoolValue(); } },
                 { "download_mobile_attachments", n => { DownloadMobileAttachments = n.GetBoolValue(); } },
                 { "export_project_data", n => { ExportProjectData = n.GetBoolValue(); } },
@@ -91,9 +113,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "proactive_ai", n => { ProactiveAi = n.GetBoolValue(); } },
                 { "share_goal_with_domain", n => { ShareGoalWithDomain = n.GetBoolValue(); } },
                 { "share_portfolios_with_org", n => { SharePortfoliosWithOrg = n.GetBoolValue(); } },
+                { "share_teams_with_org", n => { ShareTeamsWithOrg = n.GetBoolValue(); } },
                 { "standard_ai", n => { StandardAi = n.GetBoolValue(); } },
                 { "task_deletion_policy", n => { TaskDeletionPolicy = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissionsTaskDeletionPolicy>(); } },
                 { "upload_attachments", n => { UploadAttachments = n.GetBoolValue(); } },
+                { "view_public_teams", n => { ViewPublicTeams = n.GetBoolValue(); } },
+                { "view_shared_with_org_portfolios", n => { ViewSharedWithOrgPortfolios = n.GetBoolValue(); } },
+                { "view_shared_with_org_projects", n => { ViewSharedWithOrgProjects = n.GetBoolValue(); } },
+                { "view_shared_with_org_tasks", n => { ViewSharedWithOrgTasks = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -109,7 +136,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("create_and_edit_ai_teammates", CreateAndEditAiTeammates);
             writer.WriteBoolValue("create_app_authorization", CreateAppAuthorization);
             writer.WriteBoolValue("create_global_custom_fields", CreateGlobalCustomFields);
+            writer.WriteBoolValue("create_goal", CreateGoal);
             writer.WriteBoolValue("create_pat_authorization", CreatePatAuthorization);
+            writer.WriteBoolValue("create_portfolio", CreatePortfolio);
+            writer.WriteBoolValue("create_project", CreateProject);
+            writer.WriteBoolValue("create_read_only_link", CreateReadOnlyLink);
             writer.WriteBoolValue("create_team", CreateTeam);
             writer.WriteBoolValue("download_mobile_attachments", DownloadMobileAttachments);
             writer.WriteBoolValue("export_project_data", ExportProjectData);
@@ -118,9 +149,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("proactive_ai", ProactiveAi);
             writer.WriteBoolValue("share_goal_with_domain", ShareGoalWithDomain);
             writer.WriteBoolValue("share_portfolios_with_org", SharePortfoliosWithOrg);
+            writer.WriteBoolValue("share_teams_with_org", ShareTeamsWithOrg);
             writer.WriteBoolValue("standard_ai", StandardAi);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponsePermissionsTaskDeletionPolicy>("task_deletion_policy", TaskDeletionPolicy);
             writer.WriteBoolValue("upload_attachments", UploadAttachments);
+            writer.WriteBoolValue("view_public_teams", ViewPublicTeams);
+            writer.WriteBoolValue("view_shared_with_org_portfolios", ViewSharedWithOrgPortfolios);
+            writer.WriteBoolValue("view_shared_with_org_projects", ViewSharedWithOrgProjects);
+            writer.WriteBoolValue("view_shared_with_org_tasks", ViewSharedWithOrgTasks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

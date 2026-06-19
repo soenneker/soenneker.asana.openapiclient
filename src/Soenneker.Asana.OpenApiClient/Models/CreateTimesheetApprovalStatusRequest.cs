@@ -16,9 +16,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The end date of the timesheet week (must be the following Sunday).</summary>
+        /// <summary>The end date of the timesheet week (must be the following Sunday for Monday starts, or the following Saturday for Sunday starts).</summary>
         public Date? EndDate { get; set; }
-        /// <summary>The start date of the timesheet week (must be a Monday).</summary>
+        /// <summary>The start date of the timesheet week (must be a Monday or Sunday).</summary>
         public Date? StartDate { get; set; }
         /// <summary>Globally unique identifier for the user whose timesheet this is.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

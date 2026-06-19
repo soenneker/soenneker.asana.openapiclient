@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday and end_date must be the following Sunday.Returns the created timesheet approval status record.&quot;
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -132,7 +132,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday and end_date must be the following Sunday.Returns the created timesheet approval status record.&quot;
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -229,7 +229,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday and end_date must be the following Sunday.Returns the created timesheet approval status record.&quot;
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Timesheet_approval_statusesRequestBuilderPostQueryParameters 

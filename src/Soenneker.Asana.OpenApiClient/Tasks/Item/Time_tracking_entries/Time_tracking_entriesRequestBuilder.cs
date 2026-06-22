@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryCompactArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.
+        /// &quot;Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `201` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData"/></returns>
         /// <param name="body">The request body</param>
@@ -73,6 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
@@ -91,6 +92,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             {
                 { "400", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
@@ -117,7 +119,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
             return requestInfo;
         }
         /// <summary>
-        /// Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.
+        /// &quot;Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `201` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -178,7 +180,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Time_tracking_entries
 #endif
         }
         /// <summary>
-        /// Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.
+        /// &quot;Creates a time tracking entry on a given task.Returns the record of the newly created time tracking entry.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `201` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Time_tracking_entriesRequestBuilderPostQueryParameters 

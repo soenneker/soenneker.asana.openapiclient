@@ -23,9 +23,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string AttributableTo { get; set; }
 #endif
-        /// <summary>*Optional*. The current billable status of the entry.</summary>
+        /// <summary>*Optional*. The current billable status of the entry. This field requires the Timesheets and Budgets add-on; including it without the add-on returns a `402 Payment Required` error.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.CreateTimeTrackingEntryRequestBillableStatus? BillableStatus { get; set; }
-        /// <summary>*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category.</summary>
+        /// <summary>*Optional*. The gids of time tracking categories to assign to this time tracking entry. Existing categories will be overridden. Currently limited to a maximum of 1 category. This field requires the Timesheets and Budgets add-on; including it without the add-on returns a `402 Payment Required` error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Categories { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<string> Categories { get; set; }
 #endif
-        /// <summary>*Optional*. The description of the entry.</summary>
+        /// <summary>*Optional*. The description of the entry. This field requires the Timesheets and Budgets add-on; including it without the add-on returns a `402 Payment Required` error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

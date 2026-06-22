@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>*Optional*. The current billable status of the entry.</summary>
+    /// <summary>*Optional*. The current billable status of the entry. This field requires the Timesheets and Budgets add-on; including it without the add-on returns a `402 Payment Required` error.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CreateTimeTrackingEntryRequestBillableStatus
     {

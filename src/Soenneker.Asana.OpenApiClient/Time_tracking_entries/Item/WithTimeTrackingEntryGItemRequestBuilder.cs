@@ -34,13 +34,14 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
         {
         }
         /// <summary>
-        /// A specific, existing time tracking entry can be deleted by making a `DELETE` request onthe URL for that time tracking entry.Returns an empty data record.
+        /// A specific, existing time tracking entry can be deleted by making a `DELETE` request onthe URL for that time tracking entry.Returns an empty data record.#### Access requirementsThis endpoint is available only when time tracking is available through the domain&apos;splan or add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
@@ -58,6 +59,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             {
                 { "400", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
@@ -96,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.
+        /// &quot;A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `200` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData"/></returns>
         /// <param name="body">The request body</param>
@@ -104,6 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
@@ -122,6 +125,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             {
                 { "400", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
@@ -129,7 +133,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// A specific, existing time tracking entry can be deleted by making a `DELETE` request onthe URL for that time tracking entry.Returns an empty data record.
+        /// A specific, existing time tracking entry can be deleted by making a `DELETE` request onthe URL for that time tracking entry.Returns an empty data record.#### Access requirementsThis endpoint is available only when time tracking is available through the domain&apos;splan or add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +171,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
             return requestInfo;
         }
         /// <summary>
-        /// A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.
+        /// &quot;A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `200` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -215,7 +219,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item
 #endif
         }
         /// <summary>
-        /// A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.
+        /// &quot;A specific, existing time tracking entry can be updated by making a `PUT` request onthe URL for that time tracking entry. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated time tracking entry record.#### Access requirementsAccess to this endpoint has two levels:- **Endpoint access** requires time tracking to be available through the domain&apos;s planor add-ons. A request from a domain without time tracking access returns a`402 Payment Required` error for every request to this endpoint.- **Field access** for some request fields requires the Timesheets and Budgets add-on.Fields with this requirement are noted in the request schema. Including one of thesefields without the add-on returns a `402 Payment Required` error, even when the rest ofthe request is valid.Because the field-level requirement is separate, the same endpoint may return `200` or`402` for the same domain depending on which fields are sent: a request that only usesfields available with endpoint access succeeds on any domain that meets the endpointrequirement, while a request that includes a field requiring the add-on also requiresthe add-on.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTimeTrackingEntryGItemRequestBuilderPutQueryParameters 

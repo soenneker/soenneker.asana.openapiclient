@@ -36,7 +36,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.Items
         /// <summary>
         /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Get a list of the items in compact form in a portfolio.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioItemCompactArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
@@ -46,11 +46,11 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.Items
         /// <exception cref="global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray?> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Portfolios.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.PortfolioItemCompactArray?> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Portfolios.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Portfolios.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Asana.OpenApiClient.Models.PortfolioItemCompactArray> GetAsync(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Portfolios.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -62,7 +62,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.Items
                 { "404", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Asana.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.PortfolioItemCompactArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.PortfolioItemCompactArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Get a list of the items in compact form in a portfolio.&quot;

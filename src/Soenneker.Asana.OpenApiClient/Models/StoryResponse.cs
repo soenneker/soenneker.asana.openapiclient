@@ -131,7 +131,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDates NewDates { get; private set; }
 #endif
-        /// <summary>The new_date_value property</summary>
+        /// <summary>*Conditional* The new value of a date custom field story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseNewDateValue? NewDateValue { get; private set; }
@@ -217,7 +217,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDates OldDates { get; private set; }
 #endif
-        /// <summary>The old_date_value property</summary>
+        /// <summary>*Conditional*. The old value of a date custom field story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseOldDateValue? OldDateValue { get; private set; }

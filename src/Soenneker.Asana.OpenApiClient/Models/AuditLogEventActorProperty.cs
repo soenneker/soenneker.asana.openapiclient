@@ -13,7 +13,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AuditLogEventActorProperty : IAdditionalDataHolder, IParsable
     {
-        /// <summary>The type of actor.Can be one of `user`, `asana`, `asana_support`, `anonymous`, or `external_administrator`.</summary>
+        /// <summary>The type of actor.Can be one of `user`, `asana`, `asana_support`, `anonymous`, `external_administrator`, or `data_retention_policy`.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventActorPropertyActorType? ActorType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

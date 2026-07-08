@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>The type of actor.Can be one of `user`, `asana`, `asana_support`, `anonymous`, or `external_administrator`.</summary>
+    /// <summary>The type of actor.Can be one of `user`, `asana`, `asana_support`, `anonymous`, `external_administrator`, or `data_retention_policy`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AuditLogEventActorPropertyActorType
     {
@@ -26,6 +26,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "external_administrator")]
         #pragma warning disable CS1591
         ExternalAdministrator,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "data_retention_policy")]
+        #pragma warning disable CS1591
+        DataRetentionPolicy,
         #pragma warning restore CS1591
     }
 }

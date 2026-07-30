@@ -32233,6 +32233,17 @@
           }
         }
       },
+      "TaskMembership": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/TaskMembershipProject"
+          },
+          "section": {
+            "$ref": "#/components/schemas/TaskMembershipSection"
+          }
+        }
+      },
       "TaskRequestBase": {
         "type": "object",
         "properties": {
@@ -47252,6 +47263,63 @@
           "properties.resource_type.example": "custom_field"
         }
       },
+      "TaskMembershipProject": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "project"
+        }
+      },
+      "TaskMembershipSection": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the section (i.e. the text displayed as the section header).",
+            "example": "Next Actions"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
+        "x-docs-overrides": {
+          "properties.resource_type.example": "section"
+        }
+      },
       "TaskRequestBaseCreatedBy": {
         "type": "object",
         "properties": {
@@ -55652,6 +55720,7 @@
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "section"
         }
@@ -55896,6 +55965,7 @@
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "section"
         }
@@ -56008,6 +56078,7 @@
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "section"
         }
@@ -56120,6 +56191,7 @@
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "section"
         }
@@ -56232,6 +56304,7 @@
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "section"
         }

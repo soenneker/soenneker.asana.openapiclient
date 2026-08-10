@@ -303,7 +303,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             [QueryParameter("projects%2Eall")]
             public string ProjectsAll { get; set; }
 #endif
-            /// <summary>Comma-separated list of project IDs</summary>
+            /// <summary>Comma-separated list of project IDs. Returns tasks that are directly in these projects or inherit them from an ancestor task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("projects%2Eany")]

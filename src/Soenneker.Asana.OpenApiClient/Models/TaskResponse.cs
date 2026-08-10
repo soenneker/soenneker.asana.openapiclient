@@ -68,7 +68,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCreatedBy CreatedBy { get; private set; }
 #endif
-        /// <summary>Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an `enum_value` property for custom fields of type `enum`, a `text_value` property for custom fields of type `text`, and so on. Please note that the `gid` returned on each custom field value *is identical* to the `gid` of the custom field, which allows referencing the custom field metadata through the `/custom_fields/custom_field_gid` endpoint.</summary>
+        /// <summary>Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an `enum_value` property for custom fields of type `enum`, a `text_value` property for custom fields of type `text`, and so on. Please note that the `gid` returned on each custom field value *is identical* to the `gid` of the custom field, which allows referencing the custom field metadata through the `/custom_fields/custom_field_gid` endpoint. The array includes custom fields from projects the task belongs to directly and from projects inherited from its full ancestor chain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomFieldsItem>? CustomFields { get; private set; }
@@ -112,6 +112,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public DateTimeOffset? DueAt { get; set; }
         /// <summary>The localized date on which this task is due, or null if the task has no due date. This takes a date with `YYYY-MM-DD` format and should not be used together with `due_at`.</summary>
         public Date? DueOn { get; set; }
+        /// <summary>Opt-in, read-only. The union of direct and inherited memberships for this task. If the task is both directly associated with and inherits the same project, the direct membership takes precedence.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseEffectiveMembershipsItem>? EffectiveMemberships { get; private set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseEffectiveMembershipsItem> EffectiveMemberships { get; private set; }
+#endif
         /// <summary>*OAuth Required*. *Conditional*. This field is returned only if external values are set or included by using [Opt In](/docs/inputoutput-options).The external field allows you to store app-specific metadata on tasks, including a gid that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external gid is set, you can use the notation `external:custom_gid` to reference your object anywhere in the API where you may use the original object gid. See the page on Custom External Data for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -214,7 +222,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string PermalinkUrl { get; private set; }
 #endif
-        /// <summary>*Create-only.* Array of projects this task is associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the addProject and removeProject endpoints.</summary>
+        /// <summary>*Create-only.* Array of projects this task is directly associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the addProject and removeProject endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem>? Projects { get; private set; }
@@ -295,6 +303,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
+                { "effective_memberships", n => { EffectiveMemberships = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseEffectiveMembershipsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseEffectiveMembershipsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal.CreateFromDiscriminatorValue); } },
                 { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },

@@ -284,6 +284,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         DueOn,
         #pragma warning restore CS1591
+        [EnumMember(Value = "effective_memberships")]
+        #pragma warning disable CS1591
+        EffectiveMemberships,
+        #pragma warning restore CS1591
         [EnumMember(Value = "external")]
         #pragma warning disable CS1591
         External,

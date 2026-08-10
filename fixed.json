@@ -9724,6 +9724,16 @@
         },
         {
           "$ref": "#/components/parameters/offset"
+        },
+        {
+          "name": "include_inherited_projects",
+          "in": "query",
+          "description": "Opt-in, read-only. When \u0060true\u0060, the response also includes projects the task inherits from its ancestor tasks (in addition to its direct projects). Defaults to \u0060false\u0060, in which case only direct projects are returned.",
+          "schema": {
+            "type": "boolean",
+            "default": false
+          },
+          "example": false
         }
       ]
     },
@@ -15709,6 +15719,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -15867,6 +15878,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -16039,6 +16051,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -16194,6 +16207,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -16491,6 +16505,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -16665,6 +16680,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -16839,6 +16855,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17010,6 +17027,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17190,6 +17208,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17348,6 +17367,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17525,6 +17545,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17702,6 +17723,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -17988,6 +18010,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -18526,6 +18549,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -18703,6 +18727,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -18921,6 +18946,7 @@
               "dependents",
               "due_at",
               "due_on",
+              "effective_memberships",
               "external",
               "external.data",
               "followers",
@@ -19038,7 +19064,7 @@
         {
           "name": "projects.any",
           "in": "query",
-          "description": "Comma-separated list of project IDs",
+          "description": "Comma-separated list of project IDs. Returns tasks that are directly in these projects or inherit them from an ancestor task.",
           "schema": {
             "type": "string"
           },
@@ -25754,6 +25780,23 @@
         "x-docs-overrides": {
           "properties.resource_type.example": "custom_type_status_option"
         }
+      },
+      "EffectiveTaskMembership": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/EffectiveTaskMembershipAllOf1Project"
+          },
+          "section": {
+            "$ref": "#/components/schemas/EffectiveTaskMembershipAllOf1Section"
+          },
+          "is_inherited": {
+            "type": "boolean",
+            "description": "Whether this membership is inherited from an ancestor task (\u0060true\u0060) or is a direct membership (\u0060false\u0060).",
+            "example": false
+          }
+        },
+        "description": "A task\u0027s project membership, indicating whether the membership is direct or inherited from an ancestor task."
       },
       "EmptyResponse": {
         "type": "object",
@@ -33146,7 +33189,7 @@
             "items": {
               "$ref": "#/components/schemas/TaskResponseCustomFieldsItem"
             },
-            "description": "Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an \u0060enum_value\u0060 property for custom fields of type \u0060enum\u0060, a \u0060text_value\u0060 property for custom fields of type \u0060text\u0060, and so on. Please note that the \u0060gid\u0060 returned on each custom field value *is identical* to the \u0060gid\u0060 of the custom field, which allows referencing the custom field metadata through the \u0060/custom_fields/custom_field_gid\u0060 endpoint.",
+            "description": "Array of custom field values applied to the task. These represent the custom field values recorded on this project for a particular custom field. For example, these custom field values will contain an \u0060enum_value\u0060 property for custom fields of type \u0060enum\u0060, a \u0060text_value\u0060 property for custom fields of type \u0060text\u0060, and so on. Please note that the \u0060gid\u0060 returned on each custom field value *is identical* to the \u0060gid\u0060 of the custom field, which allows referencing the custom field metadata through the \u0060/custom_fields/custom_field_gid\u0060 endpoint. The array includes custom fields from projects the task belongs to directly and from projects inherited from its full ancestor chain.",
             "readOnly": true
           },
           "custom_type": {
@@ -33171,7 +33214,15 @@
             "items": {
               "$ref": "#/components/schemas/TaskResponseProjectsItem"
             },
-            "description": "*Create-only.* Array of projects this task is associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the addProject and removeProject endpoints.",
+            "description": "*Create-only.* Array of projects this task is directly associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the addProject and removeProject endpoints.",
+            "readOnly": true
+          },
+          "effective_memberships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TaskResponseEffectiveMembershipsItem"
+            },
+            "description": "Opt-in, read-only. The union of direct and inherited memberships for this task. If the task is both directly associated with and inherits the same project, the direct membership takes precedence.",
             "readOnly": true
           },
           "tags": {
@@ -37221,6 +37272,27 @@
           }
         }
       },
+      "EffectiveTaskMembershipAllOf1": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/EffectiveTaskMembershipAllOf1Project"
+          },
+          "section": {
+            "$ref": "#/components/schemas/EffectiveTaskMembershipAllOf1Section"
+          }
+        }
+      },
+      "EffectiveTaskMembershipAllOf2": {
+        "type": "object",
+        "properties": {
+          "is_inherited": {
+            "type": "boolean",
+            "description": "Whether this membership is inherited from an ancestor task (\u0060true\u0060) or is a direct membership (\u0060false\u0060).",
+            "example": false
+          }
+        }
+      },
       "MembershipCompactAnyOf1": {
         "type": "object",
         "properties": {
@@ -37932,6 +38004,23 @@
           }
         },
         "description": "The user who created this task template."
+      },
+      "TaskResponseEffectiveMembershipsItem": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/TaskResponseEffectiveMembershipsItemAllOf1Project"
+          },
+          "section": {
+            "$ref": "#/components/schemas/TaskResponseEffectiveMembershipsItemAllOf1Section"
+          },
+          "is_inherited": {
+            "type": "boolean",
+            "description": "Whether this membership is inherited from an ancestor task (\u0060true\u0060) or is a direct membership (\u0060false\u0060).",
+            "example": false
+          }
+        },
+        "description": "A task\u0027s project membership, indicating whether the membership is direct or inherited from an ancestor task."
       },
       "UserTaskListBaseOwner": {
         "type": "object",
@@ -38974,6 +39063,27 @@
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
         "x-docs-overrides": {
           "properties.resource_type.example": "user"
+        }
+      },
+      "TaskResponseEffectiveMembershipsItemAllOf1": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "$ref": "#/components/schemas/TaskResponseEffectiveMembershipsItemAllOf1Project"
+          },
+          "section": {
+            "$ref": "#/components/schemas/TaskResponseEffectiveMembershipsItemAllOf1Section"
+          }
+        }
+      },
+      "TaskResponseEffectiveMembershipsItemAllOf2": {
+        "type": "object",
+        "properties": {
+          "is_inherited": {
+            "type": "boolean",
+            "description": "Whether this membership is inherited from an ancestor task (\u0060true\u0060) or is a direct membership (\u0060false\u0060).",
+            "example": false
+          }
         }
       },
       "UserTaskListBaseOwnerAllOf1": {
@@ -50974,6 +51084,63 @@
           "properties.resource_type.example": "user"
         }
       },
+      "EffectiveTaskMembershipAllOf1Project": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "project"
+        }
+      },
+      "EffectiveTaskMembershipAllOf1Section": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the section (i.e. the text displayed as the section header).",
+            "example": "Next Actions"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
+        "x-docs-overrides": {
+          "properties.resource_type.example": "section"
+        }
+      },
       "MembershipCompactAnyOf1Member": {
         "type": "object",
         "properties": {
@@ -52309,6 +52476,63 @@
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nCustom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.\n\nUsers in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code \u0060403 Forbidden\u0060.",
         "x-docs-overrides": {
           "properties.resource_type.example": "custom_field"
+        }
+      },
+      "TaskResponseEffectiveMembershipsItemAllOf1Project": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.",
+            "example": "Stuff to buy"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "project"
+        }
+      },
+      "TaskResponseEffectiveMembershipsItemAllOf1Section": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the section (i.e. the text displayed as the section header).",
+            "example": "Next Actions"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.",
+        "nullable": true,
+        "x-docs-overrides": {
+          "properties.resource_type.example": "section"
         }
       },
       "AttachmentResponseParentCreatedBy": {
@@ -115233,6 +115457,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -115559,6 +115784,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -115800,6 +116029,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -116123,6 +116353,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -116352,6 +116586,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -116675,6 +116910,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -116904,6 +117143,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -117225,6 +117465,10 @@
             {
               "value": "due_on",
               "name": "DueOn"
+            },
+            {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
             },
             {
               "value": "external",
@@ -117568,6 +117812,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -117894,6 +118139,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -118135,6 +118384,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -118461,6 +118711,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -118702,6 +118956,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -119028,6 +119283,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -119269,6 +119528,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -119595,6 +119855,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -119836,6 +120100,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -120162,6 +120427,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -120403,6 +120672,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -120726,6 +120996,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -120955,6 +121229,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -121278,6 +121553,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -121507,6 +121786,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -121833,6 +122113,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -122074,6 +122358,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -122400,6 +122685,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -122641,6 +122930,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -122964,6 +123254,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -123193,6 +123487,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -123516,6 +123811,10 @@
               "name": "DueOn"
             },
             {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
+            },
+            {
               "value": "external",
               "name": "External"
             },
@@ -123819,6 +124118,7 @@
           "dependents",
           "due_at",
           "due_on",
+          "effective_memberships",
           "external",
           "external.data",
           "followers",
@@ -124140,6 +124440,10 @@
             {
               "value": "due_on",
               "name": "DueOn"
+            },
+            {
+              "value": "effective_memberships",
+              "name": "EffectiveMemberships"
             },
             {
               "value": "external",

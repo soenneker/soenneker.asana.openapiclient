@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/projects{?limit*,offset*,opt_fields}", pathParameters)
+        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/projects{?include_inherited_projects*,limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/projects{?limit*,offset*,opt_fields}", rawUrl)
+        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/projects{?include_inherited_projects*,limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -98,6 +98,9 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Projects
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Opt-in, read-only. When `true`, the response also includes projects the task inherits from its ancestor tasks (in addition to its direct projects). Defaults to `false`, in which case only direct projects are returned.</summary>
+            [QueryParameter("include_inherited_projects")]
+            public bool? IncludeInheritedProjects { get; set; }
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

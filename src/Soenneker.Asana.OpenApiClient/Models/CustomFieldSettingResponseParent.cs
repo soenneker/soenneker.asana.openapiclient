@@ -31,6 +31,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParentResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,6 +68,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParentResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
         }
@@ -77,6 +80,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseParentResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

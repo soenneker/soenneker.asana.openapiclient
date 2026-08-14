@@ -208,6 +208,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldSettingsParentName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field_settings.parent.resource_subtype")]
+        #pragma warning disable CS1591
+        CustomFieldSettingsParentResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_field_settings.project")]
         #pragma warning disable CS1591
         CustomFieldSettingsProject,
@@ -215,6 +219,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "custom_field_settings.project.name")]
         #pragma warning disable CS1591
         CustomFieldSettingsProjectName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field_settings.project.resource_subtype")]
+        #pragma warning disable CS1591
+        CustomFieldSettingsProjectResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "description")]
         #pragma warning disable CS1591

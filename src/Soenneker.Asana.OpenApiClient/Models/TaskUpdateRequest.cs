@@ -76,7 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.TaskUpdateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
-        /// <summary>*Conditional:* You can only set custom_type if task `resource_subtype` is `custom`. GID or globally-unique identifier of a task&apos;s custom type.</summary>
+        /// <summary>*Conditional:* You can only set custom_type if task `resource_subtype` is `custom`. GID or globally-unique identifier of a task&apos;s custom type. The type must be valid for tasks, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomType { get; set; }

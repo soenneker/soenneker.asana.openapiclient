@@ -28,6 +28,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         PortfolioName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "portfolio.resource_subtype")]
+        #pragma warning disable CS1591
+        PortfolioResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "uri")]
         #pragma warning disable CS1591
         Uri,

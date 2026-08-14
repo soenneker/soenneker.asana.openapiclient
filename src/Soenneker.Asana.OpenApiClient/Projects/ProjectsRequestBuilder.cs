@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?archived*,limit*,offset*,opt_fields,team*,workspace*}", pathParameters)
+        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?archived*,custom_type*,limit*,offset*,opt_fields,team*,workspace*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?archived*,limit*,offset*,opt_fields,team*,workspace*}", rawUrl)
+        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?archived*,custom_type*,limit*,offset*,opt_fields,team*,workspace*}", rawUrl)
         {
         }
         /// <summary>
@@ -169,6 +169,16 @@ namespace Soenneker.Asana.OpenApiClient.Projects
             /// <summary>Only return projects whose `archived` field takes on the value of this parameter.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
+            /// <summary>Filter results by custom type. Provide a custom type GID to return only objects of that custom type (an unknown GID returns `400`). Provide an empty string to return only objects with no custom type assigned. If this parameter is omitted, results are not filtered by custom type.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("custom_type")]
+            public string? CustomType { get; set; }
+#nullable restore
+#else
+            [QueryParameter("custom_type")]
+            public string CustomType { get; set; }
+#endif
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

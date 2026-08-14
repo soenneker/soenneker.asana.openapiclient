@@ -40,5 +40,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         SupportingResourceName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "supporting_resource.resource_subtype")]
+        #pragma warning disable CS1591
+        SupportingResourceResourceSubtype,
+        #pragma warning restore CS1591
     }
 }

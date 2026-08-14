@@ -208,6 +208,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         ParentName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "parent.resource_subtype")]
+        #pragma warning disable CS1591
+        ParentResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "path")]
         #pragma warning disable CS1591
         Path,
@@ -219,6 +223,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "project.name")]
         #pragma warning disable CS1591
         ProjectName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "project.resource_subtype")]
+        #pragma warning disable CS1591
+        ProjectResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "uri")]
         #pragma warning disable CS1591

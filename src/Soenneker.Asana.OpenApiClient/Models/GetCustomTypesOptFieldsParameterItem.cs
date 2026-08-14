@@ -8,6 +8,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public enum GetCustomTypesOptFieldsParameterItem
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "asana_created_type_identifier")]
+        #pragma warning disable CS1591
+        AsanaCreatedTypeIdentifier,
+        #pragma warning restore CS1591
         [EnumMember(Value = "name")]
         #pragma warning disable CS1591
         Name,

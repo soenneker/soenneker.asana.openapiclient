@@ -52,6 +52,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         ParentName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "parent.resource_subtype")]
+        #pragma warning disable CS1591
+        ParentResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "path")]
         #pragma warning disable CS1591
         Path,

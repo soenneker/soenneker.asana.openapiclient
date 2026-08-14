@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Custom_typesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_types?project={project}{&limit*,offset*,opt_fields}", pathParameters)
+        public Custom_typesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_types{?limit*,offset*,opt_fields,project*,workspace*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Custom_typesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_types?project={project}{&limit*,offset*,opt_fields}", rawUrl)
+        public Custom_typesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/custom_types{?limit*,offset*,opt_fields,project*,workspace*}", rawUrl)
         {
         }
         /// <summary>
-        /// Returns a list of all of the custom types associated with an object. Currently, only projects are supported. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns a list of all of the custom types associated with an object. Exactly one of `project` or `workspace` must be provided as a query parameter. When `workspace` is provided, all custom types in the workspace are listed, including types created by Asana products. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a list of all of the custom types associated with an object. Currently, only projects are supported. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns a list of all of the custom types associated with an object. Exactly one of `project` or `workspace` must be provided as a query parameter. When `workspace` is provided, all custom types in the workspace are listed, including types created by Asana products. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
             return new global::Soenneker.Asana.OpenApiClient.Custom_types.Custom_typesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a list of all of the custom types associated with an object. Currently, only projects are supported. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.
+        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns a list of all of the custom types associated with an object. Exactly one of `project` or `workspace` must be provided as a query parameter. When `workspace` is provided, all custom types in the workspace are listed, including types created by Asana products. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [documentation for input/output options](https://developers.asana.com/docs/inputoutput-options) for more information.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Custom_typesRequestBuilderGetQueryParameters 
@@ -134,7 +134,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Models.GetCustomTypesOptFieldsParameterItem[] OptFields { get; set; }
 #endif
-            /// <summary>Globally unique identifier for the project, which is used as a filter when retrieving all custom types.</summary>
+            /// <summary>Globally unique identifier for the project, used as a filter when retrieving custom types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project")]
@@ -143,6 +143,16 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types
 #else
             [QueryParameter("project")]
             public string Project { get; set; }
+#endif
+            /// <summary>The workspace to filter results on.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("workspace")]
+            public string? Workspace { get; set; }
+#nullable restore
+#else
+            [QueryParameter("workspace")]
+            public string Workspace { get; set; }
 #endif
         }
     }

@@ -16,6 +16,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         AttributableToName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "attributable_to.resource_subtype")]
+        #pragma warning disable CS1591
+        AttributableToResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "categories")]
         #pragma warning disable CS1591
         Categories,

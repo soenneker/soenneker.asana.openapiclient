@@ -54,6 +54,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldSettingsItem> CustomFieldSettings { get; set; }
 #endif
+        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomType? CustomType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomType CustomType { get; set; }
+#endif
         /// <summary>The default access level when inviting new members to the portfolio</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The day on which this portfolio is due. This takes a date with format YYYY-MM-DD.</summary>
@@ -110,6 +118,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>True if the portfolio is public to its workspace members.</summary>
         public bool? Public { get; set; }
+        /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -160,6 +170,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_type", n => { CustomType = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomType>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomType.CreateFromDiscriminatorValue); } },
                 { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseDefaultAccessLevel>(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -170,6 +181,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponsePrivacySetting>(); } },
                 { "project_templates", n => { ProjectTemplates = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseProjectTemplatesItem>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseProjectTemplatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
                 { "workspace", n => { Workspace = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace.CreateFromDiscriminatorValue); } },
@@ -188,12 +200,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldsItem>("custom_fields", CustomFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomFieldSettingsItem>("custom_field_settings", CustomFieldSettings);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseCustomType>("custom_type", CustomType);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseOwner>("owner", Owner);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponsePrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteBoolValue("public", Public);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseWorkspace>("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);

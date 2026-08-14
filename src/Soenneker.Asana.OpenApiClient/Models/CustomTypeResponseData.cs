@@ -14,7 +14,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects, currently only Custom Tasks are supported.</summary>
+        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponse? Data { get; set; }

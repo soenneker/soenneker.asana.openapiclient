@@ -8,13 +8,15 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects, currently only Custom Tasks are supported.
+    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomTypeResponse : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>*Read-only*. A stable identifier present when this custom type was created by Asana as part of an Asana product (for example, a Command ticket type or a Service queue type). `null` for custom types created by users, and for Asana-created types that do not have a public identifier yet. New values may be added over time as Asana products introduce new types; integrations should tolerate unrecognized values.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseAsanaCreatedTypeIdentifier? AsanaCreatedTypeIdentifier { get; private set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,6 +74,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "asana_created_type_identifier", n => { AsanaCreatedTypeIdentifier = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseAsanaCreatedTypeIdentifier>(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },

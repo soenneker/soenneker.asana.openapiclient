@@ -300,6 +300,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldSettingsParentName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field_settings.parent.resource_subtype")]
+        #pragma warning disable CS1591
+        CustomFieldSettingsParentResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_field_settings.project")]
         #pragma warning disable CS1591
         CustomFieldSettingsProject,
@@ -307,6 +311,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "custom_field_settings.project.name")]
         #pragma warning disable CS1591
         CustomFieldSettingsProjectName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field_settings.project.resource_subtype")]
+        #pragma warning disable CS1591
+        CustomFieldSettingsProjectResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "custom_fields")]
         #pragma warning disable CS1591
@@ -412,6 +420,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldsType,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_type")]
+        #pragma warning disable CS1591
+        CustomType,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "custom_type.asana_created_type_identifier")]
+        #pragma warning disable CS1591
+        CustomTypeAsanaCreatedTypeIdentifier,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "custom_type.name")]
+        #pragma warning disable CS1591
+        CustomTypeName,
+        #pragma warning restore CS1591
         [EnumMember(Value = "default_access_level")]
         #pragma warning disable CS1591
         DefaultAccessLevel,
@@ -499,6 +519,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "public")]
         #pragma warning disable CS1591
         PublicValue,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "resource_subtype")]
+        #pragma warning disable CS1591
+        ResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "start_on")]
         #pragma warning disable CS1591

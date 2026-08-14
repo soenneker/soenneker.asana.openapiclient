@@ -20,6 +20,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? Archived { get; set; }
         /// <summary>Color of the portfolio.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestColor? Color { get; set; }
+        /// <summary>*Conditional:* You can only set custom_type if portfolio `resource_subtype` is `custom`. GID or globally-unique identifier of a portfolio&apos;s custom type. The type must be valid for portfolios, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomType { get; set; }
+#nullable restore
+#else
+        public string CustomType { get; set; }
+#endif
         /// <summary>The default access level when inviting new members to the portfolio</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The day on which this portfolio is due. This takes a date with format YYYY-MM-DD.</summary>
@@ -43,6 +51,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
         public bool? Public { get; set; }
+        /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,11 +98,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "color", n => { Color = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestColor>(); } },
+                { "custom_type", n => { CustomType = n.GetStringValue(); } },
                 { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestDefaultAccessLevel>(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
                 { "workspace", n => { Workspace = n.GetStringValue(); } },
@@ -107,10 +119,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestColor>("color", Color);
+            writer.WriteStringValue("custom_type", CustomType);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("public", Public);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteStringValue("workspace", Workspace);
             writer.WriteAdditionalData(AdditionalData);

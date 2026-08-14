@@ -32,6 +32,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         ProjectName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "project.resource_subtype")]
+        #pragma warning disable CS1591
+        ProjectResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "projects")]
         #pragma warning disable CS1591
         Projects,
@@ -39,6 +43,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "projects.name")]
         #pragma warning disable CS1591
         ProjectsName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "projects.resource_subtype")]
+        #pragma warning disable CS1591
+        ProjectsResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "uri")]
         #pragma warning disable CS1591

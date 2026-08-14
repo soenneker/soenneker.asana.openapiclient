@@ -464,6 +464,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         ProjectName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "project.resource_subtype")]
+        #pragma warning disable CS1591
+        ProjectResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "reaction_summary")]
         #pragma warning disable CS1591
         ReactionSummary,

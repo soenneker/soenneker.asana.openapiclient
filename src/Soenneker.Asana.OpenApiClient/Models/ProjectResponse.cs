@@ -74,6 +74,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomFieldSettingsItem> CustomFieldSettings { get; private set; }
 #endif
+        /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomType? CustomType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomType CustomType { get; set; }
+#endif
         /// <summary>The default access for users or teams who join or are added as members to the project.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseDefaultAccessLevel? DefaultAccessLevel { get; set; }
         /// <summary>The default view (list, board, calendar, or timeline) of a project.</summary>
@@ -167,6 +175,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
         public bool? Public { get; set; }
+        /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -229,6 +239,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_type", n => { CustomType = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomType>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomType.CreateFromDiscriminatorValue); } },
                 { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseDefaultAccessLevel>(); } },
                 { "default_view", n => { DefaultView = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseDefaultView>(); } },
                 { "due_date", n => { DueDate = n.GetDateValue(); } },
@@ -248,6 +259,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponsePrivacySetting>(); } },
                 { "project_brief", n => { ProjectBrief = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseProjectBrief>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseProjectBrief.CreateFromDiscriminatorValue); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
                 { "team", n => { Team = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam.CreateFromDiscriminatorValue); } },
@@ -266,6 +278,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCreatedFromTemplate>("created_from_template", CreatedFromTemplate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatus>("current_status", CurrentStatus);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCustomType>("custom_type", CustomType);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseDefaultView>("default_view", DefaultView);
             writer.WriteDateValue("due_date", DueDate);
@@ -280,6 +293,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponsePrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseProjectBrief>("project_brief", ProjectBrief);
             writer.WriteBoolValue("public", Public);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseTeam>("team", Team);
             writer.WriteAdditionalData(AdditionalData);

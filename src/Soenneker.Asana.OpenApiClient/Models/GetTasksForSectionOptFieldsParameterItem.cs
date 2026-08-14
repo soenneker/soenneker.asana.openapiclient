@@ -256,6 +256,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomType,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_type.asana_created_type_identifier")]
+        #pragma warning disable CS1591
+        CustomTypeAsanaCreatedTypeIdentifier,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_type.name")]
         #pragma warning disable CS1591
         CustomTypeName,
@@ -356,6 +360,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         MembershipsProjectName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "memberships.project.resource_subtype")]
+        #pragma warning disable CS1591
+        MembershipsProjectResourceSubtype,
+        #pragma warning restore CS1591
         [EnumMember(Value = "memberships.section")]
         #pragma warning disable CS1591
         MembershipsSection,
@@ -423,6 +431,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "projects.name")]
         #pragma warning disable CS1591
         ProjectsName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "projects.resource_subtype")]
+        #pragma warning disable CS1591
+        ProjectsResourceSubtype,
         #pragma warning restore CS1591
         [EnumMember(Value = "resource_subtype")]
         #pragma warning disable CS1591

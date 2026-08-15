@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Team_memberships.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Team_memberships.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Team_memberships.Item
             return new global::Soenneker.Asana.OpenApiClient.Team_memberships.Item.WithTeamMembershipGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;team_memberships:read&lt;/code&gt;Returns the complete team membership record for a single team membership.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTeamMembershipGItemRequestBuilderGetQueryParameters 

@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.RemoveCustomFieldSetting
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Removes a custom field setting from a portfolio.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Removes a custom field setting from a portfolio.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios.Item.RemoveCustomFieldSetting
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Removes a custom field setting from a portfolio.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:write&lt;/code&gt;Removes a custom field setting from a portfolio.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

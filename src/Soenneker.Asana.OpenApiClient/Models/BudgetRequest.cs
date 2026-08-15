@@ -25,7 +25,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the budget, in &quot;cost&quot; or &quot;time&quot;. The value of this property will dictate how the corresponding values for actual, estimate, and total are interpreted.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType? BudgetType { get; set; }
-        /// <summary>&quot;Defines how the estimate portion of a budget is configured. This object controls whether the estimate is enabled, what data source it uses, and which tasks (by billable status) are included in calculating the estimate value. When disabled (enabled: false and source: none), the estimate is hidden and the API response will return `value: null` and `units: null` for this field.&quot;</summary>
+        /// <summary>Defines how the estimate portion of a budget is configured. This object controls whether the estimate is enabled, what data source it uses, and which tasks (by billable status) are included in calculating the estimate value. When disabled (enabled: false and source: none), the estimate is hidden and the API response will return `value: null` and `units: null` for this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate? Estimate { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>&quot;Globally unique ID of the parent object: project. Can only be set on create, immutable thereafter.&quot;</summary>
+        /// <summary>Globally unique ID of the parent object: project. Can only be set on create, immutable thereafter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Parent { get; set; }

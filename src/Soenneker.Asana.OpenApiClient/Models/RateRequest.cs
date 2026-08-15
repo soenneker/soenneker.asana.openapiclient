@@ -23,7 +23,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>&quot;Globally unique ID of the parent object: project.&quot;</summary>
+        /// <summary>Globally unique ID of the parent object: project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Parent { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>The monetary value of the rate.</summary>
         public double? Rate { get; set; }
-        /// <summary>&quot;Globally unique ID of the resource object: user or placeholder.&quot;</summary>
+        /// <summary>Globally unique ID of the resource object: user or placeholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Resource { get; set; }

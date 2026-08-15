@@ -240,9 +240,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>&quot;Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.*Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*&quot;</summary>
+        /// <summary>Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.*Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*</summary>
         public DateTimeOffset? StartAt { get; set; }
-        /// <summary>&quot;The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.*Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*&quot;</summary>
+        /// <summary>The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.*Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*</summary>
         public Date? StartOn { get; set; }
         /// <summary>Array of tags associated with this task. In order to change tags on an existing task use `addTag` and `removeTag`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

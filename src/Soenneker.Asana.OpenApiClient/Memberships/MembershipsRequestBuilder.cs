@@ -179,7 +179,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             [QueryParameter("member")]
             public string Member { get; set; }
 #endif
-            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
+            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]
@@ -211,7 +211,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
 #endif
             /// <summary>The type of membership to return. Required when `parent` is absent. Currently supported value is `project_membership` (when `member` is a team GID, returns all project memberships for that team).</summary>
             [QueryParameter("resource_subtype")]
-            public global::Soenneker.Asana.OpenApiClient.Models.GetMembershipsResourceSubtypeParameter? ResourceSubtype { get; set; }
+            public global::Soenneker.Asana.OpenApiClient.Models.ProjectMembershipResourceSubtype? ResourceSubtype { get; set; }
         }
     }
 }

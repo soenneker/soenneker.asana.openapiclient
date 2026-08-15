@@ -69,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseLikesItem> Likes { get; private set; }
 #endif
-        /// <summary>&quot;The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the status.*&quot;</summary>
+        /// <summary>The time at which this project status was last modified.*Note: This does not currently reflect any changes in associations such as comments that may have been added or removed from the status.*</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>*Deprecated - please use likes instead* The number of users who have hearted this status.</summary>
         public int? NumHearts { get; private set; }
@@ -101,7 +101,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>&quot;The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.&quot;</summary>
+        /// <summary>The type associated with the status update. This represents the current state of the object this object is on.The valid values for `status_type` depend on the parent of the status update:- Projects: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Portfolios: `on_track`, `at_risk`, `off_track`, `on_hold`, `complete`, `dropped`.- Goals: `on_track`, `at_risk`, `off_track`, `achieved`, `partial`, `missed`, `dropped`.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StatusUpdateResponseStatusType? StatusType { get; set; }
         /// <summary>The text content of the status update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -37,9 +37,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField();
-            if("AddCustomFieldSettingRequestCustomField_1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("AddCustomFieldSettingRequestCustomFieldBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.AddCustomFieldSettingRequestCustomFieldBranch1 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldBranch1();
             }

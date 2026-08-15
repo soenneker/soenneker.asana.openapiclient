@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -80,7 +80,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomFieldResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
             return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Custom_fieldsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Creates a new custom field in a workspace. Every custom field is requiredto be created in a specific workspace, and this workspace cannot bechanged once set.A custom field’s name must be unique within a workspace and not conflictwith names of existing task properties such as `Due Date` or `Assignee`.A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,`date`, or `people`.Returns the full record of the newly created custom field.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Custom_fieldsRequestBuilderPostQueryParameters 

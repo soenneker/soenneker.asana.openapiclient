@@ -283,7 +283,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string OldTextValue { get; private set; }
 #endif
-        /// <summary>&quot;*Conditional*. A collection of previews to be displayed in the story.*Note: This property only exists for comment stories.*&quot;</summary>
+        /// <summary>*Conditional*. A collection of previews to be displayed in the story.*Note: This property only exists for comment stories.*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponsePreviewsItem>? Previews { get; private set; }

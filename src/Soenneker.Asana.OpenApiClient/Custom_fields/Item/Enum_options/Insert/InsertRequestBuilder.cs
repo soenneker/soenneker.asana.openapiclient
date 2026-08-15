@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.Insert
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.Insert
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EnumOptionData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.Insert
             return new global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options.Insert.InsertRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_fields:write&lt;/code&gt;Moves a particular enum option to be either before or after another specified enum option in the custom field.Locked custom fields can only be reordered by the user who locked the field.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class InsertRequestBuilderPostQueryParameters 

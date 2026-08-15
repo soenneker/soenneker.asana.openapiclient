@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -117,7 +117,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
             return new global::Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item.WithProjectPortfolioSettingGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:read&lt;/code&gt;Returns the complete project portfolio setting record for a single project portfolio setting.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProjectPortfolioSettingGItemRequestBuilderGetQueryParameters 
@@ -165,7 +165,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_portfolio_settings.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;project_portfolio_settings:write&lt;/code&gt;An existing project portfolio setting can be updated by making a PUTrequest on the URL for that setting. Only the fields provided in the`data` block will be updated; any unspecified fields will remainunchanged.Returns the complete updated project portfolio setting record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProjectPortfolioSettingGItemRequestBuilderPutQueryParameters 

@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -113,7 +113,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimesheetApprovalStatusResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -132,7 +132,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -163,7 +163,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             return new global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Timesheet_approval_statusesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:read&lt;/code&gt;Returns a list of timesheet approval statuses filtered by workspace and optionally by user, date range, or approval status.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Timesheet_approval_statusesRequestBuilderGetQueryParameters 
@@ -184,7 +184,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>&quot;Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*&quot;</summary>
+            /// <summary>Offset token.An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.*Note: You can only pass in an offset that was returned to you via a previously paginated request.*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("offset")]
@@ -229,7 +229,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;timesheet_approval_statuses:write&lt;/code&gt;Creates a new timesheet approval status for a user&apos;s timesheet week. The start_date must be a Monday or Sunday, and end_date must be the last day of that week (Sunday for a Monday start, Saturday for a Sunday start).Returns the created timesheet approval status record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Timesheet_approval_statusesRequestBuilderPostQueryParameters 

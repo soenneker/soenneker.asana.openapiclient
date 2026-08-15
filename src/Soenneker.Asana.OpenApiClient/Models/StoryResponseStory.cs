@@ -49,7 +49,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>&quot;*Create-only*. Human-readable text for the story or comment.This will not include the name of the creator.*Note: This is not guaranteed to be stable for a given type of story. For example, text for a reassignment may not always say “assigned to …” as the text for a story can both be edited and change based on the language settings of the user making the request.*Use the `resource_subtype` property to discover the action that created the story.&quot;</summary>
+        /// <summary>*Create-only*. Human-readable text for the story or comment.This will not include the name of the creator.*Note: This is not guaranteed to be stable for a given type of story. For example, text for a reassignment may not always say “assigned to …” as the text for a story can both be edited and change based on the language settings of the user making the request.*Use the `resource_subtype` property to discover the action that created the story.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

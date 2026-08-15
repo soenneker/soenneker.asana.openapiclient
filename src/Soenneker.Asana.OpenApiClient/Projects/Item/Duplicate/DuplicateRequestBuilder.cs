@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Duplicate
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.JobResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Duplicate
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.JobResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.JobResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Duplicate
             return new global::Soenneker.Asana.OpenApiClient.Projects.Item.Duplicate.DuplicateRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the duplication.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DuplicateRequestBuilderPostQueryParameters 

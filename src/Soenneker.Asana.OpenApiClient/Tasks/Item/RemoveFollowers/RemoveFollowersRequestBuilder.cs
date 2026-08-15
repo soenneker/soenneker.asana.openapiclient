@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers
             return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers.RemoveFollowersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RemoveFollowersRequestBuilderPostQueryParameters 

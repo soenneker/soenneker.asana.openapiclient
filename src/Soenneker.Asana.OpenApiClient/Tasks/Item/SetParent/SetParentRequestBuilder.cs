@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent
             return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent.SetParentRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;Updates the parent of a given task. This endpoint can be used to make a task a subtask of another task, or to remove its existing parent.When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.Returns the complete, updated record of the affected [task](/reference/tasks#/task).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SetParentRequestBuilderPostQueryParameters 

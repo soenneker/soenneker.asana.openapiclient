@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>&quot;The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
+    /// <summary>The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PortfolioResponsePrivacySetting
     {

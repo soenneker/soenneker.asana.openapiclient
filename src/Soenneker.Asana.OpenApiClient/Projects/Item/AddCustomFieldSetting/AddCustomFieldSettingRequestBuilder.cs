@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.AddCustomFieldSetting
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.AddCustomFieldSetting
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.AddCustomFieldSetting
             return new global::Soenneker.Asana.OpenApiClient.Projects.Item.AddCustomFieldSetting.AddCustomFieldSettingRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AddCustomFieldSettingRequestBuilderPostQueryParameters 

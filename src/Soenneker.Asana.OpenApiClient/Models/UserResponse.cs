@@ -63,7 +63,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>&quot;Workspaces and organizations this user may access.Note\: The API will only return workspaces and organizations that also contain the authenticated user.&quot;</summary>
+        /// <summary>Workspaces and organizations this user may access.Note\: The API will only return workspaces and organizations that also contain the authenticated user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Asana.OpenApiClient.Models.UserResponseWorkspacesItem>? Workspaces { get; private set; }

@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public DateTimeOffset? CompletedAt { get; private set; }
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
-        /// <summary>&quot;Download this URL to retrieve the full exportin JSON format. It will be compressed in a gzip (.gz) container.*Note: May be null if the export is still in progress orfailed.  If present, this URL may only be valid for 1 hour fromthe time of retrieval. You should avoid persisting this URLsomewhere and rather refresh on demand to ensure you do not keepstale URLs.*&quot;</summary>
+        /// <summary>Download this URL to retrieve the full exportin JSON format. It will be compressed in a gzip (.gz) container.*Note: May be null if the export is still in progress orfailed.  If present, this URL may only be valid for 1 hour fromthe time of retrieval. You should avoid persisting this URLsomewhere and rather refresh on demand to ensure you do not keepstale URLs.*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DownloadUrl { get; private set; }

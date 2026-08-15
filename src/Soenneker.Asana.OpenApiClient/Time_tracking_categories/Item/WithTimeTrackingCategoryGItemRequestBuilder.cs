@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:delete&lt;/code&gt;Deletes a specific, existing time tracking category.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:delete&lt;/code&gt;Deletes a specific, existing time tracking category.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingCategoryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:delete&lt;/code&gt;Deletes a specific, existing time tracking category.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:delete&lt;/code&gt;Deletes a specific, existing time tracking category.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -173,7 +173,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -204,7 +204,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
             return new global::Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item.WithTimeTrackingCategoryGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:read&lt;/code&gt;Returns the complete time tracking category record for a single time tracking category.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTimeTrackingCategoryGItemRequestBuilderGetQueryParameters 
@@ -221,7 +221,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_categories.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;time_tracking_categories:write&lt;/code&gt;Updates the properties of a time tracking category. Only the fields provided in the`data` block will be updated; any unspecified fields will remain unchanged.Returns the complete updated time tracking category record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTimeTrackingCategoryGItemRequestBuilderPutQueryParameters 

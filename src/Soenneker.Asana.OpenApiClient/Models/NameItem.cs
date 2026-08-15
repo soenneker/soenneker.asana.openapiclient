@@ -5,12 +5,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum GetMembershipsResourceSubtypeParameter
+    public enum NameItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "project_membership")]
+        [EnumMember(Value = "name")]
         #pragma warning disable CS1591
-        ProjectMembership,
+        Name,
         #pragma warning restore CS1591
     }
 }

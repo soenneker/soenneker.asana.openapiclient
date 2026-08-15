@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item.InstantiateProjec
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.JobResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item.InstantiateProjec
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.JobResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.JobResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates.Item.InstantiateProjec
             return new global::Soenneker.Asana.OpenApiClient.Project_templates.Item.InstantiateProject.InstantiateProjectRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates and returns a job that will asynchronously handle the project instantiation.To form this request, it is recommended to first make a request to [get a project template](/reference/getprojecttemplate). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project._Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class InstantiateProjectRequestBuilderPostQueryParameters 

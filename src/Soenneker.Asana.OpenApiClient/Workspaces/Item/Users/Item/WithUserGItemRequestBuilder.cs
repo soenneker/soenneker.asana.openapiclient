@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.UserResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.UserResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item
             return new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item.WithUserGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;users:read&lt;/code&gt;Returns the full user record for the single user with the provided ID in the specified workspace or organization.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserGItemRequestBuilderGetQueryParameters 

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
-    /// <summary>&quot;*Deprecated: Describes if the member is a commenter or editor in goal.*&quot;</summary>
+    /// <summary>*Deprecated: Describes if the member is a commenter or editor in goal.*</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     [Obsolete("")]
     public enum MembershipResponseAnyOf1Role

@@ -5,7 +5,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum GoalMetricRequestResourceSubtype
+    public enum NumberResourceSubtype
     {
         [EnumMember(Value = "number")]
         #pragma warning disable CS1591

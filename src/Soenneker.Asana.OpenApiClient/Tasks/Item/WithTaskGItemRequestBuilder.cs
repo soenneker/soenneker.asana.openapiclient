@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:delete&lt;/code&gt;A specific, existing task can be deleted by making a DELETE request onthe URL for that task. Deleted tasks go into the “trash” of the usermaking the delete request. Tasks can be recovered from the trash within aperiod of 30 days; afterward they are completely removed from the system.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:delete&lt;/code&gt;A specific, existing task can be deleted by making a DELETE request onthe URL for that task. Deleted tasks go into the “trash” of the usermaking the delete request. Tasks can be recovered from the trash within aperiod of 30 days; afterward they are completely removed from the system.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -179,7 +179,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -210,7 +210,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -243,7 +243,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TaskResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:delete&lt;/code&gt;A specific, existing task can be deleted by making a DELETE request onthe URL for that task. Deleted tasks go into the “trash” of the usermaking the delete request. Tasks can be recovered from the trash within aperiod of 30 days; afterward they are completely removed from the system.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:delete&lt;/code&gt;A specific, existing task can be deleted by making a DELETE request onthe URL for that task. Deleted tasks go into the “trash” of the usermaking the delete request. Tasks can be recovered from the trash within aperiod of 30 days; afterward they are completely removed from the system.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -262,7 +262,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -281,7 +281,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -312,7 +312,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
             return new global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:read&lt;/code&gt;Returns the complete task record for a single task.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTaskGItemRequestBuilderGetQueryParameters 
@@ -329,7 +329,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;tasks:write&lt;/code&gt;A specific, existing task can be updated by making a PUT request on theURL for that task. Only the fields provided in the `data` block will beupdated; any unspecified fields will remain unchanged.When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated task record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTaskGItemRequestBuilderPutQueryParameters 

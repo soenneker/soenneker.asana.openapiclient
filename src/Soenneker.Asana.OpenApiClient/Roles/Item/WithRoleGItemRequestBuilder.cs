@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:delete&lt;/code&gt;Deletes a role from a workspace.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:delete&lt;/code&gt;Deletes a role from a workspace.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.RbacRoleResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:delete&lt;/code&gt;Deletes a role from a workspace.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:delete&lt;/code&gt;Deletes a role from a workspace.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -198,7 +198,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
             return new global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:read&lt;/code&gt;Returns the complete role record for a single role.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRoleGItemRequestBuilderGetQueryParameters 
@@ -215,7 +215,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;roles:write&lt;/code&gt;Updates a role in a workspace.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRoleGItemRequestBuilderPutQueryParameters 

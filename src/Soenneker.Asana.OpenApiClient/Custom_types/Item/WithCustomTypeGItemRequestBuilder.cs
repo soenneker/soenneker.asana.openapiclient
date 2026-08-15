@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.CustomTypeResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_types.Item
             return new global::Soenneker.Asana.OpenApiClient.Custom_types.Item.WithCustomTypeGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;custom_types:read&lt;/code&gt;Returns the complete custom type record for a single custom type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCustomTypeGItemRequestBuilderGetQueryParameters 

@@ -23,7 +23,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string DueOn { get; set; }
 #endif
-        /// <summary>&quot;**Required**: Determines if the auto-shifted dates should skip weekends.&quot;</summary>
+        /// <summary>**Required**: Determines if the auto-shifted dates should skip weekends.</summary>
         public bool? ShouldSkipWeekends { get; set; }
         /// <summary>Sets the first start date in the duplicated project to the given date. The rest of the start dates will be offset by the same amount as the start dates in the original project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

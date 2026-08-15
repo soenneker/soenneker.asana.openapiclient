@@ -76,7 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -140,7 +140,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.TeamResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -190,7 +190,7 @@ namespace Soenneker.Asana.OpenApiClient.Teams.Item
             return new global::Soenneker.Asana.OpenApiClient.Teams.Item.WithTeamGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;teams:read&lt;/code&gt;Returns the full record for a single team.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTeamGItemRequestBuilderGetQueryParameters 

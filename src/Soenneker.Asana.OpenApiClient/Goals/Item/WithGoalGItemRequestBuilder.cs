@@ -133,7 +133,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -218,7 +218,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -268,7 +268,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item
             return new global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;goals:read&lt;/code&gt;Returns the complete goal record for a single goal.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithGoalGItemRequestBuilderGetQueryParameters 

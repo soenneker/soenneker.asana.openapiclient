@@ -106,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string PermalinkUrl { get; private set; }
 #endif
-        /// <summary>&quot;The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*&quot;</summary>
+        /// <summary>The privacy setting of the portfolio. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponsePrivacySetting? PrivacySetting { get; set; }
         /// <summary>Array of project templates that are in the portfolio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,7 +128,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>&quot;The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*&quot;</summary>
+        /// <summary>The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*</summary>
         public Date? StartOn { get; set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.*Create-only*. The workspace or organization that the portfolio belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

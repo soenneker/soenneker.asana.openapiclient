@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:delete&lt;/code&gt;This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:delete&lt;/code&gt;This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.WebhookResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:delete&lt;/code&gt;This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:delete&lt;/code&gt;This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -198,7 +198,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
             return new global::Soenneker.Asana.OpenApiClient.Webhooks.Item.WithWebhookGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:read&lt;/code&gt;Returns the full record for the given webhook.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithWebhookGItemRequestBuilderGetQueryParameters 
@@ -215,7 +215,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;webhooks:write&lt;/code&gt;An existing webhook&apos;s filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook&apos;s previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithWebhookGItemRequestBuilderPutQueryParameters 

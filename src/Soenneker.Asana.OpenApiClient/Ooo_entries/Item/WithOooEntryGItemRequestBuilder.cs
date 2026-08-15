@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
         {
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:delete&lt;/code&gt;A specific, existing OOO entry can be deleted by making a DELETE request on the URL for that OOO entry.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:delete&lt;/code&gt;A specific, existing OOO entry can be deleted by making a DELETE request on the URL for that OOO entry.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.OooEntryResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:delete&lt;/code&gt;A specific, existing OOO entry can be deleted by making a DELETE request on the URL for that OOO entry.Returns an empty data record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:delete&lt;/code&gt;A specific, existing OOO entry can be deleted by making a DELETE request on the URL for that OOO entry.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -198,7 +198,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
             return new global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:read&lt;/code&gt;Returns the complete OOO entry record for a single OOO entry.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithOooEntryGItemRequestBuilderGetQueryParameters 
@@ -215,7 +215,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries.Item
 #endif
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;ooo_entries:write&lt;/code&gt;An existing OOO entry can be updated by making a PUT request on the URL forthat OOO entry. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged.Returns the complete updated OOO entry record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithOooEntryGItemRequestBuilderPutQueryParameters 

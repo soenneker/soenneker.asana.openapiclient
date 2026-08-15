@@ -50,7 +50,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>This field defines how the progress value of a goal metric is being calculated. A goal&apos;s progress can be provided manually by the user, calculated automatically from contributing subgoals, projects, or tasks, or managed by an integration with an external data source, such as Salesforce.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestProgressSource? ProgressSource { get; set; }
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestResourceSubtype? ResourceSubtype { get; private set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.NumberResourceSubtype? ResourceSubtype { get; private set; }
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "is_custom_weight", n => { IsCustomWeight = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetIntValue(); } },
                 { "progress_source", n => { ProgressSource = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestProgressSource>(); } },
-                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestResourceSubtype>(); } },
+                { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.NumberResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "target_number_value", n => { TargetNumberValue = n.GetDoubleValue(); } },
                 { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalMetricRequestUnit>(); } },

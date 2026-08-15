@@ -73,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -123,7 +123,7 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -151,7 +151,7 @@ namespace Soenneker.Asana.OpenApiClient.Task_templates.Item
             return new global::Soenneker.Asana.OpenApiClient.Task_templates.Item.WithTaskTemplateGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.&quot;
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;task_templates:read&lt;/code&gt;Returns the complete task template record for a single task template.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTaskTemplateGItemRequestBuilderGetQueryParameters 

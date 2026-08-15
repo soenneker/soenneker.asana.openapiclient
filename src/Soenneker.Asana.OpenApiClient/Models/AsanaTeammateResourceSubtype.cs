@@ -5,7 +5,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>The subtype of the agent. `asana_teammate` is an Asana-built teammate.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum AgentResponseResourceSubtype
+    public enum AsanaTeammateResourceSubtype
     {
         [EnumMember(Value = "asana_teammate")]
         #pragma warning disable CS1591

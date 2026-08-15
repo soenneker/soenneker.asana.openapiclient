@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses.Item
         {
         }
         /// <summary>
-        /// &quot;*Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Deletes a specific, existing project status update.Returns an empty data record.&quot;
+        /// *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Deletes a specific, existing project status update.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;*Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.&quot;
+        /// *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.ProjectStatusResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;*Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Deletes a specific, existing project status update.Returns an empty data record.&quot;
+        /// *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Deletes a specific, existing project status update.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -115,7 +115,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;*Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.&quot;
+        /// *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -143,7 +143,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_statuses.Item
             return new global::Soenneker.Asana.OpenApiClient.Project_statuses.Item.WithProjectStatusGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;*Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.&quot;
+        /// *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*Returns the complete record for a single status update.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProjectStatusGItemRequestBuilderGetQueryParameters 

@@ -2726,7 +2726,7 @@
           "Custom types"
         ],
         "summary": "Get a custom type",
-        "description": "Returns the complete custom type record for a single custom type.",
+        "description": "\u0022\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Ecustom_types:read\u003C/code\u003E\n\nReturns the complete custom type record for a single custom type.\u0022",
         "operationId": "GetCustomType",
         "parameters": [
           {
@@ -2770,7 +2770,10 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "parameters": [
         {

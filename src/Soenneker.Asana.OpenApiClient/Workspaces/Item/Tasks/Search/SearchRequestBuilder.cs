@@ -273,7 +273,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Search
             /// <summary>ISO 8601 date string</summary>
             [QueryParameter("modified_on%2Ebefore")]
             public Date? ModifiedOnBefore { get; set; }
-            /// <summary>This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.</summary>
+            /// <summary>This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. Properties can include nested fields. To learn more, see the [input/output options guide](/docs/inputoutput-options#selecting-nested-fields).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("opt_fields")]

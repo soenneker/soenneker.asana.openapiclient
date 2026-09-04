@@ -56,6 +56,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>Defines whether the portfolio is public to its workspace members. `true` if the portfolio is public to workspace members, `false` if it&apos;s visible only to members of the portfolio. New portfolios are private by default.</summary>
+        public bool? Public { get; set; }
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestResourceSubtype? ResourceSubtype { get; set; }
         /// <summary>The base type of this resource.</summary>
@@ -101,6 +103,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "public", n => { Public = n.GetBoolValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetDateValue(); } },
@@ -120,6 +123,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("name", Name);
+            writer.WriteBoolValue("public", Public);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteAdditionalData(AdditionalData);

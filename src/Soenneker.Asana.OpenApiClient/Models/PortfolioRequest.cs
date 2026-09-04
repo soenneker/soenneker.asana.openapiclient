@@ -48,8 +48,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
-        [Obsolete("")]
+        /// <summary>Defines whether the portfolio is public to its workspace members. `true` if the portfolio is public to workspace members, `false` if it&apos;s visible only to members of the portfolio. New portfolios are private by default.</summary>
         public bool? Public { get; set; }
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioRequestResourceSubtype? ResourceSubtype { get; set; }

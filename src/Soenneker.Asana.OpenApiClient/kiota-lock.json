@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "7464BD7BA0B38F9E8BD9FF3C16FD05166EC4529709EAE95944D855E82B276245BF5E19F921920492E0C9CFC826E32BB48516305BAF6212F6E1E6EAACFE74BFA6",
+  "descriptionHash": "5E4863891B4A1A56D7F5BD25B6C635D9DE519880BE76502EEC74D99689BBB29B0214607551DBECB0A4CF756A2762563943E74464FEF94E8FBFD5B55272D26BBA",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "AsanaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Asana.OpenApiClient",

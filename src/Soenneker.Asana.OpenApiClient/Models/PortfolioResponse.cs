@@ -116,7 +116,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseProjectTemplatesItem> ProjectTemplates { get; private set; }
 #endif
-        /// <summary>True if the portfolio is public to its workspace members.</summary>
+        /// <summary>Defines whether the portfolio is public to its workspace members. `true` if the portfolio is public to workspace members, `false` if it&apos;s visible only to members of the portfolio. New portfolios are private by default.</summary>
         public bool? Public { get; set; }
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseResourceSubtype? ResourceSubtype { get; set; }

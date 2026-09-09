@@ -20,6 +20,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         Name,
         #pragma warning restore CS1591
+        [EnumMember(Value = "offset")]
+        #pragma warning disable CS1591
+        Offset,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "path")]
+        #pragma warning disable CS1591
+        Path,
+        #pragma warning restore CS1591
         [EnumMember(Value = "project")]
         #pragma warning disable CS1591
         Project,
@@ -27,6 +35,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "template")]
         #pragma warning disable CS1591
         Template,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "uri")]
+        #pragma warning disable CS1591
+        Uri,
         #pragma warning restore CS1591
     }
 }

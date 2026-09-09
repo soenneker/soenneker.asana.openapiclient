@@ -991,7 +991,7 @@
           {
             "name": "parent",
             "in": "query",
-            "description": "Globally unique identifier for object to fetch statuses from. Must be a GID for a \u0060project\u0060, \u0060project_brief\u0060, or \u0060task\u0060.",
+            "description": "Globally unique identifier for the object to fetch attachments from. Must be a GID for a \u0060project\u0060, \u0060project_brief\u0060, or \u0060task\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -15632,8 +15632,11 @@
               "created_at",
               "created_by",
               "name",
+              "offset",
+              "path",
               "project",
-              "template"
+              "template",
+              "uri"
             ]
           }
         ],
@@ -32989,6 +32992,20 @@
           "custom_fields": {
             "$ref": "#/components/schemas/TaskRequestBaseCustomFieldsProperty"
           },
+          "custom_type": {
+            "type": "string",
+            "description": "*Conditional:* You can only set custom_type if task \u0060resource_subtype\u0060 is \u0060custom\u0060. GID or globally-unique identifier of a task\u0027s custom type. The type must be valid for tasks, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.",
+            "nullable": true,
+            "example": "12345",
+            "x-env-variable": true
+          },
+          "custom_type_status_option": {
+            "type": "string",
+            "description": "*Conditional:* You can only set custom_type_status_option if task \u0060resource_subtype\u0060 is \u0060custom\u0060 GID or globally-unique identifier of a custom type\u0027s status option.",
+            "nullable": true,
+            "example": "12345",
+            "x-env-variable": true
+          },
           "parent": {
             "type": "string",
             "description": "Gid of a task.",
@@ -33207,6 +33224,20 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/TaskCreateRequestCustomFieldsProperty"
+          },
+          "custom_type": {
+            "type": "string",
+            "description": "*Conditional:* You can only set custom_type if task \u0060resource_subtype\u0060 is \u0060custom\u0060. GID or globally-unique identifier of a task\u0027s custom type. The type must be valid for tasks, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.",
+            "nullable": true,
+            "example": "12345",
+            "x-env-variable": true
+          },
+          "custom_type_status_option": {
+            "type": "string",
+            "description": "*Conditional:* You can only set custom_type_status_option if task \u0060resource_subtype\u0060 is \u0060custom\u0060 GID or globally-unique identifier of a custom type\u0027s status option.",
+            "nullable": true,
+            "example": "12345",
+            "x-env-variable": true
           },
           "parent": {
             "type": "string",
@@ -33457,13 +33488,6 @@
           "custom_fields": {
             "$ref": "#/components/schemas/TaskUpdateRequestCustomFieldsProperty"
           },
-          "parent": {
-            "type": "string",
-            "description": "Gid of a task.",
-            "nullable": true,
-            "example": "12345",
-            "x-env-variable": true
-          },
           "custom_type": {
             "type": "string",
             "description": "*Conditional:* You can only set custom_type if task \u0060resource_subtype\u0060 is \u0060custom\u0060. GID or globally-unique identifier of a task\u0027s custom type. The type must be valid for tasks, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.",
@@ -33474,6 +33498,13 @@
           "custom_type_status_option": {
             "type": "string",
             "description": "*Conditional:* You can only set custom_type_status_option if task \u0060resource_subtype\u0060 is \u0060custom\u0060 GID or globally-unique identifier of a custom type\u0027s status option.",
+            "nullable": true,
+            "example": "12345",
+            "x-env-variable": true
+          },
+          "parent": {
+            "type": "string",
+            "description": "Gid of a task.",
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
@@ -119705,8 +119736,11 @@
           "created_at",
           "created_by",
           "name",
+          "offset",
+          "path",
           "project",
-          "template"
+          "template",
+          "uri"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -119727,12 +119761,24 @@
               "name": "Name"
             },
             {
+              "value": "offset",
+              "name": "Offset"
+            },
+            {
+              "value": "path",
+              "name": "Path"
+            },
+            {
               "value": "project",
               "name": "Project"
             },
             {
               "value": "template",
               "name": "Template"
+            },
+            {
+              "value": "uri",
+              "name": "Uri"
             }
           ]
         }

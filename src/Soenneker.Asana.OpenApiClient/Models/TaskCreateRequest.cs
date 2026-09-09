@@ -76,6 +76,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty CustomFields { get; set; }
 #endif
+        /// <summary>*Conditional:* You can only set custom_type if task `resource_subtype` is `custom`. GID or globally-unique identifier of a task&apos;s custom type. The type must be valid for tasks, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomType { get; set; }
+#nullable restore
+#else
+        public string CustomType { get; set; }
+#endif
+        /// <summary>*Conditional:* You can only set custom_type_status_option if task `resource_subtype` is `custom` GID or globally-unique identifier of a custom type&apos;s status option.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomTypeStatusOption { get; set; }
+#nullable restore
+#else
+        public string CustomTypeStatusOption { get; set; }
+#endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -265,6 +281,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCreatedBy.CreateFromDiscriminatorValue); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
+                { "custom_type", n => { CustomType = n.GetStringValue(); } },
+                { "custom_type_status_option", n => { CustomTypeStatusOption = n.GetStringValue(); } },
                 { "dependencies", n => { Dependencies = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependenciesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dependents", n => { Dependents = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestDependentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "due_at", n => { DueAt = n.GetDateTimeOffsetValue(); } },
@@ -308,6 +326,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestAssigneeStatus>("assignee_status", AssigneeStatus);
             writer.WriteBoolValue("completed", Completed);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestCustomFieldsProperty>("custom_fields", CustomFields);
+            writer.WriteStringValue("custom_type", CustomType);
+            writer.WriteStringValue("custom_type_status_option", CustomTypeStatusOption);
             writer.WriteDateTimeOffsetValue("due_at", DueAt);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal>("external", External);

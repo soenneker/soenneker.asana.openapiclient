@@ -189,7 +189,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Models.GetAttachmentsForObjectOptFieldsParameterItem[] OptFields { get; set; }
 #endif
-            /// <summary>Globally unique identifier for object to fetch statuses from. Must be a GID for a `project`, `project_brief`, or `task`.</summary>
+            /// <summary>Globally unique identifier for the object to fetch attachments from. Must be a GID for a `project`, `project_brief`, or `task`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("parent")]

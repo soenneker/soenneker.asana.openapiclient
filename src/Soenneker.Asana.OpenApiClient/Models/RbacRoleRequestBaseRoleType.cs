@@ -19,9 +19,5 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         Admin,
         #pragma warning restore CS1591
-        [EnumMember(Value = "super_admin")]
-        #pragma warning disable CS1591
-        SuperAdmin,
-        #pragma warning restore CS1591
     }
 }

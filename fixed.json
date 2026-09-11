@@ -12667,6 +12667,7 @@
             "name": "workspace",
             "in": "query",
             "description": "The workspace or organization to filter roles on.",
+            "required": true,
             "schema": {
               "type": "string"
             },
@@ -72465,8 +72466,7 @@
         "enum": [
           "guest",
           "member",
-          "admin",
-          "super_admin"
+          "admin"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -72486,10 +72486,6 @@
             {
               "value": "admin",
               "name": "Admin"
-            },
-            {
-              "value": "super_admin",
-              "name": "SuperAdmin"
             }
           ]
         }

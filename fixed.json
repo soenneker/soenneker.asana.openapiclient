@@ -180,7 +180,7 @@
         "operationId": "CreateAccessRequest",
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -228,7 +228,12 @@
         "operationId": "ApproveAccessRequest",
         "parameters": [
           {
-            "$ref": "#/components/parameters/access_request_gid"
+            "name": "accessRequestGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -263,7 +268,12 @@
         "operationId": "RejectAccessRequest",
         "parameters": [
           {
-            "$ref": "#/components/parameters/access_request_gid"
+            "name": "accessRequestGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -331,6 +341,14 @@
               "uri",
               "workspace"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -354,11 +372,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/agents/{agentGid}": {
       "get": {
@@ -394,6 +408,14 @@
               "resource_subtype",
               "workspace"
             ]
+          },
+          {
+            "name": "agentGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -417,11 +439,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/agent_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/ai_studio/runs": {
       "get": {
@@ -450,12 +468,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/ai_studio_start_at"
         },
@@ -500,12 +525,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/ai_studio_seat_state"
         },
@@ -555,6 +587,14 @@
               "resource_subtype",
               "start_date"
             ]
+          },
+          {
+            "name": "allocationGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -615,12 +655,20 @@
               "resource_subtype",
               "start_date"
             ]
+          },
+          {
+            "name": "allocationGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the allocation.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -683,13 +731,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "allocationGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/allocation_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/allocations": {
       "get": {
@@ -827,7 +881,7 @@
         "requestBody": {
           "description": "The allocation to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "$ref": "#/components/schemas/CreateAllocationRequest"
               }
@@ -895,6 +949,14 @@
               "size",
               "view_url"
             ]
+          },
+          {
+            "name": "attachmentGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -965,13 +1027,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "attachmentGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/attachment_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/attachments": {
       "get": {
@@ -1151,12 +1219,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/audit_log_start_at"
         },
@@ -1213,7 +1288,7 @@
         "requestBody": {
           "description": "The requests to batch together via the Batch API.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -1302,7 +1377,7 @@
         "requestBody": {
           "description": "The budget to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -1380,6 +1455,14 @@
               "total.units",
               "total.value"
             ]
+          },
+          {
+            "name": "budgetGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1445,12 +1528,20 @@
               "total.units",
               "total.value"
             ]
+          },
+          {
+            "name": "budgetGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The budget to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -1516,13 +1607,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "budgetGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/budget_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/custom_field_settings": {
       "get": {
@@ -1602,6 +1699,14 @@
               "project.resource_subtype",
               "uri"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1629,9 +1734,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -1718,6 +1820,14 @@
               "project.resource_subtype",
               "uri"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1745,9 +1855,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -1834,6 +1941,14 @@
               "project.resource_subtype",
               "uri"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1861,9 +1976,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -1947,6 +2059,14 @@
               "project.name",
               "project.resource_subtype"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1973,11 +2093,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/custom_fields": {
       "post": {
@@ -2051,7 +2167,7 @@
         "requestBody": {
           "description": "The custom field object to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2156,6 +2272,14 @@
               "text_value",
               "type"
             ]
+          },
+          {
+            "name": "customFieldGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2248,12 +2372,20 @@
               "text_value",
               "type"
             ]
+          },
+          {
+            "name": "customFieldGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The custom field object with all updated properties.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2315,13 +2447,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "customFieldGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/custom_field_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/custom_fields": {
       "get": {
@@ -2393,6 +2531,14 @@
               "type",
               "uri"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2420,9 +2566,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -2456,12 +2599,20 @@
               "enabled",
               "name"
             ]
+          },
+          {
+            "name": "customFieldGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The enum option object to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2497,11 +2648,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/custom_field_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/custom_fields/{customFieldGid}/enum_options/insert": {
       "post": {
@@ -2528,12 +2675,20 @@
               "enabled",
               "name"
             ]
+          },
+          {
+            "name": "customFieldGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The enum option object to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2569,11 +2724,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/custom_field_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/enum_options/{enumOptionGid}": {
       "put": {
@@ -2605,7 +2756,7 @@
         "requestBody": {
           "description": "The enum option object to update",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2756,6 +2907,14 @@
               "status_options.enabled",
               "status_options.name"
             ]
+          },
+          {
+            "name": "customTypeGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2782,11 +2941,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/custom_type_gid"
-        }
-      ]
+      "parameters": []
     },
     "/events": {
       "get": {
@@ -2846,7 +3001,7 @@
           "412": {
             "description": "The request is missing or has an expired sync token.",
             "content": {
-              "application/json": {
+              "application/json; charset=UTF-8": {
                 "schema": {
                   "$ref": "#/components/schemas/GetEvents412Response"
                 }
@@ -2891,7 +3046,7 @@
         "requestBody": {
           "description": "A JSON payload specifying the parent object to export.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -2937,7 +3092,7 @@
         "requestBody": {
           "description": "A JSON payload specifying the resources to export, including filters to apply and fields to be exported.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -3003,6 +3158,14 @@
               "supporting_resource.name",
               "supporting_resource.resource_subtype"
             ]
+          },
+          {
+            "name": "goalRelationshipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3056,12 +3219,20 @@
               "supporting_resource.name",
               "supporting_resource.resource_subtype"
             ]
+          },
+          {
+            "name": "goalRelationshipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the goal relationship.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -3095,11 +3266,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_relationship_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goal_relationships": {
       "get": {
@@ -3215,12 +3382,20 @@
               "supporting_resource.name",
               "supporting_resource.resource_subtype"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The supporting resource to be added to the goal",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -3254,11 +3429,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/removeSupportingRelationship": {
       "post": {
@@ -3271,7 +3442,7 @@
         "requestBody": {
           "description": "The supporting resource to be removed from the goal",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -3303,13 +3474,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}": {
       "get": {
@@ -3455,6 +3632,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3627,12 +3812,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the goal.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -3695,13 +3888,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals": {
       "get": {
@@ -4099,7 +4298,7 @@
         "requestBody": {
           "description": "The goal to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -4281,12 +4480,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The goal metric to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -4323,11 +4530,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/setMetricCurrentValue": {
       "post": {
@@ -4473,12 +4676,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the goal metric.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -4515,11 +4726,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/addFollowers": {
       "post": {
@@ -4665,12 +4872,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The followers to be added as collaborators",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -4707,11 +4922,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/removeFollowers": {
       "post": {
@@ -4857,12 +5068,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The followers to be removed as collaborators",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -4899,11 +5118,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/parentGoals": {
       "get": {
@@ -5049,6 +5264,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -5078,11 +5301,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/addCustomFieldSetting": {
       "post": {
@@ -5095,7 +5314,7 @@
         "requestBody": {
           "description": "Information about the custom field setting.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5130,13 +5349,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/removeCustomFieldSetting": {
       "post": {
@@ -5149,7 +5374,7 @@
         "requestBody": {
           "description": "Information about the custom field setting being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5184,13 +5409,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/jobs/{jobGid}": {
       "get": {
@@ -5236,6 +5467,14 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "jobGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -5262,11 +5501,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/job_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/memberships": {
       "get": {
@@ -5359,7 +5594,7 @@
         "requestBody": {
           "description": "The updated fields for the membership.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5420,7 +5655,17 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "membershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "put": {
         "tags": [
@@ -5432,7 +5677,7 @@
         "requestBody": {
           "description": "The membership to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5464,7 +5709,17 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "membershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -5492,13 +5747,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "membershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/membership_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/ooo_entries/{oooEntryGid}": {
       "get": {
@@ -5528,6 +5789,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "oooEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -5581,12 +5850,20 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "oooEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the OOO entry.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5652,13 +5929,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "oooEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/ooo_entry_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/ooo_entries": {
       "get": {
@@ -5795,7 +6078,7 @@
         "requestBody": {
           "description": "The OOO entry to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "$ref": "#/components/schemas/CreateOooEntryRequest"
               }
@@ -5860,7 +6143,7 @@
         "requestBody": {
           "description": "The organization to export.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -5922,6 +6205,14 @@
               "organization.name",
               "state"
             ]
+          },
+          {
+            "name": "organizationExportGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -5945,11 +6236,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/organization_export_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolio_memberships": {
       "get": {
@@ -6051,6 +6338,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "portfolioMembershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -6074,11 +6369,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_membership_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/portfolio_memberships": {
       "get": {
@@ -6111,6 +6402,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -6135,9 +6434,6 @@
         }
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        },
         {
           "$ref": "#/components/parameters/user_query_param"
         },
@@ -6468,7 +6764,7 @@
         "requestBody": {
           "description": "The portfolio to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -6635,6 +6931,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -6789,12 +7093,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the portfolio.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -6857,13 +7169,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/items": {
       "get": {
@@ -6890,6 +7208,14 @@
               "path",
               "uri"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -6918,9 +7244,6 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        },
-        {
           "$ref": "#/components/parameters/limit"
         },
         {
@@ -6939,7 +7262,7 @@
         "requestBody": {
           "description": "Information about the item being inserted.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -6974,13 +7297,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/removeItem": {
       "post": {
@@ -6993,7 +7322,7 @@
         "requestBody": {
           "description": "Information about the item being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7028,13 +7357,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/addCustomFieldSetting": {
       "post": {
@@ -7047,7 +7382,7 @@
         "requestBody": {
           "description": "Information about the custom field setting.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7082,13 +7417,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/removeCustomFieldSetting": {
       "post": {
@@ -7101,7 +7442,7 @@
         "requestBody": {
           "description": "Information about the custom field setting being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7136,13 +7477,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/addMembers": {
       "post": {
@@ -7273,12 +7620,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the members being added.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7312,11 +7667,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/removeMembers": {
       "post": {
@@ -7447,12 +7798,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the members being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7486,11 +7845,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/portfolios/{portfolioGid}/duplicate": {
       "post": {
@@ -7536,12 +7891,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the duplicate\u0027s name and the elements that will be duplicated.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7577,11 +7940,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/project_briefs/{projectBriefGid}": {
       "get": {
@@ -7612,6 +7971,14 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "projectBriefGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -7678,12 +8045,20 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "projectBriefGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the project brief.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7743,13 +8118,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "projectBriefGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_brief_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/project_briefs": {
       "post": {
@@ -7780,12 +8161,20 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The project brief to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -7822,11 +8211,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/project_memberships/{projectMembershipGid}": {
       "get": {
@@ -7862,6 +8247,14 @@
               "user.name",
               "write_access"
             ]
+          },
+          {
+            "name": "projectMembershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -7885,11 +8278,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_membership_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/project_memberships": {
       "get": {
@@ -7922,6 +8311,14 @@
               "path",
               "uri"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -7946,9 +8343,6 @@
         }
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        },
         {
           "$ref": "#/components/parameters/user_query_param"
         },
@@ -7986,6 +8380,14 @@
               "portfolio",
               "project"
             ]
+          },
+          {
+            "name": "projectPortfolioSettingGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8037,12 +8439,20 @@
               "portfolio",
               "project"
             ]
+          },
+          {
+            "name": "projectPortfolioSettingGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the project portfolio setting.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -8079,11 +8489,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_portfolio_setting_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/project_portfolio_settings": {
       "get": {
@@ -8114,6 +8520,14 @@
               "project",
               "uri"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8141,9 +8555,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -8181,6 +8592,14 @@
               "project",
               "uri"
             ]
+          },
+          {
+            "name": "portfolioGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8208,9 +8627,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/portfolio_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -8251,6 +8667,14 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "projectStatusGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8300,13 +8724,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "projectStatusGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_status_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/project_statuses": {
       "get": {
@@ -8317,9 +8747,6 @@
         "description": "*Deprecated: new integrations should prefer the \u0060/status_updates\u0060 route.*\n\nReturns the compact project status update records for all updates on the project.",
         "operationId": "GetProjectStatusesForProject",
         "parameters": [
-          {
-            "$ref": "#/components/parameters/project_path_gid"
-          },
           {
             "$ref": "#/components/parameters/limit"
           },
@@ -8352,6 +8779,14 @@
               "title",
               "uri"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8406,12 +8841,20 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The project status to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -8445,11 +8888,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/project_templates/{projectTemplateGid}": {
       "get": {
@@ -8486,6 +8925,14 @@
               "team",
               "team.name"
             ]
+          },
+          {
+            "name": "projectTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8541,13 +8988,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "projectTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_template_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/project_templates": {
       "get": {
@@ -8670,6 +9123,14 @@
               "team.name",
               "uri"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -8696,11 +9157,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/project_templates/{projectTemplateGid}/instantiateProject": {
       "post": {
@@ -8746,12 +9203,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "projectTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the inputs used for instantiating a project, such as the resulting project\u0027s name, which team it should be created in, and values for date variables.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -8787,11 +9252,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_template_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects": {
       "get": {
@@ -9165,7 +9626,7 @@
         "requestBody": {
           "description": "The project to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -9357,6 +9818,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -9536,12 +10005,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the project.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -9607,13 +10084,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/duplicate": {
       "post": {
@@ -9659,12 +10142,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the duplicate\u0027s name and the elements that will be duplicated.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -9700,11 +10191,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/projects": {
       "get": {
@@ -9863,6 +10350,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -9890,9 +10385,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -10077,6 +10569,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10256,12 +10756,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The new project to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -10298,11 +10806,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/projects": {
       "get": {
@@ -10470,6 +10974,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10649,12 +11161,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The new project to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -10691,11 +11211,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/projects/search": {
       "get": {
@@ -10851,6 +11367,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -10881,9 +11405,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "name": "text",
           "in": "query",
@@ -11227,12 +11748,20 @@
               "project.name",
               "project.resource_subtype"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the custom field setting.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -11269,11 +11798,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/removeCustomFieldSetting": {
       "post": {
@@ -11286,7 +11811,7 @@
         "requestBody": {
           "description": "Information about the custom field setting being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -11321,13 +11846,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/task_counts": {
       "get": {
@@ -11357,6 +11888,14 @@
               "num_milestones",
               "num_tasks"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -11383,11 +11922,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/addMembers": {
       "post": {
@@ -11543,12 +12078,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the members being added.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -11582,11 +12125,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/removeMembers": {
       "post": {
@@ -11742,12 +12281,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the members being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -11781,11 +12328,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/addFollowers": {
       "post": {
@@ -11941,12 +12484,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the followers being added.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -11980,11 +12531,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/removeFollowers": {
       "post": {
@@ -12140,12 +12687,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the followers being removed.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -12179,11 +12734,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/saveAsTemplate": {
       "post": {
@@ -12229,12 +12780,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the inputs used for creating a project template, such as the resulting project template\u0027s name, which team it should be created in.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -12268,11 +12827,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/rates": {
       "get": {
@@ -12384,7 +12939,7 @@
         "requestBody": {
           "description": "The rate to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -12453,6 +13008,14 @@
               "resource",
               "resource.name"
             ]
+          },
+          {
+            "name": "rateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -12509,12 +13072,20 @@
               "resource",
               "resource.name"
             ]
+          },
+          {
+            "name": "rateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the rate.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -12580,13 +13151,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "rateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/rate_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/reactions": {
       "get": {
@@ -12816,7 +13393,7 @@
         "requestBody": {
           "description": "The role to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -12912,6 +13489,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "roleGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -12995,12 +13580,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "roleGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the role.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13066,13 +13659,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "roleGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/role_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/rule_triggers/{ruleTriggerGid}/run": {
       "post": {
@@ -13085,7 +13684,7 @@
         "requestBody": {
           "description": "A dictionary of variables accessible from within the rule.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13120,13 +13719,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "ruleTriggerGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/rule_trigger_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/sections/{sectionGid}": {
       "get": {
@@ -13158,6 +13763,14 @@
               "projects.name",
               "projects.resource_subtype"
             ]
+          },
+          {
+            "name": "sectionGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -13210,12 +13823,20 @@
               "projects.name",
               "projects.resource_subtype"
             ]
+          },
+          {
+            "name": "sectionGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The section to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13274,13 +13895,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "sectionGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/section_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/sections": {
       "get": {
@@ -13321,6 +13948,14 @@
               "projects.resource_subtype",
               "uri"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -13373,12 +14008,20 @@
               "projects.name",
               "projects.resource_subtype"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The section to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13411,11 +14054,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/sections/{sectionGid}/addTask": {
       "post": {
@@ -13428,7 +14067,7 @@
         "requestBody": {
           "description": "The task and optionally the insert location.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13462,13 +14101,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "sectionGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/section_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/sections/insert": {
       "post": {
@@ -13481,7 +14126,7 @@
         "requestBody": {
           "description": "The section\u0027s move action.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13512,13 +14157,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/project_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/status_updates/{statusUpdateGid}": {
       "get": {
@@ -13571,6 +14222,14 @@
               "text",
               "title"
             ]
+          },
+          {
+            "name": "statusUpdateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -13620,13 +14279,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "statusUpdateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/status_update_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/status_updates": {
       "get": {
@@ -13786,7 +14451,7 @@
         "requestBody": {
           "description": "The status update to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -13984,6 +14649,14 @@
               "text",
               "type"
             ]
+          },
+          {
+            "name": "storyGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -14172,12 +14845,20 @@
               "text",
               "type"
             ]
+          },
+          {
+            "name": "storyGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The comment story to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -14243,13 +14924,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "storyGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/story_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/stories": {
       "get": {
@@ -14423,6 +15110,14 @@
               "type",
               "uri"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -14611,12 +15306,20 @@
               "text",
               "type"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The story to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -14653,11 +15356,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/goals/{goalGid}/stories": {
       "get": {
@@ -14831,6 +15530,14 @@
               "type",
               "uri"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -15019,12 +15726,20 @@
               "text",
               "type"
             ]
+          },
+          {
+            "name": "goalGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The story to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -15061,11 +15776,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/goal_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tags": {
       "get": {
@@ -15177,7 +15888,7 @@
         "requestBody": {
           "description": "The tag to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -15246,6 +15957,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "tagGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -15302,12 +16021,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "tagGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The tag to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -15370,13 +16097,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "tagGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/tag_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/tags": {
       "get": {
@@ -15412,6 +16145,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -15439,9 +16180,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -15490,6 +16228,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -15546,12 +16292,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The tag to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -15588,11 +16342,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/task_templates": {
       "get": {
@@ -15693,6 +16443,14 @@
               "project",
               "template"
             ]
+          },
+          {
+            "name": "taskTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -15748,13 +16506,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "taskTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_template_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/task_templates/{taskTemplateGid}/instantiateTask": {
       "post": {
@@ -15800,12 +16564,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "taskTemplateGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the inputs used for instantiating a task - the task\u0027s name.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -15838,11 +16610,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_template_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks": {
       "get": {
@@ -16210,7 +16978,7 @@
         "requestBody": {
           "description": "The task to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -16382,6 +17150,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -16541,12 +17317,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The task to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -16612,13 +17396,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/duplicate": {
       "post": {
@@ -16664,12 +17454,20 @@
               "resource_subtype",
               "status"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Describes the duplicate\u0027s name and the fields that will be duplicated.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -16706,11 +17504,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/projects/{projectGid}/tasks": {
       "get": {
@@ -16849,6 +17643,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -16878,9 +17680,6 @@
       "parameters": [
         {
           "$ref": "#/components/parameters/completed_since"
-        },
-        {
-          "$ref": "#/components/parameters/project_path_gid"
         },
         {
           "$ref": "#/components/parameters/limit"
@@ -17027,6 +17826,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "sectionGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -17054,9 +17861,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/section_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -17205,6 +18009,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "tagGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -17232,9 +18044,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/tag_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -17380,6 +18189,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "userTaskListGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -17409,9 +18226,6 @@
       "parameters": [
         {
           "$ref": "#/components/parameters/completed_since"
-        },
-        {
-          "$ref": "#/components/parameters/user_task_list_path_gid"
         },
         {
           "$ref": "#/components/parameters/limit"
@@ -17564,6 +18378,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -17723,12 +18545,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The new subtask to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -17765,11 +18595,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/setParent": {
       "post": {
@@ -17905,12 +18731,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The new parent of the subtask.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -17947,11 +18781,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/dependencies": {
       "get": {
@@ -18090,6 +18920,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -18121,9 +18959,6 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/task_path_gid"
-        },
-        {
           "$ref": "#/components/parameters/limit"
         },
         {
@@ -18142,7 +18977,7 @@
         "requestBody": {
           "description": "The list of tasks to set as dependencies.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18180,13 +19015,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/removeDependencies": {
       "post": {
@@ -18199,7 +19040,7 @@
         "requestBody": {
           "description": "The list of tasks to unlink as dependencies.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18237,13 +19078,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/dependents": {
       "get": {
@@ -18382,6 +19229,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -18413,9 +19268,6 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/task_path_gid"
-        },
-        {
           "$ref": "#/components/parameters/limit"
         },
         {
@@ -18434,7 +19286,7 @@
         "requestBody": {
           "description": "The list of tasks to add as dependents.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18472,13 +19324,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/removeDependents": {
       "post": {
@@ -18491,7 +19349,7 @@
         "requestBody": {
           "description": "The list of tasks to remove as dependents.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18529,13 +19387,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/addProject": {
       "post": {
@@ -18548,7 +19412,7 @@
         "requestBody": {
           "description": "The project to add the task to.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18623,13 +19487,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/removeProject": {
       "post": {
@@ -18642,7 +19512,7 @@
         "requestBody": {
           "description": "The project to remove the task from.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18677,13 +19547,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/addTag": {
       "post": {
@@ -18696,7 +19572,7 @@
         "requestBody": {
           "description": "The tag to add to the task.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18731,13 +19607,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/removeTag": {
       "post": {
@@ -18750,7 +19632,7 @@
         "requestBody": {
           "description": "The tag to remove from the task.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18785,13 +19667,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/addFollowers": {
       "post": {
@@ -18927,12 +19815,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The followers to add to the task.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -18969,11 +19865,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/tasks/{taskGid}/removeFollowers": {
       "post": {
@@ -19109,12 +20001,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The followers to remove from the task.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -19151,11 +20051,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/tasks/custom_id/{customId}": {
       "get": {
@@ -19187,16 +20083,27 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
-        {
-          "$ref": "#/components/parameters/custom_id"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/tasks/search": {
       "get": {
@@ -19332,6 +20239,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -19359,9 +20274,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "name": "text",
           "in": "query",
@@ -19898,6 +20810,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "teamMembershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -19924,11 +20844,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_membership_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/team_memberships": {
       "get": {
@@ -20056,6 +20972,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -20083,9 +21007,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -20136,6 +21057,14 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -20163,9 +21092,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -20270,7 +21196,7 @@
         "requestBody": {
           "description": "The team to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -20396,6 +21322,14 @@
               "team_member_removal_access_level",
               "visibility"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -20512,12 +21446,20 @@
               "team_member_removal_access_level",
               "visibility"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The team to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -20551,11 +21493,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/teams": {
       "get": {
@@ -20651,6 +21589,14 @@
               "uri",
               "visibility"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -20678,9 +21624,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -20783,6 +21726,14 @@
               "uri",
               "visibility"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -20810,9 +21761,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -20860,12 +21808,20 @@
               "user",
               "user.name"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The user to add to the team.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -20899,11 +21855,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/teams/{teamGid}/removeUser": {
       "post": {
@@ -20916,7 +21868,7 @@
         "requestBody": {
           "description": "The user to remove from the team.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -20948,13 +21900,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_periods/{timePeriodGid}": {
       "get": {
@@ -20987,6 +21945,14 @@
               "period",
               "start_on"
             ]
+          },
+          {
+            "name": "timePeriodGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -21010,11 +21976,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/time_period_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_periods": {
       "get": {
@@ -21137,6 +22099,14 @@
               "is_archived",
               "name"
             ]
+          },
+          {
+            "name": "timeTrackingCategoryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -21187,12 +22157,20 @@
               "is_archived",
               "name"
             ]
+          },
+          {
+            "name": "timeTrackingCategoryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the time tracking category.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -21258,13 +22236,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "timeTrackingCategoryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/time_tracking_category_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_tracking_categories/{timeTrackingCategoryGid}/time_tracking_entries": {
       "get": {
@@ -21327,6 +22311,14 @@
               "path",
               "uri"
             ]
+          },
+          {
+            "name": "timeTrackingCategoryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -21353,11 +22345,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/time_tracking_category_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_tracking_categories": {
       "get": {
@@ -21467,7 +22455,7 @@
         "requestBody": {
           "description": "Information about the time tracking category.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -21546,6 +22534,14 @@
               "path",
               "uri"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -21611,12 +22607,20 @@
               "task.name",
               "task.resource_subtype"
             ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "Information about the time tracking entry.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -21653,11 +22657,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/task_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_tracking_entries/{timeTrackingEntryGid}": {
       "get": {
@@ -21699,6 +22699,14 @@
               "task.name",
               "task.resource_subtype"
             ]
+          },
+          {
+            "name": "timeTrackingEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -21764,12 +22772,20 @@
               "task.name",
               "task.resource_subtype"
             ]
+          },
+          {
+            "name": "timeTrackingEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated fields for the time tracking entry.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -21835,13 +22851,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "timeTrackingEntryGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/time_tracking_entry_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/time_tracking_entries": {
       "get": {
@@ -22018,6 +23040,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "timesheetApprovalStatusGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22073,12 +23103,20 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "timesheetApprovalStatusGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The fields to update on the timesheet approval status.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -22118,11 +23156,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/timesheet_approval_status_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/timesheet_approval_statuses": {
       "get": {
@@ -22271,7 +23305,7 @@
         "requestBody": {
           "description": "The timesheet approval status to create.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -22335,6 +23369,14 @@
             "example": [
               "name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22362,9 +23404,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "name": "resource_type",
           "in": "query",
@@ -22427,6 +23466,14 @@
               "owner",
               "workspace"
             ]
+          },
+          {
+            "name": "userTaskListGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22453,11 +23500,7 @@
           {}
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/user_task_list_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/users/{userGid}/user_task_list": {
       "get": {
@@ -22484,6 +23527,14 @@
               "owner",
               "workspace"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22511,9 +23562,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
         {
           "name": "workspace",
           "in": "query",
@@ -22700,6 +23748,14 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22784,12 +23840,20 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The user to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -22825,9 +23889,6 @@
       },
       "parameters": [
         {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
-        {
           "$ref": "#/components/parameters/workspace_query_param"
         }
       ]
@@ -22858,6 +23919,14 @@
               "path",
               "uri"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -22885,9 +23954,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -22974,6 +24040,14 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "teamGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23001,9 +24075,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/team_path_gid"
-        },
         {
           "$ref": "#/components/parameters/offset"
         }
@@ -23068,6 +24139,14 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23095,9 +24174,6 @@
         ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/offset"
         }
@@ -23162,6 +24238,22 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23246,12 +24338,28 @@
               "workspaces",
               "workspaces.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The user to update.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -23285,14 +24393,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/webhooks": {
       "get": {
@@ -23426,7 +24527,7 @@
         "requestBody": {
           "description": "The webhook workspace and target.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -23501,6 +24602,14 @@
               "resource.name",
               "target"
             ]
+          },
+          {
+            "name": "webhookGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23563,12 +24672,20 @@
               "resource.name",
               "target"
             ]
+          },
+          {
+            "name": "webhookGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The updated filters for the webhook.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -23634,13 +24751,19 @@
         },
         "security": [
           {}
+        ],
+        "parameters": [
+          {
+            "name": "webhookGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/webhook_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspace_memberships/{workspaceMembershipGid}": {
       "get": {
@@ -23680,6 +24803,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceMembershipGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23703,11 +24834,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_membership_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/users/{userGid}/workspace_memberships": {
       "get": {
@@ -23750,6 +24877,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "userGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23774,9 +24909,6 @@
         }
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/user_path_gid"
-        },
         {
           "$ref": "#/components/parameters/limit"
         },
@@ -23826,6 +24958,14 @@
               "workspace",
               "workspace.name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23835,9 +24975,6 @@
         }
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "$ref": "#/components/parameters/user_query_param"
         },
@@ -23937,6 +25074,14 @@
               "is_organization",
               "name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -23987,12 +25132,20 @@
               "is_organization",
               "name"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The workspace object with all updated properties.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -24026,11 +25179,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/addUser": {
       "post": {
@@ -24063,12 +25212,20 @@
               "photo.image_36x36",
               "photo.image_60x60"
             ]
+          },
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
           "description": "The user to add to the workspace.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -24102,11 +25259,7 @@
           }
         }
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/removeUser": {
       "post": {
@@ -24119,7 +25272,7 @@
         "requestBody": {
           "description": "The user to remove from the workspace.",
           "content": {
-            "application/json": {
+            "application/json; charset=UTF-8": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -24151,13 +25304,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
-      "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        }
-      ]
+      "parameters": []
     },
     "/workspaces/{workspaceGid}/events": {
       "get": {
@@ -24186,12 +25345,19 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "workspaceGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "parameters": [
-        {
-          "$ref": "#/components/parameters/workspace_path_gid"
-        },
         {
           "name": "sync",
           "in": "query",

@@ -91,7 +91,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields.Item.Enum_options
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);
             return requestInfo;
         }
         /// <summary>

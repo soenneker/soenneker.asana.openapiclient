@@ -16366,7 +16366,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "321654"
+            "example": "321654",
+            "x-env-variable": "project"
           },
           {
             "name": "opt_fields",
@@ -16634,7 +16635,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "14641"
+            "example": "14641",
+            "x-env-variable": "assignee"
           },
           {
             "name": "project",
@@ -16643,7 +16645,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "321654"
+            "example": "321654",
+            "x-env-variable": "project"
           },
           {
             "name": "section",
@@ -16652,7 +16655,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "321654"
+            "example": "321654",
+            "x-env-variable": "section"
           },
           {
             "name": "workspace",
@@ -16661,7 +16665,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "321654"
+            "example": "321654",
+            "x-env-variable": "workspace"
           },
           {
             "name": "completed_since",
@@ -137230,7 +137235,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "access_request"
       },
       "agent_path_gid": {
         "name": "agent_gid",
@@ -137240,7 +137246,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "agent"
       },
       "attachment_path_gid": {
         "name": "attachment_gid",
@@ -137250,7 +137257,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "attachment"
       },
       "budget_path_gid": {
         "name": "budget_gid",
@@ -137260,7 +137268,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "budget"
       },
       "custom_field_path_gid": {
         "name": "custom_field_gid",
@@ -137270,7 +137279,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "custom_field"
       },
       "custom_id": {
         "name": "custom_id",
@@ -137299,7 +137309,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "custom_type"
       },
       "goal_path_gid": {
         "name": "goal_gid",
@@ -137309,7 +137320,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "goal"
       },
       "goal_relationship_path_gid": {
         "name": "goal_relationship_gid",
@@ -137319,7 +137331,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "goal_relationship"
       },
       "job_path_gid": {
         "name": "job_gid",
@@ -137329,7 +137342,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "job"
       },
       "membership_path_gid": {
         "name": "membership_gid",
@@ -137339,7 +137353,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "membership"
       },
       "organization_export_path_gid": {
         "name": "organization_export_gid",
@@ -137349,7 +137364,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "organization_export"
       },
       "project_brief_path_gid": {
         "name": "project_brief_gid",
@@ -137359,7 +137375,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "project_brief"
       },
       "project_path_gid": {
         "name": "project_gid",
@@ -137369,7 +137386,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "project"
       },
       "project_query_param": {
         "name": "project",
@@ -137378,7 +137396,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "project"
       },
       "project_template_path_gid": {
         "name": "project_template_gid",
@@ -137388,7 +137407,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "project_template"
       },
       "project_membership_path_gid": {
         "name": "project_membership_gid",
@@ -137397,7 +137417,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "project_membership"
       },
       "project_portfolio_setting_path_gid": {
         "name": "project_portfolio_setting_gid",
@@ -137407,7 +137428,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "project_portfolio_setting"
       },
       "project_status_path_gid": {
         "name": "project_status_gid",
@@ -137417,7 +137439,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "321654"
+        "example": "321654",
+        "x-env-variable": "project_status"
       },
       "rate_path_gid": {
         "name": "rate_gid",
@@ -137427,7 +137450,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "rate"
       },
       "status_update_path_gid": {
         "name": "status_update_gid",
@@ -137437,7 +137461,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "321654"
+        "example": "321654",
+        "x-env-variable": "status"
       },
       "portfolio_path_gid": {
         "name": "portfolio_gid",
@@ -137447,7 +137472,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "portfolio"
       },
       "portfolio_membership_path_gid": {
         "name": "portfolio_membership_gid",
@@ -137456,7 +137482,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "portfolio_membership"
       },
       "portfolio_query_param": {
         "name": "portfolio",
@@ -137465,7 +137492,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "portfolio"
       },
       "rule_trigger_path_gid": {
         "name": "rule_trigger_gid",
@@ -137475,7 +137503,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "rule"
       },
       "section_path_gid": {
         "name": "section_gid",
@@ -137485,7 +137514,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "321654"
+        "example": "321654",
+        "x-env-variable": "section"
       },
       "story_path_gid": {
         "name": "story_gid",
@@ -137495,7 +137525,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "35678"
+        "example": "35678",
+        "x-env-variable": "story"
       },
       "target_query_param": {
         "name": "target",
@@ -137505,7 +137536,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "target"
       },
       "tag_path_gid": {
         "name": "tag_gid",
@@ -137515,7 +137547,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "11235"
+        "example": "11235",
+        "x-env-variable": "tag"
       },
       "task_path_gid": {
         "name": "task_gid",
@@ -137525,7 +137558,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "321654"
+        "example": "321654",
+        "x-env-variable": "task"
       },
       "task_template_path_gid": {
         "name": "task_template_gid",
@@ -137535,7 +137569,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "1331"
+        "example": "1331",
+        "x-env-variable": "task_template"
       },
       "team_path_gid": {
         "name": "team_gid",
@@ -137545,7 +137580,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "159874"
+        "example": "159874",
+        "x-env-variable": "team"
       },
       "team_query_param": {
         "name": "team",
@@ -137554,7 +137590,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "14916"
+        "example": "14916",
+        "x-env-variable": "team"
       },
       "team_membership_path_gid": {
         "name": "team_membership_gid",
@@ -137563,7 +137600,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "724362"
+        "example": "724362",
+        "x-env-variable": "team_membership"
       },
       "time_period_path_gid": {
         "name": "time_period_gid",
@@ -137573,7 +137611,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "917392"
+        "example": "917392",
+        "x-env-variable": "time_period"
       },
       "time_tracking_category_path_gid": {
         "name": "time_tracking_category_gid",
@@ -137583,7 +137622,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "917392"
+        "example": "917392",
+        "x-env-variable": "time_tracking_category"
       },
       "time_tracking_entry_path_gid": {
         "name": "time_tracking_entry_gid",
@@ -137593,7 +137633,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "917392"
+        "example": "917392",
+        "x-env-variable": "time_tracking_entry"
       },
       "timesheet_approval_status_path_gid": {
         "name": "timesheet_approval_status_gid",
@@ -137603,7 +137644,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "917392"
+        "example": "917392",
+        "x-env-variable": "timesheet_approval_status"
       },
       "user_query_param": {
         "name": "user",
@@ -137612,7 +137654,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "me"
+        "example": "me",
+        "x-env-variable": "user"
       },
       "user_path_gid": {
         "name": "user_gid",
@@ -137622,7 +137665,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "me"
+        "example": "me",
+        "x-env-variable": "user"
       },
       "user_task_list_path_gid": {
         "name": "user_task_list_gid",
@@ -137632,7 +137676,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "user_task_list"
       },
       "webhook_path_gid": {
         "name": "webhook_gid",
@@ -137642,7 +137687,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "webhook"
       },
       "workspace_path_gid": {
         "name": "workspace_gid",
@@ -137652,7 +137698,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "workspace"
       },
       "workspace_query_param": {
         "name": "workspace",
@@ -137661,7 +137708,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "workspace"
       },
       "workspace_membership_path_gid": {
         "name": "workspace_membership_gid",
@@ -137670,7 +137718,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "workspace_membership"
       },
       "audit_log_start_at": {
         "name": "start_at",
@@ -137748,7 +137797,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "321654"
+        "example": "321654",
+        "x-env-variable": "message"
       },
       "ooo_entry_path_gid": {
         "name": "ooo_entry_gid",
@@ -137758,7 +137808,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "ooo_entry"
       },
       "allocation_path_gid": {
         "name": "allocation_gid",
@@ -137768,7 +137819,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "77688"
+        "example": "77688",
+        "x-env-variable": "allocation"
       },
       "role_path_gid": {
         "name": "role_gid",
@@ -137778,7 +137830,8 @@
         "schema": {
           "type": "string"
         },
-        "example": "12345"
+        "example": "12345",
+        "x-env-variable": "role"
       },
       "ai_studio_start_at": {
         "name": "start_at",
@@ -138030,5 +138083,8 @@
       "name": "Workspaces",
       "description": "A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.\n\nAn *organization* is a special kind of workspace that represents a company. In an organization, you can group your projects into teams. You can read more about how organizations work on the Asana Guide. To tell if your workspace is an organization or not, check its \u0060is_organization\u0060 property.\n\nOver time, we intend to migrate most workspaces into organizations and to release more organization-specific functionality. We may eventually deprecate using workspace-based APIs for organizations. Currently, and until after some reasonable grace period following any further announcements, you can still reference organizations in any \u0060workspace\u0060 parameter."
     }
-  ]
+  ],
+  "x-readme": {
+    "proxy-enabled": false
+  }
 }

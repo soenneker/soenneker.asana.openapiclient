@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/stories{?limit*,offset*,opt_fields}", pathParameters)
+        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/stories{?created_after*,limit*,offset*,opt_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/stories{?limit*,offset*,opt_fields}", rawUrl)
+        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tasks/{taskGid}/stories{?created_after*,limit*,offset*,opt_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -153,6 +153,9 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StoriesRequestBuilderGetQueryParameters 
         {
+            /// <summary>Only return stories created after this time. Applies to every story type; pair it with `resource_subtype=comment_added` to get just the comments added since a given moment.The bound is exclusive but has second granularity: it is truncated to the start of its second before filtering, so any story created within that same second is still returned. A client polling with the `created_at` of the last story it saw should expect to see that story again, and others alongside it, and should de-duplicate on `gid`.</summary>
+            [QueryParameter("created_after")]
+            public DateTimeOffset? CreatedAfter { get; set; }
             /// <summary>Results per page.The number of objects to return per page. The value must be between 1 and 100.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

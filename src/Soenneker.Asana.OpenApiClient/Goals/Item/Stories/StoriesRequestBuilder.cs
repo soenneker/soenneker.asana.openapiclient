@@ -22,7 +22,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.Stories
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/stories{?created_after*,limit*,offset*,opt_fields}", pathParameters)
+        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/stories{?created_after*,limit*,offset*,opt_fields,resource_subtype*,sort_ascending*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.Stories
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/stories{?created_after*,limit*,offset*,opt_fields}", rawUrl)
+        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/goals/{goalGid}/stories{?created_after*,limit*,offset*,opt_fields,resource_subtype*,sort_ascending*}", rawUrl)
         {
         }
         /// <summary>
@@ -179,6 +179,12 @@ namespace Soenneker.Asana.OpenApiClient.Goals.Item.Stories
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Models.GetStoriesForGoalOptFieldsParameterItem[] OptFields { get; set; }
 #endif
+            /// <summary>Only return stories of this subtype. Only `comment_added` is supported, which narrows the response to comments and excludes activity such as assignments, due date changes, and project moves. Omit to return the full activity feed.</summary>
+            [QueryParameter("resource_subtype")]
+            public global::Soenneker.Asana.OpenApiClient.Models.CommentAddedResourceSubtype? ResourceSubtype { get; set; }
+            /// <summary>Creation-time order: `true` (the default) is oldest first, `false` is newest first. Pair `false` with `limit` to read only the most recent stories. Ordering is applied across the parent&apos;s stories; on a parent with an extremely large activity feed the feed may be truncated before it is ordered, so pair `false` with `created_after` to bound what is considered.</summary>
+            [QueryParameter("sort_ascending")]
+            public bool? SortAscending { get; set; }
         }
         /// <summary>
         /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a goal. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Returns the full record for the new story added to the goal.

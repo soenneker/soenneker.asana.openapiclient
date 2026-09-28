@@ -15,6 +15,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Progress of a subtask date rollup job. Only present on project rollup jobs; the object is empty until the job discovers tasks to reconcile.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress? DatesRollupProgress { get; private set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress DatesRollupProgress { get; private set; }
+#endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,6 +122,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "dates_rollup_progress", n => { DatesRollupProgress = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "new_graph_export", n => { NewGraphExport = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport.CreateFromDiscriminatorValue); } },
                 { "new_portfolio", n => { NewPortfolio = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio.CreateFromDiscriminatorValue); } },

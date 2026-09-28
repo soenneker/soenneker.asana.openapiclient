@@ -16,6 +16,7 @@ using Soenneker.Asana.OpenApiClient.Projects.Item.Project_statuses;
 using Soenneker.Asana.OpenApiClient.Projects.Item.RemoveCustomFieldSetting;
 using Soenneker.Asana.OpenApiClient.Projects.Item.RemoveFollowers;
 using Soenneker.Asana.OpenApiClient.Projects.Item.RemoveMembers;
+using Soenneker.Asana.OpenApiClient.Projects.Item.Rollup;
 using Soenneker.Asana.OpenApiClient.Projects.Item.SaveAsTemplate;
 using Soenneker.Asana.OpenApiClient.Projects.Item.Sections;
 using Soenneker.Asana.OpenApiClient.Projects.Item.Task_counts;
@@ -92,6 +93,11 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item
         public global::Soenneker.Asana.OpenApiClient.Projects.Item.RemoveMembers.RemoveMembersRequestBuilder RemoveMembers
         {
             get => new global::Soenneker.Asana.OpenApiClient.Projects.Item.RemoveMembers.RemoveMembersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The rollup property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Projects.Item.Rollup.RollupRequestBuilder Rollup
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Projects.Item.Rollup.RollupRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The saveAsTemplate property</summary>
         public global::Soenneker.Asana.OpenApiClient.Projects.Item.SaveAsTemplate.SaveAsTemplateRequestBuilder SaveAsTemplate

@@ -308,6 +308,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         FollowersName,
         #pragma warning restore CS1591
+        [EnumMember(Value = "has_subtasks_date_mismatch")]
+        #pragma warning disable CS1591
+        HasSubtasksDateMismatch,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hearted")]
         #pragma warning disable CS1591
         Hearted,

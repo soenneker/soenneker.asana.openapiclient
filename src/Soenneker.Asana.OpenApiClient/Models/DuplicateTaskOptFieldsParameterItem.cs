@@ -8,6 +8,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public enum DuplicateTaskOptFieldsParameterItem
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "dates_rollup_progress")]
+        #pragma warning disable CS1591
+        DatesRollupProgress,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "dates_rollup_progress.total_tasks")]
+        #pragma warning disable CS1591
+        DatesRollupProgressTotalTasks,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "dates_rollup_progress.updated_tasks")]
+        #pragma warning disable CS1591
+        DatesRollupProgressUpdatedTasks,
+        #pragma warning restore CS1591
         [EnumMember(Value = "new_graph_export")]
         #pragma warning disable CS1591
         NewGraphExport,

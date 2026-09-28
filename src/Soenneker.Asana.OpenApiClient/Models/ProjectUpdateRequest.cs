@@ -86,6 +86,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
+        /// <summary>An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in &lt;body&gt;&lt;/body&gt; tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
+#endif
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -199,6 +207,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "followers", n => { Followers = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
+                { "html_custom_fields", n => { HtmlCustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
                 { "icon", n => { Icon = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestIcon>(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMembersItem>(global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMembersItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -234,6 +243,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteDateValue("due_date", DueDate);
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteStringValue("followers", Followers);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty>("html_custom_fields", HtmlCustomFields);
             writer.WriteStringValue("html_notes", HtmlNotes);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestIcon>("icon", Icon);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForCustomization>("minimum_access_level_for_customization", MinimumAccessLevelForCustomization);

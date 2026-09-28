@@ -18,6 +18,7 @@ using Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveDependents;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveFollowers;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveProject;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveTag;
+using Soenneker.Asana.OpenApiClient.Tasks.Item.Rollup;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.Stories;
 using Soenneker.Asana.OpenApiClient.Tasks.Item.Subtasks;
@@ -105,6 +106,11 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item
         public global::Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveTag.RemoveTagRequestBuilder RemoveTag
         {
             get => new global::Soenneker.Asana.OpenApiClient.Tasks.Item.RemoveTag.RemoveTagRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The rollup property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Tasks.Item.Rollup.RollupRequestBuilder Rollup
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Tasks.Item.Rollup.RollupRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The setParent property</summary>
         public global::Soenneker.Asana.OpenApiClient.Tasks.Item.SetParent.SetParentRequestBuilder SetParent

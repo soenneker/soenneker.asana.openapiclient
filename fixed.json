@@ -5444,6 +5444,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -7868,6 +7871,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -9180,6 +9186,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -10119,6 +10128,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -12757,6 +12769,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -12826,6 +12841,92 @@
             "$ref": "#/components/responses/InternalServerError"
           }
         }
+      },
+      "parameters": []
+    },
+    "/projects/{projectGid}/rollup": {
+      "post": {
+        "tags": [
+          "Projects"
+        ],
+        "summary": "Roll up subtask dates for a project",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:write\u003C/code\u003E\n\nCreates and returns a job that will asynchronously roll up subtask dates for tasks in the project with the given \u0060project_gid\u0060 whose descendant dates fall outside their current date range. Each parent task\u0027s start and due dates are reconciled to cover its descendants\u0027 date range.",
+        "operationId": "RollupProject",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. Properties can include nested fields. To learn more, see the [input/output options guide](/docs/inputoutput-options#selecting-nested-fields).",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/RollupProjectOptFieldsParameterItem"
+              }
+            },
+            "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
+              "new_graph_export",
+              "new_graph_export.completed_at",
+              "new_graph_export.created_at",
+              "new_graph_export.download_url",
+              "new_portfolio",
+              "new_portfolio.name",
+              "new_portfolio.resource_subtype",
+              "new_project",
+              "new_project.name",
+              "new_project.resource_subtype",
+              "new_project_template",
+              "new_project_template.name",
+              "new_resource_export",
+              "new_resource_export.completed_at",
+              "new_resource_export.created_at",
+              "new_resource_export.download_url",
+              "new_task",
+              "new_task.created_by",
+              "new_task.name",
+              "new_task.resource_subtype",
+              "resource_subtype",
+              "status"
+            ]
+          },
+          {
+            "name": "projectGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/JobResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "402": {
+            "$ref": "#/components/responses/PaymentRequired"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          {}
+        ]
       },
       "parameters": []
     },
@@ -16560,6 +16661,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -16796,6 +16900,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -16958,6 +17063,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -17135,6 +17241,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -17302,6 +17409,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -17454,6 +17562,9 @@
               }
             },
             "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
               "new_graph_export",
               "new_graph_export.completed_at",
               "new_graph_export.created_at",
@@ -17625,6 +17736,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -17808,6 +17920,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -17991,6 +18104,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -18171,6 +18285,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -18360,6 +18475,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -18530,6 +18646,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -18716,6 +18833,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -18902,6 +19020,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -19211,6 +19330,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -19800,6 +19920,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -19986,6 +20107,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -20059,6 +20181,92 @@
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        },
+        "security": [
+          {}
+        ]
+      },
+      "parameters": []
+    },
+    "/tasks/{taskGid}/rollup": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Roll up subtask dates for a task",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Etasks:write\u003C/code\u003E\n\nCreates and returns a job that will asynchronously roll up the subtask dates for the subtask tree rooted at the task with the given \u0060task_gid\u0060. Each parent task\u0027s start and due dates are reconciled to cover its descendants\u0027 date range.",
+        "operationId": "RollupTask",
+        "parameters": [
+          {
+            "name": "opt_fields",
+            "in": "query",
+            "description": "This endpoint returns a resource which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include. Properties can include nested fields. To learn more, see the [input/output options guide](/docs/inputoutput-options#selecting-nested-fields).",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/RollupTaskOptFieldsParameterItem"
+              }
+            },
+            "example": [
+              "dates_rollup_progress",
+              "dates_rollup_progress.total_tasks",
+              "dates_rollup_progress.updated_tasks",
+              "new_graph_export",
+              "new_graph_export.completed_at",
+              "new_graph_export.created_at",
+              "new_graph_export.download_url",
+              "new_portfolio",
+              "new_portfolio.name",
+              "new_portfolio.resource_subtype",
+              "new_project",
+              "new_project.name",
+              "new_project.resource_subtype",
+              "new_project_template",
+              "new_project_template.name",
+              "new_resource_export",
+              "new_resource_export.completed_at",
+              "new_resource_export.created_at",
+              "new_resource_export.download_url",
+              "new_task",
+              "new_task.created_by",
+              "new_task.name",
+              "new_task.resource_subtype",
+              "resource_subtype",
+              "status"
+            ]
+          },
+          {
+            "name": "taskGid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/JobResponseData"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "402": {
+            "$ref": "#/components/responses/PaymentRequired"
           },
           "403": {
             "$ref": "#/components/responses/Forbidden"
@@ -20224,6 +20432,7 @@
               "external.data",
               "followers",
               "followers.name",
+              "has_subtasks_date_mismatch",
               "hearted",
               "hearts",
               "hearts.user",
@@ -28197,6 +28406,9 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/GoalUpdateRequestCustomFieldsProperty"
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/GoalUpdateRequestHtmlCustomFieldsProperty"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.",
@@ -28501,6 +28713,9 @@
           "status": {
             "$ref": "#/components/schemas/JobBaseStatus"
           },
+          "dates_rollup_progress": {
+            "$ref": "#/components/schemas/JobBaseDatesRollupProgress"
+          },
           "new_portfolio": {
             "$ref": "#/components/schemas/JobBaseNewPortfolio"
           },
@@ -28551,6 +28766,9 @@
           "status": {
             "$ref": "#/components/schemas/JobCompactStatus"
           },
+          "dates_rollup_progress": {
+            "$ref": "#/components/schemas/JobCompactDatesRollupProgress"
+          },
           "new_portfolio": {
             "$ref": "#/components/schemas/JobCompactNewPortfolio"
           },
@@ -28600,6 +28818,9 @@
           },
           "status": {
             "$ref": "#/components/schemas/JobResponseStatus"
+          },
+          "dates_rollup_progress": {
+            "$ref": "#/components/schemas/JobResponseDatesRollupProgress"
           },
           "new_portfolio": {
             "$ref": "#/components/schemas/JobResponseNewPortfolio"
@@ -29572,6 +29793,9 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/PortfolioUpdateRequestCustomFieldsProperty"
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/PortfolioUpdateRequestHtmlCustomFieldsProperty"
           },
           "custom_type": {
             "type": "string",
@@ -30700,6 +30924,9 @@
           "custom_fields": {
             "$ref": "#/components/schemas/ProjectRequestCustomFieldsProperty"
           },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/ProjectRequestHtmlCustomFieldsProperty"
+          },
           "followers": {
             "type": "string",
             "description": "*Create-only*. Comma separated string of users. Followers are a subset of members who have opted in to receive \u0022tasks added\u0022 notifications for a project.",
@@ -30861,6 +31088,9 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/ProjectUpdateRequestCustomFieldsProperty"
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/ProjectUpdateRequestHtmlCustomFieldsProperty"
           },
           "followers": {
             "type": "string",
@@ -33542,6 +33772,12 @@
             "description": "*Deprecated - please use likes instead* Array of likes for users who have hearted this task.",
             "readOnly": true
           },
+          "has_subtasks_date_mismatch": {
+            "type": "boolean",
+            "description": "[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task\u0027s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.",
+            "readOnly": true,
+            "example": true
+          },
           "is_rendered_as_separator": {
             "type": "boolean",
             "description": "[Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true \u0060section\u0060 objects. If a \u0060task\u0060 object is rendered this way in any context it will have the property \u0060is_rendered_as_separator\u0060 set to \u0060true\u0060. This parameter only applies to regular tasks with \u0060resource_subtype\u0060 of \u0060default_task\u0060. Tasks with \u0060resource_subtype\u0060 of \u0060milestone\u0060, \u0060approval\u0060, or custom task types will not have this property and cannot be rendered as separators.",
@@ -34088,6 +34324,12 @@
             "description": "*Deprecated - please use likes instead* Array of likes for users who have hearted this task.",
             "readOnly": true
           },
+          "has_subtasks_date_mismatch": {
+            "type": "boolean",
+            "description": "[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task\u0027s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.",
+            "readOnly": true,
+            "example": true
+          },
           "is_rendered_as_separator": {
             "type": "boolean",
             "description": "[Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true \u0060section\u0060 objects. If a \u0060task\u0060 object is rendered this way in any context it will have the property \u0060is_rendered_as_separator\u0060 set to \u0060true\u0060. This parameter only applies to regular tasks with \u0060resource_subtype\u0060 of \u0060default_task\u0060. Tasks with \u0060resource_subtype\u0060 of \u0060milestone\u0060, \u0060approval\u0060, or custom task types will not have this property and cannot be rendered as separators.",
@@ -34195,6 +34437,9 @@
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/TaskRequestBaseHtmlCustomFieldsProperty"
           },
           "parent": {
             "type": "string",
@@ -34321,6 +34566,12 @@
             "description": "*Deprecated - please use likes instead* Array of likes for users who have hearted this task.",
             "readOnly": true
           },
+          "has_subtasks_date_mismatch": {
+            "type": "boolean",
+            "description": "[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task\u0027s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.",
+            "readOnly": true,
+            "example": true
+          },
           "is_rendered_as_separator": {
             "type": "boolean",
             "description": "[Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true \u0060section\u0060 objects. If a \u0060task\u0060 object is rendered this way in any context it will have the property \u0060is_rendered_as_separator\u0060 set to \u0060true\u0060. This parameter only applies to regular tasks with \u0060resource_subtype\u0060 of \u0060default_task\u0060. Tasks with \u0060resource_subtype\u0060 of \u0060milestone\u0060, \u0060approval\u0060, or custom task types will not have this property and cannot be rendered as separators.",
@@ -34428,6 +34679,9 @@
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/TaskCreateRequestHtmlCustomFieldsProperty"
           },
           "parent": {
             "type": "string",
@@ -34584,6 +34838,12 @@
             "description": "*Deprecated - please use likes instead* Array of likes for users who have hearted this task.",
             "readOnly": true
           },
+          "has_subtasks_date_mismatch": {
+            "type": "boolean",
+            "description": "[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task\u0027s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.",
+            "readOnly": true,
+            "example": true
+          },
           "is_rendered_as_separator": {
             "type": "boolean",
             "description": "[Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true \u0060section\u0060 objects. If a \u0060task\u0060 object is rendered this way in any context it will have the property \u0060is_rendered_as_separator\u0060 set to \u0060true\u0060. This parameter only applies to regular tasks with \u0060resource_subtype\u0060 of \u0060default_task\u0060. Tasks with \u0060resource_subtype\u0060 of \u0060milestone\u0060, \u0060approval\u0060, or custom task types will not have this property and cannot be rendered as separators.",
@@ -34691,6 +34951,9 @@
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/TaskUpdateRequestHtmlCustomFieldsProperty"
           },
           "parent": {
             "type": "string",
@@ -34816,6 +35079,12 @@
             },
             "description": "*Deprecated - please use likes instead* Array of likes for users who have hearted this task.",
             "readOnly": true
+          },
+          "has_subtasks_date_mismatch": {
+            "type": "boolean",
+            "description": "[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task\u0027s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.",
+            "readOnly": true,
+            "example": true
           },
           "is_rendered_as_separator": {
             "type": "boolean",
@@ -35618,6 +35887,9 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UserUpdateRequestCustomFieldsProperty"
+          },
+          "html_custom_fields": {
+            "$ref": "#/components/schemas/UserUpdateRequestHtmlCustomFieldsProperty"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
@@ -43042,6 +43314,18 @@
           "4578152156": "Not Started"
         }
       },
+      "GoalUpdateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
+        }
+      },
       "GoalResponseLikesItem": {
         "type": "object",
         "properties": {
@@ -43676,6 +43960,27 @@
           "properties.resource_type.example": "goal"
         }
       },
+      "JobBaseDatesRollupProgress": {
+        "type": "object",
+        "properties": {
+          "updated_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The number of tasks whose dates have been reconciled so far.",
+            "readOnly": true,
+            "example": 12
+          },
+          "total_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The total number of tasks discovered for reconciliation so far. This value may increase while the job is running and is final when the job completes.",
+            "readOnly": true,
+            "example": 40
+          }
+        },
+        "description": "Progress of a subtask date rollup job. Only present on project rollup jobs; the object is empty until the job discovers tasks to reconcile.",
+        "readOnly": true
+      },
       "JobBaseNewPortfolio": {
         "type": "object",
         "properties": {
@@ -43891,6 +44196,27 @@
           "properties.resource_type.example": "export_request"
         }
       },
+      "JobCompactDatesRollupProgress": {
+        "type": "object",
+        "properties": {
+          "updated_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The number of tasks whose dates have been reconciled so far.",
+            "readOnly": true,
+            "example": 12
+          },
+          "total_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The total number of tasks discovered for reconciliation so far. This value may increase while the job is running and is final when the job completes.",
+            "readOnly": true,
+            "example": 40
+          }
+        },
+        "description": "Progress of a subtask date rollup job. Only present on project rollup jobs; the object is empty until the job discovers tasks to reconcile.",
+        "readOnly": true
+      },
       "JobCompactNewPortfolio": {
         "type": "object",
         "properties": {
@@ -44105,6 +44431,27 @@
         "x-docs-overrides": {
           "properties.resource_type.example": "export_request"
         }
+      },
+      "JobResponseDatesRollupProgress": {
+        "type": "object",
+        "properties": {
+          "updated_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The number of tasks whose dates have been reconciled so far.",
+            "readOnly": true,
+            "example": 12
+          },
+          "total_tasks": {
+            "minimum": 0,
+            "type": "integer",
+            "description": "The total number of tasks discovered for reconciliation so far. This value may increase while the job is running and is final when the job completes.",
+            "readOnly": true,
+            "example": 40
+          }
+        },
+        "description": "Progress of a subtask date rollup job. Only present on project rollup jobs; the object is empty until the job discovers tasks to reconcile.",
+        "readOnly": true
       },
       "JobResponseNewPortfolio": {
         "type": "object",
@@ -44904,6 +45251,18 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
+        }
+      },
+      "PortfolioUpdateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "PortfolioResponseCreatedBy": {
@@ -46452,6 +46811,18 @@
           "4578152156": "Not Started"
         }
       },
+      "ProjectRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
+        }
+      },
       "ProjectUpdateRequestCurrentStatus": {
         "type": "object",
         "properties": {
@@ -46622,6 +46993,18 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
+        }
+      },
+      "ProjectUpdateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "ProjectResponseCurrentStatus": {
@@ -49716,6 +50099,18 @@
           "4578152156": "Not Started"
         }
       },
+      "TaskRequestBaseHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
+        }
+      },
       "TaskCreateRequestCreatedBy": {
         "type": "object",
         "properties": {
@@ -49904,6 +50299,18 @@
           "4578152156": "Not Started"
         }
       },
+      "TaskCreateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
+        }
+      },
       "TaskUpdateRequestCreatedBy": {
         "type": "object",
         "properties": {
@@ -50090,6 +50497,18 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
+        }
+      },
+      "TaskUpdateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "TaskResponseCreatedBy": {
@@ -51043,6 +51462,18 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
+        }
+      },
+      "UserUpdateRequestHtmlCustomFields": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
+        "example": {
+          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
+          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "UserBaseResponsePhoto": {
@@ -61610,6 +62041,14 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
+      "GoalUpdateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
+      },
       "PortfolioUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -61617,6 +62056,14 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, enum GID, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
+      },
+      "PortfolioUpdateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "ProjectRequestCustomFieldsProperty": {
         "type": "object",
@@ -61626,6 +62073,14 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
+      "ProjectRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
+      },
       "ProjectUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -61633,6 +62088,14 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
+      },
+      "ProjectUpdateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "RuleTriggerRequestActionDataProperty": {
         "type": "object",
@@ -61646,6 +62109,14 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
+      "TaskRequestBaseHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
+      },
       "TaskCreateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -61653,6 +62124,14 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
+      },
+      "TaskCreateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "TaskUpdateRequestCustomFieldsProperty": {
         "type": "object",
@@ -61662,6 +62141,14 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
+      "TaskUpdateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
+      },
       "UserUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -61669,6 +62156,14 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, enum GID, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
+      },
+      "UserUpdateRequestHtmlCustomFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
+        },
+        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "EmptyResponseDataData": {
         "type": "object",
@@ -99364,6 +99859,9 @@
       },
       "GetJobOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -99393,6 +99891,18 @@
           "name": "GetJobOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -103267,6 +103777,9 @@
       },
       "DuplicatePortfolioOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -103296,6 +103809,18 @@
           "name": "DuplicatePortfolioOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -104279,6 +104804,9 @@
       },
       "InstantiateProjectOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -104308,6 +104836,18 @@
           "name": "InstantiateProjectOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -107104,6 +107644,9 @@
       },
       "DuplicateProjectOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -107133,6 +107676,18 @@
           "name": "DuplicateProjectOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -114347,6 +114902,9 @@
       },
       "ProjectSaveAsTemplateOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -114376,6 +114934,155 @@
           "name": "ProjectSaveAsTemplateOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
+            {
+              "value": "new_graph_export",
+              "name": "NewGraphExport"
+            },
+            {
+              "value": "new_graph_export.completed_at",
+              "name": "NewGraphExportCompletedAt"
+            },
+            {
+              "value": "new_graph_export.created_at",
+              "name": "NewGraphExportCreatedAt"
+            },
+            {
+              "value": "new_graph_export.download_url",
+              "name": "NewGraphExportDownloadUrl"
+            },
+            {
+              "value": "new_portfolio",
+              "name": "NewPortfolio"
+            },
+            {
+              "value": "new_portfolio.name",
+              "name": "NewPortfolioName"
+            },
+            {
+              "value": "new_portfolio.resource_subtype",
+              "name": "NewPortfolioResourceSubtype"
+            },
+            {
+              "value": "new_project",
+              "name": "NewProject"
+            },
+            {
+              "value": "new_project.name",
+              "name": "NewProjectName"
+            },
+            {
+              "value": "new_project.resource_subtype",
+              "name": "NewProjectResourceSubtype"
+            },
+            {
+              "value": "new_project_template",
+              "name": "NewProjectTemplate"
+            },
+            {
+              "value": "new_project_template.name",
+              "name": "NewProjectTemplateName"
+            },
+            {
+              "value": "new_resource_export",
+              "name": "NewResourceExport"
+            },
+            {
+              "value": "new_resource_export.completed_at",
+              "name": "NewResourceExportCompletedAt"
+            },
+            {
+              "value": "new_resource_export.created_at",
+              "name": "NewResourceExportCreatedAt"
+            },
+            {
+              "value": "new_resource_export.download_url",
+              "name": "NewResourceExportDownloadUrl"
+            },
+            {
+              "value": "new_task",
+              "name": "NewTask"
+            },
+            {
+              "value": "new_task.created_by",
+              "name": "NewTaskCreatedBy"
+            },
+            {
+              "value": "new_task.name",
+              "name": "NewTaskName"
+            },
+            {
+              "value": "new_task.resource_subtype",
+              "name": "NewTaskResourceSubtype"
+            },
+            {
+              "value": "resource_subtype",
+              "name": "ResourceSubtype"
+            },
+            {
+              "value": "status",
+              "name": "Status"
+            }
+          ]
+        }
+      },
+      "RollupProjectOptFieldsParameterItem": {
+        "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
+          "new_graph_export",
+          "new_graph_export.completed_at",
+          "new_graph_export.created_at",
+          "new_graph_export.download_url",
+          "new_portfolio",
+          "new_portfolio.name",
+          "new_portfolio.resource_subtype",
+          "new_project",
+          "new_project.name",
+          "new_project.resource_subtype",
+          "new_project_template",
+          "new_project_template.name",
+          "new_resource_export",
+          "new_resource_export.completed_at",
+          "new_resource_export.created_at",
+          "new_resource_export.download_url",
+          "new_task",
+          "new_task.created_by",
+          "new_task.name",
+          "new_task.resource_subtype",
+          "resource_subtype",
+          "status"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "RollupProjectOptFieldsParameterItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -121024,6 +121731,9 @@
       },
       "InstantiateTaskOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -121053,6 +121763,18 @@
           "name": "InstantiateTaskOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -121221,6 +121943,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -121569,6 +122292,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -121808,6 +122535,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -122153,6 +122881,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -122380,6 +123112,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -122725,6 +123458,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -122952,6 +123689,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -123297,6 +124035,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -123449,6 +124191,9 @@
       },
       "DuplicateTaskOptFieldsParameterItem": {
         "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
           "new_graph_export",
           "new_graph_export.completed_at",
           "new_graph_export.created_at",
@@ -123478,6 +124223,18 @@
           "name": "DuplicateTaskOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
             {
               "value": "new_graph_export",
               "name": "NewGraphExport"
@@ -123646,6 +124403,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -123994,6 +124752,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -124233,6 +124995,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -124581,6 +125344,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -124820,6 +125587,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -125168,6 +125936,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -125407,6 +126179,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -125755,6 +126528,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -125994,6 +126771,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -126342,6 +127120,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -126581,6 +127363,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -126926,6 +127709,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -127153,6 +127940,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -127498,6 +128286,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -127725,6 +128517,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -128073,6 +128866,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -128312,6 +129109,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -128660,6 +129458,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -128899,6 +129701,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -129244,6 +130047,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -129471,6 +130278,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -129816,6 +130624,10 @@
               "name": "FollowersName"
             },
             {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
+            },
+            {
               "value": "hearted",
               "name": "Hearted"
             },
@@ -129962,6 +130774,143 @@
             {
               "value": "workspace.name",
               "name": "WorkspaceName"
+            }
+          ]
+        }
+      },
+      "RollupTaskOptFieldsParameterItem": {
+        "enum": [
+          "dates_rollup_progress",
+          "dates_rollup_progress.total_tasks",
+          "dates_rollup_progress.updated_tasks",
+          "new_graph_export",
+          "new_graph_export.completed_at",
+          "new_graph_export.created_at",
+          "new_graph_export.download_url",
+          "new_portfolio",
+          "new_portfolio.name",
+          "new_portfolio.resource_subtype",
+          "new_project",
+          "new_project.name",
+          "new_project.resource_subtype",
+          "new_project_template",
+          "new_project_template.name",
+          "new_resource_export",
+          "new_resource_export.completed_at",
+          "new_resource_export.created_at",
+          "new_resource_export.download_url",
+          "new_task",
+          "new_task.created_by",
+          "new_task.name",
+          "new_task.resource_subtype",
+          "resource_subtype",
+          "status"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "RollupTaskOptFieldsParameterItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "dates_rollup_progress",
+              "name": "DatesRollupProgress"
+            },
+            {
+              "value": "dates_rollup_progress.total_tasks",
+              "name": "DatesRollupProgressTotalTasks"
+            },
+            {
+              "value": "dates_rollup_progress.updated_tasks",
+              "name": "DatesRollupProgressUpdatedTasks"
+            },
+            {
+              "value": "new_graph_export",
+              "name": "NewGraphExport"
+            },
+            {
+              "value": "new_graph_export.completed_at",
+              "name": "NewGraphExportCompletedAt"
+            },
+            {
+              "value": "new_graph_export.created_at",
+              "name": "NewGraphExportCreatedAt"
+            },
+            {
+              "value": "new_graph_export.download_url",
+              "name": "NewGraphExportDownloadUrl"
+            },
+            {
+              "value": "new_portfolio",
+              "name": "NewPortfolio"
+            },
+            {
+              "value": "new_portfolio.name",
+              "name": "NewPortfolioName"
+            },
+            {
+              "value": "new_portfolio.resource_subtype",
+              "name": "NewPortfolioResourceSubtype"
+            },
+            {
+              "value": "new_project",
+              "name": "NewProject"
+            },
+            {
+              "value": "new_project.name",
+              "name": "NewProjectName"
+            },
+            {
+              "value": "new_project.resource_subtype",
+              "name": "NewProjectResourceSubtype"
+            },
+            {
+              "value": "new_project_template",
+              "name": "NewProjectTemplate"
+            },
+            {
+              "value": "new_project_template.name",
+              "name": "NewProjectTemplateName"
+            },
+            {
+              "value": "new_resource_export",
+              "name": "NewResourceExport"
+            },
+            {
+              "value": "new_resource_export.completed_at",
+              "name": "NewResourceExportCompletedAt"
+            },
+            {
+              "value": "new_resource_export.created_at",
+              "name": "NewResourceExportCreatedAt"
+            },
+            {
+              "value": "new_resource_export.download_url",
+              "name": "NewResourceExportDownloadUrl"
+            },
+            {
+              "value": "new_task",
+              "name": "NewTask"
+            },
+            {
+              "value": "new_task.created_by",
+              "name": "NewTaskCreatedBy"
+            },
+            {
+              "value": "new_task.name",
+              "name": "NewTaskName"
+            },
+            {
+              "value": "new_task.resource_subtype",
+              "name": "NewTaskResourceSubtype"
+            },
+            {
+              "value": "resource_subtype",
+              "name": "ResourceSubtype"
+            },
+            {
+              "value": "status",
+              "name": "Status"
             }
           ]
         }
@@ -130117,6 +131066,7 @@
           "external.data",
           "followers",
           "followers.name",
+          "has_subtasks_date_mismatch",
           "hearted",
           "hearts",
           "hearts.user",
@@ -130460,6 +131410,10 @@
             {
               "value": "followers.name",
               "name": "FollowersName"
+            },
+            {
+              "value": "has_subtasks_date_mismatch",
+              "name": "HasSubtasksDateMismatch"
             },
             {
               "value": "hearted",

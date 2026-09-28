@@ -136,6 +136,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
+        /// <summary>[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task&apos;s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.</summary>
+        public bool? HasSubtasksDateMismatch { get; private set; }
         /// <summary>*Deprecated - please use liked instead* True if the task is hearted by the authorized user, false if not.</summary>
         public bool? Hearted { get; private set; }
         /// <summary>*Deprecated - please use likes instead* Array of likes for users who have hearted this task.</summary>
@@ -145,6 +147,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem> Hearts { get; private set; }
+#endif
+        /// <summary>An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in &lt;body&gt;&lt;/body&gt; tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -290,8 +300,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal.CreateFromDiscriminatorValue); } },
                 { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
+                { "has_subtasks_date_mismatch", n => { HasSubtasksDateMismatch = n.GetBoolValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
                 { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHeartsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "html_custom_fields", n => { HtmlCustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHtmlCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHtmlCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },
                 { "is_rendered_as_separator", n => { IsRenderedAsSeparator = n.GetBoolValue(); } },
                 { "liked", n => { Liked = n.GetBoolValue(); } },
@@ -332,6 +344,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteDateValue("due_on", DueOn);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestExternal>("external", External);
             writer.WriteCollectionOfPrimitiveValues<string>("followers", Followers);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskCreateRequestHtmlCustomFieldsProperty>("html_custom_fields", HtmlCustomFields);
             writer.WriteStringValue("html_notes", HtmlNotes);
             writer.WriteBoolValue("liked", Liked);
             writer.WriteStringValue("name", Name);

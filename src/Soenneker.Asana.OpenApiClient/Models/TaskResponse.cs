@@ -144,6 +144,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
+        /// <summary>[Opt In](/docs/inputoutput-options). True when one or more descendant subtasks have dates outside the task&apos;s own date range. This field reflects the latest computed rollup state and returns false when no rollup has been computed.</summary>
+        public bool? HasSubtasksDateMismatch { get; private set; }
         /// <summary>*Deprecated - please use liked instead* True if the task is hearted by the authorized user, false if not.</summary>
         public bool? Hearted { get; private set; }
         /// <summary>*Deprecated - please use likes instead* Array of likes for users who have hearted this task.</summary>
@@ -307,6 +309,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "external", n => { External = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal.CreateFromDiscriminatorValue); } },
                 { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
+                { "has_subtasks_date_mismatch", n => { HasSubtasksDateMismatch = n.GetBoolValue(); } },
                 { "hearted", n => { Hearted = n.GetBoolValue(); } },
                 { "hearts", n => { Hearts = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskResponseHeartsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "html_notes", n => { HtmlNotes = n.GetStringValue(); } },

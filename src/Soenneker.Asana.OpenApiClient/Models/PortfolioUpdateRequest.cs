@@ -48,14 +48,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in &lt;body&gt;&lt;/body&gt; tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
-#endif
         /// <summary>The name of the portfolio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +102,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel>(); } },
                 { "due_on", n => { DueOn = n.GetDateValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "html_custom_fields", n => { HtmlCustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestHtmlCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestHtmlCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "public", n => { Public = n.GetBoolValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestResourceSubtype>(); } },
@@ -131,7 +122,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("custom_type", CustomType);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteDateValue("due_on", DueOn);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestHtmlCustomFieldsProperty>("html_custom_fields", HtmlCustomFields);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("public", Public);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.PortfolioUpdateRequestResourceSubtype>("resource_subtype", ResourceSubtype);

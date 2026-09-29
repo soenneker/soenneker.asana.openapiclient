@@ -28406,9 +28406,6 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/GoalUpdateRequestCustomFieldsProperty"
-          },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/GoalUpdateRequestHtmlCustomFieldsProperty"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.",
@@ -29794,9 +29791,6 @@
           "custom_fields": {
             "$ref": "#/components/schemas/PortfolioUpdateRequestCustomFieldsProperty"
           },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/PortfolioUpdateRequestHtmlCustomFieldsProperty"
-          },
           "custom_type": {
             "type": "string",
             "description": "*Conditional:* You can only set custom_type if portfolio \u0060resource_subtype\u0060 is \u0060custom\u0060. GID or globally-unique identifier of a portfolio\u0027s custom type. The type must be valid for portfolios, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.",
@@ -30924,9 +30918,6 @@
           "custom_fields": {
             "$ref": "#/components/schemas/ProjectRequestCustomFieldsProperty"
           },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/ProjectRequestHtmlCustomFieldsProperty"
-          },
           "followers": {
             "type": "string",
             "description": "*Create-only*. Comma separated string of users. Followers are a subset of members who have opted in to receive \u0022tasks added\u0022 notifications for a project.",
@@ -31088,9 +31079,6 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/ProjectUpdateRequestCustomFieldsProperty"
-          },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/ProjectUpdateRequestHtmlCustomFieldsProperty"
           },
           "followers": {
             "type": "string",
@@ -34438,9 +34426,6 @@
             "example": "12345",
             "x-env-variable": true
           },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/TaskRequestBaseHtmlCustomFieldsProperty"
-          },
           "parent": {
             "type": "string",
             "description": "Gid of a task.",
@@ -34679,9 +34664,6 @@
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
-          },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/TaskCreateRequestHtmlCustomFieldsProperty"
           },
           "parent": {
             "type": "string",
@@ -34951,9 +34933,6 @@
             "nullable": true,
             "example": "12345",
             "x-env-variable": true
-          },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/TaskUpdateRequestHtmlCustomFieldsProperty"
           },
           "parent": {
             "type": "string",
@@ -35887,9 +35866,6 @@
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UserUpdateRequestCustomFieldsProperty"
-          },
-          "html_custom_fields": {
-            "$ref": "#/components/schemas/UserUpdateRequestHtmlCustomFieldsProperty"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
@@ -43314,18 +43290,6 @@
           "4578152156": "Not Started"
         }
       },
-      "GoalUpdateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
-        }
-      },
       "GoalResponseLikesItem": {
         "type": "object",
         "properties": {
@@ -45253,18 +45217,6 @@
           "4578152156": "Not Started"
         }
       },
-      "PortfolioUpdateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
-        }
-      },
       "PortfolioResponseCreatedBy": {
         "type": "object",
         "properties": {
@@ -46811,18 +46763,6 @@
           "4578152156": "Not Started"
         }
       },
-      "ProjectRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
-        }
-      },
       "ProjectUpdateRequestCurrentStatus": {
         "type": "object",
         "properties": {
@@ -46993,18 +46933,6 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
-        }
-      },
-      "ProjectUpdateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "ProjectResponseCurrentStatus": {
@@ -50099,18 +50027,6 @@
           "4578152156": "Not Started"
         }
       },
-      "TaskRequestBaseHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
-        }
-      },
       "TaskCreateRequestCreatedBy": {
         "type": "object",
         "properties": {
@@ -50299,18 +50215,6 @@
           "4578152156": "Not Started"
         }
       },
-      "TaskCreateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
-        }
-      },
       "TaskUpdateRequestCreatedBy": {
         "type": "object",
         "properties": {
@@ -50497,18 +50401,6 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
-        }
-      },
-      "TaskUpdateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "TaskResponseCreatedBy": {
@@ -51462,18 +51354,6 @@
         "example": {
           "5678904321": "On Hold",
           "4578152156": "Not Started"
-        }
-      },
-      "UserUpdateRequestHtmlCustomFields": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.",
-        "example": {
-          "5678904321": "\u003Cbody\u003E\u003Cstrong\u003EBold text\u003C/strong\u003E\u003C/body\u003E",
-          "4578152156": "\u003Cbody\u003E\u003Ccode\u003ECode block\u003C/code\u003E\u003C/body\u003E"
         }
       },
       "UserBaseResponsePhoto": {
@@ -62041,14 +61921,6 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
-      "GoalUpdateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
-      },
       "PortfolioUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -62056,14 +61928,6 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, enum GID, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
-      },
-      "PortfolioUpdateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "ProjectRequestCustomFieldsProperty": {
         "type": "object",
@@ -62073,14 +61937,6 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
-      "ProjectRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
-      },
       "ProjectUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -62088,14 +61944,6 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
-      },
-      "ProjectUpdateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "RuleTriggerRequestActionDataProperty": {
         "type": "object",
@@ -62109,14 +61957,6 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
-      "TaskRequestBaseHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
-      },
       "TaskCreateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -62124,14 +61964,6 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
-      },
-      "TaskCreateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "TaskUpdateRequestCustomFieldsProperty": {
         "type": "object",
@@ -62141,14 +61973,6 @@
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, object, or array (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
       },
-      "TaskUpdateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
-      },
       "UserUpdateRequestCustomFieldsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -62156,14 +61980,6 @@
           "description": "\u0022{custom_field_gid}\u0022 =\u003E Value (can be text, enum GID, a number, etc.). For date, use format \u0022YYYY-MM-DD\u0022 (e.g., 2019-09-15). For date-time, use ISO 8601 date string in UTC (e.g., 2019-09-15T02:06:58.147Z)."
         },
         "description": "An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values."
-      },
-      "UserUpdateRequestHtmlCustomFieldsProperty": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "description": "\u0022{custom_field_gid}\u0022 =\u003E HTML string (e.g., \u0022\u003Cbody\u003EText content\u003C/body\u003E\u0022)"
-        },
-        "description": "An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in \u003Cbody\u003E\u003C/body\u003E tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting."
       },
       "EmptyResponseDataData": {
         "type": "object",

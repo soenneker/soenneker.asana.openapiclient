@@ -31,14 +31,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in &lt;body&gt;&lt;/body&gt; tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
-#endif
         /// <summary>*Read-only except when same user as requester*. The user&apos;s name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +74,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "html_custom_fields", n => { HtmlCustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestHtmlCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestHtmlCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
             };
@@ -95,7 +86,6 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestCustomFieldsProperty>("custom_fields", CustomFields);
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.UserUpdateRequestHtmlCustomFieldsProperty>("html_custom_fields", HtmlCustomFields);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

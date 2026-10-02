@@ -52494,7 +52494,7 @@
             "example": "Greg Sanchez"
           }
         },
-        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.\nUser that created a time tracking entry.",
         "readOnly": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "user"
@@ -52585,7 +52585,7 @@
             "example": "Greg Sanchez"
           }
         },
-        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.",
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.\nUser that created a time tracking entry.",
         "readOnly": true,
         "x-docs-overrides": {
           "properties.resource_type.example": "user"

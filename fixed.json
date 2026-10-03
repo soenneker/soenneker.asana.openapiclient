@@ -37804,6 +37804,9 @@
           "rule": {
             "$ref": "#/components/schemas/AiStudioRunResponseRule"
           },
+          "automation": {
+            "$ref": "#/components/schemas/AiStudioRunResponseAutomation"
+          },
           "rule_owner": {
             "$ref": "#/components/schemas/AiStudioRunResponseRuleOwner"
           },
@@ -53451,7 +53454,31 @@
             "example": "Auto-summarize incoming requests"
           }
         },
-        "description": "The rule (automation) that ran, as a compact reference. The Rules API is not yet public, so this is not dereferenceable today, but the shape is forward-compatible (consumers can key off \u0060rule.gid\u0060).",
+        "description": "The rule (AutomationStep) that ran, as a compact reference. Non-null for both standalone rules and multi-step automation steps as long as the step still exists. \u0060null\u0060 if the step was deleted after the run. The Rules API is not yet public, so this is not dereferenceable today, but the shape is forward-compatible (consumers can key off \u0060rule.gid\u0060).",
+        "nullable": true,
+        "readOnly": true
+      },
+      "AiStudioRunResponseAutomation": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "readOnly": true,
+            "example": "1208222222222222"
+          },
+          "resource_type": {
+            "type": "string",
+            "readOnly": true,
+            "example": "automation"
+          },
+          "name": {
+            "type": "string",
+            "readOnly": true,
+            "example": "Intake triage automation"
+          }
+        },
+        "description": "The multi-step automation (AutomationWorkflow) the step belonged to when it ran. \u0060null\u0060 for standalone rules. Non-null for workflow steps regardless of whether the step itself was later deleted. Each step of a multi-step automation run is returned as its own row with the same \u0060automation\u0060, so group by \u0060automation.gid\u0060 to reconstruct per-automation usage. Not dereferenceable yet (no public Automations API).",
+        "nullable": true,
         "readOnly": true
       },
       "AiStudioRunResponseRuleOwner": {

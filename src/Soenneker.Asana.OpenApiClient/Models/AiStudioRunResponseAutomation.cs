@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// The rule (AutomationStep) that ran, as a compact reference. Non-null for both standalone rules and multi-step automation steps as long as the step still exists. `null` if the step was deleted after the run. The Rules API is not yet public, so this is not dereferenceable today, but the shape is forward-compatible (consumers can key off `rule.gid`).
+    /// The multi-step automation (AutomationWorkflow) the step belonged to when it ran. `null` for standalone rules. Non-null for workflow steps regardless of whether the step itself was later deleted. Each step of a multi-step automation run is returned as its own row with the same `automation`, so group by `automation.gid` to reconstruct per-automation usage. Not dereferenceable yet (no public Automations API).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AiStudioRunResponseRule : IAdditionalDataHolder, IParsable
+    public partial class AiStudioRunResponseAutomation : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -40,21 +40,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseRule"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation"/> and sets the default values.
         /// </summary>
-        public AiStudioRunResponseRule()
+        public AiStudioRunResponseAutomation()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseRule"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseRule CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseRule();
+            return new global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation();
         }
         /// <summary>
         /// The deserialization information for the current model

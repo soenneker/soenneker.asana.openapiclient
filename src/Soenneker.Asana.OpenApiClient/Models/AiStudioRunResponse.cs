@@ -15,6 +15,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The multi-step automation (AutomationWorkflow) the step belonged to when it ran. `null` for standalone rules. Non-null for workflow steps regardless of whether the step itself was later deleted. Each step of a multi-step automation run is returned as its own row with the same `automation`, so group by `automation.gid` to reconstruct per-automation usage. Not dereferenceable yet (no public Automations API).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation? Automation { get; private set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation Automation { get; private set; }
+#endif
         /// <summary>Whether the credits were drawn from a paid or free balance.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseCreditSource? CreditSource { get; private set; }
         /// <summary>The number of credits consumed by the run.</summary>
@@ -51,7 +59,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The rule (automation) that ran, as a compact reference. The Rules API is not yet public, so this is not dereferenceable today, but the shape is forward-compatible (consumers can key off `rule.gid`).</summary>
+        /// <summary>The rule (AutomationStep) that ran, as a compact reference. Non-null for both standalone rules and multi-step automation steps as long as the step still exists. `null` if the step was deleted after the run. The Rules API is not yet public, so this is not dereferenceable today, but the shape is forward-compatible (consumers can key off `rule.gid`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseRule? Rule { get; private set; }
@@ -114,6 +122,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "automation", n => { Automation = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation>(global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseAutomation.CreateFromDiscriminatorValue); } },
                 { "credit_source", n => { CreditSource = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseCreditSource>(); } },
                 { "credits_used", n => { CreditsUsed = n.GetDoubleValue(); } },
                 { "division", n => { Division = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseDivision>(global::Soenneker.Asana.OpenApiClient.Models.AiStudioRunResponseDivision.CreateFromDiscriminatorValue); } },

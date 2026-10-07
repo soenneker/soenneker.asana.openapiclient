@@ -11418,6 +11418,9 @@
       },
       "parameters": [
         {
+          "$ref": "#/components/parameters/search_limit"
+        },
+        {
           "name": "text",
           "in": "query",
           "description": "Performs full-text search on the project name.",
@@ -20506,6 +20509,9 @@
         ]
       },
       "parameters": [
+        {
+          "$ref": "#/components/parameters/search_limit"
+        },
         {
           "name": "text",
           "in": "query",
@@ -138218,6 +138224,17 @@
         "name": "limit",
         "in": "query",
         "description": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+        "schema": {
+          "maximum": 100,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "example": 50
+      },
+      "search_limit": {
+        "name": "limit",
+        "in": "query",
+        "description": "Results per search response.\nThe number of objects to return in one search response. The value must be between 1 and 100. Search responses have no \u0060next_page\u0060, so to retrieve further results, sort by \u0060created_at\u0060 and repeat the query with a \u0060created_at.before\u0060 or \u0060created_at.after\u0060 filter that excludes the results you have already seen.",
         "schema": {
           "maximum": 100,
           "minimum": 1,

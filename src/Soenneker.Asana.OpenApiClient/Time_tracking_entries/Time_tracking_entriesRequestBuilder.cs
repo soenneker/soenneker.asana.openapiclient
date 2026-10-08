@@ -35,7 +35,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Time_tracking_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_entries{?attributable_to*,entered_on_end_date*,entered_on_start_date*,limit*,offset*,opt_fields,portfolio*,task*,timesheet_approval_status*,user*,workspace*}", pathParameters)
+        public Time_tracking_entriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_entries{?assignee*,attributable_to*,entered_on_end_date*,entered_on_start_date*,limit*,offset*,opt_fields,portfolio*,task*,timesheet_approval_status*,user*,workspace*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Time_tracking_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_entries{?attributable_to*,entered_on_end_date*,entered_on_start_date*,limit*,offset*,opt_fields,portfolio*,task*,timesheet_approval_status*,user*,workspace*}", rawUrl)
+        public Time_tracking_entriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/time_tracking_entries{?assignee*,attributable_to*,entered_on_end_date*,entered_on_start_date*,limit*,offset*,opt_fields,portfolio*,task*,timesheet_approval_status*,user*,workspace*}", rawUrl)
         {
         }
         /// <summary>
@@ -113,6 +113,16 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Time_tracking_entriesRequestBuilderGetQueryParameters 
         {
+            /// <summary>Globally unique identifier for the user the time tracking entry&apos;s logged time is attributed to, to filter time tracking entries by.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("assignee")]
+            public string? Assignee { get; set; }
+#nullable restore
+#else
+            [QueryParameter("assignee")]
+            public string Assignee { get; set; }
+#endif
             /// <summary>Globally unique identifier for the project the time tracking entries are attributed to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -182,7 +192,8 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
             [QueryParameter("timesheet_approval_status")]
             public string TimesheetApprovalStatus { get; set; }
 #endif
-            /// <summary>Globally unique identifier for the user to filter time tracking entries by.</summary>
+            /// <summary>*Deprecated - please use assignee instead* Globally unique identifier for the user the time tracking entry&apos;s logged time is attributed to, to filter time tracking entries by.</summary>
+            [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user")]

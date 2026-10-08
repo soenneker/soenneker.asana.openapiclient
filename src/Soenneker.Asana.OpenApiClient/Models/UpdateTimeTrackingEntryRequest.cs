@@ -15,6 +15,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>*Optional*. The gid of the user which the time is attributed to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Assignee { get; set; }
+#nullable restore
+#else
+        public string Assignee { get; set; }
+#endif
         /// <summary>*Optional*. The gid of the project which the time is attributable to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,6 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "assignee", n => { Assignee = n.GetStringValue(); } },
                 { "attributable_to", n => { AttributableTo = n.GetStringValue(); } },
                 { "billable_status", n => { BillableStatus = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequestBillableStatus>(); } },
                 { "categories", n => { Categories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -85,6 +94,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("assignee", Assignee);
             writer.WriteStringValue("attributable_to", AttributableTo);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.UpdateTimeTrackingEntryRequestBillableStatus>("billable_status", BillableStatus);
             writer.WriteCollectionOfPrimitiveValues<string>("categories", Categories);

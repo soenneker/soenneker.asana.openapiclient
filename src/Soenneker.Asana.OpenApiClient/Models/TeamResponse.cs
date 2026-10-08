@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>Controls who can accept or deny guest invites for a given team</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.TeamResponseGuestInviteManagementAccessLevel? GuestInviteManagementAccessLevel { get; set; }
-        /// <summary>[Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML.</summary>
+        /// <summary>[Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML. See [rich text](/docs/rich-text#reading-rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HtmlDescription { get; set; }

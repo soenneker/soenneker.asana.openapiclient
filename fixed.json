@@ -22535,6 +22535,8 @@
               }
             },
             "example": [
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -22758,6 +22760,8 @@
               }
             },
             "example": [
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -22827,6 +22831,8 @@
             },
             "example": [
               "approval_status",
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -22919,6 +22925,8 @@
             },
             "example": [
               "approval_status",
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -22992,6 +23000,8 @@
             },
             "example": [
               "approval_status",
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -23142,7 +23152,17 @@
           {
             "name": "user",
             "in": "query",
-            "description": "Globally unique identifier for the user to filter time tracking entries by.",
+            "description": "*Deprecated - please use assignee instead* Globally unique identifier for the user the time tracking entry\u0027s logged time is attributed to, to filter time tracking entries by.",
+            "deprecated": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "12345"
+          },
+          {
+            "name": "assignee",
+            "in": "query",
+            "description": "Globally unique identifier for the user the time tracking entry\u0027s logged time is attributed to, to filter time tracking entries by.",
             "schema": {
               "type": "string"
             },
@@ -23204,6 +23224,8 @@
               }
             },
             "example": [
+              "assignee",
+              "assignee.name",
               "attributable_to",
               "attributable_to.name",
               "attributable_to.resource_subtype",
@@ -27265,7 +27287,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -27876,7 +27898,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "The notes of the goal with formatting as HTML.",
+            "description": "The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EStart building brand awareness.\u003C/body\u003E"
           },
           "notes": {
@@ -28178,7 +28200,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "The notes of the goal with formatting as HTML.",
+            "description": "The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EStart building brand awareness.\u003C/body\u003E"
           },
           "notes": {
@@ -28261,7 +28283,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "The notes of the goal with formatting as HTML.",
+            "description": "The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EStart building brand awareness.\u003C/body\u003E"
           },
           "notes": {
@@ -28351,7 +28373,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "The notes of the goal with formatting as HTML.",
+            "description": "The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EStart building brand awareness.\u003C/body\u003E"
           },
           "notes": {
@@ -28446,7 +28468,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "The notes of the goal with formatting as HTML.",
+            "description": "The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EStart building brand awareness.\u003C/body\u003E"
           },
           "notes": {
@@ -29994,7 +30016,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "HTML formatted text for the body of the preview.",
+            "description": "HTML formatted text for the body of the preview. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "\u003Cbody\u003EGreat! I like this idea.\u003C/body\u003E"
           },
           "text": {
@@ -30092,7 +30114,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to purchase.\u003C/body\u003E"
           },
           "members": {
@@ -30170,7 +30192,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "HTML formatted text for the project brief.",
+            "description": "HTML formatted text for the project brief. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a \u003Cstrong\u003Eproject brief\u003C/strong\u003E.\u003C/body\u003E"
           }
         },
@@ -30226,7 +30248,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "HTML formatted text for the project brief.",
+            "description": "HTML formatted text for the project brief. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a \u003Cstrong\u003Eproject brief\u003C/strong\u003E.\u003C/body\u003E"
           },
           "text": {
@@ -30264,7 +30286,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "HTML formatted text for the project brief.",
+            "description": "HTML formatted text for the project brief. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a \u003Cstrong\u003Eproject brief\u003C/strong\u003E.\u003C/body\u003E"
           },
           "text": {
@@ -30879,7 +30901,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to purchase.\u003C/body\u003E"
           },
           "members": {
@@ -31044,7 +31066,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to purchase.\u003C/body\u003E"
           },
           "members": {
@@ -31204,7 +31226,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to purchase.\u003C/body\u003E"
           },
           "members": {
@@ -31367,7 +31389,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -31439,7 +31461,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -31480,7 +31502,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -31569,7 +31591,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "The description of the project template with formatting as HTML.",
+            "description": "The description of the project template with formatting as HTML. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to pack for a trip.\u003C/body\u003E"
           },
           "public": {
@@ -31636,7 +31658,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "The description of the project template with formatting as HTML.",
+            "description": "The description of the project template with formatting as HTML. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "\u003Cbody\u003EThese are things we need to pack for a trip.\u003C/body\u003E"
           },
           "public": {
@@ -32645,7 +32667,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "status_type": {
@@ -32725,7 +32747,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "status_type": {
@@ -32777,7 +32799,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "status_type": {
@@ -32896,7 +32918,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator.",
+            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a comment.\u003C/body\u003E"
           },
           "is_pinned": {
@@ -32994,7 +33016,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator.",
+            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a comment.\u003C/body\u003E"
           },
           "is_pinned": {
@@ -33048,7 +33070,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator.",
+            "description": "[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThis is a comment.\u003C/body\u003E"
           },
           "is_pinned": {
@@ -33761,7 +33783,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EMittens \u003Cem\u003Ereally\u003C/em\u003E likes the stuff from Humboldt.\u003C/body\u003E"
           },
           "hearted": {
@@ -33989,7 +34011,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "HTML description of the task that will be created from this template.",
+            "description": "HTML description of the task that will be created from this template. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "Please describe the bug you found and how to reproduce it."
           },
           "memberships": {
@@ -34313,7 +34335,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EMittens \u003Cem\u003Ereally\u003C/em\u003E likes the stuff from Humboldt.\u003C/body\u003E"
           },
           "hearted": {
@@ -34555,7 +34577,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EMittens \u003Cem\u003Ereally\u003C/em\u003E likes the stuff from Humboldt.\u003C/body\u003E"
           },
           "hearted": {
@@ -34827,7 +34849,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EMittens \u003Cem\u003Ereally\u003C/em\u003E likes the stuff from Humboldt.\u003C/body\u003E"
           },
           "hearted": {
@@ -35069,7 +35091,7 @@
           },
           "html_notes": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EMittens \u003Cem\u003Ereally\u003C/em\u003E likes the stuff from Humboldt.\u003C/body\u003E"
           },
           "hearted": {
@@ -35505,7 +35527,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "The description of the team with formatting as HTML.\n",
+            "description": "The description of the team with formatting as HTML. See [rich text](/docs/rich-text).\n",
             "example": "\u003Cbody\u003E\u003Cem\u003EAll\u003C/em\u003E developers should be members of this team.\u003C/body\u003E"
           },
           "organization": {
@@ -35577,7 +35599,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML.\n",
+            "description": "[Opt In](/docs/inputoutput-options). The description of the team with formatting as HTML. See [rich text](/docs/rich-text#reading-rich-text).\n",
             "example": "\u003Cbody\u003E\u003Cem\u003EAll\u003C/em\u003E developers should be members of this team.\u003C/body\u003E"
           },
           "organization": {
@@ -36888,6 +36910,11 @@
             "description": "*Optional*. The gid of the project which the time is attributable to.",
             "example": "987654"
           },
+          "assignee": {
+            "type": "string",
+            "description": "*Optional*. The gid of the user which the time is attributed to.",
+            "example": "12345"
+          },
           "billable_status": {
             "$ref": "#/components/schemas/UpdateTimeTrackingEntryRequestBillableStatus"
           },
@@ -36923,6 +36950,11 @@
             "type": "string",
             "description": "*Optional*. The gid of the project which the time is attributable to.",
             "example": "987654"
+          },
+          "assignee": {
+            "type": "string",
+            "description": "*Optional*. The gid of the user this entry\u0027s logged time is attributed to. Defaults to the current user; can only be set to another user if you\u0027re their time reviewer or an admin. Reviewer-submitter relationships require the Timesheets and Budgets add-on.",
+            "example": "12345"
           },
           "billable_status": {
             "$ref": "#/components/schemas/CreateTimeTrackingEntryRequestBillableStatus"
@@ -36972,6 +37004,9 @@
           "attributable_to": {
             "$ref": "#/components/schemas/TimeTrackingEntryCompactAttributableTo"
           },
+          "assignee": {
+            "$ref": "#/components/schemas/TimeTrackingEntryCompactAssignee"
+          },
           "created_by": {
             "$ref": "#/components/schemas/TimeTrackingEntryCompactCreatedBy"
           },
@@ -37019,6 +37054,9 @@
           },
           "attributable_to": {
             "$ref": "#/components/schemas/TimeTrackingEntryBaseAttributableTo"
+          },
+          "assignee": {
+            "$ref": "#/components/schemas/TimeTrackingEntryBaseAssignee"
           },
           "created_by": {
             "$ref": "#/components/schemas/TimeTrackingEntryBaseCreatedBy"
@@ -40087,7 +40125,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "HTML description of the task that will be created from this template.",
+            "description": "HTML description of the task that will be created from this template. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "Please describe the bug you found and how to reproduce it."
           },
           "memberships": {
@@ -41160,7 +41198,7 @@
           },
           "html_description": {
             "type": "string",
-            "description": "HTML description of the task that will be created from this template.",
+            "description": "HTML description of the task that will be created from this template. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "Please describe the bug you found and how to reproduce it."
           },
           "memberships": {
@@ -43086,7 +43124,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -45641,7 +45679,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -46677,7 +46715,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -46861,7 +46899,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -47045,7 +47083,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.",
+            "description": "[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML. See [rich text](/docs/rich-text).",
             "example": "\u003Cbody\u003EThe project \u003Cstrong\u003Eis\u003C/strong\u003E moving forward according to plan...\u003C/body\u003E"
           },
           "color": {
@@ -48603,7 +48641,7 @@
           },
           "html_text": {
             "type": "string",
-            "description": "HTML formatted text for the body of the preview.",
+            "description": "HTML formatted text for the body of the preview. See [rich text](/docs/rich-text#reading-rich-text).",
             "example": "\u003Cbody\u003EGreat! I like this idea.\u003C/body\u003E"
           },
           "text": {
@@ -50910,7 +50948,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -52480,6 +52518,34 @@
           "properties.resource_type.example": "project"
         }
       },
+      "TimeTrackingEntryCompactAssignee": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user\u0027s name.",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.\nThe user this entry\u0027s logged time is attributed to.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "user"
+        }
+      },
       "TimeTrackingEntryCompactCreatedBy": {
         "type": "object",
         "properties": {
@@ -52569,6 +52635,34 @@
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.\nThe attributable to project specifies which project\u0027s budget a time entry should be counted toward, if the task belongs to more than one project. If it only belongs to one project, it should be that project.",
         "x-docs-overrides": {
           "properties.resource_type.example": "project"
+        }
+      },
+      "TimeTrackingEntryBaseAssignee": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "*Read-only except when same user as requester*. The user\u0027s name.",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.\nThe user this entry\u0027s logged time is attributed to.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "user"
         }
       },
       "TimeTrackingEntryBaseCreatedBy": {
@@ -55796,7 +55890,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -56175,7 +56269,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -56604,7 +56698,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -57297,7 +57391,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -57594,7 +57688,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -57891,7 +57985,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -59642,7 +59736,7 @@
           },
           "html_text_value": {
             "type": "string",
-            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field.",
+            "description": "*Conditional*. Only relevant for custom fields of type \u0060text\u0060. This is the HTML representation of the text value of a custom field, corresponding to the \u0060text_value\u0060 plain-text field. See [rich text](/docs/rich-text#reading-rich-text).",
             "nullable": true,
             "readOnly": true,
             "example": "\u003Cbody\u003ESome Value\u003C/body\u003E"
@@ -133879,6 +133973,8 @@
       },
       "GetTimeTrackingEntriesForTimeTrackingCategoryOptFieldsParameterItem": {
         "enum": [
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -133899,6 +133995,14 @@
           "name": "GetTimeTrackingEntriesForTimeTrackingCategoryOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
+            },
             {
               "value": "attributable_to",
               "name": "AttributableTo"
@@ -134025,6 +134129,8 @@
       },
       "GetTimeTrackingEntriesForTaskOptFieldsParameterItem": {
         "enum": [
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -134045,6 +134151,14 @@
           "name": "GetTimeTrackingEntriesForTaskOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
+            },
             {
               "value": "attributable_to",
               "name": "AttributableTo"
@@ -134103,6 +134217,8 @@
       "CreateTimeTrackingEntryOptFieldsParameterItem": {
         "enum": [
           "approval_status",
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -134130,6 +134246,14 @@
             {
               "value": "approval_status",
               "name": "ApprovalStatus"
+            },
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
             },
             {
               "value": "attributable_to",
@@ -134205,6 +134329,8 @@
       "GetTimeTrackingEntryOptFieldsParameterItem": {
         "enum": [
           "approval_status",
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -134232,6 +134358,14 @@
             {
               "value": "approval_status",
               "name": "ApprovalStatus"
+            },
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
             },
             {
               "value": "attributable_to",
@@ -134307,6 +134441,8 @@
       "UpdateTimeTrackingEntryOptFieldsParameterItem": {
         "enum": [
           "approval_status",
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -134334,6 +134470,14 @@
             {
               "value": "approval_status",
               "name": "ApprovalStatus"
+            },
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
             },
             {
               "value": "attributable_to",
@@ -134408,6 +134552,8 @@
       },
       "GetTimeTrackingEntriesOptFieldsParameterItem": {
         "enum": [
+          "assignee",
+          "assignee.name",
           "attributable_to",
           "attributable_to.name",
           "attributable_to.resource_subtype",
@@ -134428,6 +134574,14 @@
           "name": "GetTimeTrackingEntriesOptFieldsParameterItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "assignee",
+              "name": "Assignee"
+            },
+            {
+              "value": "assignee.name",
+              "name": "AssigneeName"
+            },
             {
               "value": "attributable_to",
               "name": "AttributableTo"

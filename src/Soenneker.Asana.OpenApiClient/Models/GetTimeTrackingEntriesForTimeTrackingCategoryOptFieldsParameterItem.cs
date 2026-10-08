@@ -8,6 +8,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public enum GetTimeTrackingEntriesForTimeTrackingCategoryOptFieldsParameterItem
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "assignee")]
+        #pragma warning disable CS1591
+        Assignee,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "assignee.name")]
+        #pragma warning disable CS1591
+        AssigneeName,
+        #pragma warning restore CS1591
         [EnumMember(Value = "attributable_to")]
         #pragma warning disable CS1591
         AttributableTo,

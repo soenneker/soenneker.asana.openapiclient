@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string HeaderLink { get; set; }
 #endif
-        /// <summary>HTML formatted text for the body of the preview.</summary>
+        /// <summary>HTML formatted text for the body of the preview. See [rich text](/docs/rich-text#reading-rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HtmlText { get; set; }

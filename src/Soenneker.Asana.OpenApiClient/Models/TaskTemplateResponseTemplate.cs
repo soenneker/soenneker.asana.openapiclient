@@ -71,7 +71,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem> Followers { get; set; }
 #endif
-        /// <summary>HTML description of the task that will be created from this template.</summary>
+        /// <summary>HTML description of the task that will be created from this template. See [rich text](/docs/rich-text#reading-rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HtmlDescription { get; set; }

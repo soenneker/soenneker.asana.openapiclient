@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
 #endif
-        /// <summary>The notes of the goal with formatting as HTML.</summary>
+        /// <summary>The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HtmlNotes { get; set; }

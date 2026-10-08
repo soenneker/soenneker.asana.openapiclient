@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *Project Brief* allows you to explain the what and why of the project to your team.
+    /// A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.The user this entry&apos;s logged time is attributed to.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ProjectBriefRequest : IAdditionalDataHolder, IParsable
+    public partial class TimeTrackingEntryBaseAssignee : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -23,13 +23,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Gid { get; private set; }
 #endif
-        /// <summary>HTML formatted text for the project brief. See [rich text](/docs/rich-text).</summary>
+        /// <summary>*Read-only except when same user as requester*. The user&apos;s name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlText { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public string HtmlText { get; set; }
+        public string Name { get; set; }
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,38 +39,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string ResourceType { get; private set; }
 #endif
-        /// <summary>The plain text of the project brief. When writing to a project brief, you can specify either `html_text` (preferred) or `text`, but not both.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Text { get; set; }
-#nullable restore
-#else
-        public string Text { get; set; }
-#endif
-        /// <summary>The title of the project brief.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Title { get; set; }
-#nullable restore
-#else
-        public string Title { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAssignee"/> and sets the default values.
         /// </summary>
-        public ProjectBriefRequest()
+        public TimeTrackingEntryBaseAssignee()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAssignee"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAssignee CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectBriefRequest();
+            return new global::Soenneker.Asana.OpenApiClient.Models.TimeTrackingEntryBaseAssignee();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,10 +65,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "gid", n => { Gid = n.GetStringValue(); } },
-                { "html_text", n => { HtmlText = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "text", n => { Text = n.GetStringValue(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -94,9 +76,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("html_text", HtmlText);
-            writer.WriteStringValue("text", Text);
-            writer.WriteStringValue("title", Title);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

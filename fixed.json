@@ -137392,6 +137392,16 @@
           }
         }
       },
+      "Conflict": {
+        "description": "The request could not be completed because it conflicts with the current state of the target resource.",
+        "content": {
+          "application/json; charset=UTF-8": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
       "TooManyRequests": {
         "description": "You have exceeded one of the enforced rate limits in the API. See the [documentation on rate limiting](https://developers.asana.com/docs/#rate-limits) for more information.",
         "content": {
@@ -139048,6 +139058,28 @@
         },
         "example": "12345",
         "x-env-variable": "role"
+      },
+      "table_path_gid": {
+        "name": "table_gid",
+        "in": "path",
+        "description": "Globally unique identifier for the table.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "example": "1337",
+        "x-env-variable": "table"
+      },
+      "record_path_gid": {
+        "name": "record_gid",
+        "in": "path",
+        "description": "Globally unique identifier for the record.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "example": "7331",
+        "x-env-variable": "record"
       },
       "ai_studio_start_at": {
         "name": "start_at",

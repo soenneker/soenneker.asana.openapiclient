@@ -1671,6 +1671,7 @@
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
               "custom_field.is_global_to_workspace",
+              "custom_field.is_lookup_field",
               "custom_field.is_value_read_only",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
@@ -1792,6 +1793,7 @@
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
               "custom_field.is_global_to_workspace",
+              "custom_field.is_lookup_field",
               "custom_field.is_value_read_only",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
@@ -1913,6 +1915,7 @@
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
               "custom_field.is_global_to_workspace",
+              "custom_field.is_lookup_field",
               "custom_field.is_value_read_only",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
@@ -2034,6 +2037,7 @@
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
               "custom_field.is_global_to_workspace",
+              "custom_field.is_lookup_field",
               "custom_field.is_value_read_only",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
@@ -2144,6 +2148,7 @@
               "input_restrictions",
               "is_formula_field",
               "is_global_to_workspace",
+              "is_lookup_field",
               "is_value_read_only",
               "multi_enum_values",
               "multi_enum_values.color",
@@ -2254,6 +2259,7 @@
               "input_restrictions",
               "is_formula_field",
               "is_global_to_workspace",
+              "is_lookup_field",
               "is_value_read_only",
               "multi_enum_values",
               "multi_enum_values.color",
@@ -2354,6 +2360,7 @@
               "input_restrictions",
               "is_formula_field",
               "is_global_to_workspace",
+              "is_lookup_field",
               "is_value_read_only",
               "multi_enum_values",
               "multi_enum_values.color",
@@ -2510,6 +2517,7 @@
               "input_restrictions",
               "is_formula_field",
               "is_global_to_workspace",
+              "is_lookup_field",
               "is_value_read_only",
               "multi_enum_values",
               "multi_enum_values.color",
@@ -3542,6 +3550,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -3583,6 +3592,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -3722,6 +3732,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -3763,6 +3774,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4028,6 +4040,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -4069,6 +4082,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4203,6 +4217,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -4244,6 +4259,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4390,6 +4406,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -4431,6 +4448,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4586,6 +4604,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -4627,6 +4646,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4782,6 +4802,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -4823,6 +4844,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -4978,6 +5000,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -5019,6 +5042,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -5174,6 +5198,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -5215,6 +5240,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -6535,6 +6561,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -6576,6 +6603,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -6692,6 +6720,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -6733,6 +6762,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -6864,6 +6894,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -6905,6 +6936,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -7026,6 +7058,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -7067,6 +7100,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -7553,6 +7587,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -7594,6 +7629,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -7731,6 +7767,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -7772,6 +7809,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -9368,6 +9406,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -9409,6 +9448,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -9550,6 +9590,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -9591,6 +9632,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -9747,6 +9789,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -9788,6 +9831,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -9934,6 +9978,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -9975,6 +10020,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -10279,6 +10325,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -10320,6 +10367,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -10498,6 +10546,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -10539,6 +10588,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -10688,6 +10738,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -10729,6 +10780,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -10903,6 +10955,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -10944,6 +10997,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -11093,6 +11147,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -11134,6 +11189,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -11299,6 +11355,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -11340,6 +11397,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -11738,6 +11796,7 @@
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
               "custom_field.is_global_to_workspace",
+              "custom_field.is_lookup_field",
               "custom_field.is_value_read_only",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
@@ -12013,6 +12072,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -12054,6 +12114,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -12216,6 +12277,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -12257,6 +12319,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -12419,6 +12482,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -12460,6 +12524,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -12622,6 +12687,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -12663,6 +12729,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -14633,6 +14700,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -14829,6 +14897,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -15100,6 +15169,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -15299,6 +15369,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -15529,6 +15600,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -15728,6 +15800,7 @@
               "custom_field.id_prefix",
               "custom_field.input_restrictions",
               "custom_field.is_formula_field",
+              "custom_field.is_lookup_field",
               "custom_field.multi_enum_values",
               "custom_field.multi_enum_values.color",
               "custom_field.multi_enum_values.enabled",
@@ -16872,6 +16945,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -17035,6 +17109,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -17213,6 +17288,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -17381,6 +17457,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -17708,6 +17785,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -17892,6 +17970,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18076,6 +18155,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18257,6 +18337,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18447,6 +18528,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18618,6 +18700,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18805,6 +18888,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -18992,6 +19076,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -19302,6 +19387,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -19892,6 +19978,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -20079,6 +20166,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -20404,6 +20492,7 @@
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
               "custom_fields.is_global_to_workspace",
+              "custom_fields.is_lookup_field",
               "custom_fields.is_value_read_only",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
@@ -21389,6 +21478,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -21520,6 +21610,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -21644,6 +21735,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -21784,6 +21876,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -21921,6 +22014,7 @@
               "custom_field_settings.custom_field.input_restrictions",
               "custom_field_settings.custom_field.is_formula_field",
               "custom_field_settings.custom_field.is_global_to_workspace",
+              "custom_field_settings.custom_field.is_lookup_field",
               "custom_field_settings.custom_field.is_value_read_only",
               "custom_field_settings.custom_field.multi_enum_values",
               "custom_field_settings.custom_field.multi_enum_values.color",
@@ -23872,6 +23966,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -23987,6 +24082,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -24079,6 +24175,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -24279,6 +24376,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -24378,6 +24476,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -24477,6 +24576,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -24577,6 +24677,7 @@
               "custom_fields.id_prefix",
               "custom_fields.input_restrictions",
               "custom_fields.is_formula_field",
+              "custom_fields.is_lookup_field",
               "custom_fields.multi_enum_values",
               "custom_fields.multi_enum_values.color",
               "custom_fields.multi_enum_values.enabled",
@@ -26619,6 +26720,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldBaseDateValue"
           },
@@ -26757,6 +26863,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldCompactDateValue"
           },
@@ -26854,6 +26965,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -27023,6 +27139,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldCreateRequestDateValue"
           },
@@ -27187,6 +27308,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -39365,6 +39491,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/AddCustomFieldSettingRequestCustomFieldOneOf2DateValue"
           },
@@ -40777,6 +40908,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -43026,6 +43162,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldSettingResponseCustomFieldDateValue"
           },
@@ -43705,6 +43846,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -45468,6 +45614,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/PortfolioResponseCustomFieldsItemDateValue"
           },
@@ -45920,6 +46071,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldMembershipBaseParentDateValue"
           },
@@ -46042,6 +46198,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/CustomFieldMembershipCompactParentDateValue"
           },
@@ -46162,6 +46323,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -47270,6 +47436,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -49032,6 +49203,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/StoryResponseCustomFieldDateValue"
           },
@@ -49858,6 +50034,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -50850,6 +51031,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/TaskResponseCustomFieldsItemDateValue"
           },
@@ -51699,6 +51885,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -54075,6 +54266,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/MembershipCompactAnyOf4ParentDateValue"
           },
@@ -54695,6 +54891,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/MembershipResponseAnyOf4ParentDateValue"
           },
@@ -55136,6 +55337,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -55792,6 +55998,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/GoalResponseCustomFieldSettingsItemCustomFieldDateValue"
           },
@@ -56169,6 +56380,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -56598,6 +56814,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -57293,6 +57514,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/ProjectRequestCustomFieldSettingsItemCustomFieldDateValue"
           },
@@ -57590,6 +57816,11 @@
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
             "example": false
           },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
+            "example": false
+          },
           "date_value": {
             "$ref": "#/components/schemas/ProjectUpdateRequestCustomFieldSettingsItemCustomFieldDateValue"
           },
@@ -57885,6 +58116,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -59636,6 +59872,11 @@
           "is_formula_field": {
             "type": "boolean",
             "description": "*Conditional*. This flag describes whether a custom field is a formula custom field.",
+            "example": false
+          },
+          "is_lookup_field": {
+            "type": "boolean",
+            "description": "*Conditional*. This flag describes whether a custom field is a lookup custom field.",
             "example": false
           },
           "date_value": {
@@ -91766,6 +92007,7 @@
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
           "custom_field.is_global_to_workspace",
+          "custom_field.is_lookup_field",
           "custom_field.is_value_read_only",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
@@ -91917,6 +92159,10 @@
               "name": "CustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field.is_value_read_only",
               "name": "CustomFieldIsValueReadOnly"
             },
@@ -92058,6 +92304,7 @@
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
           "custom_field.is_global_to_workspace",
+          "custom_field.is_lookup_field",
           "custom_field.is_value_read_only",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
@@ -92209,6 +92456,10 @@
               "name": "CustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field.is_value_read_only",
               "name": "CustomFieldIsValueReadOnly"
             },
@@ -92350,6 +92601,7 @@
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
           "custom_field.is_global_to_workspace",
+          "custom_field.is_lookup_field",
           "custom_field.is_value_read_only",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
@@ -92501,6 +92753,10 @@
               "name": "CustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field.is_value_read_only",
               "name": "CustomFieldIsValueReadOnly"
             },
@@ -92642,6 +92898,7 @@
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
           "custom_field.is_global_to_workspace",
+          "custom_field.is_lookup_field",
           "custom_field.is_value_read_only",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
@@ -92790,6 +93047,10 @@
               "name": "CustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field.is_value_read_only",
               "name": "CustomFieldIsValueReadOnly"
             },
@@ -92918,6 +93179,7 @@
           "input_restrictions",
           "is_formula_field",
           "is_global_to_workspace",
+          "is_lookup_field",
           "is_value_read_only",
           "multi_enum_values",
           "multi_enum_values.color",
@@ -93055,6 +93317,10 @@
               "name": "IsGlobalToWorkspace"
             },
             {
+              "value": "is_lookup_field",
+              "name": "IsLookupField"
+            },
+            {
               "value": "is_value_read_only",
               "name": "IsValueReadOnly"
             },
@@ -93155,6 +93421,7 @@
           "input_restrictions",
           "is_formula_field",
           "is_global_to_workspace",
+          "is_lookup_field",
           "is_value_read_only",
           "multi_enum_values",
           "multi_enum_values.color",
@@ -93292,6 +93559,10 @@
               "name": "IsGlobalToWorkspace"
             },
             {
+              "value": "is_lookup_field",
+              "name": "IsLookupField"
+            },
+            {
               "value": "is_value_read_only",
               "name": "IsValueReadOnly"
             },
@@ -93392,6 +93663,7 @@
           "input_restrictions",
           "is_formula_field",
           "is_global_to_workspace",
+          "is_lookup_field",
           "is_value_read_only",
           "multi_enum_values",
           "multi_enum_values.color",
@@ -93529,6 +93801,10 @@
               "name": "IsGlobalToWorkspace"
             },
             {
+              "value": "is_lookup_field",
+              "name": "IsLookupField"
+            },
+            {
               "value": "is_value_read_only",
               "name": "IsValueReadOnly"
             },
@@ -93629,6 +93905,7 @@
           "input_restrictions",
           "is_formula_field",
           "is_global_to_workspace",
+          "is_lookup_field",
           "is_value_read_only",
           "multi_enum_values",
           "multi_enum_values.color",
@@ -93767,6 +94044,10 @@
             {
               "value": "is_global_to_workspace",
               "name": "IsGlobalToWorkspace"
+            },
+            {
+              "value": "is_lookup_field",
+              "name": "IsLookupField"
             },
             {
               "value": "is_value_read_only",
@@ -94406,6 +94687,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -94447,6 +94729,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -94635,6 +94918,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -94797,6 +95084,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -95028,6 +95319,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -95069,6 +95361,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -95257,6 +95550,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -95419,6 +95716,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -95650,6 +95951,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -95691,6 +95993,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -95882,6 +96185,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -96044,6 +96351,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -96287,6 +96598,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -96328,6 +96640,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -96516,6 +96829,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -96678,6 +96995,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -96909,6 +97230,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -96950,6 +97272,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -97138,6 +97461,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -97300,6 +97627,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -97531,6 +97862,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -97572,6 +97904,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -97760,6 +98093,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -97922,6 +98259,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -98153,6 +98494,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -98194,6 +98536,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -98382,6 +98725,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -98544,6 +98891,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -98775,6 +99126,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -98816,6 +99168,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -99004,6 +99357,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -99166,6 +99523,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -99397,6 +99758,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -99438,6 +99800,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -99626,6 +99989,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -99788,6 +100155,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -100618,6 +100989,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -100659,6 +101031,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -100850,6 +101223,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -101012,6 +101389,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -101180,6 +101561,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -101221,6 +101603,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -101409,6 +101792,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -101573,6 +101960,10 @@
               "name": "CustomFieldsIsFormulaField"
             },
             {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
+            },
+            {
               "value": "custom_fields.multi_enum_values",
               "name": "CustomFieldsMultiEnumValues"
             },
@@ -101727,6 +102118,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -101768,6 +102160,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -101956,6 +102349,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -102120,6 +102517,10 @@
               "name": "CustomFieldsIsFormulaField"
             },
             {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
+            },
+            {
               "value": "custom_fields.multi_enum_values",
               "name": "CustomFieldsMultiEnumValues"
             },
@@ -102274,6 +102675,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -102315,6 +102717,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -102503,6 +102906,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -102665,6 +103072,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -102848,6 +103259,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -102889,6 +103301,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -103077,6 +103490,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -103241,6 +103658,10 @@
               "name": "CustomFieldsIsFormulaField"
             },
             {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
+            },
+            {
               "value": "custom_fields.multi_enum_values",
               "name": "CustomFieldsMultiEnumValues"
             },
@@ -103395,6 +103816,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -103436,6 +103858,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -103624,6 +104047,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -103786,6 +104213,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -105121,6 +105552,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -105162,6 +105594,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -105423,6 +105856,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -105585,6 +106022,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -105808,6 +106249,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -105849,6 +106291,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -106107,6 +106550,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -106269,6 +106716,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -106480,6 +106931,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -106521,6 +106973,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -106779,6 +107232,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -106941,6 +107398,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -107152,6 +107613,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -107193,6 +107655,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -107451,6 +107914,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -107613,6 +108080,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -107961,6 +108432,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -108002,6 +108474,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -108263,6 +108736,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -108425,6 +108902,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -108648,6 +109129,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -108689,6 +109171,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -108950,6 +109433,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -109112,6 +109599,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -109335,6 +109826,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -109376,6 +109868,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -109634,6 +110127,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -109796,6 +110293,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -110007,6 +110508,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -110048,6 +110550,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -110309,6 +110812,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -110471,6 +110978,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -110694,6 +111205,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -110735,6 +111247,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -110993,6 +111506,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -111155,6 +111672,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -111403,6 +111924,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -111444,6 +111966,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -111702,6 +112225,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -111864,6 +112391,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -112051,6 +112582,7 @@
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
           "custom_field.is_global_to_workspace",
+          "custom_field.is_lookup_field",
           "custom_field.is_value_read_only",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
@@ -112197,6 +112729,10 @@
             {
               "value": "custom_field.is_global_to_workspace",
               "name": "CustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.is_value_read_only",
@@ -112394,6 +112930,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -112435,6 +112972,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -112693,6 +113231,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -112855,6 +113397,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -113066,6 +113612,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -113107,6 +113654,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -113365,6 +113913,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -113527,6 +114079,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -113738,6 +114294,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -113779,6 +114336,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -114037,6 +114595,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -114199,6 +114761,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -114410,6 +114976,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -114451,6 +115018,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -114709,6 +115277,10 @@
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
             },
             {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
+            },
+            {
               "value": "custom_field_settings.custom_field.is_value_read_only",
               "name": "CustomFieldSettingsCustomFieldIsValueReadOnly"
             },
@@ -114871,6 +115443,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -117015,6 +117591,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -117228,6 +117805,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -117732,6 +118313,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -117945,6 +118527,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -118449,6 +119035,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -118665,6 +119252,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -119181,6 +119772,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -119394,6 +119986,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -119898,6 +120494,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -120114,6 +120711,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -120630,6 +121231,7 @@
           "custom_field.id_prefix",
           "custom_field.input_restrictions",
           "custom_field.is_formula_field",
+          "custom_field.is_lookup_field",
           "custom_field.multi_enum_values",
           "custom_field.multi_enum_values.color",
           "custom_field.multi_enum_values.enabled",
@@ -120843,6 +121445,10 @@
             {
               "value": "custom_field.is_formula_field",
               "name": "CustomFieldIsFormulaField"
+            },
+            {
+              "value": "custom_field.is_lookup_field",
+              "name": "CustomFieldIsLookupField"
             },
             {
               "value": "custom_field.multi_enum_values",
@@ -122039,6 +122645,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -122293,6 +122900,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -122631,6 +123242,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -122882,6 +123494,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -123208,6 +123824,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -123459,6 +124076,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -123785,6 +124406,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -124036,6 +124658,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -124499,6 +125125,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -124753,6 +125380,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -125091,6 +125722,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -125345,6 +125977,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -125683,6 +126319,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -125937,6 +126574,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -126275,6 +126916,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -126529,6 +127171,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -126867,6 +127513,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -127121,6 +127768,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -127459,6 +128110,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -127710,6 +128362,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -128036,6 +128692,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -128287,6 +128944,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -128613,6 +129274,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -128867,6 +129529,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -129205,6 +129871,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -129459,6 +130126,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -129797,6 +130468,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -130048,6 +130720,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -130374,6 +131050,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -130625,6 +131302,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -131162,6 +131843,7 @@
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
           "custom_fields.is_global_to_workspace",
+          "custom_fields.is_lookup_field",
           "custom_fields.is_value_read_only",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
@@ -131413,6 +132095,10 @@
             {
               "value": "custom_fields.is_global_to_workspace",
               "name": "CustomFieldsIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.is_value_read_only",
@@ -131958,6 +132644,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -132123,6 +132810,10 @@
             {
               "value": "custom_field_settings.custom_field.is_global_to_workspace",
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
             },
             {
               "value": "custom_field_settings.custom_field.is_value_read_only",
@@ -132315,6 +133006,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -132480,6 +133172,10 @@
             {
               "value": "custom_field_settings.custom_field.is_global_to_workspace",
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
             },
             {
               "value": "custom_field_settings.custom_field.is_value_read_only",
@@ -132672,6 +133368,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -132837,6 +133534,10 @@
             {
               "value": "custom_field_settings.custom_field.is_global_to_workspace",
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
             },
             {
               "value": "custom_field_settings.custom_field.is_value_read_only",
@@ -133029,6 +133730,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -133197,6 +133899,10 @@
             {
               "value": "custom_field_settings.custom_field.is_global_to_workspace",
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
             },
             {
               "value": "custom_field_settings.custom_field.is_value_read_only",
@@ -133401,6 +134107,7 @@
           "custom_field_settings.custom_field.input_restrictions",
           "custom_field_settings.custom_field.is_formula_field",
           "custom_field_settings.custom_field.is_global_to_workspace",
+          "custom_field_settings.custom_field.is_lookup_field",
           "custom_field_settings.custom_field.is_value_read_only",
           "custom_field_settings.custom_field.multi_enum_values",
           "custom_field_settings.custom_field.multi_enum_values.color",
@@ -133569,6 +134276,10 @@
             {
               "value": "custom_field_settings.custom_field.is_global_to_workspace",
               "name": "CustomFieldSettingsCustomFieldIsGlobalToWorkspace"
+            },
+            {
+              "value": "custom_field_settings.custom_field.is_lookup_field",
+              "name": "CustomFieldSettingsCustomFieldIsLookupField"
             },
             {
               "value": "custom_field_settings.custom_field.is_value_read_only",
@@ -135059,6 +135770,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -135156,6 +135868,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -135271,6 +135987,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -135365,6 +136082,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -135468,6 +136189,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -135562,6 +136284,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -135739,6 +136465,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -135833,6 +136560,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -135936,6 +136667,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -136030,6 +136762,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -136133,6 +136869,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -136227,6 +136964,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",
@@ -136330,6 +137071,7 @@
           "custom_fields.id_prefix",
           "custom_fields.input_restrictions",
           "custom_fields.is_formula_field",
+          "custom_fields.is_lookup_field",
           "custom_fields.multi_enum_values",
           "custom_fields.multi_enum_values.color",
           "custom_fields.multi_enum_values.enabled",
@@ -136424,6 +137166,10 @@
             {
               "value": "custom_fields.is_formula_field",
               "name": "CustomFieldsIsFormulaField"
+            },
+            {
+              "value": "custom_fields.is_lookup_field",
+              "name": "CustomFieldsIsLookupField"
             },
             {
               "value": "custom_fields.multi_enum_values",

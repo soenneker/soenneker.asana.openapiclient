@@ -127,6 +127,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? IsFormulaField { get; set; }
         /// <summary>This flag describes whether this custom field is available to every container in the workspace. Before project-specific custom fields, this field was always true.</summary>
         public bool? IsGlobalToWorkspace { get; private set; }
+        /// <summary>*Conditional*. This flag describes whether a custom field is a lookup custom field.</summary>
+        public bool? IsLookupField { get; set; }
         /// <summary>*Conditional*. This flag describes whether a custom field is read only.</summary>
         public bool? IsValueReadOnly { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
@@ -234,6 +236,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomFieldInputRestrictionsItem>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
                 { "is_global_to_workspace", n => { IsGlobalToWorkspace = n.GetBoolValue(); } },
+                { "is_lookup_field", n => { IsLookupField = n.GetBoolValue(); } },
                 { "is_value_read_only", n => { IsValueReadOnly = n.GetBoolValue(); } },
                 { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomFieldMultiEnumValuesItem>(global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomFieldMultiEnumValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -270,6 +273,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("id_prefix", IdPrefix);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomFieldInputRestrictionsItem>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
+            writer.WriteBoolValue("is_lookup_field", IsLookupField);
             writer.WriteBoolValue("is_value_read_only", IsValueReadOnly);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.CustomFieldSettingResponseCustomFieldMultiEnumValuesItem>("multi_enum_values", MultiEnumValues);
             writer.WriteStringValue("name", Name);

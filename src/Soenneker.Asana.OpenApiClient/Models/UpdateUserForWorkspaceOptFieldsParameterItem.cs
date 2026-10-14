@@ -76,6 +76,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldsIsFormulaField,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_fields.is_lookup_field")]
+        #pragma warning disable CS1591
+        CustomFieldsIsLookupField,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_fields.multi_enum_values")]
         #pragma warning disable CS1591
         CustomFieldsMultiEnumValues,

@@ -128,6 +128,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldSettingsCustomFieldIsGlobalToWorkspace,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom_field_settings.custom_field.is_lookup_field")]
+        #pragma warning disable CS1591
+        CustomFieldSettingsCustomFieldIsLookupField,
+        #pragma warning restore CS1591
         [EnumMember(Value = "custom_field_settings.custom_field.is_value_read_only")]
         #pragma warning disable CS1591
         CustomFieldSettingsCustomFieldIsValueReadOnly,

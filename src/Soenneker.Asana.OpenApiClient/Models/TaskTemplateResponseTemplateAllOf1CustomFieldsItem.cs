@@ -75,6 +75,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
         public bool? IsFormulaField { get; set; }
+        /// <summary>*Conditional*. This flag describes whether a custom field is a lookup custom field.</summary>
+        public bool? IsLookupField { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,6 +149,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "id_prefix", n => { IdPrefix = n.GetStringValue(); } },
                 { "input_restrictions", n => { InputRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItemInputRestrictionsItem>()?.AsList(); } },
                 { "is_formula_field", n => { IsFormulaField = n.GetBoolValue(); } },
+                { "is_lookup_field", n => { IsLookupField = n.GetBoolValue(); } },
                 { "multi_enum_values", n => { MultiEnumValues = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItemMultiEnumValuesItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItemMultiEnumValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number_value", n => { NumberValue = n.GetDoubleValue(); } },
@@ -169,6 +172,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("id_prefix", IdPrefix);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItemInputRestrictionsItem>("input_restrictions", InputRestrictions);
             writer.WriteBoolValue("is_formula_field", IsFormulaField);
+            writer.WriteBoolValue("is_lookup_field", IsLookupField);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItemMultiEnumValuesItem>("multi_enum_values", MultiEnumValues);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("number_value", NumberValue);

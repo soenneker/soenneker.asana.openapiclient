@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
         {
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), then only portfolios owned by the current API user are returned.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), only portfolios owned by the current API user are returned. If the `owner` parameter is omitted, it defaults to the current API user. If specified, it must identify that user; use `owner=me` to refer to the current API user.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.PortfolioResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), then only portfolios owned by the current API user are returned.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), only portfolios owned by the current API user are returned. If the `owner` parameter is omitted, it defaults to the current API user. If specified, it must identify that user; use `owner=me` to refer to the current API user.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -161,7 +161,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             return new global::Soenneker.Asana.OpenApiClient.Portfolios.PortfoliosRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), then only portfolios owned by the current API user are returned.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;portfolios:read&lt;/code&gt;Returns a list of the portfolios in compact representation.The portfolios are filtered based on the following criteria:- If the request is made from a regular API user (PAT or OAuth), only portfolios owned by the current API user are returned. If the `owner` parameter is omitted, it defaults to the current API user. If specified, it must identify that user; use `owner=me` to refer to the current API user.- If the request is made from a Service Account without the `owner` parameter, then all portfolios across the workspace are returned.- If the request is made from a Service Account with the `owner` parameter, then only portfolios owned by the specified user are returned.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PortfoliosRequestBuilderGetQueryParameters 
@@ -199,7 +199,7 @@ namespace Soenneker.Asana.OpenApiClient.Portfolios
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Models.GetPortfoliosOptFieldsParameterItem[] OptFields { get; set; }
 #endif
-            /// <summary>The user who owns the portfolio. Currently, API users can only get a list of portfolios that they themselves own, unless the request is made from a Service Account. In the case of a Service Account, if this parameter is specified, then all portfolios owned by this parameter are returned. Otherwise, all portfolios across the workspace are returned.</summary>
+            /// <summary>The user who owns the portfolios. For regular API users (PAT or OAuth), defaults to the current API user when omitted and must identify that user when specified; use `me` to refer to the current API user. For Service Accounts, if this parameter is specified, only portfolios owned by the specified user are returned. If a Service Account omits this parameter, all portfolios across the workspace are returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("owner")]

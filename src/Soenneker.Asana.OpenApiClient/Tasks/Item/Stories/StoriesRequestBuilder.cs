@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.StoryResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Returns the full record for the new story added to the task.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Omit `parent_comment` to create a top-level comment. To create a threadedreply, pass the top-level comment&apos;s `comment_gid`, not its story `gid`.Retrieve it with `GET /stories/{story_gid}?opt_fields=comment_gid` or`GET /tasks/{task_gid}/stories?opt_fields=comment_gid,text,anchor_gid`.The parent must belong to this task and must not itself be a reply.A top-level comment&apos;s `anchor_gid` is the task GID; a reply&apos;s `anchor_gid`is its parent comment&apos;s envelope GID.Returns the full record for the new story added to the task.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.StoryResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -117,7 +117,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
             return requestInfo;
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Returns the full record for the new story added to the task.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Omit `parent_comment` to create a top-level comment. To create a threadedreply, pass the top-level comment&apos;s `comment_gid`, not its story `gid`.Retrieve it with `GET /stories/{story_gid}?opt_fields=comment_gid` or`GET /tasks/{task_gid}/stories?opt_fields=comment_gid,text,anchor_gid`.The parent must belong to this task and must not itself be a reply.A top-level comment&apos;s `anchor_gid` is the task GID; a reply&apos;s `anchor_gid`is its parent comment&apos;s envelope GID.Returns the full record for the new story added to the task.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -187,7 +187,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Stories
             public bool? SortAscending { get; set; }
         }
         /// <summary>
-        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Returns the full record for the new story added to the task.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;stories:write&lt;/code&gt;Adds a story to a task. This endpoint currently only allows for commentstories to be created. The comment will be authored by the currentlyauthenticated user, and timestamped when the server receives the request.Omit `parent_comment` to create a top-level comment. To create a threadedreply, pass the top-level comment&apos;s `comment_gid`, not its story `gid`.Retrieve it with `GET /stories/{story_gid}?opt_fields=comment_gid` or`GET /tasks/{task_gid}/stories?opt_fields=comment_gid,text,anchor_gid`.The parent must belong to this task and must not itself be a reply.A top-level comment&apos;s `anchor_gid` is the task GID; a reply&apos;s `anchor_gid`is its parent comment&apos;s envelope GID.Returns the full record for the new story added to the task.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StoriesRequestBuilderPostQueryParameters 

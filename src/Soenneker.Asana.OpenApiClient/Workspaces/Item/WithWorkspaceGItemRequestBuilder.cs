@@ -11,7 +11,9 @@ using Soenneker.Asana.OpenApiClient.Workspaces.Item.Audit_log_events;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Custom_fields;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Events;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects;
+using Soenneker.Asana.OpenApiClient.Workspaces.Item.Records;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.RemoveUser;
+using Soenneker.Asana.OpenApiClient.Workspaces.Item.Tables;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Tags;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks;
 using Soenneker.Asana.OpenApiClient.Workspaces.Item.Teams;
@@ -66,10 +68,20 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item
         {
             get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Projects.ProjectsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The records property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Records.RecordsRequestBuilder Records
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Records.RecordsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The removeUser property</summary>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.RemoveUser.RemoveUserRequestBuilder RemoveUser
         {
             get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.RemoveUser.RemoveUserRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tables property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tables.TablesRequestBuilder Tables
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tags property</summary>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tags.TagsRequestBuilder Tags

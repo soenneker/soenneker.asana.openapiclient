@@ -33,11 +33,13 @@ using Soenneker.Asana.OpenApiClient.Project_templates;
 using Soenneker.Asana.OpenApiClient.Projects;
 using Soenneker.Asana.OpenApiClient.Rates;
 using Soenneker.Asana.OpenApiClient.Reactions;
+using Soenneker.Asana.OpenApiClient.Records;
 using Soenneker.Asana.OpenApiClient.Roles;
 using Soenneker.Asana.OpenApiClient.Rule_triggers;
 using Soenneker.Asana.OpenApiClient.Sections;
 using Soenneker.Asana.OpenApiClient.Status_updates;
 using Soenneker.Asana.OpenApiClient.Stories;
+using Soenneker.Asana.OpenApiClient.Tables;
 using Soenneker.Asana.OpenApiClient.Tags;
 using Soenneker.Asana.OpenApiClient.Task_templates;
 using Soenneker.Asana.OpenApiClient.Tasks;
@@ -199,6 +201,11 @@ namespace Soenneker.Asana.OpenApiClient
         {
             get => new global::Soenneker.Asana.OpenApiClient.Reactions.ReactionsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The records property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Records.RecordsRequestBuilder Records
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Records.RecordsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The roles property</summary>
         public global::Soenneker.Asana.OpenApiClient.Roles.RolesRequestBuilder Roles
         {
@@ -223,6 +230,11 @@ namespace Soenneker.Asana.OpenApiClient
         public global::Soenneker.Asana.OpenApiClient.Stories.StoriesRequestBuilder Stories
         {
             get => new global::Soenneker.Asana.OpenApiClient.Stories.StoriesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tables property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Tables.TablesRequestBuilder Tables
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Tables.TablesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tags property</summary>
         public global::Soenneker.Asana.OpenApiClient.Tags.TagsRequestBuilder Tags

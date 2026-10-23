@@ -8,6 +8,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public enum UpdateStoryOptFieldsParameterItem
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "anchor_gid")]
+        #pragma warning disable CS1591
+        AnchorGid,
+        #pragma warning restore CS1591
         [EnumMember(Value = "assignee")]
         #pragma warning disable CS1591
         Assignee,
@@ -15,6 +19,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "assignee.name")]
         #pragma warning disable CS1591
         AssigneeName,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "comment_gid")]
+        #pragma warning disable CS1591
+        CommentGid,
         #pragma warning restore CS1591
         [EnumMember(Value = "created_at")]
         #pragma warning disable CS1591
@@ -507,6 +515,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [EnumMember(Value = "story")]
         #pragma warning disable CS1591
         Story,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "story.anchor_gid")]
+        #pragma warning disable CS1591
+        StoryAnchorGid,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "story.comment_gid")]
+        #pragma warning disable CS1591
+        StoryCommentGid,
         #pragma warning restore CS1591
         [EnumMember(Value = "story.created_at")]
         #pragma warning disable CS1591

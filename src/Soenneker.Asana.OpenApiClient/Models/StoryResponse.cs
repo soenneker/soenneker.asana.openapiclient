@@ -15,6 +15,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>*Conditional*. The GID of the object this comment is anchored to. For a top-level task comment this is the task GID; for a threaded reply this is the parent comment&apos;s envelope GID (`comment_gid`). Also present on sticker stories. Request with `opt_fields=anchor_gid` on story reads.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AnchorGid { get; private set; }
+#nullable restore
+#else
+        public string AnchorGid { get; private set; }
+#endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,6 +30,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee Assignee { get; private set; }
+#endif
+        /// <summary>*Conditional*. The GID of this comment&apos;s envelope, distinct from the story `gid`. Request with `opt_fields=comment_gid` on story reads. For a top-level task comment, pass this value as `parent_comment` when creating a threaded reply. Null for a legacy comment without an envelope; absent on non-comment stories.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CommentGid { get; private set; }
+#nullable restore
+#else
+        public string CommentGid { get; private set; }
 #endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
@@ -394,7 +410,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "anchor_gid", n => { AnchorGid = n.GetStringValue(); } },
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseAssignee.CreateFromDiscriminatorValue); } },
+                { "comment_gid", n => { CommentGid = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "custom_field", n => { CustomField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField.CreateFromDiscriminatorValue); } },

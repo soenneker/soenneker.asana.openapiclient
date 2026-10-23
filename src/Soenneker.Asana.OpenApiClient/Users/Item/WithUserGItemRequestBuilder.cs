@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Asana.OpenApiClient.Models;
 using Soenneker.Asana.OpenApiClient.Users.Item.Favorites;
+using Soenneker.Asana.OpenApiClient.Users.Item.Notifications;
 using Soenneker.Asana.OpenApiClient.Users.Item.Team_memberships;
 using Soenneker.Asana.OpenApiClient.Users.Item.Teams;
 using Soenneker.Asana.OpenApiClient.Users.Item.User_task_list;
@@ -26,6 +27,11 @@ namespace Soenneker.Asana.OpenApiClient.Users.Item
         public global::Soenneker.Asana.OpenApiClient.Users.Item.Favorites.FavoritesRequestBuilder Favorites
         {
             get => new global::Soenneker.Asana.OpenApiClient.Users.Item.Favorites.FavoritesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The notifications property</summary>
+        public global::Soenneker.Asana.OpenApiClient.Users.Item.Notifications.NotificationsRequestBuilder Notifications
+        {
+            get => new global::Soenneker.Asana.OpenApiClient.Users.Item.Notifications.NotificationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The team_memberships property</summary>
         public global::Soenneker.Asana.OpenApiClient.Users.Item.Team_memberships.Team_membershipsRequestBuilder Team_memberships

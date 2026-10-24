@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Tables
     public partial class TablesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.tables.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the table.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tables.Item.WithTableGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Tables.Item.WithTableGItemRequestBuilder this[string position]
         {

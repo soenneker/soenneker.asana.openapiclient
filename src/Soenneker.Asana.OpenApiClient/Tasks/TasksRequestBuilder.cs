@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks
     public partial class TasksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.tasks.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The task to operate on.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Tasks.Item.WithTaskGItemRequestBuilder this[string position]
         {

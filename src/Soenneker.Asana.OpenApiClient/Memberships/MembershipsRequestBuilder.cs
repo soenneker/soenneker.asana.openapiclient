@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
     public partial class MembershipsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.memberships.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the membership.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembershipGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Memberships.Item.WithMembershipGItemRequestBuilder this[string position]
         {

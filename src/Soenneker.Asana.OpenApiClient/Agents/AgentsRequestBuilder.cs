@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Agents
     public partial class AgentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.agents.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the agent.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgentGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Agents.Item.WithAgentGItemRequestBuilder this[string position]
         {

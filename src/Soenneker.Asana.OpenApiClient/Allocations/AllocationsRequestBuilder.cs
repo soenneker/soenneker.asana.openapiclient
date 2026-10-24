@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Allocations
     public partial class AllocationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.allocations.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the allocation.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocationGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Allocations.Item.WithAllocationGItemRequestBuilder this[string position]
         {

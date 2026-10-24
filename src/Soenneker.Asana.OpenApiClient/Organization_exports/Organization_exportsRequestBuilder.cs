@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Organization_exports
     public partial class Organization_exportsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.organization_exports.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the organization export.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganizationExportGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Organization_exports.Item.WithOrganizationExportGItemRequestBuilder this[string position]
         {

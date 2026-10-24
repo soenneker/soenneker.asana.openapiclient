@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Custom_fields
     public partial class Custom_fieldsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.custom_fields.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the custom field.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustomFieldGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Custom_fields.Item.WithCustomFieldGItemRequestBuilder this[string position]
         {

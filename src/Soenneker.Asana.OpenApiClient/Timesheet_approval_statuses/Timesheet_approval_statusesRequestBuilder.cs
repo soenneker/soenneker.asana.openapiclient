@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses
     public partial class Timesheet_approval_statusesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.timesheet_approval_statuses.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the timesheet approval status.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheetApprovalStatusGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Timesheet_approval_statuses.Item.WithTimesheetApprovalStatusGItemRequestBuilder this[string position]
         {

@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Goals
     public partial class GoalsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.goals.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the goal.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Goals.Item.WithGoalGItemRequestBuilder this[string position]
         {

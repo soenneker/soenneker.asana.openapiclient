@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_tracking_entries
     public partial class Time_tracking_entriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.time_tracking_entries.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the time tracking entry.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTimeTrackingEntryGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Time_tracking_entries.Item.WithTimeTrackingEntryGItemRequestBuilder this[string position]
         {

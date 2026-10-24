@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
     public partial class Ooo_entriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.ooo_entries.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the OOO entry.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Ooo_entries.Item.WithOooEntryGItemRequestBuilder this[string position]
         {

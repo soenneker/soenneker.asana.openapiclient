@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Users
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspaces.item.users.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">A string identifying a user. This can either be the string &quot;me&quot;, an email, or the gid of a user.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item.WithUserGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Users.Item.WithUserGItemRequestBuilder this[string position]
         {

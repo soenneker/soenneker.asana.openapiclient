@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Status_updates
     public partial class Status_updatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.status_updates.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the status update.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatusUpdateGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Status_updates.Item.WithStatusUpdateGItemRequestBuilder this[string position]
         {

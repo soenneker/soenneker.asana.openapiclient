@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Time_periods
     public partial class Time_periodsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.time_periods.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the time period.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTimePeriodGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Time_periods.Item.WithTimePeriodGItemRequestBuilder this[string position]
         {

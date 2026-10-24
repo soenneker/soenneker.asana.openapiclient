@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Access_requests
     public partial class Access_requestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.access_requests.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the access request.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccessRequestGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Access_requests.Item.WithAccessRequestGItemRequestBuilder this[string position]
         {

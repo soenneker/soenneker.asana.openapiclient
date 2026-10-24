@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles
     public partial class RolesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.roles.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the role.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Roles.Item.WithRoleGItemRequestBuilder this[string position]
         {

@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Records
     public partial class RecordsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.records.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the record.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Records.Item.WithRecordGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Records.Item.WithRecordGItemRequestBuilder this[string position]
         {

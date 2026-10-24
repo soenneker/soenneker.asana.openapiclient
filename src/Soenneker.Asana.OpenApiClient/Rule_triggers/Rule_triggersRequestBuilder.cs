@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Rule_triggers
     public partial class Rule_triggersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.rule_triggers.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the incoming web request trigger. This value is a path parameter that is automatically generated for the API endpoint.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Rule_triggers.Item.WithRuleTriggerGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Rule_triggers.Item.WithRuleTriggerGItemRequestBuilder this[string position]
         {

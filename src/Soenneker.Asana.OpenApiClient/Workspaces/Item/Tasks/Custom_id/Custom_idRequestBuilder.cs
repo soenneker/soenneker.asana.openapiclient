@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id
     public partial class Custom_idRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspaces.item.tasks.custom_id.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Generated custom ID for a task.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustomItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.Tasks.Custom_id.Item.WithCustomItemRequestBuilder this[string position]
         {

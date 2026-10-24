@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks
     public partial class WebhooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.webhooks.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the webhook.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Webhooks.Item.WithWebhookGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Webhooks.Item.WithWebhookGItemRequestBuilder this[string position]
         {

@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Attachments
     public partial class AttachmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.attachments.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the attachment.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachmentGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Attachments.Item.WithAttachmentGItemRequestBuilder this[string position]
         {

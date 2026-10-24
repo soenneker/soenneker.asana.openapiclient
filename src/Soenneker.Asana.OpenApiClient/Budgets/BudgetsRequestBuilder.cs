@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Budgets
     public partial class BudgetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.budgets.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the budget.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Budgets.Item.WithBudgetGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Budgets.Item.WithBudgetGItemRequestBuilder this[string position]
         {

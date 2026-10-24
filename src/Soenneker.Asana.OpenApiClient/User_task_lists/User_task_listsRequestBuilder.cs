@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.User_task_lists
     public partial class User_task_listsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.user_task_lists.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the user task list.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUserTaskListGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.User_task_lists.Item.WithUserTaskListGItemRequestBuilder this[string position]
         {

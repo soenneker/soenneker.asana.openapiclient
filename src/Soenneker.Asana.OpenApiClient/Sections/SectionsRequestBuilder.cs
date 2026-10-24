@@ -16,7 +16,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections
     public partial class SectionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.sections.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The globally unique identifier for the section.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder this[string position]
         {

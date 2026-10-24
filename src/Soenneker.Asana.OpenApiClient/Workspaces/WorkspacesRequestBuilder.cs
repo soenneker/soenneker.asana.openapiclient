@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Workspaces
     public partial class WorkspacesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.workspaces.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the workspace or organization.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspaceGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Workspaces.Item.WithWorkspaceGItemRequestBuilder this[string position]
         {

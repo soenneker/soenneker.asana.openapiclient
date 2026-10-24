@@ -19,7 +19,7 @@ namespace Soenneker.Asana.OpenApiClient.Project_templates
     public partial class Project_templatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Asana.OpenApiClient.project_templates.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">Globally unique identifier for the project template.</param>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProjectTemplateGItemRequestBuilder"/></returns>
         public global::Soenneker.Asana.OpenApiClient.Project_templates.Item.WithProjectTemplateGItemRequestBuilder this[string position]
         {

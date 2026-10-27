@@ -5550,13 +5550,13 @@
           "Memberships"
         ],
         "summary": "Get multiple memberships",
-        "description": "Returns compact \u0060goal_membership\u0060, \u0060project_membership\u0060, \u0060portfolio_membership\u0060, \u0060custom_type_membership\u0060, or \u0060custom_field_membership\u0060 records. The possible types for \u0060parent\u0060 in this request are \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, or \u0060custom_field\u0060. An additional member (user GID or team GID) can be passed in to filter to a specific membership.\n\nAlternatively, when \u0060parent\u0060 is absent, you can use the \u0060member\u0060 and \u0060resource_subtype\u0060 parameters together to fetch all memberships of a specific type for a given member. For example, passing \u0060member\u0060 as a team GID and \u0060resource_subtype\u0060 as \u0060project_membership\u0060 will return all project memberships for that team.",
+        "description": "Returns compact \u0060goal_membership\u0060, \u0060project_membership\u0060, \u0060portfolio_membership\u0060, \u0060custom_type_membership\u0060, \u0060custom_field_membership\u0060, \u0060table_membership\u0060, or \u0060record_membership\u0060 records. The possible types for \u0060parent\u0060 in this request are \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, \u0060custom_field\u0060, \u0060table\u0060, or \u0060record\u0060. An additional member (user GID or team GID) can be passed in to filter to a specific membership.\n\nAlternatively, when \u0060parent\u0060 is absent, you can use the \u0060member\u0060 and \u0060resource_subtype\u0060 parameters together to fetch all memberships of a specific type for a given member. For example, passing \u0060member\u0060 as a team GID and \u0060resource_subtype\u0060 as \u0060project_membership\u0060 will return all project memberships for that team.",
         "operationId": "GetMemberships",
         "parameters": [
           {
             "name": "parent",
             "in": "query",
-            "description": "Globally unique identifier for \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, or \u0060custom_field\u0060. This parameter is optional when \u0060resource_subtype\u0060 is provided along with \u0060member\u0060 of type \u0060team\u0060.",
+            "description": "Globally unique identifier for \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, \u0060custom_field\u0060, \u0060table\u0060, or \u0060record\u0060. This parameter is optional when \u0060resource_subtype\u0060 is provided along with \u0060member\u0060 of type \u0060team\u0060.",
             "schema": {
               "type": "string"
             },
@@ -5630,7 +5630,7 @@
           "Memberships"
         ],
         "summary": "Create a membership",
-        "description": "Creates a new membership in a \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, or \u0060custom_field\u0060, where members can be Teams or Users.\n\nReturns the full record of the newly created membership.",
+        "description": "Creates a new membership in a \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, \u0060custom_field\u0060, \u0060table\u0060, or \u0060record\u0060, where members can be Teams or Users.\n\nReturns the full record of the newly created membership.",
         "operationId": "CreateMembership",
         "requestBody": {
           "description": "The updated fields for the membership.",
@@ -5675,7 +5675,7 @@
           "Memberships"
         ],
         "summary": "Get a membership",
-        "description": "Returns a \u0060project_membership\u0060, \u0060goal_membership\u0060, \u0060portfolio_membership\u0060, \u0060custom_type_membership\u0060, or \u0060custom_field_membership\u0060 record for a membership id.",
+        "description": "Returns a \u0060project_membership\u0060, \u0060goal_membership\u0060, \u0060portfolio_membership\u0060, \u0060custom_type_membership\u0060, \u0060custom_field_membership\u0060, \u0060table_membership\u0060, or \u0060record_membership\u0060 record for a membership id.",
         "operationId": "GetMembership",
         "responses": {
           "200": {
@@ -5703,7 +5703,7 @@
           "Memberships"
         ],
         "summary": "Update a membership",
-        "description": "An existing membership can be updated by making a \u0060PUT\u0060 request on the membership. Only the fields provided in the \u0060data\u0060 block will be updated;\nany unspecified fields will remain unchanged. Memberships on \u0060goals\u0060, \u0060projects\u0060, \u0060portfolios\u0060, \u0060custom_types\u0060, and \u0060custom_fields\u0060 can be updated.\n\nReturns the full record of the updated membership.",
+        "description": "An existing membership can be updated by making a \u0060PUT\u0060 request on the membership. Only the fields provided in the \u0060data\u0060 block will be updated;\nany unspecified fields will remain unchanged. Memberships on \u0060goals\u0060, \u0060projects\u0060, \u0060portfolios\u0060, \u0060custom_types\u0060, \u0060custom_fields\u0060, \u0060tables\u0060, and \u0060records\u0060 can be updated.\nReturns the full record of the updated membership.",
         "operationId": "UpdateMembership",
         "requestBody": {
           "description": "The membership to update.",
@@ -5747,7 +5747,7 @@
           "Memberships"
         ],
         "summary": "Delete a membership",
-        "description": "A specific, existing membership for a \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, or \u0060custom_field\u0060 can be deleted by making a \u0060DELETE\u0060 request\non the URL for that membership.\n\nReturns an empty data record.",
+        "description": "A specific, existing membership for a \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, \u0060custom_field\u0060, \u0060table\u0060, or \u0060record\u0060 can be deleted by making a \u0060DELETE\u0060 request\non the URL for that membership.\n\nReturns an empty data record.",
         "operationId": "DeleteMembership",
         "responses": {
           "200": {
@@ -31466,6 +31466,12 @@
           },
           {
             "$ref": "#/components/schemas/MembershipCompactAnyOf5"
+          },
+          {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf6"
+          },
+          {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf7"
           }
         ]
       },
@@ -33196,6 +33202,154 @@
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nThis object describes a user or team\u0027s membership to a custom type including their level of access (Admin, Editor, User, or Viewer).",
         "x-docs-overrides": {
           "properties.resource_type.example": "custom_type_membership"
+        }
+      },
+      "TableMembershipCompact": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "table_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/TableMembershipCompactParent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/TableMembershipCompactMember"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/TableMembershipCompactAccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a table.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
+      "TableMembershipResponse": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "table_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/TableMembershipResponseParent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/TableMembershipResponseMember"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/TableMembershipResponseAccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a table.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
+      "RecordMembershipCompact": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "record_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/RecordMembershipCompactParent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/RecordMembershipCompactMember"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/RecordMembershipCompactAccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a record.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
+      "RecordMembershipResponse": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "record_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/RecordMembershipResponseParent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/RecordMembershipResponseMember"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/RecordMembershipResponseAccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a record.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
         }
       },
       "ProjectMembershipBase": {
@@ -39932,7 +40086,7 @@
         "properties": {
           "access_level": {
             "type": "string",
-            "description": "Sets the access level for the member. Goals can have access levels \u0060viewer\u0060, \u0060commenter\u0060, \u0060editor\u0060 or \u0060admin\u0060. Projects can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060commenter\u0060. Portfolios can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060viewer\u0060. Custom Fields can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060user\u0060.",
+            "description": "Sets the access level for the member. Goals can have access levels \u0060viewer\u0060, \u0060commenter\u0060, \u0060editor\u0060 or \u0060admin\u0060. Projects can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060commenter\u0060. Portfolios can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060viewer\u0060. Custom Fields can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060user\u0060. Tables accept \u0060admin\u0060, \u0060editor\u0060, or \u0060viewer\u0060 on creation. Records accept \u0060admin\u0060, \u0060editor\u0060, \u0060commenter\u0060, or \u0060viewer\u0060.",
             "example": "editor"
           }
         }
@@ -39942,7 +40096,7 @@
         "properties": {
           "access_level": {
             "type": "string",
-            "description": "Sets the access level for the member. Goals can have access levels \u0060viewer\u0060, \u0060commenter\u0060, \u0060editor\u0060 or \u0060admin\u0060. Projects can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060commenter\u0060. Portfolios can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060viewer\u0060. Custom Fields can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060user\u0060.",
+            "description": "Sets the access level for the member. Goals can have access levels \u0060viewer\u0060, \u0060commenter\u0060, \u0060editor\u0060 or \u0060admin\u0060. Projects can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060commenter\u0060. Portfolios can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060viewer\u0060. Custom Fields can have access levels \u0060admin\u0060, \u0060editor\u0060 or \u0060user\u0060. Tables accept \u0060admin\u0060, \u0060editor\u0060, or \u0060viewer\u0060 on creation. Records accept \u0060admin\u0060, \u0060editor\u0060, \u0060commenter\u0060, or \u0060viewer\u0060.",
             "example": "editor"
           },
           "member": {
@@ -39952,7 +40106,7 @@
           },
           "parent": {
             "type": "string",
-            "description": "The gid of the \u0060goal\u0060, \u0060project\u0060, or \u0060portfolio\u0060 to add the member to.",
+            "description": "The gid of the \u0060goal\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060custom_type\u0060, \u0060custom_field\u0060, \u0060table\u0060, or \u0060record\u0060 to add the member to.",
             "example": "987654"
           },
           "role": {
@@ -39979,6 +40133,12 @@
           },
           {
             "$ref": "#/components/schemas/MembershipResponseAnyOf5"
+          },
+          {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf6"
+          },
+          {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf7"
           }
         ]
       },
@@ -42736,6 +42896,80 @@
           "properties.resource_type.example": "custom_type_membership"
         }
       },
+      "MembershipCompactAnyOf6": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "table_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf6Parent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf6Member"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf6AccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a table.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
+      "MembershipCompactAnyOf7": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "record_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf7Parent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf7Member"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/MembershipCompactAnyOf7AccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a record.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
       "NotificationResponseStory": {
         "type": "object",
         "properties": {
@@ -43789,6 +44023,80 @@
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nThis object describes a user or team\u0027s membership to a custom type including their level of access (Admin, Editor, User, or Viewer).",
         "x-docs-overrides": {
           "properties.resource_type.example": "custom_type_membership"
+        }
+      },
+      "MembershipResponseAnyOf6": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "table_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf6Parent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf6Member"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf6AccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a table.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
+        }
+      },
+      "MembershipResponseAnyOf7": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "resource_subtype": {
+            "type": "string",
+            "description": "Type of the membership.",
+            "example": "record_membership"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf7Parent"
+          },
+          "member": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf7Member"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/MembershipResponseAnyOf7AccessLevel"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA user or team\u0027s membership in a record.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "membership"
         }
       },
       "AgentResponseWorkspaceAllOf1": {
@@ -49666,6 +49974,222 @@
         }
       },
       "CustomTypeMembershipResponseMember": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "TableMembershipCompactParent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the table.",
+            "example": "Vendor contracts"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *table* is a container for structured records (rows), with columns defined by custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "table"
+        }
+      },
+      "TableMembershipCompactMember": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "TableMembershipResponseParent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the table.",
+            "example": "Vendor contracts"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *table* is a container for structured records (rows), with columns defined by custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "table"
+        }
+      },
+      "TableMembershipResponseMember": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "RecordMembershipCompactParent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the record.",
+            "example": "Q3 renewal"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "record"
+        }
+      },
+      "RecordMembershipCompactMember": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "RecordMembershipResponseParent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the record.",
+            "example": "Q3 renewal"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "record"
+        }
+      },
+      "RecordMembershipResponseMember": {
         "type": "object",
         "properties": {
           "gid": {
@@ -58021,6 +58545,114 @@
           "properties.resource_type.example": "member"
         }
       },
+      "MembershipCompactAnyOf6Parent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the table.",
+            "example": "Vendor contracts"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *table* is a container for structured records (rows), with columns defined by custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "table"
+        }
+      },
+      "MembershipCompactAnyOf6Member": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "MembershipCompactAnyOf7Parent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the record.",
+            "example": "Q3 renewal"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "record"
+        }
+      },
+      "MembershipCompactAnyOf7Member": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
       "RateOrPlaceholderCompactAnyOf1Parent": {
         "type": "object",
         "properties": {
@@ -58624,6 +59256,114 @@
         }
       },
       "MembershipResponseAnyOf5Member": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "MembershipResponseAnyOf6Parent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the table.",
+            "example": "Vendor contracts"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *table* is a container for structured records (rows), with columns defined by custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "table"
+        }
+      },
+      "MembershipResponseAnyOf6Member": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The type of the member (team or user)",
+            "example": "user"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the member",
+            "example": "Greg Sanchez"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *member* object represents either a team or user.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "member"
+        }
+      },
+      "MembershipResponseAnyOf7Parent": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "description": "Globally unique identifier of the resource, as a string.",
+            "readOnly": true,
+            "example": "12345",
+            "x-insert-after": false
+          },
+          "resource_type": {
+            "type": "string",
+            "description": "The base type of this resource.",
+            "readOnly": true,
+            "example": "task",
+            "x-insert-after": "gid"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the record.",
+            "example": "Q3 renewal"
+          }
+        },
+        "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
+        "x-docs-overrides": {
+          "properties.resource_type.example": "record"
+        }
+      },
+      "MembershipResponseAnyOf7Member": {
         "type": "object",
         "properties": {
           "gid": {
@@ -73554,6 +74294,142 @@
           ]
         }
       },
+      "TableMembershipCompactAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the table.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "TableMembershipCompactAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "TableMembershipResponseAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the table.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "TableMembershipResponseAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "RecordMembershipCompactAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the record.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "RecordMembershipCompactAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "RecordMembershipResponseAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the record.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "RecordMembershipResponseAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
       "ProjectMembershipBaseAccessLevel": {
         "enum": [
           "admin",
@@ -79083,6 +79959,74 @@
           ]
         }
       },
+      "MembershipCompactAnyOf6AccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the table.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "MembershipCompactAnyOf6AccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "MembershipCompactAnyOf7AccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the record.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "MembershipCompactAnyOf7AccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
       "PortfolioItemCompactAnyOf1ResourceSubtype": {
         "enum": [
           "default_project",
@@ -79447,6 +80391,74 @@
             {
               "value": "user",
               "name": "User"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "MembershipResponseAnyOf6AccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the table.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "MembershipResponseAnyOf6AccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "MembershipResponseAnyOf7AccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The member\u0027s access level in the record.",
+        "readOnly": true,
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "MembershipResponseAnyOf7AccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
             },
             {
               "value": "viewer",

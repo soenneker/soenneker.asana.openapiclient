@@ -12,7 +12,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
     public partial class CreateMembershipRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Sets the access level for the member. Goals can have access levels `viewer`, `commenter`, `editor` or `admin`. Projects can have access levels `admin`, `editor` or `commenter`. Portfolios can have access levels `admin`, `editor` or `viewer`. Custom Fields can have access levels `admin`, `editor` or `user`.</summary>
+        /// <summary>Sets the access level for the member. Goals can have access levels `viewer`, `commenter`, `editor` or `admin`. Projects can have access levels `admin`, `editor` or `commenter`. Portfolios can have access levels `admin`, `editor` or `viewer`. Custom Fields can have access levels `admin`, `editor` or `user`. Tables accept `admin`, `editor`, or `viewer` on creation. Records accept `admin`, `editor`, `commenter`, or `viewer`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessLevel { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public string Member { get; set; }
 #endif
-        /// <summary>The gid of the `goal`, `project`, or `portfolio` to add the member to.</summary>
+        /// <summary>The gid of the `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record` to add the member to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Parent { get; set; }

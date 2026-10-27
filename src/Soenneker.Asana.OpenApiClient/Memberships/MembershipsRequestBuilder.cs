@@ -47,7 +47,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
         {
         }
         /// <summary>
-        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, or `custom_field_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
+        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, `custom_field_membership`, `table_membership`, or `record_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new membership in a `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`, where members can be Teams or Users.Returns the full record of the newly created membership.
+        /// Creates a new membership in a `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`, where members can be Teams or Users.Returns the full record of the newly created membership.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, or `custom_field_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
+        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, `custom_field_membership`, `table_membership`, or `record_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,7 +130,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new membership in a `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`, where members can be Teams or Users.Returns the full record of the newly created membership.
+        /// Creates a new membership in a `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`, where members can be Teams or Users.Returns the full record of the newly created membership.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -161,7 +161,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             return new global::Soenneker.Asana.OpenApiClient.Memberships.MembershipsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, or `custom_field_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
+        /// Returns compact `goal_membership`, `project_membership`, `portfolio_membership`, `custom_type_membership`, `custom_field_membership`, `table_membership`, or `record_membership` records. The possible types for `parent` in this request are `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`. An additional member (user GID or team GID) can be passed in to filter to a specific membership.Alternatively, when `parent` is absent, you can use the `member` and `resource_subtype` parameters together to fetch all memberships of a specific type for a given member. For example, passing `member` as a team GID and `resource_subtype` as `project_membership` will return all project memberships for that team.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MembershipsRequestBuilderGetQueryParameters 
@@ -199,7 +199,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships
             [QueryParameter("opt_fields")]
             public global::Soenneker.Asana.OpenApiClient.Models.GetMembershipsOptFieldsParameterItem[] OptFields { get; set; }
 #endif
-            /// <summary>Globally unique identifier for `goal`, `project`, `portfolio`, `custom_type`, or `custom_field`. This parameter is optional when `resource_subtype` is provided along with `member` of type `team`.</summary>
+            /// <summary>Globally unique identifier for `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record`. This parameter is optional when `resource_subtype` is provided along with `member` of type `team`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("parent")]

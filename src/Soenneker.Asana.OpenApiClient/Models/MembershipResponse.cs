@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Asana.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf2"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf3"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf5"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf2"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf3"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf5"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6"/>, <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembershipResponse : IComposedTypeWrapper, IParsable
@@ -53,6 +53,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf5 MembershipResponseAnyOf5 { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6? MembershipResponseAnyOf6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6 MembershipResponseAnyOf6 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7? MembershipResponseAnyOf7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7 MembershipResponseAnyOf7 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,6 +83,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             result.MembershipResponseAnyOf3 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf3();
             result.MembershipResponseAnyOf4 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4();
             result.MembershipResponseAnyOf5 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf5();
+            result.MembershipResponseAnyOf6 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6();
+            result.MembershipResponseAnyOf7 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7();
             return result;
         }
         /// <summary>
@@ -75,9 +93,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(MembershipResponseAnyOf1 != null || MembershipResponseAnyOf2 != null || MembershipResponseAnyOf3 != null || MembershipResponseAnyOf4 != null || MembershipResponseAnyOf5 != null)
+            if(MembershipResponseAnyOf1 != null || MembershipResponseAnyOf2 != null || MembershipResponseAnyOf3 != null || MembershipResponseAnyOf4 != null || MembershipResponseAnyOf5 != null || MembershipResponseAnyOf6 != null || MembershipResponseAnyOf7 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(MembershipResponseAnyOf1, MembershipResponseAnyOf2, MembershipResponseAnyOf3, MembershipResponseAnyOf4, MembershipResponseAnyOf5);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(MembershipResponseAnyOf1, MembershipResponseAnyOf2, MembershipResponseAnyOf3, MembershipResponseAnyOf4, MembershipResponseAnyOf5, MembershipResponseAnyOf6, MembershipResponseAnyOf7);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -88,7 +106,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1>(null, MembershipResponseAnyOf1, MembershipResponseAnyOf2, MembershipResponseAnyOf3, MembershipResponseAnyOf4, MembershipResponseAnyOf5);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1>(null, MembershipResponseAnyOf1, MembershipResponseAnyOf2, MembershipResponseAnyOf3, MembershipResponseAnyOf4, MembershipResponseAnyOf5, MembershipResponseAnyOf6, MembershipResponseAnyOf7);
         }
     }
 }

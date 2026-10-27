@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
         {
         }
         /// <summary>
-        /// A specific, existing membership for a `goal`, `project`, `portfolio`, `custom_type`, or `custom_field` can be deleted by making a `DELETE` requeston the URL for that membership.Returns an empty data record.
+        /// A specific, existing membership for a `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record` can be deleted by making a `DELETE` requeston the URL for that membership.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a `project_membership`, `goal_membership`, `portfolio_membership`, `custom_type_membership`, or `custom_field_membership` record for a membership id.
+        /// Returns a `project_membership`, `goal_membership`, `portfolio_membership`, `custom_type_membership`, `custom_field_membership`, `table_membership`, or `record_membership` record for a membership id.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// An existing membership can be updated by making a `PUT` request on the membership. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged. Memberships on `goals`, `projects`, `portfolios`, `custom_types`, and `custom_fields` can be updated.Returns the full record of the updated membership.
+        /// An existing membership can be updated by making a `PUT` request on the membership. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged. Memberships on `goals`, `projects`, `portfolios`, `custom_types`, `custom_fields`, `tables`, and `records` can be updated.Returns the full record of the updated membership.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -129,7 +129,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// A specific, existing membership for a `goal`, `project`, `portfolio`, `custom_type`, or `custom_field` can be deleted by making a `DELETE` requeston the URL for that membership.Returns an empty data record.
+        /// A specific, existing membership for a `goal`, `project`, `portfolio`, `custom_type`, `custom_field`, `table`, or `record` can be deleted by making a `DELETE` requeston the URL for that membership.Returns an empty data record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -148,7 +148,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
             return requestInfo;
         }
         /// <summary>
-        /// Returns a `project_membership`, `goal_membership`, `portfolio_membership`, `custom_type_membership`, or `custom_field_membership` record for a membership id.
+        /// Returns a `project_membership`, `goal_membership`, `portfolio_membership`, `custom_type_membership`, `custom_field_membership`, `table_membership`, or `record_membership` record for a membership id.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -167,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Memberships.Item
             return requestInfo;
         }
         /// <summary>
-        /// An existing membership can be updated by making a `PUT` request on the membership. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged. Memberships on `goals`, `projects`, `portfolios`, `custom_types`, and `custom_fields` can be updated.Returns the full record of the updated membership.
+        /// An existing membership can be updated by making a `PUT` request on the membership. Only the fields provided in the `data` block will be updated;any unspecified fields will remain unchanged. Memberships on `goals`, `projects`, `portfolios`, `custom_types`, `custom_fields`, `tables`, and `records` can be updated.Returns the full record of the updated membership.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

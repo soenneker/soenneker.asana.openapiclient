@@ -1413,6 +1413,16 @@ components:
         type: string
       example: '724362'
       x-env-variable: team_membership
+    ticket_path_gid:
+      name: ticket_gid
+      in: path
+      description: >-
+        Globally unique identifier for the Command ticket.
+      required: true
+      schema:
+        type: string
+      example: '321654'
+      x-env-variable: ticket
     time_period_path_gid:
       name: time_period_gid
       in: path
@@ -1453,6 +1463,16 @@ components:
         type: string
       example: '917392'
       x-env-variable: timesheet_approval_status
+    todo_path_gid:
+      name: todo_gid
+      in: path
+      description: >-
+        Globally unique identifier for the Command to-do.
+      required: true
+      schema:
+        type: string
+      example: '321654'
+      x-env-variable: todo
     user_query_param:
       name: user
       in: query

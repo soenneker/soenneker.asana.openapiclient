@@ -12,7 +12,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembershipResponseAnyOf4 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("member") is { } nullNodeMember && nullNodeMember.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Member = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("resource_subtype") is { } nullNodeResourceSubtype && nullNodeResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceSubtype = null;
+        }
+
         /// <summary>Whether the member has admin, editor, or user access to the custom field.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4AccessLevel? AccessLevel { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,26 +38,32 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *member* object represents either a team or user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member? Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member? Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member? _explicitNullValueMember = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member Member { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member Member { get => _explicitNullValueMember; set { _explicitNullValueMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member"); else _explicitNullProperties?.Remove("member"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member _explicitNullValueMember = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent? Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent Parent { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent _explicitNullValueParent = default!;
 #endif
         /// <summary>Type of the membership.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceSubtype { get; set; }
+        public string? ResourceSubtype { get => _explicitNullValueResourceSubtype; set { _explicitNullValueResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_subtype"); else _explicitNullProperties?.Remove("resource_subtype"); } }
+        private string? _explicitNullValueResourceSubtype = default!;
 #nullable restore
 #else
-        public string ResourceSubtype { get; set; }
+        public string ResourceSubtype { get => _explicitNullValueResourceSubtype; set { _explicitNullValueResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_subtype"); else _explicitNullProperties?.Remove("resource_subtype"); } }
+        private string _explicitNullValueResourceSubtype = default!;
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +116,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Member>("member", Member);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4Parent>("parent", Parent);
             writer.WriteStringValue("resource_subtype", ResourceSubtype);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

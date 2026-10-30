@@ -12,7 +12,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TeamMembershipResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_admin") is { } nullNodeIsAdmin && nullNodeIsAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAdmin = null;
+            if (parseNode.GetChildNode("is_guest") is { } nullNodeIsGuest && nullNodeIsGuest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGuest = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -24,9 +35,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>Describes if the user is a team admin.</summary>
-        public bool? IsAdmin { get; set; }
+        public bool? IsAdmin { get => _explicitNullValueIsAdmin; set { _explicitNullValueIsAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_admin"); else _explicitNullProperties?.Remove("is_admin"); } }
+        private bool? _explicitNullValueIsAdmin = default!;
         /// <summary>Describes if the user is a guest in the team.</summary>
-        public bool? IsGuest { get; set; }
+        public bool? IsGuest { get => _explicitNullValueIsGuest; set { _explicitNullValueIsGuest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_guest"); else _explicitNullProperties?.Remove("is_guest"); } }
+        private bool? _explicitNullValueIsGuest = default!;
         /// <summary>Describes if the user has limited access to the team.</summary>
         public bool? IsLimitedAccess { get; private set; }
         /// <summary>The base type of this resource.</summary>
@@ -40,18 +53,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam? Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam Team { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse"/> and sets the default values.
@@ -68,7 +85,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +115,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("is_guest", IsGuest);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseTeam>("team", Team);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.TeamMembershipResponseUser>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,35 +11,53 @@ namespace Soenneker.Asana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AddCustomFieldSettingRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_field") is { } nullNodeCustomField && nullNodeCustomField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomField = null;
+            if (parseNode.GetChildNode("insert_after") is { } nullNodeInsertAfter && nullNodeInsertAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertAfter = null;
+            if (parseNode.GetChildNode("insert_before") is { } nullNodeInsertBefore && nullNodeInsertBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertBefore = null;
+            if (parseNode.GetChildNode("is_important") is { } nullNodeIsImportant && nullNodeIsImportant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsImportant = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField? CustomField { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField? CustomField { get => _explicitNullValueCustomField; set { _explicitNullValueCustomField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field"); else _explicitNullProperties?.Remove("custom_field"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField? _explicitNullValueCustomField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField CustomField { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField CustomField { get => _explicitNullValueCustomField; set { _explicitNullValueCustomField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field"); else _explicitNullProperties?.Remove("custom_field"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField _explicitNullValueCustomField = default!;
 #endif
         /// <summary>A gid of a Custom Field Setting on this container, after which the new Custom Field Setting will be added.  `insert_before` and `insert_after` parameters cannot both be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsertAfter { get; set; }
+        public string? InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
+        private string? _explicitNullValueInsertAfter = default!;
 #nullable restore
 #else
-        public string InsertAfter { get; set; }
+        public string InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
+        private string _explicitNullValueInsertAfter = default!;
 #endif
         /// <summary>A gid of a Custom Field Setting on this container, before which the new Custom Field Setting will be added.  `insert_before` and `insert_after` parameters cannot both be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsertBefore { get; set; }
+        public string? InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
+        private string? _explicitNullValueInsertBefore = default!;
 #nullable restore
 #else
-        public string InsertBefore { get; set; }
+        public string InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
+        private string _explicitNullValueInsertBefore = default!;
 #endif
         /// <summary>Whether this field should be considered important to this container (for instance, to display in the list view of items in the container).</summary>
-        public bool? IsImportant { get; set; }
+        public bool? IsImportant { get => _explicitNullValueIsImportant; set { _explicitNullValueIsImportant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_important"); else _explicitNullProperties?.Remove("is_important"); } }
+        private bool? _explicitNullValueIsImportant = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequest"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("insert_after", InsertAfter);
             writer.WriteStringValue("insert_before", InsertBefore);
             writer.WriteBoolValue("is_important", IsImportant);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

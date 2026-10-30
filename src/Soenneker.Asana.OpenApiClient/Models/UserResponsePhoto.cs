@@ -12,56 +12,81 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserResponsePhoto : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("image_1024x1024") is { } nullNodeImage1024x1024 && nullNodeImage1024x1024.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image1024x1024 = null;
+            if (parseNode.GetChildNode("image_128x128") is { } nullNodeImage128x128 && nullNodeImage128x128.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image128x128 = null;
+            if (parseNode.GetChildNode("image_21x21") is { } nullNodeImage21x21 && nullNodeImage21x21.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image21x21 = null;
+            if (parseNode.GetChildNode("image_27x27") is { } nullNodeImage27x27 && nullNodeImage27x27.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image27x27 = null;
+            if (parseNode.GetChildNode("image_36x36") is { } nullNodeImage36x36 && nullNodeImage36x36.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image36x36 = null;
+            if (parseNode.GetChildNode("image_60x60") is { } nullNodeImage60x60 && nullNodeImage60x60.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image60x60 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>JPEG image of the user at 1024x1024 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image1024x1024 { get; set; }
+        public string? Image1024x1024 { get => _explicitNullValueImage1024x1024; set { _explicitNullValueImage1024x1024 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_1024x1024"); else _explicitNullProperties?.Remove("image_1024x1024"); } }
+        private string? _explicitNullValueImage1024x1024 = default!;
 #nullable restore
 #else
-        public string Image1024x1024 { get; set; }
+        public string Image1024x1024 { get => _explicitNullValueImage1024x1024; set { _explicitNullValueImage1024x1024 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_1024x1024"); else _explicitNullProperties?.Remove("image_1024x1024"); } }
+        private string _explicitNullValueImage1024x1024 = default!;
 #endif
         /// <summary>PNG image of the user at 128x128 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image128x128 { get; set; }
+        public string? Image128x128 { get => _explicitNullValueImage128x128; set { _explicitNullValueImage128x128 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_128x128"); else _explicitNullProperties?.Remove("image_128x128"); } }
+        private string? _explicitNullValueImage128x128 = default!;
 #nullable restore
 #else
-        public string Image128x128 { get; set; }
+        public string Image128x128 { get => _explicitNullValueImage128x128; set { _explicitNullValueImage128x128 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_128x128"); else _explicitNullProperties?.Remove("image_128x128"); } }
+        private string _explicitNullValueImage128x128 = default!;
 #endif
         /// <summary>PNG image of the user at 21x21 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image21x21 { get; set; }
+        public string? Image21x21 { get => _explicitNullValueImage21x21; set { _explicitNullValueImage21x21 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_21x21"); else _explicitNullProperties?.Remove("image_21x21"); } }
+        private string? _explicitNullValueImage21x21 = default!;
 #nullable restore
 #else
-        public string Image21x21 { get; set; }
+        public string Image21x21 { get => _explicitNullValueImage21x21; set { _explicitNullValueImage21x21 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_21x21"); else _explicitNullProperties?.Remove("image_21x21"); } }
+        private string _explicitNullValueImage21x21 = default!;
 #endif
         /// <summary>PNG image of the user at 27x27 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image27x27 { get; set; }
+        public string? Image27x27 { get => _explicitNullValueImage27x27; set { _explicitNullValueImage27x27 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_27x27"); else _explicitNullProperties?.Remove("image_27x27"); } }
+        private string? _explicitNullValueImage27x27 = default!;
 #nullable restore
 #else
-        public string Image27x27 { get; set; }
+        public string Image27x27 { get => _explicitNullValueImage27x27; set { _explicitNullValueImage27x27 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_27x27"); else _explicitNullProperties?.Remove("image_27x27"); } }
+        private string _explicitNullValueImage27x27 = default!;
 #endif
         /// <summary>PNG image of the user at 36x36 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image36x36 { get; set; }
+        public string? Image36x36 { get => _explicitNullValueImage36x36; set { _explicitNullValueImage36x36 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_36x36"); else _explicitNullProperties?.Remove("image_36x36"); } }
+        private string? _explicitNullValueImage36x36 = default!;
 #nullable restore
 #else
-        public string Image36x36 { get; set; }
+        public string Image36x36 { get => _explicitNullValueImage36x36; set { _explicitNullValueImage36x36 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_36x36"); else _explicitNullProperties?.Remove("image_36x36"); } }
+        private string _explicitNullValueImage36x36 = default!;
 #endif
         /// <summary>PNG image of the user at 60x60 pixels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image60x60 { get; set; }
+        public string? Image60x60 { get => _explicitNullValueImage60x60; set { _explicitNullValueImage60x60 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_60x60"); else _explicitNullProperties?.Remove("image_60x60"); } }
+        private string? _explicitNullValueImage60x60 = default!;
 #nullable restore
 #else
-        public string Image60x60 { get; set; }
+        public string Image60x60 { get => _explicitNullValueImage60x60; set { _explicitNullValueImage60x60 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_60x60"); else _explicitNullProperties?.Remove("image_60x60"); } }
+        private string _explicitNullValueImage60x60 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto"/> and sets the default values.
@@ -78,7 +103,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.UserResponsePhoto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +136,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("image_27x27", Image27x27);
             writer.WriteStringValue("image_36x36", Image36x36);
             writer.WriteStringValue("image_60x60", Image60x60);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

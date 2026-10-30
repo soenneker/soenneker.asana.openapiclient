@@ -12,46 +12,71 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AuditLogEventContextProperty : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_authentication_method") is { } nullNodeApiAuthenticationMethod && nullNodeApiAuthenticationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiAuthenticationMethod = null;
+            if (parseNode.GetChildNode("client_ip_address") is { } nullNodeClientIpAddress && nullNodeClientIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientIpAddress = null;
+            if (parseNode.GetChildNode("context_type") is { } nullNodeContextType && nullNodeContextType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextType = null;
+            if (parseNode.GetChildNode("oauth_app_name") is { } nullNodeOauthAppName && nullNodeOauthAppName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthAppName = null;
+            if (parseNode.GetChildNode("on_behalf_of_user_id") is { } nullNodeOnBehalfOfUserId && nullNodeOnBehalfOfUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnBehalfOfUserId = null;
+            if (parseNode.GetChildNode("rule_name") is { } nullNodeRuleName && nullNodeRuleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleName = null;
+            if (parseNode.GetChildNode("user_agent") is { } nullNodeUserAgent && nullNodeUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authentication method used in the context of an API request.Only present if the `context_type` is `api`. Can be one of `cookie`, `oauth`, `personal_access_token`, or `service_account`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyApiAuthenticationMethod? ApiAuthenticationMethod { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyApiAuthenticationMethod? ApiAuthenticationMethod { get => _explicitNullValueApiAuthenticationMethod; set { _explicitNullValueApiAuthenticationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_authentication_method"); else _explicitNullProperties?.Remove("api_authentication_method"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyApiAuthenticationMethod? _explicitNullValueApiAuthenticationMethod = default!;
         /// <summary>The IP address of the client that initiated the event, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientIpAddress { get; set; }
+        public string? ClientIpAddress { get => _explicitNullValueClientIpAddress; set { _explicitNullValueClientIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_ip_address"); else _explicitNullProperties?.Remove("client_ip_address"); } }
+        private string? _explicitNullValueClientIpAddress = default!;
 #nullable restore
 #else
-        public string ClientIpAddress { get; set; }
+        public string ClientIpAddress { get => _explicitNullValueClientIpAddress; set { _explicitNullValueClientIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_ip_address"); else _explicitNullProperties?.Remove("client_ip_address"); } }
+        private string _explicitNullValueClientIpAddress = default!;
 #endif
         /// <summary>The type of context.Can be one of `web`, `desktop`, `mobile`, `asana_support`, `asana`, `email`, or `api`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyContextType? ContextType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyContextType? ContextType { get => _explicitNullValueContextType; set { _explicitNullValueContextType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_type"); else _explicitNullProperties?.Remove("context_type"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyContextType? _explicitNullValueContextType = default!;
         /// <summary>The name of the OAuth App that initiated the event.Only present if the `api_authentication_method` is `oauth`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OauthAppName { get; set; }
+        public string? OauthAppName { get => _explicitNullValueOauthAppName; set { _explicitNullValueOauthAppName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_app_name"); else _explicitNullProperties?.Remove("oauth_app_name"); } }
+        private string? _explicitNullValueOauthAppName = default!;
 #nullable restore
 #else
-        public string OauthAppName { get; set; }
+        public string OauthAppName { get => _explicitNullValueOauthAppName; set { _explicitNullValueOauthAppName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_app_name"); else _explicitNullProperties?.Remove("oauth_app_name"); } }
+        private string _explicitNullValueOauthAppName = default!;
 #endif
         /// <summary>The ID of the user who requested a change via support.</summary>
-        public int? OnBehalfOfUserId { get; set; }
+        public int? OnBehalfOfUserId { get => _explicitNullValueOnBehalfOfUserId; set { _explicitNullValueOnBehalfOfUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of_user_id"); else _explicitNullProperties?.Remove("on_behalf_of_user_id"); } }
+        private int? _explicitNullValueOnBehalfOfUserId = default!;
         /// <summary>The name of the automation rule that initiated the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleName { get; set; }
+        public string? RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_name"); else _explicitNullProperties?.Remove("rule_name"); } }
+        private string? _explicitNullValueRuleName = default!;
 #nullable restore
 #else
-        public string RuleName { get; set; }
+        public string RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_name"); else _explicitNullProperties?.Remove("rule_name"); } }
+        private string _explicitNullValueRuleName = default!;
 #endif
         /// <summary>The user agent of the client that initiated the event, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAgent { get; set; }
+        public string? UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent"); else _explicitNullProperties?.Remove("user_agent"); } }
+        private string? _explicitNullValueUserAgent = default!;
 #nullable restore
 #else
-        public string UserAgent { get; set; }
+        public string UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent"); else _explicitNullProperties?.Remove("user_agent"); } }
+        private string _explicitNullValueUserAgent = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextProperty"/> and sets the default values.
@@ -68,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextProperty();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextProperty(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +126,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteIntValue("on_behalf_of_user_id", OnBehalfOfUserId);
             writer.WriteStringValue("rule_name", RuleName);
             writer.WriteStringValue("user_agent", UserAgent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

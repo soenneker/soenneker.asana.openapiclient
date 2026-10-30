@@ -12,26 +12,41 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectDuplicateRequestScheduleDates : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("due_on") is { } nullNodeDueOn && nullNodeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueOn = null;
+            if (parseNode.GetChildNode("should_skip_weekends") is { } nullNodeShouldSkipWeekends && nullNodeShouldSkipWeekends.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSkipWeekends = null;
+            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets the last due date in the duplicated project to the given date. The rest of the due dates will be offset by the same amount as the due dates in the original project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DueOn { get; set; }
+        public string? DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        private string? _explicitNullValueDueOn = default!;
 #nullable restore
 #else
-        public string DueOn { get; set; }
+        public string DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        private string _explicitNullValueDueOn = default!;
 #endif
         /// <summary>**Required**: Determines if the auto-shifted dates should skip weekends.</summary>
-        public bool? ShouldSkipWeekends { get; set; }
+        public bool? ShouldSkipWeekends { get => _explicitNullValueShouldSkipWeekends; set { _explicitNullValueShouldSkipWeekends = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("should_skip_weekends"); else _explicitNullProperties?.Remove("should_skip_weekends"); } }
+        private bool? _explicitNullValueShouldSkipWeekends = default!;
         /// <summary>Sets the first start date in the duplicated project to the given date. The rest of the start dates will be offset by the same amount as the start dates in the original project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartOn { get; set; }
+        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private string? _explicitNullValueStartOn = default!;
 #nullable restore
 #else
-        public string StartOn { get; set; }
+        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private string _explicitNullValueStartOn = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("due_on", DueOn);
             writer.WriteBoolValue("should_skip_weekends", ShouldSkipWeekends);
             writer.WriteStringValue("start_on", StartOn);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

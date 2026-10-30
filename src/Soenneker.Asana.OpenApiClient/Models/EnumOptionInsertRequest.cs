@@ -11,32 +11,48 @@ namespace Soenneker.Asana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EnumOptionInsertRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("after_enum_option") is { } nullNodeAfterEnumOption && nullNodeAfterEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterEnumOption = null;
+            if (parseNode.GetChildNode("before_enum_option") is { } nullNodeBeforeEnumOption && nullNodeBeforeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeEnumOption = null;
+            if (parseNode.GetChildNode("enum_option") is { } nullNodeEnumOption && nullNodeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOption = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An existing enum option within this custom field after which the new enum option should be inserted. Cannot be provided together with before_enum_option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AfterEnumOption { get; set; }
+        public string? AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
+        private string? _explicitNullValueAfterEnumOption = default!;
 #nullable restore
 #else
-        public string AfterEnumOption { get; set; }
+        public string AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
+        private string _explicitNullValueAfterEnumOption = default!;
 #endif
         /// <summary>An existing enum option within this custom field before which the new enum option should be inserted. Cannot be provided together with after_enum_option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BeforeEnumOption { get; set; }
+        public string? BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
+        private string? _explicitNullValueBeforeEnumOption = default!;
 #nullable restore
 #else
-        public string BeforeEnumOption { get; set; }
+        public string BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
+        private string _explicitNullValueBeforeEnumOption = default!;
 #endif
         /// <summary>The gid of the enum option to relocate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnumOption { get; set; }
+        public string? EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
+        private string? _explicitNullValueEnumOption = default!;
 #nullable restore
 #else
-        public string EnumOption { get; set; }
+        public string EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
+        private string _explicitNullValueEnumOption = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.EnumOptionInsertRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.EnumOptionInsertRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.EnumOptionInsertRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.EnumOptionInsertRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("after_enum_option", AfterEnumOption);
             writer.WriteStringValue("before_enum_option", BeforeEnumOption);
             writer.WriteStringValue("enum_option", EnumOption);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

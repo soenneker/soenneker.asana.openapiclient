@@ -12,63 +12,124 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RbacRoleRequestPermissions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_guest_invites") is { } nullNodeAllowedGuestInvites && nullNodeAllowedGuestInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedGuestInvites = null;
+            if (parseNode.GetChildNode("assign_roles") is { } nullNodeAssignRoles && nullNodeAssignRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignRoles = null;
+            if (parseNode.GetChildNode("create_and_edit_ai_automations") is { } nullNodeCreateAndEditAiAutomations && nullNodeCreateAndEditAiAutomations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateAndEditAiAutomations = null;
+            if (parseNode.GetChildNode("create_and_edit_ai_teammates") is { } nullNodeCreateAndEditAiTeammates && nullNodeCreateAndEditAiTeammates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateAndEditAiTeammates = null;
+            if (parseNode.GetChildNode("create_app_authorization") is { } nullNodeCreateAppAuthorization && nullNodeCreateAppAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateAppAuthorization = null;
+            if (parseNode.GetChildNode("create_global_custom_fields") is { } nullNodeCreateGlobalCustomFields && nullNodeCreateGlobalCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateGlobalCustomFields = null;
+            if (parseNode.GetChildNode("create_goal") is { } nullNodeCreateGoal && nullNodeCreateGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateGoal = null;
+            if (parseNode.GetChildNode("create_pat_authorization") is { } nullNodeCreatePatAuthorization && nullNodeCreatePatAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatePatAuthorization = null;
+            if (parseNode.GetChildNode("create_portfolio") is { } nullNodeCreatePortfolio && nullNodeCreatePortfolio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatePortfolio = null;
+            if (parseNode.GetChildNode("create_project") is { } nullNodeCreateProject && nullNodeCreateProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateProject = null;
+            if (parseNode.GetChildNode("create_read_only_link") is { } nullNodeCreateReadOnlyLink && nullNodeCreateReadOnlyLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateReadOnlyLink = null;
+            if (parseNode.GetChildNode("create_team") is { } nullNodeCreateTeam && nullNodeCreateTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTeam = null;
+            if (parseNode.GetChildNode("download_mobile_attachments") is { } nullNodeDownloadMobileAttachments && nullNodeDownloadMobileAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadMobileAttachments = null;
+            if (parseNode.GetChildNode("export_project_data") is { } nullNodeExportProjectData && nullNodeExportProjectData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportProjectData = null;
+            if (parseNode.GetChildNode("import_data") is { } nullNodeImportData && nullNodeImportData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportData = null;
+            if (parseNode.GetChildNode("manage_roles") is { } nullNodeManageRoles && nullNodeManageRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageRoles = null;
+            if (parseNode.GetChildNode("proactive_ai") is { } nullNodeProactiveAi && nullNodeProactiveAi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProactiveAi = null;
+            if (parseNode.GetChildNode("share_goal_with_domain") is { } nullNodeShareGoalWithDomain && nullNodeShareGoalWithDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareGoalWithDomain = null;
+            if (parseNode.GetChildNode("share_portfolios_with_org") is { } nullNodeSharePortfoliosWithOrg && nullNodeSharePortfoliosWithOrg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharePortfoliosWithOrg = null;
+            if (parseNode.GetChildNode("share_teams_with_org") is { } nullNodeShareTeamsWithOrg && nullNodeShareTeamsWithOrg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareTeamsWithOrg = null;
+            if (parseNode.GetChildNode("standard_ai") is { } nullNodeStandardAi && nullNodeStandardAi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardAi = null;
+            if (parseNode.GetChildNode("task_deletion_policy") is { } nullNodeTaskDeletionPolicy && nullNodeTaskDeletionPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskDeletionPolicy = null;
+            if (parseNode.GetChildNode("upload_attachments") is { } nullNodeUploadAttachments && nullNodeUploadAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadAttachments = null;
+            if (parseNode.GetChildNode("view_public_teams") is { } nullNodeViewPublicTeams && nullNodeViewPublicTeams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewPublicTeams = null;
+            if (parseNode.GetChildNode("view_shared_with_org_portfolios") is { } nullNodeViewSharedWithOrgPortfolios && nullNodeViewSharedWithOrgPortfolios.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewSharedWithOrgPortfolios = null;
+            if (parseNode.GetChildNode("view_shared_with_org_projects") is { } nullNodeViewSharedWithOrgProjects && nullNodeViewSharedWithOrgProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewSharedWithOrgProjects = null;
+            if (parseNode.GetChildNode("view_shared_with_org_tasks") is { } nullNodeViewSharedWithOrgTasks && nullNodeViewSharedWithOrgTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewSharedWithOrgTasks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls what type of email users with this role are allowed to invite</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsAllowedGuestInvites? AllowedGuestInvites { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsAllowedGuestInvites? AllowedGuestInvites { get => _explicitNullValueAllowedGuestInvites; set { _explicitNullValueAllowedGuestInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_guest_invites"); else _explicitNullProperties?.Remove("allowed_guest_invites"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsAllowedGuestInvites? _explicitNullValueAllowedGuestInvites = default!;
         /// <summary>Controls whether users with this role can assign guest, member, and admin roles to other users</summary>
-        public bool? AssignRoles { get; set; }
+        public bool? AssignRoles { get => _explicitNullValueAssignRoles; set { _explicitNullValueAssignRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assign_roles"); else _explicitNullProperties?.Remove("assign_roles"); } }
+        private bool? _explicitNullValueAssignRoles = default!;
         /// <summary>Controls whether users with this role can create and edit AI automations</summary>
-        public bool? CreateAndEditAiAutomations { get; set; }
+        public bool? CreateAndEditAiAutomations { get => _explicitNullValueCreateAndEditAiAutomations; set { _explicitNullValueCreateAndEditAiAutomations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_and_edit_ai_automations"); else _explicitNullProperties?.Remove("create_and_edit_ai_automations"); } }
+        private bool? _explicitNullValueCreateAndEditAiAutomations = default!;
         /// <summary>Controls whether users with this role can create and edit AI teammates</summary>
-        public bool? CreateAndEditAiTeammates { get; set; }
+        public bool? CreateAndEditAiTeammates { get => _explicitNullValueCreateAndEditAiTeammates; set { _explicitNullValueCreateAndEditAiTeammates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_and_edit_ai_teammates"); else _explicitNullProperties?.Remove("create_and_edit_ai_teammates"); } }
+        private bool? _explicitNullValueCreateAndEditAiTeammates = default!;
         /// <summary>Controls whether users with this role can create app authorizations</summary>
-        public bool? CreateAppAuthorization { get; set; }
+        public bool? CreateAppAuthorization { get => _explicitNullValueCreateAppAuthorization; set { _explicitNullValueCreateAppAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_app_authorization"); else _explicitNullProperties?.Remove("create_app_authorization"); } }
+        private bool? _explicitNullValueCreateAppAuthorization = default!;
         /// <summary>Controls whether users with this role can create global custom fields</summary>
-        public bool? CreateGlobalCustomFields { get; set; }
+        public bool? CreateGlobalCustomFields { get => _explicitNullValueCreateGlobalCustomFields; set { _explicitNullValueCreateGlobalCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_global_custom_fields"); else _explicitNullProperties?.Remove("create_global_custom_fields"); } }
+        private bool? _explicitNullValueCreateGlobalCustomFields = default!;
         /// <summary>Controls whether users with this role can create goals</summary>
-        public bool? CreateGoal { get; set; }
+        public bool? CreateGoal { get => _explicitNullValueCreateGoal; set { _explicitNullValueCreateGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_goal"); else _explicitNullProperties?.Remove("create_goal"); } }
+        private bool? _explicitNullValueCreateGoal = default!;
         /// <summary>Controls whether users with this role can create PAT authorizations</summary>
-        public bool? CreatePatAuthorization { get; set; }
+        public bool? CreatePatAuthorization { get => _explicitNullValueCreatePatAuthorization; set { _explicitNullValueCreatePatAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_pat_authorization"); else _explicitNullProperties?.Remove("create_pat_authorization"); } }
+        private bool? _explicitNullValueCreatePatAuthorization = default!;
         /// <summary>Controls whether users with this role can create portfolios</summary>
-        public bool? CreatePortfolio { get; set; }
+        public bool? CreatePortfolio { get => _explicitNullValueCreatePortfolio; set { _explicitNullValueCreatePortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_portfolio"); else _explicitNullProperties?.Remove("create_portfolio"); } }
+        private bool? _explicitNullValueCreatePortfolio = default!;
         /// <summary>Controls whether users with this role can create projects</summary>
-        public bool? CreateProject { get; set; }
+        public bool? CreateProject { get => _explicitNullValueCreateProject; set { _explicitNullValueCreateProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_project"); else _explicitNullProperties?.Remove("create_project"); } }
+        private bool? _explicitNullValueCreateProject = default!;
         /// <summary>Controls whether users with this role can create read-only links</summary>
-        public bool? CreateReadOnlyLink { get; set; }
+        public bool? CreateReadOnlyLink { get => _explicitNullValueCreateReadOnlyLink; set { _explicitNullValueCreateReadOnlyLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_read_only_link"); else _explicitNullProperties?.Remove("create_read_only_link"); } }
+        private bool? _explicitNullValueCreateReadOnlyLink = default!;
         /// <summary>Controls whether users with this role can create teams</summary>
-        public bool? CreateTeam { get; set; }
+        public bool? CreateTeam { get => _explicitNullValueCreateTeam; set { _explicitNullValueCreateTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_team"); else _explicitNullProperties?.Remove("create_team"); } }
+        private bool? _explicitNullValueCreateTeam = default!;
         /// <summary>Controls whether users with this role can download attachments from mobile app</summary>
-        public bool? DownloadMobileAttachments { get; set; }
+        public bool? DownloadMobileAttachments { get => _explicitNullValueDownloadMobileAttachments; set { _explicitNullValueDownloadMobileAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_mobile_attachments"); else _explicitNullProperties?.Remove("download_mobile_attachments"); } }
+        private bool? _explicitNullValueDownloadMobileAttachments = default!;
         /// <summary>Controls whether users with this role can export project data</summary>
-        public bool? ExportProjectData { get; set; }
+        public bool? ExportProjectData { get => _explicitNullValueExportProjectData; set { _explicitNullValueExportProjectData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_project_data"); else _explicitNullProperties?.Remove("export_project_data"); } }
+        private bool? _explicitNullValueExportProjectData = default!;
         /// <summary>Controls whether users with this role can import data into the domain</summary>
-        public bool? ImportData { get; set; }
+        public bool? ImportData { get => _explicitNullValueImportData; set { _explicitNullValueImportData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_data"); else _explicitNullProperties?.Remove("import_data"); } }
+        private bool? _explicitNullValueImportData = default!;
         /// <summary>Controls whether users with this role can create, edit, and delete roles</summary>
-        public bool? ManageRoles { get; set; }
+        public bool? ManageRoles { get => _explicitNullValueManageRoles; set { _explicitNullValueManageRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_roles"); else _explicitNullProperties?.Remove("manage_roles"); } }
+        private bool? _explicitNullValueManageRoles = default!;
         /// <summary>Controls whether users with this role can use proactive AI features</summary>
-        public bool? ProactiveAi { get; set; }
+        public bool? ProactiveAi { get => _explicitNullValueProactiveAi; set { _explicitNullValueProactiveAi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proactive_ai"); else _explicitNullProperties?.Remove("proactive_ai"); } }
+        private bool? _explicitNullValueProactiveAi = default!;
         /// <summary>Controls whether users with this role can create company-wide goals</summary>
-        public bool? ShareGoalWithDomain { get; set; }
+        public bool? ShareGoalWithDomain { get => _explicitNullValueShareGoalWithDomain; set { _explicitNullValueShareGoalWithDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_goal_with_domain"); else _explicitNullProperties?.Remove("share_goal_with_domain"); } }
+        private bool? _explicitNullValueShareGoalWithDomain = default!;
         /// <summary>Controls whether users with this role can create portfolios that are shared with the organization and share existing portfolios to the organization</summary>
-        public bool? SharePortfoliosWithOrg { get; set; }
+        public bool? SharePortfoliosWithOrg { get => _explicitNullValueSharePortfoliosWithOrg; set { _explicitNullValueSharePortfoliosWithOrg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_portfolios_with_org"); else _explicitNullProperties?.Remove("share_portfolios_with_org"); } }
+        private bool? _explicitNullValueSharePortfoliosWithOrg = default!;
         /// <summary>Controls whether users with this role can share teams with the organization</summary>
-        public bool? ShareTeamsWithOrg { get; set; }
+        public bool? ShareTeamsWithOrg { get => _explicitNullValueShareTeamsWithOrg; set { _explicitNullValueShareTeamsWithOrg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_teams_with_org"); else _explicitNullProperties?.Remove("share_teams_with_org"); } }
+        private bool? _explicitNullValueShareTeamsWithOrg = default!;
         /// <summary>Controls whether users with this role can use standard AI features</summary>
-        public bool? StandardAi { get; set; }
+        public bool? StandardAi { get => _explicitNullValueStandardAi; set { _explicitNullValueStandardAi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_ai"); else _explicitNullProperties?.Remove("standard_ai"); } }
+        private bool? _explicitNullValueStandardAi = default!;
         /// <summary>Determines what tasks users with this role are allowed to delete</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsTaskDeletionPolicy? TaskDeletionPolicy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsTaskDeletionPolicy? TaskDeletionPolicy { get => _explicitNullValueTaskDeletionPolicy; set { _explicitNullValueTaskDeletionPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_deletion_policy"); else _explicitNullProperties?.Remove("task_deletion_policy"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissionsTaskDeletionPolicy? _explicitNullValueTaskDeletionPolicy = default!;
         /// <summary>Controls whether users with this role can upload attachments</summary>
-        public bool? UploadAttachments { get; set; }
+        public bool? UploadAttachments { get => _explicitNullValueUploadAttachments; set { _explicitNullValueUploadAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_attachments"); else _explicitNullProperties?.Remove("upload_attachments"); } }
+        private bool? _explicitNullValueUploadAttachments = default!;
         /// <summary>Controls whether users with this role can view public teams</summary>
-        public bool? ViewPublicTeams { get; set; }
+        public bool? ViewPublicTeams { get => _explicitNullValueViewPublicTeams; set { _explicitNullValueViewPublicTeams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_public_teams"); else _explicitNullProperties?.Remove("view_public_teams"); } }
+        private bool? _explicitNullValueViewPublicTeams = default!;
         /// <summary>Controls whether users with this role can view portfolios shared with the organization</summary>
-        public bool? ViewSharedWithOrgPortfolios { get; set; }
+        public bool? ViewSharedWithOrgPortfolios { get => _explicitNullValueViewSharedWithOrgPortfolios; set { _explicitNullValueViewSharedWithOrgPortfolios = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_shared_with_org_portfolios"); else _explicitNullProperties?.Remove("view_shared_with_org_portfolios"); } }
+        private bool? _explicitNullValueViewSharedWithOrgPortfolios = default!;
         /// <summary>Controls whether users with this role can view projects shared with the organization</summary>
-        public bool? ViewSharedWithOrgProjects { get; set; }
+        public bool? ViewSharedWithOrgProjects { get => _explicitNullValueViewSharedWithOrgProjects; set { _explicitNullValueViewSharedWithOrgProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_shared_with_org_projects"); else _explicitNullProperties?.Remove("view_shared_with_org_projects"); } }
+        private bool? _explicitNullValueViewSharedWithOrgProjects = default!;
         /// <summary>Controls whether users with this role can view tasks shared with the organization</summary>
-        public bool? ViewSharedWithOrgTasks { get; set; }
+        public bool? ViewSharedWithOrgTasks { get => _explicitNullValueViewSharedWithOrgTasks; set { _explicitNullValueViewSharedWithOrgTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_shared_with_org_tasks"); else _explicitNullProperties?.Remove("view_shared_with_org_tasks"); } }
+        private bool? _explicitNullValueViewSharedWithOrgTasks = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissions"/> and sets the default values.
         /// </summary>
@@ -84,7 +145,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestPermissions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -157,6 +218,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("view_shared_with_org_portfolios", ViewSharedWithOrgPortfolios);
             writer.WriteBoolValue("view_shared_with_org_projects", ViewSharedWithOrgProjects);
             writer.WriteBoolValue("view_shared_with_org_tasks", ViewSharedWithOrgTasks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,32 +11,48 @@ namespace Soenneker.Asana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProjectSectionInsertRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("after_section") is { } nullNodeAfterSection && nullNodeAfterSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterSection = null;
+            if (parseNode.GetChildNode("before_section") is { } nullNodeBeforeSection && nullNodeBeforeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeSection = null;
+            if (parseNode.GetChildNode("section") is { } nullNodeSection && nullNodeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Section = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Insert the given section immediately after the section specified by this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AfterSection { get; set; }
+        public string? AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
+        private string? _explicitNullValueAfterSection = default!;
 #nullable restore
 #else
-        public string AfterSection { get; set; }
+        public string AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
+        private string _explicitNullValueAfterSection = default!;
 #endif
         /// <summary>Insert the given section immediately before the section specified by this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BeforeSection { get; set; }
+        public string? BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
+        private string? _explicitNullValueBeforeSection = default!;
 #nullable restore
 #else
-        public string BeforeSection { get; set; }
+        public string BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
+        private string _explicitNullValueBeforeSection = default!;
 #endif
         /// <summary>The section to reorder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Section { get; set; }
+        public string? Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
+        private string? _explicitNullValueSection = default!;
 #nullable restore
 #else
-        public string Section { get; set; }
+        public string Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
+        private string _explicitNullValueSection = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectSectionInsertRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.ProjectSectionInsertRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectSectionInsertRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.ProjectSectionInsertRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("after_section", AfterSection);
             writer.WriteStringValue("before_section", BeforeSection);
             writer.WriteStringValue("section", Section);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

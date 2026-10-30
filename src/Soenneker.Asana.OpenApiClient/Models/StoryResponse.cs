@@ -12,7 +12,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StoryResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("html_text") is { } nullNodeHtmlText && nullNodeHtmlText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlText = null;
+            if (parseNode.GetChildNode("is_pinned") is { } nullNodeIsPinned && nullNodeIsPinned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPinned = null;
+            if (parseNode.GetChildNode("old_name") is { } nullNodeOldName && nullNodeOldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldName = null;
+            if (parseNode.GetChildNode("sticker_name") is { } nullNodeStickerName && nullNodeStickerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickerName = null;
+            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. The GID of the object this comment is anchored to. For a top-level task comment this is the task GID; for a threaded reply this is the parent comment&apos;s envelope GID (`comment_gid`). Also present on sticker stories. Request with `opt_fields=anchor_gid` on story reads.</summary>
@@ -44,10 +57,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCreatedBy _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [custom fields](/reference/custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,17 +125,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlText { get; set; }
+        public string? HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
+        private string? _explicitNullValueHtmlText = default!;
 #nullable restore
 #else
-        public string HtmlText { get; set; }
+        public string HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
+        private string _explicitNullValueHtmlText = default!;
 #endif
         /// <summary>*Conditional*. Whether the text of the story can be edited after creation.</summary>
         public bool? IsEditable { get; private set; }
         /// <summary>*Conditional*. Whether the text of the story has been edited after creation.</summary>
         public bool? IsEdited { get; private set; }
         /// <summary>*Conditional*. Whether the story should be pinned on the resource.</summary>
-        public bool? IsPinned { get; set; }
+        public bool? IsPinned { get => _explicitNullValueIsPinned; set { _explicitNullValueIsPinned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pinned"); else _explicitNullProperties?.Remove("is_pinned"); } }
+        private bool? _explicitNullValueIsPinned = default!;
         /// <summary>*Conditional*. True if the story is liked by the authorized user, false if not.</summary>
         public bool? Liked { get; private set; }
         /// <summary>*Conditional*. Array of likes for users who have liked this story.</summary>
@@ -260,10 +278,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional* The previous name of the task before a name change.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldName { get; set; }
+        public string? OldName { get => _explicitNullValueOldName; set { _explicitNullValueOldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_name"); else _explicitNullProperties?.Remove("old_name"); } }
+        private string? _explicitNullValueOldName = default!;
 #nullable restore
 #else
-        public string OldName { get; set; }
+        public string OldName { get => _explicitNullValueOldName; set { _explicitNullValueOldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_name"); else _explicitNullProperties?.Remove("old_name"); } }
+        private string _explicitNullValueOldName = default!;
 #endif
         /// <summary>*Conditional* The previous value of a number-type custom field before the update.</summary>
         public int? OldNumberValue { get; private set; }
@@ -342,7 +362,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The component of the Asana product the user used to trigger the story.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseSource? Source { get; private set; }
         /// <summary>The name of the sticker in this story. `null` if there is no sticker.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStickerName? StickerName { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStickerName? StickerName { get => _explicitNullValueStickerName; set { _explicitNullValueStickerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_name"); else _explicitNullProperties?.Remove("sticker_name"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStickerName? _explicitNullValueStickerName = default!;
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A story represents an activity associated with an object in the Asana system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -378,10 +399,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The plain text of the comment to add. Cannot be used with html_text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get; set; }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get; set; }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        private string _explicitNullValueText = default!;
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseType? Type { get; private set; }
@@ -400,7 +423,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.StoryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.StoryResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.StoryResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -481,6 +504,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("old_name", OldName);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseStickerName>("sticker_name", StickerName);
             writer.WriteStringValue("text", Text);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

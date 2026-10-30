@@ -12,7 +12,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JobResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("new_graph_export") is { } nullNodeNewGraphExport && nullNodeNewGraphExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewGraphExport = null;
+            if (parseNode.GetChildNode("new_portfolio") is { } nullNodeNewPortfolio && nullNodeNewPortfolio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPortfolio = null;
+            if (parseNode.GetChildNode("new_project") is { } nullNodeNewProject && nullNodeNewProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewProject = null;
+            if (parseNode.GetChildNode("new_project_template") is { } nullNodeNewProjectTemplate && nullNodeNewProjectTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewProjectTemplate = null;
+            if (parseNode.GetChildNode("new_resource_export") is { } nullNodeNewResourceExport && nullNodeNewResourceExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewResourceExport = null;
+            if (parseNode.GetChildNode("new_task") is { } nullNodeNewTask && nullNodeNewTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewTask = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Progress of a subtask date rollup job. Only present on project rollup jobs; the object is empty until the job discovers tasks to reconcile.</summary>
@@ -34,50 +47,62 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *graph_export* object represents a request to export the data starting from a parent object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport? NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport? NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport? _explicitNullValueNewGraphExport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport NewGraphExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewGraphExport _explicitNullValueNewGraphExport = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.Portfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio? NewPortfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio? NewPortfolio { get => _explicitNullValueNewPortfolio; set { _explicitNullValueNewPortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_portfolio"); else _explicitNullProperties?.Remove("new_portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio? _explicitNullValueNewPortfolio = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio NewPortfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio NewPortfolio { get => _explicitNullValueNewPortfolio; set { _explicitNullValueNewPortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_portfolio"); else _explicitNullProperties?.Remove("new_portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewPortfolio _explicitNullValueNewPortfolio = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject? NewProject { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject? NewProject { get => _explicitNullValueNewProject; set { _explicitNullValueNewProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project"); else _explicitNullProperties?.Remove("new_project"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject? _explicitNullValueNewProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject NewProject { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject NewProject { get => _explicitNullValueNewProject; set { _explicitNullValueNewProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project"); else _explicitNullProperties?.Remove("new_project"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProject _explicitNullValueNewProject = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *project template* is an object that allows new projects to be created with a predefined setup, which may include tasks, sections, Rules, etc. It simplifies the process of running a workflow that involves a similar set of work every time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate? NewProjectTemplate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate? NewProjectTemplate { get => _explicitNullValueNewProjectTemplate; set { _explicitNullValueNewProjectTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project_template"); else _explicitNullProperties?.Remove("new_project_template"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate? _explicitNullValueNewProjectTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate NewProjectTemplate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate NewProjectTemplate { get => _explicitNullValueNewProjectTemplate; set { _explicitNullValueNewProjectTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project_template"); else _explicitNullProperties?.Remove("new_project_template"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate _explicitNullValueNewProjectTemplate = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport? NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport? NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport? _explicitNullValueNewResourceExport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport NewResourceExport { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport _explicitNullValueNewResourceExport = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.The *task* is the basic object around which many operations in Asana are centered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask? NewTask { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask? NewTask { get => _explicitNullValueNewTask; set { _explicitNullValueNewTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_task"); else _explicitNullProperties?.Remove("new_task"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask? _explicitNullValueNewTask = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask NewTask { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask NewTask { get => _explicitNullValueNewTask; set { _explicitNullValueNewTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_task"); else _explicitNullProperties?.Remove("new_task"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask _explicitNullValueNewTask = default!;
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +137,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.JobResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.JobResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.JobResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +173,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewProjectTemplate>("new_project_template", NewProjectTemplate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewResourceExport>("new_resource_export", NewResourceExport);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseNewTask>("new_task", NewTask);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

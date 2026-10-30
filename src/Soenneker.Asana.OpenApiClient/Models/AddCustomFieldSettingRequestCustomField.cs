@@ -12,7 +12,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddCustomFieldSettingRequestCustomField : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +46,19 @@ namespace Soenneker.Asana.OpenApiClient.Models
             var result = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomField();
             if("AddCustomFieldSettingRequestCustomFieldOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AddCustomFieldSettingRequestCustomFieldOneOf2 = new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2();
+                
             }
-            else if(parseNode.GetStringValue() is string stringValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("workspace") != null && parseNode.GetChildNode("resource_subtype") != null && (parseNode.GetChildNode("resource_subtype")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("text".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "enum".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "multi_enum".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "number".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "date".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "people".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "reference".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("type") == null || (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag3 && ("text".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "enum".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "multi_enum".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "number".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "date".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "people".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "reference".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("representation_type") == null || (parseNode.GetChildNode("representation_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag4 && ("text".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "enum".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "multi_enum".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "number".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "date".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "people".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "formula".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "custom_id".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "reference".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("format") == null || (parseNode.GetChildNode("format")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag5 && ("currency".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal) || "identifier".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal) || "percentage".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal) || "custom".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal) || "duration".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal) || "none".Equals(optionalTag5.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.AddCustomFieldSettingRequestCustomFieldOneOf2 == null && result.String == null && matchesUnionBranch0) result.AddCustomFieldSettingRequestCustomFieldOneOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2(), parseNode);
+            if (result.AddCustomFieldSettingRequestCustomFieldOneOf2 == null && result.String == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.AddCustomFieldSettingRequestCustomFieldOneOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2(), parseNode);
+            if (result.AddCustomFieldSettingRequestCustomFieldOneOf2 == null && result.String == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,9 +78,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AddCustomFieldSettingRequestCustomFieldOneOf2 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AddCustomFieldSettingRequestCustomFieldOneOf2 != null && String == null) { if (AddCustomFieldSettingRequestCustomFieldOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AddCustomFieldSettingRequestCustomFieldOneOf2); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AddCustomFieldSettingRequestCustomFieldOneOf2 != null)
             {
+                if (AddCustomFieldSettingRequestCustomFieldOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2>(null, AddCustomFieldSettingRequestCustomFieldOneOf2);
             }
             else if(String != null)

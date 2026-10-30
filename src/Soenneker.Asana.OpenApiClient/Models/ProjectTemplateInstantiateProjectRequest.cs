@@ -11,47 +11,72 @@ namespace Soenneker.Asana.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProjectTemplateInstantiateProjectRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_strict") is { } nullNodeIsStrict && nullNodeIsStrict.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStrict = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("privacy_setting") is { } nullNodePrivacySetting && nullNodePrivacySetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacySetting = null;
+            if (parseNode.GetChildNode("public") is { } nullNodePublic && nullNodePublic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Public = null;
+            if (parseNode.GetChildNode("requested_dates") is { } nullNodeRequestedDates && nullNodeRequestedDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedDates = null;
+            if (parseNode.GetChildNode("requested_roles") is { } nullNodeRequestedRoles && nullNodeRequestedRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedRoles = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Optional*. If set to `true`, the endpoint returns an &quot;Unprocessable Entity&quot; error if you fail to provide a calendar date value for any date variable. If set to `false`, a default date is used for each unfulfilled date variable (e.g., the current date is used as the Start Date of a project).</summary>
-        public bool? IsStrict { get; set; }
+        public bool? IsStrict { get => _explicitNullValueIsStrict; set { _explicitNullValueIsStrict = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_strict"); else _explicitNullProperties?.Remove("is_strict"); } }
+        private bool? _explicitNullValueIsStrict = default!;
         /// <summary>The name of the new project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting? PrivacySetting { get => _explicitNullValuePrivacySetting; set { _explicitNullValuePrivacySetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_setting"); else _explicitNullProperties?.Remove("privacy_setting"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestPrivacySetting? _explicitNullValuePrivacySetting = default!;
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
-        public bool? Public { get; set; }
+        public bool? Public { get => _explicitNullValuePublic; set { _explicitNullValuePublic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public"); else _explicitNullProperties?.Remove("public"); } }
+        private bool? _explicitNullValuePublic = default!;
         /// <summary>*Conditional*. Array of mappings of date variables to calendar dates. This property is required in the instantiation request if the project template includes dates (e.g., a start date on a task).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>? RequestedDates { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>? RequestedDates { get => _explicitNullValueRequestedDates; set { _explicitNullValueRequestedDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_dates"); else _explicitNullProperties?.Remove("requested_dates"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>? _explicitNullValueRequestedDates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem> RequestedDates { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem> RequestedDates { get => _explicitNullValueRequestedDates; set { _explicitNullValueRequestedDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_dates"); else _explicitNullProperties?.Remove("requested_dates"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem> _explicitNullValueRequestedDates = default!;
 #endif
         /// <summary>Array of mappings of template roles to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>? RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>? RequestedRoles { get => _explicitNullValueRequestedRoles; set { _explicitNullValueRequestedRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_roles"); else _explicitNullProperties?.Remove("requested_roles"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>? _explicitNullValueRequestedRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem> RequestedRoles { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem> RequestedRoles { get => _explicitNullValueRequestedRoles; set { _explicitNullValueRequestedRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_roles"); else _explicitNullProperties?.Remove("requested_roles"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem> _explicitNullValueRequestedRoles = default!;
 #endif
         /// <summary>*Optional*. Sets the team of the new project. If the project template exists in an _organization_, you may specify a value for `team`. If no value is provided then it defaults to the same team as the project template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Team { get; set; }
+        public string? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private string? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public string Team { get; set; }
+        public string Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private string _explicitNullValueTeam = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest"/> and sets the default values.
@@ -68,7 +93,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +126,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedDatesItem>("requested_dates", RequestedDates);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateInstantiateProjectRequestRequestedRolesItem>("requested_roles", RequestedRoles);
             writer.WriteStringValue("team", Team);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

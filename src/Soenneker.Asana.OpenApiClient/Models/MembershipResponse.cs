@@ -12,7 +12,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembershipResponse : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,14 +83,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponse();
-            result.MembershipResponseAnyOf1 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1();
-            result.MembershipResponseAnyOf2 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf2();
-            result.MembershipResponseAnyOf3 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf3();
-            result.MembershipResponseAnyOf4 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf4();
-            result.MembershipResponseAnyOf5 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf5();
-            result.MembershipResponseAnyOf6 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf6();
-            result.MembershipResponseAnyOf7 = new global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf7();
-            return result;
+            
+            
+            
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.MembershipResponseAnyOf1 == null && result.MembershipResponseAnyOf2 == null && result.MembershipResponseAnyOf3 == null && result.MembershipResponseAnyOf4 == null && result.MembershipResponseAnyOf5 == null && result.MembershipResponseAnyOf6 == null && result.MembershipResponseAnyOf7 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,6 +113,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (MembershipResponseAnyOf1 != null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf1); return; }
+            if (MembershipResponseAnyOf2 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf2); return; }
+            if (MembershipResponseAnyOf3 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf3); return; }
+            if (MembershipResponseAnyOf4 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf4); return; }
+            if (MembershipResponseAnyOf5 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf6 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf5); return; }
+            if (MembershipResponseAnyOf6 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf7 == null) { if (MembershipResponseAnyOf6 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf6); return; }
+            if (MembershipResponseAnyOf7 != null && MembershipResponseAnyOf1 == null && MembershipResponseAnyOf2 == null && MembershipResponseAnyOf3 == null && MembershipResponseAnyOf4 == null && MembershipResponseAnyOf5 == null && MembershipResponseAnyOf6 == null) { if (MembershipResponseAnyOf7 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MembershipResponseAnyOf7); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.MembershipResponseAnyOf1>(null, MembershipResponseAnyOf1, MembershipResponseAnyOf2, MembershipResponseAnyOf3, MembershipResponseAnyOf4, MembershipResponseAnyOf5, MembershipResponseAnyOf6, MembershipResponseAnyOf7);
         }

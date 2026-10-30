@@ -13,13 +13,38 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approval_status") is { } nullNodeApprovalStatus && nullNodeApprovalStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStatus = null;
+            if (parseNode.GetChildNode("assignee") is { } nullNodeAssignee && nullNodeAssignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assignee = null;
+            if (parseNode.GetChildNode("assignee_section") is { } nullNodeAssigneeSection && nullNodeAssigneeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeSection = null;
+            if (parseNode.GetChildNode("assignee_status") is { } nullNodeAssigneeStatus && nullNodeAssigneeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeStatus = null;
+            if (parseNode.GetChildNode("completed") is { } nullNodeCompleted && nullNodeCompleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Completed = null;
+            if (parseNode.GetChildNode("custom_type") is { } nullNodeCustomType && nullNodeCustomType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomType = null;
+            if (parseNode.GetChildNode("custom_type_status_option") is { } nullNodeCustomTypeStatusOption && nullNodeCustomTypeStatusOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomTypeStatusOption = null;
+            if (parseNode.GetChildNode("due_at") is { } nullNodeDueAt && nullNodeDueAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueAt = null;
+            if (parseNode.GetChildNode("due_on") is { } nullNodeDueOn && nullNodeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueOn = null;
+            if (parseNode.GetChildNode("external") is { } nullNodeExternal && nullNodeExternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) External = null;
+            if (parseNode.GetChildNode("html_notes") is { } nullNodeHtmlNotes && nullNodeHtmlNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlNotes = null;
+            if (parseNode.GetChildNode("liked") is { } nullNodeLiked && nullNodeLiked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Liked = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("resource_subtype") is { } nullNodeResourceSubtype && nullNodeResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceSubtype = null;
+            if (parseNode.GetChildNode("start_at") is { } nullNodeStartAt && nullNodeStartAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAt = null;
+            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+        }
+
         /// <summary>This value represents the sum of all the Time Tracking entries in the Actual Time field on a given Task. It is represented as a nullable long value.</summary>
         public double? ActualTimeMinutes { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus? ApprovalStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus? ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_status"); else _explicitNullProperties?.Remove("approval_status"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus? _explicitNullValueApprovalStatus = default!;
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.The user who assigned the task. This field is only returned when requesting it via opt_fields, and will be null if the task has no specific assigner (e.g., tasks created without an explicit assigner).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,23 +56,29 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee? Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee? Assignee { get => _explicitNullValueAssignee; set { _explicitNullValueAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee"); else _explicitNullProperties?.Remove("assignee"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee? _explicitNullValueAssignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee Assignee { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee Assignee { get => _explicitNullValueAssignee; set { _explicitNullValueAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee"); else _explicitNullProperties?.Remove("assignee"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssignee _explicitNullValueAssignee = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.The *assignee section* is a subdivision of a project that groups tasks together in the assignee&apos;s &quot;My tasks&quot; list. It can either be a header above a list of tasks in a list view or a column in a board view of &quot;My tasks.&quot;The `assignee_section` property will be returned in the response only if the request was sent by the user who is the assignee of the task. Note that you can only write to `assignee_section` with the gid of an existing section visible in the user&apos;s &quot;My tasks&quot; list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection? AssigneeSection { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection? AssigneeSection { get => _explicitNullValueAssigneeSection; set { _explicitNullValueAssigneeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_section"); else _explicitNullProperties?.Remove("assignee_section"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection? _explicitNullValueAssigneeSection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection AssigneeSection { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection AssigneeSection { get => _explicitNullValueAssigneeSection; set { _explicitNullValueAssigneeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_section"); else _explicitNullProperties?.Remove("assignee_section"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeSection _explicitNullValueAssigneeSection = default!;
 #endif
         /// <summary>*Deprecated* Scheduling status of this task for the user it is assigned to. This field can only be set if the assignee is non-null. Setting this field to &quot;inbox&quot; or &quot;upcoming&quot; inserts it at the top of the section, while the other options will insert at the bottom.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus? AssigneeStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus? AssigneeStatus { get => _explicitNullValueAssigneeStatus; set { _explicitNullValueAssigneeStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_status"); else _explicitNullProperties?.Remove("assignee_status"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseAssigneeStatus? _explicitNullValueAssigneeStatus = default!;
         /// <summary>True if the task is currently marked complete, false if not.</summary>
-        public bool? Completed { get; set; }
+        public bool? Completed { get => _explicitNullValueCompleted; set { _explicitNullValueCompleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed"); else _explicitNullProperties?.Remove("completed"); } }
+        private bool? _explicitNullValueCompleted = default!;
         /// <summary>The time at which this task was completed, or null if the task is incomplete.</summary>
         public DateTimeOffset? CompletedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
@@ -79,18 +110,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Custom Types extend the types of Asana Objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType? CustomType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType? CustomType { get => _explicitNullValueCustomType; set { _explicitNullValueCustomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type"); else _explicitNullProperties?.Remove("custom_type"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType? _explicitNullValueCustomType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType CustomType { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType CustomType { get => _explicitNullValueCustomType; set { _explicitNullValueCustomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type"); else _explicitNullProperties?.Remove("custom_type"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomType _explicitNullValueCustomType = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption? CustomTypeStatusOption { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption? CustomTypeStatusOption { get => _explicitNullValueCustomTypeStatusOption; set { _explicitNullValueCustomTypeStatusOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type_status_option"); else _explicitNullProperties?.Remove("custom_type_status_option"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption? _explicitNullValueCustomTypeStatusOption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption CustomTypeStatusOption { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption CustomTypeStatusOption { get => _explicitNullValueCustomTypeStatusOption; set { _explicitNullValueCustomTypeStatusOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type_status_option"); else _explicitNullProperties?.Remove("custom_type_status_option"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseCustomTypeStatusOption _explicitNullValueCustomTypeStatusOption = default!;
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). Array of resources referencing tasks that this task depends on. The objects contain only the gid of the dependency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,9 +144,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseDependentsItem> Dependents { get; private set; }
 #endif
         /// <summary>The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.</summary>
-        public DateTimeOffset? DueAt { get; set; }
+        public DateTimeOffset? DueAt { get => _explicitNullValueDueAt; set { _explicitNullValueDueAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_at"); else _explicitNullProperties?.Remove("due_at"); } }
+        private DateTimeOffset? _explicitNullValueDueAt = default!;
         /// <summary>The localized date on which this task is due, or null if the task has no due date. This takes a date with `YYYY-MM-DD` format and should not be used together with `due_at`.</summary>
-        public Date? DueOn { get; set; }
+        public Date? DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        private Date? _explicitNullValueDueOn = default!;
         /// <summary>Opt-in, read-only. The union of direct and inherited memberships for this task. If the task is both directly associated with and inherits the same project, the direct membership takes precedence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,10 +160,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*OAuth Required*. *Conditional*. This field is returned only if external values are set or included by using [Opt In](/docs/inputoutput-options).The external field allows you to store app-specific metadata on tasks, including a gid that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external gid is set, you can use the notation `external:custom_gid` to reference your object anywhere in the API where you may use the original object gid. See the page on Custom External Data for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal? External { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal? External { get => _explicitNullValueExternal; set { _explicitNullValueExternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external"); else _explicitNullProperties?.Remove("external"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal? _explicitNullValueExternal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal External { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal External { get => _explicitNullValueExternal; set { _explicitNullValueExternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external"); else _explicitNullProperties?.Remove("external"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseExternal _explicitNullValueExternal = default!;
 #endif
         /// <summary>Array of users following this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -159,15 +198,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the text with formatting as HTML. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlNotes { get; set; }
+        public string? HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        private string? _explicitNullValueHtmlNotes = default!;
 #nullable restore
 #else
-        public string HtmlNotes { get; set; }
+        public string HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        private string _explicitNullValueHtmlNotes = default!;
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). In some contexts tasks can be rendered as a visual separator; for instance, subtasks can appear similar to [sections](/reference/sections) without being true `section` objects. If a `task` object is rendered this way in any context it will have the property `is_rendered_as_separator` set to `true`. This parameter only applies to regular tasks with `resource_subtype` of `default_task`. Tasks with `resource_subtype` of `milestone`, `approval`, or custom task types will not have this property and cannot be rendered as separators.</summary>
         public bool? IsRenderedAsSeparator { get; private set; }
         /// <summary>True if the task is liked by the authorized user, false if not.</summary>
-        public bool? Liked { get; set; }
+        public bool? Liked { get => _explicitNullValueLiked; set { _explicitNullValueLiked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked"); else _explicitNullProperties?.Remove("liked"); } }
+        private bool? _explicitNullValueLiked = default!;
         /// <summary>Array of likes for users who have liked this task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -189,18 +231,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Name of the task. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Free-form textual information associated with the task (i.e. its description).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>*Deprecated - please use likes instead* The number of users who have hearted this task.</summary>
         public int? NumHearts { get; private set; }
@@ -233,7 +279,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseProjectsItem> Projects { get; private set; }
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype? ResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype? ResourceSubtype { get => _explicitNullValueResourceSubtype; set { _explicitNullValueResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_subtype"); else _explicitNullProperties?.Remove("resource_subtype"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype? _explicitNullValueResourceSubtype = default!;
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -243,9 +290,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.*Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*</summary>
-        public DateTimeOffset? StartAt { get; set; }
+        public DateTimeOffset? StartAt { get => _explicitNullValueStartAt; set { _explicitNullValueStartAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_at"); else _explicitNullProperties?.Remove("start_at"); } }
+        private DateTimeOffset? _explicitNullValueStartAt = default!;
         /// <summary>The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.*Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*</summary>
-        public Date? StartOn { get; set; }
+        public Date? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private Date? _explicitNullValueStartOn = default!;
         /// <summary>Array of tags associated with this task. In order to change tags on an existing task use `addTag` and `removeTag`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -277,7 +326,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.TaskResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.TaskResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -358,6 +407,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateTimeOffsetValue("start_at", StartAt);
             writer.WriteDateValue("start_on", StartOn);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

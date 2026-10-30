@@ -12,23 +12,48 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TeamRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("edit_team_name_or_description_access_level") is { } nullNodeEditTeamNameOrDescriptionAccessLevel && nullNodeEditTeamNameOrDescriptionAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditTeamNameOrDescriptionAccessLevel = null;
+            if (parseNode.GetChildNode("edit_team_visibility_or_trash_team_access_level") is { } nullNodeEditTeamVisibilityOrTrashTeamAccessLevel && nullNodeEditTeamVisibilityOrTrashTeamAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditTeamVisibilityOrTrashTeamAccessLevel = null;
+            if (parseNode.GetChildNode("endorsed") is { } nullNodeEndorsed && nullNodeEndorsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endorsed = null;
+            if (parseNode.GetChildNode("guest_invite_management_access_level") is { } nullNodeGuestInviteManagementAccessLevel && nullNodeGuestInviteManagementAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuestInviteManagementAccessLevel = null;
+            if (parseNode.GetChildNode("html_description") is { } nullNodeHtmlDescription && nullNodeHtmlDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlDescription = null;
+            if (parseNode.GetChildNode("join_request_management_access_level") is { } nullNodeJoinRequestManagementAccessLevel && nullNodeJoinRequestManagementAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JoinRequestManagementAccessLevel = null;
+            if (parseNode.GetChildNode("member_invite_management_access_level") is { } nullNodeMemberInviteManagementAccessLevel && nullNodeMemberInviteManagementAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberInviteManagementAccessLevel = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
+            if (parseNode.GetChildNode("team_content_management_access_level") is { } nullNodeTeamContentManagementAccessLevel && nullNodeTeamContentManagementAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamContentManagementAccessLevel = null;
+            if (parseNode.GetChildNode("team_member_removal_access_level") is { } nullNodeTeamMemberRemovalAccessLevel && nullNodeTeamMemberRemovalAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamMemberRemovalAccessLevel = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The description of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Controls who can edit team name and description</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamNameOrDescriptionAccessLevel? EditTeamNameOrDescriptionAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamNameOrDescriptionAccessLevel? EditTeamNameOrDescriptionAccessLevel { get => _explicitNullValueEditTeamNameOrDescriptionAccessLevel; set { _explicitNullValueEditTeamNameOrDescriptionAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_team_name_or_description_access_level"); else _explicitNullProperties?.Remove("edit_team_name_or_description_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamNameOrDescriptionAccessLevel? _explicitNullValueEditTeamNameOrDescriptionAccessLevel = default!;
         /// <summary>Controls who can edit team visibility and trash teams</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamVisibilityOrTrashTeamAccessLevel? EditTeamVisibilityOrTrashTeamAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamVisibilityOrTrashTeamAccessLevel? EditTeamVisibilityOrTrashTeamAccessLevel { get => _explicitNullValueEditTeamVisibilityOrTrashTeamAccessLevel; set { _explicitNullValueEditTeamVisibilityOrTrashTeamAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_team_visibility_or_trash_team_access_level"); else _explicitNullProperties?.Remove("edit_team_visibility_or_trash_team_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamVisibilityOrTrashTeamAccessLevel? _explicitNullValueEditTeamVisibilityOrTrashTeamAccessLevel = default!;
         /// <summary>Whether the team has been endorsed</summary>
-        public bool? Endorsed { get; set; }
+        public bool? Endorsed { get => _explicitNullValueEndorsed; set { _explicitNullValueEndorsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endorsed"); else _explicitNullProperties?.Remove("endorsed"); } }
+        private bool? _explicitNullValueEndorsed = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,34 +63,43 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>Controls who can accept or deny guest invites for a given team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestGuestInviteManagementAccessLevel? GuestInviteManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestGuestInviteManagementAccessLevel? GuestInviteManagementAccessLevel { get => _explicitNullValueGuestInviteManagementAccessLevel; set { _explicitNullValueGuestInviteManagementAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guest_invite_management_access_level"); else _explicitNullProperties?.Remove("guest_invite_management_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestGuestInviteManagementAccessLevel? _explicitNullValueGuestInviteManagementAccessLevel = default!;
         /// <summary>The description of the team with formatting as HTML. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlDescription { get; set; }
+        public string? HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
+        private string? _explicitNullValueHtmlDescription = default!;
 #nullable restore
 #else
-        public string HtmlDescription { get; set; }
+        public string HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
+        private string _explicitNullValueHtmlDescription = default!;
 #endif
         /// <summary>Controls who can accept or deny join team requests for a Membership by Request team. This field can only be updated when the team&apos;s `visibility` field is `request_to_join`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestJoinRequestManagementAccessLevel? JoinRequestManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestJoinRequestManagementAccessLevel? JoinRequestManagementAccessLevel { get => _explicitNullValueJoinRequestManagementAccessLevel; set { _explicitNullValueJoinRequestManagementAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("join_request_management_access_level"); else _explicitNullProperties?.Remove("join_request_management_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestJoinRequestManagementAccessLevel? _explicitNullValueJoinRequestManagementAccessLevel = default!;
         /// <summary>Controls who can accept or deny member invites for a given team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestMemberInviteManagementAccessLevel? MemberInviteManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestMemberInviteManagementAccessLevel? MemberInviteManagementAccessLevel { get => _explicitNullValueMemberInviteManagementAccessLevel; set { _explicitNullValueMemberInviteManagementAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_invite_management_access_level"); else _explicitNullProperties?.Remove("member_invite_management_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestMemberInviteManagementAccessLevel? _explicitNullValueMemberInviteManagementAccessLevel = default!;
         /// <summary>The name of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The organization/workspace the team belongs to. This must be the same organization you are in and cannot be changed once set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Organization { get; set; }
+        public string? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private string? _explicitNullValueOrganization = default!;
 #nullable restore
 #else
-        public string Organization { get; set; }
+        public string Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private string _explicitNullValueOrganization = default!;
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,11 +110,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>Controls who can create and share content with the team</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamContentManagementAccessLevel? TeamContentManagementAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamContentManagementAccessLevel? TeamContentManagementAccessLevel { get => _explicitNullValueTeamContentManagementAccessLevel; set { _explicitNullValueTeamContentManagementAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_content_management_access_level"); else _explicitNullProperties?.Remove("team_content_management_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamContentManagementAccessLevel? _explicitNullValueTeamContentManagementAccessLevel = default!;
         /// <summary>Controls who can remove team members</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamMemberRemovalAccessLevel? TeamMemberRemovalAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamMemberRemovalAccessLevel? TeamMemberRemovalAccessLevel { get => _explicitNullValueTeamMemberRemovalAccessLevel; set { _explicitNullValueTeamMemberRemovalAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_member_removal_access_level"); else _explicitNullProperties?.Remove("team_member_removal_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamMemberRemovalAccessLevel? _explicitNullValueTeamMemberRemovalAccessLevel = default!;
         /// <summary>The visibility of the team to users in the same organization</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestVisibility? Visibility { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.TeamRequestVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TeamRequestVisibility? _explicitNullValueVisibility = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TeamRequest"/> and sets the default values.
         /// </summary>
@@ -96,7 +133,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.TeamRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TeamRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.TeamRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,6 +180,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamContentManagementAccessLevel>("team_content_management_access_level", TeamContentManagementAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamRequestTeamMemberRemovalAccessLevel>("team_member_removal_access_level", TeamMemberRemovalAccessLevel);
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamRequestVisibility>("visibility", Visibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

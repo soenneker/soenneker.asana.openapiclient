@@ -12,7 +12,38 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoalResponseCustomFieldSettingsItemCustomField : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("currency_code") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("custom_label") is { } nullNodeCustomLabel && nullNodeCustomLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomLabel = null;
+            if (parseNode.GetChildNode("custom_label_position") is { } nullNodeCustomLabelPosition && nullNodeCustomLabelPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomLabelPosition = null;
+            if (parseNode.GetChildNode("date_value") is { } nullNodeDateValue && nullNodeDateValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateValue = null;
+            if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("enum_options") is { } nullNodeEnumOptions && nullNodeEnumOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptions = null;
+            if (parseNode.GetChildNode("enum_value") is { } nullNodeEnumValue && nullNodeEnumValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumValue = null;
+            if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
+            if (parseNode.GetChildNode("has_notifications_enabled") is { } nullNodeHasNotificationsEnabled && nullNodeHasNotificationsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasNotificationsEnabled = null;
+            if (parseNode.GetChildNode("id_prefix") is { } nullNodeIdPrefix && nullNodeIdPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdPrefix = null;
+            if (parseNode.GetChildNode("input_restrictions") is { } nullNodeInputRestrictions && nullNodeInputRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputRestrictions = null;
+            if (parseNode.GetChildNode("is_formula_field") is { } nullNodeIsFormulaField && nullNodeIsFormulaField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFormulaField = null;
+            if (parseNode.GetChildNode("is_lookup_field") is { } nullNodeIsLookupField && nullNodeIsLookupField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLookupField = null;
+            if (parseNode.GetChildNode("is_value_read_only") is { } nullNodeIsValueReadOnly && nullNodeIsValueReadOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsValueReadOnly = null;
+            if (parseNode.GetChildNode("multi_enum_values") is { } nullNodeMultiEnumValues && nullNodeMultiEnumValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiEnumValues = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("number_value") is { } nullNodeNumberValue && nullNodeNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberValue = null;
+            if (parseNode.GetChildNode("people_value") is { } nullNodePeopleValue && nullNodePeopleValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeopleValue = null;
+            if (parseNode.GetChildNode("precision") is { } nullNodePrecision && nullNodePrecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Precision = null;
+            if (parseNode.GetChildNode("privacy_setting") is { } nullNodePrivacySetting && nullNodePrivacySetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacySetting = null;
+            if (parseNode.GetChildNode("reference_value") is { } nullNodeReferenceValue && nullNodeReferenceValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceValue = null;
+            if (parseNode.GetChildNode("text_value") is { } nullNodeTextValue && nullNodeTextValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. A unique identifier to associate this field with the template source of truth.</summary>
@@ -20,46 +51,58 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy? CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy CreatedBy { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCreatedBy _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>This is the string that appears next to the custom field value. This will be null if the `format` is not `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomLabel { get; set; }
+        public string? CustomLabel { get => _explicitNullValueCustomLabel; set { _explicitNullValueCustomLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_label"); else _explicitNullProperties?.Remove("custom_label"); } }
+        private string? _explicitNullValueCustomLabel = default!;
 #nullable restore
 #else
-        public string CustomLabel { get; set; }
+        public string CustomLabel { get => _explicitNullValueCustomLabel; set { _explicitNullValueCustomLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_label"); else _explicitNullProperties?.Remove("custom_label"); } }
+        private string _explicitNullValueCustomLabel = default!;
 #endif
         /// <summary>Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCustomLabelPosition? CustomLabelPosition { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCustomLabelPosition? CustomLabelPosition { get => _explicitNullValueCustomLabelPosition; set { _explicitNullValueCustomLabelPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_label_position"); else _explicitNullProperties?.Remove("custom_label_position"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldCustomLabelPosition? _explicitNullValueCustomLabelPosition = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue? DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue? DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue? _explicitNullValueDateValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDateValue _explicitNullValueDateValue = default!;
 #endif
         /// <summary>The default access level when inviting new members to the custom field. This isn&apos;t applied when the `privacy_setting` is `private`, or the user is a guest. For local fields in a project or portfolio, the user must additionally have permission to modify the container itself.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDefaultAccessLevel? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldDefaultAccessLevel? _explicitNullValueDefaultAccessLevel = default!;
         /// <summary>[Opt In](/docs/inputoutput-options). The description of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A string representation for the value of the custom field. Integrations that don&apos;t require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,21 +117,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem>? EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem>? EnumOptions { get => _explicitNullValueEnumOptions; set { _explicitNullValueEnumOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_options"); else _explicitNullProperties?.Remove("enum_options"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem>? _explicitNullValueEnumOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem> EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem> EnumOptions { get => _explicitNullValueEnumOptions; set { _explicitNullValueEnumOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_options"); else _explicitNullProperties?.Remove("enum_options"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumOptionsItem> _explicitNullValueEnumOptions = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue? EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue? EnumValue { get => _explicitNullValueEnumValue; set { _explicitNullValueEnumValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_value"); else _explicitNullProperties?.Remove("enum_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue? _explicitNullValueEnumValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue EnumValue { get => _explicitNullValueEnumValue; set { _explicitNullValueEnumValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_value"); else _explicitNullProperties?.Remove("enum_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldEnumValue _explicitNullValueEnumValue = default!;
 #endif
         /// <summary>The format of this custom field.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldFormat? Format { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldFormat? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldFormat? _explicitNullValueFormat = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,7 +146,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>*Conditional*. This flag describes whether a follower of a task with this field should receive inbox notifications from changes to this field.</summary>
-        public bool? HasNotificationsEnabled { get; set; }
+        public bool? HasNotificationsEnabled { get => _explicitNullValueHasNotificationsEnabled; set { _explicitNullValueHasNotificationsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_notifications_enabled"); else _explicitNullProperties?.Remove("has_notifications_enabled"); } }
+        private bool? _explicitNullValueHasNotificationsEnabled = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `text`. This is the HTML representation of the text value of a custom field, corresponding to the `text_value` plain-text field. See [rich text](/docs/rich-text#reading-rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,64 +159,82 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>This field is the unique custom ID string for the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdPrefix { get; set; }
+        public string? IdPrefix { get => _explicitNullValueIdPrefix; set { _explicitNullValueIdPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_prefix"); else _explicitNullProperties?.Remove("id_prefix"); } }
+        private string? _explicitNullValueIdPrefix = default!;
 #nullable restore
 #else
-        public string IdPrefix { get; set; }
+        public string IdPrefix { get => _explicitNullValueIdPrefix; set { _explicitNullValueIdPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_prefix"); else _explicitNullProperties?.Remove("id_prefix"); } }
+        private string _explicitNullValueIdPrefix = default!;
 #endif
         /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?>? InputRestrictions { get => _explicitNullValueInputRestrictions; set { _explicitNullValueInputRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_restrictions"); else _explicitNullProperties?.Remove("input_restrictions"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?>? _explicitNullValueInputRestrictions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?> InputRestrictions { get => _explicitNullValueInputRestrictions; set { _explicitNullValueInputRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_restrictions"); else _explicitNullProperties?.Remove("input_restrictions"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldInputRestrictionsItem?> _explicitNullValueInputRestrictions = default!;
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
-        public bool? IsFormulaField { get; set; }
+        public bool? IsFormulaField { get => _explicitNullValueIsFormulaField; set { _explicitNullValueIsFormulaField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_formula_field"); else _explicitNullProperties?.Remove("is_formula_field"); } }
+        private bool? _explicitNullValueIsFormulaField = default!;
         /// <summary>This flag describes whether this custom field is available to every container in the workspace. Before project-specific custom fields, this field was always true.</summary>
         public bool? IsGlobalToWorkspace { get; private set; }
         /// <summary>*Conditional*. This flag describes whether a custom field is a lookup custom field.</summary>
-        public bool? IsLookupField { get; set; }
+        public bool? IsLookupField { get => _explicitNullValueIsLookupField; set { _explicitNullValueIsLookupField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_lookup_field"); else _explicitNullProperties?.Remove("is_lookup_field"); } }
+        private bool? _explicitNullValueIsLookupField = default!;
         /// <summary>*Conditional*. This flag describes whether a custom field is read only.</summary>
-        public bool? IsValueReadOnly { get; set; }
+        public bool? IsValueReadOnly { get => _explicitNullValueIsValueReadOnly; set { _explicitNullValueIsValueReadOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_value_read_only"); else _explicitNullProperties?.Remove("is_value_read_only"); } }
+        private bool? _explicitNullValueIsValueReadOnly = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem>? MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem>? MultiEnumValues { get => _explicitNullValueMultiEnumValues; set { _explicitNullValueMultiEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_enum_values"); else _explicitNullProperties?.Remove("multi_enum_values"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem>? _explicitNullValueMultiEnumValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem> MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem> MultiEnumValues { get => _explicitNullValueMultiEnumValues; set { _explicitNullValueMultiEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_enum_values"); else _explicitNullProperties?.Remove("multi_enum_values"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldMultiEnumValuesItem> _explicitNullValueMultiEnumValues = default!;
 #endif
         /// <summary>The name of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>*Conditional*. This number is the value of a `number` custom field.</summary>
-        public double? NumberValue { get; set; }
+        public double? NumberValue { get => _explicitNullValueNumberValue; set { _explicitNullValueNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_value"); else _explicitNullProperties?.Remove("number_value"); } }
+        private double? _explicitNullValueNumberValue = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `people`. This array of [compact user](/reference/users) objects reflects the values of a `people` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem>? PeopleValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem>? PeopleValue { get => _explicitNullValuePeopleValue; set { _explicitNullValuePeopleValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("people_value"); else _explicitNullProperties?.Remove("people_value"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem>? _explicitNullValuePeopleValue = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem> PeopleValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem> PeopleValue { get => _explicitNullValuePeopleValue; set { _explicitNullValuePeopleValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("people_value"); else _explicitNullProperties?.Remove("people_value"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPeopleValueItem> _explicitNullValuePeopleValue = default!;
 #endif
         /// <summary>Only relevant for custom fields of type `Number`. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.The identifier format will always have a precision of 0.</summary>
-        public int? Precision { get; set; }
+        public int? Precision { get => _explicitNullValuePrecision; set { _explicitNullValuePrecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("precision"); else _explicitNullProperties?.Remove("precision"); } }
+        private int? _explicitNullValuePrecision = default!;
         /// <summary>The privacy setting of the custom field. *Note: Administrators in your organization may restrict the values of `privacy_setting`.*</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPrivacySetting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPrivacySetting? PrivacySetting { get => _explicitNullValuePrivacySetting; set { _explicitNullValuePrivacySetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_setting"); else _explicitNullProperties?.Remove("privacy_setting"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPrivacySetting? _explicitNullValuePrivacySetting = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `reference`. This array of objects reflects the values of a `reference` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem>? ReferenceValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem>? ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_value"); else _explicitNullProperties?.Remove("reference_value"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem>? _explicitNullValueReferenceValue = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem> ReferenceValue { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem> ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_value"); else _explicitNullProperties?.Remove("reference_value"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem> _explicitNullValueReferenceValue = default!;
 #endif
         /// <summary>This field tells the type of the custom field.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldRepresentationType? RepresentationType { get; private set; }
@@ -184,10 +251,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. This string is the value of a `text` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextValue { get; set; }
+        public string? TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        private string? _explicitNullValueTextValue = default!;
 #nullable restore
 #else
-        public string TextValue { get; set; }
+        public string TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        private string _explicitNullValueTextValue = default!;
 #endif
         /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldType? Type { get; private set; }
@@ -206,7 +275,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomField();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -283,6 +352,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldPrivacySetting>("privacy_setting", PrivacySetting);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItemCustomFieldReferenceValueItem>("reference_value", ReferenceValue);
             writer.WriteStringValue("text_value", TextValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

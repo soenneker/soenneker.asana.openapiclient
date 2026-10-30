@@ -2,7 +2,7 @@
   "descriptionHash": "EEAF7F397904A8E750A1B424BD0271BD626EE19CD559BE5ED01E352123B8D7543C8808FB7E4E2262F0EA1CB595B83C4C412D0AC5130AB5C2C5CA141AC31AE38B",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "AsanaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Asana.OpenApiClient",

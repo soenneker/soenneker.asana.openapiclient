@@ -13,26 +13,39 @@ namespace Soenneker.Asana.OpenApiClient.Models
     [Obsolete("")]
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkspaceMembershipResponseVacationDates : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("end_on") is { } nullNodeEndOn && nullNodeEndOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndOn = null;
+            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. The day on which the user&apos;s vacation in this workspace ends, or null if there is no end date. This is a date with `YYYY-MM-DD` format.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndOn { get; set; }
+        public string? EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
+        private string? _explicitNullValueEndOn = default!;
 #nullable restore
 #else
-        public string EndOn { get; set; }
+        public string EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
+        private string _explicitNullValueEndOn = default!;
 #endif
         /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. The day on which the user&apos;s vacation in this workspace starts. This is a date with `YYYY-MM-DD` format.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartOn { get; set; }
+        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private string? _explicitNullValueStartOn = default!;
 #nullable restore
 #else
-        public string StartOn { get; set; }
+        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private string _explicitNullValueStartOn = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates"/> and sets the default values.
@@ -49,7 +62,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.WorkspaceMembershipResponseVacationDates(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("end_on", EndOn);
             writer.WriteStringValue("start_on", StartOn);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

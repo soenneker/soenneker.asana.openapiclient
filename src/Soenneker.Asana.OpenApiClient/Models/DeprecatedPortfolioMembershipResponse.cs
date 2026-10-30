@@ -12,7 +12,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeprecatedPortfolioMembershipResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("portfolio") is { } nullNodePortfolio && nullNodePortfolio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Portfolio = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Whether the member has admin, editor, or viewer access to the portfolio. Portfolios do not support commenter access yet.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseAccessLevel? AccessLevel { get; private set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,10 +37,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/reference/project-statuses) update.Portfolios have some restrictions on size. Each portfolio has a max of 1500 items and, like projects, a max of 20 custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio? Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio? Portfolio { get => _explicitNullValuePortfolio; set { _explicitNullValuePortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portfolio"); else _explicitNullProperties?.Remove("portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio? _explicitNullValuePortfolio = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio Portfolio { get => _explicitNullValuePortfolio; set { _explicitNullValuePortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portfolio"); else _explicitNullProperties?.Remove("portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio _explicitNullValuePortfolio = default!;
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,10 +55,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser? User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser User { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse"/> and sets the default values.
@@ -64,7 +77,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +103,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponsePortfolio>("portfolio", Portfolio);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.DeprecatedPortfolioMembershipResponseUser>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

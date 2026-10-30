@@ -13,38 +13,77 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectUpdateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("archived") is { } nullNodeArchived && nullNodeArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Archived = null;
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("current_status") is { } nullNodeCurrentStatus && nullNodeCurrentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStatus = null;
+            if (parseNode.GetChildNode("current_status_update") is { } nullNodeCurrentStatusUpdate && nullNodeCurrentStatusUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStatusUpdate = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("custom_type") is { } nullNodeCustomType && nullNodeCustomType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomType = null;
+            if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
+            if (parseNode.GetChildNode("default_view") is { } nullNodeDefaultView && nullNodeDefaultView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultView = null;
+            if (parseNode.GetChildNode("due_date") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
+            if (parseNode.GetChildNode("due_on") is { } nullNodeDueOn && nullNodeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueOn = null;
+            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("html_custom_fields") is { } nullNodeHtmlCustomFields && nullNodeHtmlCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlCustomFields = null;
+            if (parseNode.GetChildNode("html_notes") is { } nullNodeHtmlNotes && nullNodeHtmlNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlNotes = null;
+            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_customization") is { } nullNodeMinimumAccessLevelForCustomization && nullNodeMinimumAccessLevelForCustomization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForCustomization = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_sharing") is { } nullNodeMinimumAccessLevelForSharing && nullNodeMinimumAccessLevelForSharing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForSharing = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("privacy_setting") is { } nullNodePrivacySetting && nullNodePrivacySetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacySetting = null;
+            if (parseNode.GetChildNode("public") is { } nullNodePublic && nullNodePublic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Public = null;
+            if (parseNode.GetChildNode("resource_subtype") is { } nullNodeResourceSubtype && nullNodeResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceSubtype = null;
+            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>True if the project is archived, false if not. Archived projects do not show in the UI by default and may be treated differently for queries.</summary>
-        public bool? Archived { get; set; }
+        public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
+        private bool? _explicitNullValueArchived = default!;
         /// <summary>Color of the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor? Color { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor? _explicitNullValueColor = default!;
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus? CurrentStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus? CurrentStatus { get => _explicitNullValueCurrentStatus; set { _explicitNullValueCurrentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status"); else _explicitNullProperties?.Remove("current_status"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus? _explicitNullValueCurrentStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus CurrentStatus { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus CurrentStatus { get => _explicitNullValueCurrentStatus; set { _explicitNullValueCurrentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status"); else _explicitNullProperties?.Remove("current_status"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus _explicitNullValueCurrentStatus = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.The latest `status_update` posted to this project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate? CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate? CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate? _explicitNullValueCurrentStatusUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate CurrentStatusUpdate { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate _explicitNullValueCurrentStatusUpdate = default!;
 #endif
         /// <summary>An object where each key is the GID of a custom field and its corresponding value is either an enum GID, string, number, or object (depending on the custom field type). See the [custom fields guide](/docs/custom-fields-guide) for details on creating and updating custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty? CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty CustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Array of custom field definitions that are enabled for the project. These represent which custom fields are available to be used on tasks within the project, but do not include any values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,26 +96,34 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional:* You can only set custom_type if project `resource_subtype` is `custom`. GID or globally-unique identifier of a project&apos;s custom type. The type must be valid for projects, and some Asana-created custom types cannot be assigned via the API; attempting either returns an error explaining which condition failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomType { get; set; }
+        public string? CustomType { get => _explicitNullValueCustomType; set { _explicitNullValueCustomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type"); else _explicitNullProperties?.Remove("custom_type"); } }
+        private string? _explicitNullValueCustomType = default!;
 #nullable restore
 #else
-        public string CustomType { get; set; }
+        public string CustomType { get => _explicitNullValueCustomType; set { _explicitNullValueCustomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_type"); else _explicitNullProperties?.Remove("custom_type"); } }
+        private string _explicitNullValueCustomType = default!;
 #endif
         /// <summary>The default access for users or teams who join or are added as members to the project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultAccessLevel? DefaultAccessLevel { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultAccessLevel? _explicitNullValueDefaultAccessLevel = default!;
         /// <summary>The default view (list, board, calendar, or timeline) of a project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultView? DefaultView { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultView? DefaultView { get => _explicitNullValueDefaultView; set { _explicitNullValueDefaultView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_view"); else _explicitNullProperties?.Remove("default_view"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestDefaultView? _explicitNullValueDefaultView = default!;
         /// <summary>*Deprecated: new integrations should prefer the `due_on` field.*</summary>
-        public Date? DueDate { get; set; }
+        public Date? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private Date? _explicitNullValueDueDate = default!;
         /// <summary>The day on which this project is due. This takes a date with format YYYY-MM-DD.</summary>
-        public Date? DueOn { get; set; }
+        public Date? DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        private Date? _explicitNullValueDueOn = default!;
         /// <summary>*Create-only*. Comma separated string of users. Followers are a subset of members who have opted in to receive &quot;tasks added&quot; notifications for a project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Followers { get; set; }
+        public string? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        private string? _explicitNullValueFollowers = default!;
 #nullable restore
 #else
-        public string Followers { get; set; }
+        public string Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        private string _explicitNullValueFollowers = default!;
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,21 +136,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object where each key is the GID of a text custom field and the corresponding value is a rich text HTML string. Only text-type custom fields support this parameter. Values must be wrapped in &lt;body&gt;&lt;/body&gt; tags. See the [custom fields guide](/docs/custom-fields-guide) and [rich text](/docs/rich-text) for details on supported formatting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty? HtmlCustomFields { get => _explicitNullValueHtmlCustomFields; set { _explicitNullValueHtmlCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_custom_fields"); else _explicitNullProperties?.Remove("html_custom_fields"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty? _explicitNullValueHtmlCustomFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty HtmlCustomFields { get => _explicitNullValueHtmlCustomFields; set { _explicitNullValueHtmlCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_custom_fields"); else _explicitNullProperties?.Remove("html_custom_fields"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestHtmlCustomFieldsProperty _explicitNullValueHtmlCustomFields = default!;
 #endif
         /// <summary>[Opt In](/docs/inputoutput-options). The notes of the project with formatting as HTML. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlNotes { get; set; }
+        public string? HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        private string? _explicitNullValueHtmlNotes = default!;
 #nullable restore
 #else
-        public string HtmlNotes { get; set; }
+        public string HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        private string _explicitNullValueHtmlNotes = default!;
 #endif
         /// <summary>The icon for a project.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestIcon? Icon { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestIcon? _explicitNullValueIcon = default!;
         /// <summary>Array of users who are members of this project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,42 +165,53 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMembersItem> Members { get; private set; }
 #endif
         /// <summary>The minimum access level needed for project members to modify this project&apos;s workflow and appearance.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForCustomization? MinimumAccessLevelForCustomization { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForCustomization? MinimumAccessLevelForCustomization { get => _explicitNullValueMinimumAccessLevelForCustomization; set { _explicitNullValueMinimumAccessLevelForCustomization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_customization"); else _explicitNullProperties?.Remove("minimum_access_level_for_customization"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForCustomization? _explicitNullValueMinimumAccessLevelForCustomization = default!;
         /// <summary>The minimum access level needed for project members to share the project and manage project memberships.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForSharing? MinimumAccessLevelForSharing { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForSharing? MinimumAccessLevelForSharing { get => _explicitNullValueMinimumAccessLevelForSharing; set { _explicitNullValueMinimumAccessLevelForSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_sharing"); else _explicitNullProperties?.Remove("minimum_access_level_for_sharing"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestMinimumAccessLevelForSharing? _explicitNullValueMinimumAccessLevelForSharing = default!;
         /// <summary>The time at which this project was last modified.*Note: This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.*</summary>
         public DateTimeOffset? ModifiedAt { get; private set; }
         /// <summary>Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Free-form textual information associated with the project (ie., its description).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The current owner of the project, may be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Owner { get; set; }
+        public string? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private string? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public string Owner { get; set; }
+        public string Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private string _explicitNullValueOwner = default!;
 #endif
         /// <summary>The privacy setting of the project. *Note: Administrators in your organization may restrict the values of `privacy_setting`.* The value `private_to_team` is deprecated. Use `POST /memberships` to share a project with a team after creation.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestPrivacySetting? PrivacySetting { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestPrivacySetting? PrivacySetting { get => _explicitNullValuePrivacySetting; set { _explicitNullValuePrivacySetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_setting"); else _explicitNullProperties?.Remove("privacy_setting"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestPrivacySetting? _explicitNullValuePrivacySetting = default!;
         /// <summary>*Deprecated:* new integrations use `privacy_setting` instead.</summary>
         [Obsolete("")]
-        public bool? Public { get; set; }
+        public bool? Public { get => _explicitNullValuePublic; set { _explicitNullValuePublic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public"); else _explicitNullProperties?.Remove("public"); } }
+        private bool? _explicitNullValuePublic = default!;
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestResourceSubtype? ResourceSubtype { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestResourceSubtype? ResourceSubtype { get => _explicitNullValueResourceSubtype; set { _explicitNullValueResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_subtype"); else _explicitNullProperties?.Remove("resource_subtype"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestResourceSubtype? _explicitNullValueResourceSubtype = default!;
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,15 +221,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*</summary>
-        public Date? StartOn { get; set; }
+        public Date? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        private Date? _explicitNullValueStartOn = default!;
         /// <summary>*Deprecated:* Updating the team a project is shared with is deprecated. Use `POST /memberships` with `{ parent: project, member: team }` instead to manage team sharing.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Team { get; set; }
+        public string? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private string? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public string Team { get; set; }
+        public string Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        private string _explicitNullValueTeam = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest"/> and sets the default values.
@@ -183,7 +249,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -256,6 +322,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestResourceSubtype>("resource_subtype", ResourceSubtype);
             writer.WriteDateValue("start_on", StartOn);
             writer.WriteStringValue("team", Team);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,7 +12,17 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectPortfolioSettingResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_access_control_inherited") is { } nullNodeIsAccessControlInherited && nullNodeIsAccessControlInherited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessControlInherited = null;
+            if (parseNode.GetChildNode("portfolio") is { } nullNodePortfolio && nullNodePortfolio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Portfolio = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The time at which this project portfolio setting was created.</summary>
@@ -26,22 +36,27 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>When true, the portfolio members gain access to the project.</summary>
-        public bool? IsAccessControlInherited { get; set; }
+        public bool? IsAccessControlInherited { get => _explicitNullValueIsAccessControlInherited; set { _explicitNullValueIsAccessControlInherited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_control_inherited"); else _explicitNullProperties?.Remove("is_access_control_inherited"); } }
+        private bool? _explicitNullValueIsAccessControlInherited = default!;
         /// <summary>The portfolio associated with this setting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio? Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio? Portfolio { get => _explicitNullValuePortfolio; set { _explicitNullValuePortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portfolio"); else _explicitNullProperties?.Remove("portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio? _explicitNullValuePortfolio = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio Portfolio { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio Portfolio { get => _explicitNullValuePortfolio; set { _explicitNullValuePortfolio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portfolio"); else _explicitNullProperties?.Remove("portfolio"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio _explicitNullValuePortfolio = default!;
 #endif
         /// <summary>The project associated with this setting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject? Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject Project { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject _explicitNullValueProject = default!;
 #endif
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +81,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +109,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteBoolValue("is_access_control_inherited", IsAccessControlInherited);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponsePortfolio>("portfolio", Portfolio);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingResponseProject>("project", Project);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

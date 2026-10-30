@@ -12,16 +12,36 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StoryResponseCustomField : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date_value") is { } nullNodeDateValue && nullNodeDateValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateValue = null;
+            if (parseNode.GetChildNode("enum_options") is { } nullNodeEnumOptions && nullNodeEnumOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOptions = null;
+            if (parseNode.GetChildNode("enum_value") is { } nullNodeEnumValue && nullNodeEnumValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumValue = null;
+            if (parseNode.GetChildNode("id_prefix") is { } nullNodeIdPrefix && nullNodeIdPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdPrefix = null;
+            if (parseNode.GetChildNode("input_restrictions") is { } nullNodeInputRestrictions && nullNodeInputRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputRestrictions = null;
+            if (parseNode.GetChildNode("is_formula_field") is { } nullNodeIsFormulaField && nullNodeIsFormulaField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFormulaField = null;
+            if (parseNode.GetChildNode("is_lookup_field") is { } nullNodeIsLookupField && nullNodeIsLookupField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLookupField = null;
+            if (parseNode.GetChildNode("multi_enum_values") is { } nullNodeMultiEnumValues && nullNodeMultiEnumValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiEnumValues = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("number_value") is { } nullNodeNumberValue && nullNodeNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberValue = null;
+            if (parseNode.GetChildNode("text_value") is { } nullNodeTextValue && nullNodeTextValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue? DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue? DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue? _explicitNullValueDateValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue DateValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue DateValue { get => _explicitNullValueDateValue; set { _explicitNullValueDateValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_value"); else _explicitNullProperties?.Remove("date_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue _explicitNullValueDateValue = default!;
 #endif
         /// <summary>A string representation for the value of the custom field. Integrations that don&apos;t require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -36,18 +56,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. Only relevant for custom fields of type `enum` or `multi_enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/reference/createenumoptionforcustomfield).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem>? EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem>? EnumOptions { get => _explicitNullValueEnumOptions; set { _explicitNullValueEnumOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_options"); else _explicitNullProperties?.Remove("enum_options"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem>? _explicitNullValueEnumOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem> EnumOptions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem> EnumOptions { get => _explicitNullValueEnumOptions; set { _explicitNullValueEnumOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_options"); else _explicitNullProperties?.Remove("enum_options"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumOptionsItem> _explicitNullValueEnumOptions = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.**It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.*Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an `enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue? EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue? EnumValue { get => _explicitNullValueEnumValue; set { _explicitNullValueEnumValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_value"); else _explicitNullProperties?.Remove("enum_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue? _explicitNullValueEnumValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue EnumValue { get; set; }
+        public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue EnumValue { get => _explicitNullValueEnumValue; set { _explicitNullValueEnumValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_value"); else _explicitNullProperties?.Remove("enum_value"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldEnumValue _explicitNullValueEnumValue = default!;
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,41 +84,52 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>This field is the unique custom ID string for the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdPrefix { get; set; }
+        public string? IdPrefix { get => _explicitNullValueIdPrefix; set { _explicitNullValueIdPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_prefix"); else _explicitNullProperties?.Remove("id_prefix"); } }
+        private string? _explicitNullValueIdPrefix = default!;
 #nullable restore
 #else
-        public string IdPrefix { get; set; }
+        public string IdPrefix { get => _explicitNullValueIdPrefix; set { _explicitNullValueIdPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_prefix"); else _explicitNullProperties?.Remove("id_prefix"); } }
+        private string _explicitNullValueIdPrefix = default!;
 #endif
         /// <summary>The input_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?>? InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?>? InputRestrictions { get => _explicitNullValueInputRestrictions; set { _explicitNullValueInputRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_restrictions"); else _explicitNullProperties?.Remove("input_restrictions"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?>? _explicitNullValueInputRestrictions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?> InputRestrictions { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?> InputRestrictions { get => _explicitNullValueInputRestrictions; set { _explicitNullValueInputRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input_restrictions"); else _explicitNullProperties?.Remove("input_restrictions"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldInputRestrictionsItem?> _explicitNullValueInputRestrictions = default!;
 #endif
         /// <summary>*Conditional*. This flag describes whether a custom field is a formula custom field.</summary>
-        public bool? IsFormulaField { get; set; }
+        public bool? IsFormulaField { get => _explicitNullValueIsFormulaField; set { _explicitNullValueIsFormulaField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_formula_field"); else _explicitNullProperties?.Remove("is_formula_field"); } }
+        private bool? _explicitNullValueIsFormulaField = default!;
         /// <summary>*Conditional*. This flag describes whether a custom field is a lookup custom field.</summary>
-        public bool? IsLookupField { get; set; }
+        public bool? IsLookupField { get => _explicitNullValueIsLookupField; set { _explicitNullValueIsLookupField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_lookup_field"); else _explicitNullProperties?.Remove("is_lookup_field"); } }
+        private bool? _explicitNullValueIsLookupField = default!;
         /// <summary>*Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem>? MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem>? MultiEnumValues { get => _explicitNullValueMultiEnumValues; set { _explicitNullValueMultiEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_enum_values"); else _explicitNullProperties?.Remove("multi_enum_values"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem>? _explicitNullValueMultiEnumValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem> MultiEnumValues { get; set; }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem> MultiEnumValues { get => _explicitNullValueMultiEnumValues; set { _explicitNullValueMultiEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_enum_values"); else _explicitNullProperties?.Remove("multi_enum_values"); } }
+        private List<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldMultiEnumValuesItem> _explicitNullValueMultiEnumValues = default!;
 #endif
         /// <summary>The name of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>*Conditional*. This number is the value of a `number` custom field.</summary>
-        public double? NumberValue { get; set; }
+        public double? NumberValue { get => _explicitNullValueNumberValue; set { _explicitNullValueNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_value"); else _explicitNullProperties?.Remove("number_value"); } }
+        private double? _explicitNullValueNumberValue = default!;
         /// <summary>This field tells the type of the custom field.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldRepresentationType? RepresentationType { get; private set; }
         /// <summary>The base type of this resource.</summary>
@@ -108,10 +143,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional*. This string is the value of a `text` custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextValue { get; set; }
+        public string? TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        private string? _explicitNullValueTextValue = default!;
 #nullable restore
 #else
-        public string TextValue { get; set; }
+        public string TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_value"); else _explicitNullProperties?.Remove("text_value"); } }
+        private string _explicitNullValueTextValue = default!;
 #endif
         /// <summary>*Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldType? Type { get; private set; }
@@ -130,7 +167,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -177,6 +214,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("number_value", NumberValue);
             writer.WriteStringValue("text_value", TextValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

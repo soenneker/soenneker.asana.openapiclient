@@ -12,21 +12,40 @@ namespace Soenneker.Asana.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskCountResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("num_completed_milestones") is { } nullNodeNumCompletedMilestones && nullNodeNumCompletedMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumCompletedMilestones = null;
+            if (parseNode.GetChildNode("num_completed_tasks") is { } nullNodeNumCompletedTasks && nullNodeNumCompletedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumCompletedTasks = null;
+            if (parseNode.GetChildNode("num_incomplete_milestones") is { } nullNodeNumIncompleteMilestones && nullNodeNumIncompleteMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumIncompleteMilestones = null;
+            if (parseNode.GetChildNode("num_incomplete_tasks") is { } nullNodeNumIncompleteTasks && nullNodeNumIncompleteTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumIncompleteTasks = null;
+            if (parseNode.GetChildNode("num_milestones") is { } nullNodeNumMilestones && nullNodeNumMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumMilestones = null;
+            if (parseNode.GetChildNode("num_tasks") is { } nullNodeNumTasks && nullNodeNumTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumTasks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of completed milestones in a project.</summary>
-        public int? NumCompletedMilestones { get; set; }
+        public int? NumCompletedMilestones { get => _explicitNullValueNumCompletedMilestones; set { _explicitNullValueNumCompletedMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_completed_milestones"); else _explicitNullProperties?.Remove("num_completed_milestones"); } }
+        private int? _explicitNullValueNumCompletedMilestones = default!;
         /// <summary>The number of completed tasks in a project.</summary>
-        public int? NumCompletedTasks { get; set; }
+        public int? NumCompletedTasks { get => _explicitNullValueNumCompletedTasks; set { _explicitNullValueNumCompletedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_completed_tasks"); else _explicitNullProperties?.Remove("num_completed_tasks"); } }
+        private int? _explicitNullValueNumCompletedTasks = default!;
         /// <summary>The number of incomplete milestones in a project.</summary>
-        public int? NumIncompleteMilestones { get; set; }
+        public int? NumIncompleteMilestones { get => _explicitNullValueNumIncompleteMilestones; set { _explicitNullValueNumIncompleteMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_incomplete_milestones"); else _explicitNullProperties?.Remove("num_incomplete_milestones"); } }
+        private int? _explicitNullValueNumIncompleteMilestones = default!;
         /// <summary>The number of incomplete tasks in a project.</summary>
-        public int? NumIncompleteTasks { get; set; }
+        public int? NumIncompleteTasks { get => _explicitNullValueNumIncompleteTasks; set { _explicitNullValueNumIncompleteTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_incomplete_tasks"); else _explicitNullProperties?.Remove("num_incomplete_tasks"); } }
+        private int? _explicitNullValueNumIncompleteTasks = default!;
         /// <summary>The number of milestones in a project.</summary>
-        public int? NumMilestones { get; set; }
+        public int? NumMilestones { get => _explicitNullValueNumMilestones; set { _explicitNullValueNumMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_milestones"); else _explicitNullProperties?.Remove("num_milestones"); } }
+        private int? _explicitNullValueNumMilestones = default!;
         /// <summary>The number of tasks in a project.</summary>
-        public int? NumTasks { get; set; }
+        public int? NumTasks { get => _explicitNullValueNumTasks; set { _explicitNullValueNumTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_tasks"); else _explicitNullProperties?.Remove("num_tasks"); } }
+        private int? _explicitNullValueNumTasks = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskCountResponse"/> and sets the default values.
         /// </summary>
@@ -42,7 +61,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public static global::Soenneker.Asana.OpenApiClient.Models.TaskCountResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Asana.OpenApiClient.Models.TaskCountResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.TaskCountResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +92,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             writer.WriteIntValue("num_incomplete_tasks", NumIncompleteTasks);
             writer.WriteIntValue("num_milestones", NumMilestones);
             writer.WriteIntValue("num_tasks", NumTasks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

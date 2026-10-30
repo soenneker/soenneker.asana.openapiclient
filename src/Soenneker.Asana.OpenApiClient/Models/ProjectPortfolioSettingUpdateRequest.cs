@@ -17,13 +17,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_access_control_inherited") is { } nullNodeIsAccessControlInherited && nullNodeIsAccessControlInherited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessControlInherited = null;
+            if (parseNode.GetChildNode("is_access_control_inherited") is null) { _explicitNullValueIsAccessControlInherited = default!; _explicitNullProperties?.Remove("is_access_control_inherited"); }
+            else if (parseNode.GetChildNode("is_access_control_inherited") is { } nullNodeIsAccessControlInherited && nullNodeIsAccessControlInherited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAccessControlInherited = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When true, the portfolio members gain access to the project.</summary>
-        public bool? IsAccessControlInherited { get => _explicitNullValueIsAccessControlInherited; set { _explicitNullValueIsAccessControlInherited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_control_inherited"); else _explicitNullProperties?.Remove("is_access_control_inherited"); } }
+        public bool? IsAccessControlInherited { get => _explicitNullValueIsAccessControlInherited; set { _explicitNullValueIsAccessControlInherited = value; AdditionalData?.Remove("is_access_control_inherited"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_access_control_inherited"); else _explicitNullProperties?.Remove("is_access_control_inherited"); } }
         private bool? _explicitNullValueIsAccessControlInherited = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ProjectPortfolioSettingUpdateRequest"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("supporting_resource") is { } nullNodeSupportingResource && nullNodeSupportingResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingResource = null;
+            if (parseNode.GetChildNode("supporting_resource") is null) { _explicitNullValueSupportingResource = default!; _explicitNullProperties?.Remove("supporting_resource"); }
+            else if (parseNode.GetChildNode("supporting_resource") is { } nullNodeSupportingResource && nullNodeSupportingResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingResource = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The gid of the supporting resource to remove from the parent goal. Must be the gid of a goal, project, task, or portfolio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
+        public string? SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; AdditionalData?.Remove("supporting_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
         private string? _explicitNullValueSupportingResource = default!;
 #nullable restore
 #else
-        public string SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
+        public string SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; AdditionalData?.Remove("supporting_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
         private string _explicitNullValueSupportingResource = default!;
 #endif
         /// <summary>

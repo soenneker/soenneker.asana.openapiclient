@@ -17,18 +17,20 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action_data") is { } nullNodeActionData && nullNodeActionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionData = null;
-            if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
+            if (parseNode.GetChildNode("action_data") is null) { _explicitNullValueActionData = default!; _explicitNullProperties?.Remove("action_data"); }
+            else if (parseNode.GetChildNode("action_data") is { } nullNodeActionData && nullNodeActionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionData = null;
+            if (parseNode.GetChildNode("resource") is null) { _explicitNullValueResource = default!; _explicitNullProperties?.Remove("resource"); }
+            else if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
         }
 
         /// <summary>The dynamic keys and values of the request. These fields are intended to be used in the action for the rule associated with this trigger.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty? ActionData { get => _explicitNullValueActionData; set { _explicitNullValueActionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_data"); else _explicitNullProperties?.Remove("action_data"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty? ActionData { get => _explicitNullValueActionData; set { _explicitNullValueActionData = value; AdditionalData?.Remove("action_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_data"); else _explicitNullProperties?.Remove("action_data"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty? _explicitNullValueActionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty ActionData { get => _explicitNullValueActionData; set { _explicitNullValueActionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_data"); else _explicitNullProperties?.Remove("action_data"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty ActionData { get => _explicitNullValueActionData; set { _explicitNullValueActionData = value; AdditionalData?.Remove("action_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_data"); else _explicitNullProperties?.Remove("action_data"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.RuleTriggerRequestActionDataProperty _explicitNullValueActionData = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +38,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The ID of the resource. For the duration of the beta, this resource is always a task, and this task must exist in the project in which the rule is created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        public string? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
         private string? _explicitNullValueResource = default!;
 #nullable restore
 #else
-        public string Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        public string Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
         private string _explicitNullValueResource = default!;
 #endif
         /// <summary>

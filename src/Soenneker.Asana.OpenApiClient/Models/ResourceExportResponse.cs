@@ -18,7 +18,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("new_resource_export") is { } nullNodeNewResourceExport && nullNodeNewResourceExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewResourceExport = null;
+            if (parseNode.GetChildNode("new_resource_export") is null) { _explicitNullValueNewResourceExport = default!; _explicitNullProperties?.Remove("new_resource_export"); }
+            else if (parseNode.GetChildNode("new_resource_export") is { } nullNodeNewResourceExport && nullNodeNewResourceExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewResourceExport = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,11 +35,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport? NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport? NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; AdditionalData?.Remove("new_resource_export"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport? _explicitNullValueNewResourceExport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport NewResourceExport { get => _explicitNullValueNewResourceExport; set { _explicitNullValueNewResourceExport = value; AdditionalData?.Remove("new_resource_export"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_resource_export"); else _explicitNullProperties?.Remove("new_resource_export"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ResourceExportResponseNewResourceExport _explicitNullValueNewResourceExport = default!;
 #endif
         /// <summary>A *resource_export* object represents a request to bulk export objects for one or more resources.</summary>

@@ -18,16 +18,26 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assigned_by.any") is { } nullNodeAssignedByAny && nullNodeAssignedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedByAny = null;
-            if (parseNode.GetChildNode("assignee.any") is { } nullNodeAssigneeAny && nullNodeAssigneeAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeAny = null;
-            if (parseNode.GetChildNode("commented_on_by.any") is { } nullNodeCommentedOnByAny && nullNodeCommentedOnByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentedOnByAny = null;
-            if (parseNode.GetChildNode("created_at.after") is { } nullNodeCreatedAtAfter && nullNodeCreatedAtAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAtAfter = null;
-            if (parseNode.GetChildNode("created_at.before") is { } nullNodeCreatedAtBefore && nullNodeCreatedAtBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAtBefore = null;
-            if (parseNode.GetChildNode("created_by.any") is { } nullNodeCreatedByAny && nullNodeCreatedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByAny = null;
-            if (parseNode.GetChildNode("followers.any") is { } nullNodeFollowersAny && nullNodeFollowersAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowersAny = null;
-            if (parseNode.GetChildNode("liked_by.any") is { } nullNodeLikedByAny && nullNodeLikedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LikedByAny = null;
-            if (parseNode.GetChildNode("modified_at.after") is { } nullNodeModifiedAtAfter && nullNodeModifiedAtAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAtAfter = null;
-            if (parseNode.GetChildNode("modified_at.before") is { } nullNodeModifiedAtBefore && nullNodeModifiedAtBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAtBefore = null;
+            if (parseNode.GetChildNode("assigned_by.any") is null) { _explicitNullValueAssignedByAny = default!; _explicitNullProperties?.Remove("assigned_by.any"); }
+            else if (parseNode.GetChildNode("assigned_by.any") is { } nullNodeAssignedByAny && nullNodeAssignedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedByAny = null;
+            if (parseNode.GetChildNode("assignee.any") is null) { _explicitNullValueAssigneeAny = default!; _explicitNullProperties?.Remove("assignee.any"); }
+            else if (parseNode.GetChildNode("assignee.any") is { } nullNodeAssigneeAny && nullNodeAssigneeAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeAny = null;
+            if (parseNode.GetChildNode("commented_on_by.any") is null) { _explicitNullValueCommentedOnByAny = default!; _explicitNullProperties?.Remove("commented_on_by.any"); }
+            else if (parseNode.GetChildNode("commented_on_by.any") is { } nullNodeCommentedOnByAny && nullNodeCommentedOnByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentedOnByAny = null;
+            if (parseNode.GetChildNode("created_at.after") is null) { _explicitNullValueCreatedAtAfter = default!; _explicitNullProperties?.Remove("created_at.after"); }
+            else if (parseNode.GetChildNode("created_at.after") is { } nullNodeCreatedAtAfter && nullNodeCreatedAtAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAtAfter = null;
+            if (parseNode.GetChildNode("created_at.before") is null) { _explicitNullValueCreatedAtBefore = default!; _explicitNullProperties?.Remove("created_at.before"); }
+            else if (parseNode.GetChildNode("created_at.before") is { } nullNodeCreatedAtBefore && nullNodeCreatedAtBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAtBefore = null;
+            if (parseNode.GetChildNode("created_by.any") is null) { _explicitNullValueCreatedByAny = default!; _explicitNullProperties?.Remove("created_by.any"); }
+            else if (parseNode.GetChildNode("created_by.any") is { } nullNodeCreatedByAny && nullNodeCreatedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedByAny = null;
+            if (parseNode.GetChildNode("followers.any") is null) { _explicitNullValueFollowersAny = default!; _explicitNullProperties?.Remove("followers.any"); }
+            else if (parseNode.GetChildNode("followers.any") is { } nullNodeFollowersAny && nullNodeFollowersAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowersAny = null;
+            if (parseNode.GetChildNode("liked_by.any") is null) { _explicitNullValueLikedByAny = default!; _explicitNullProperties?.Remove("liked_by.any"); }
+            else if (parseNode.GetChildNode("liked_by.any") is { } nullNodeLikedByAny && nullNodeLikedByAny.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LikedByAny = null;
+            if (parseNode.GetChildNode("modified_at.after") is null) { _explicitNullValueModifiedAtAfter = default!; _explicitNullProperties?.Remove("modified_at.after"); }
+            else if (parseNode.GetChildNode("modified_at.after") is { } nullNodeModifiedAtAfter && nullNodeModifiedAtAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAtAfter = null;
+            if (parseNode.GetChildNode("modified_at.before") is null) { _explicitNullValueModifiedAtBefore = default!; _explicitNullProperties?.Remove("modified_at.before"); }
+            else if (parseNode.GetChildNode("modified_at.before") is { } nullNodeModifiedAtBefore && nullNodeModifiedAtBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedAtBefore = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,74 +45,74 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Filter by the users who assigned the resource. This array accepts a list of user GIDs. This is only applicable to tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AssignedByAny { get => _explicitNullValueAssignedByAny; set { _explicitNullValueAssignedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by.any"); else _explicitNullProperties?.Remove("assigned_by.any"); } }
+        public List<string>? AssignedByAny { get => _explicitNullValueAssignedByAny; set { _explicitNullValueAssignedByAny = value; AdditionalData?.Remove("assigned_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by.any"); else _explicitNullProperties?.Remove("assigned_by.any"); } }
         private List<string>? _explicitNullValueAssignedByAny = default!;
 #nullable restore
 #else
-        public List<string> AssignedByAny { get => _explicitNullValueAssignedByAny; set { _explicitNullValueAssignedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by.any"); else _explicitNullProperties?.Remove("assigned_by.any"); } }
+        public List<string> AssignedByAny { get => _explicitNullValueAssignedByAny; set { _explicitNullValueAssignedByAny = value; AdditionalData?.Remove("assigned_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_by.any"); else _explicitNullProperties?.Remove("assigned_by.any"); } }
         private List<string> _explicitNullValueAssignedByAny = default!;
 #endif
         /// <summary>Filter by the users who are assigned to the resource. This array accepts a list of user GIDs. This is only applicable to tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AssigneeAny { get => _explicitNullValueAssigneeAny; set { _explicitNullValueAssigneeAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee.any"); else _explicitNullProperties?.Remove("assignee.any"); } }
+        public List<string>? AssigneeAny { get => _explicitNullValueAssigneeAny; set { _explicitNullValueAssigneeAny = value; AdditionalData?.Remove("assignee.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee.any"); else _explicitNullProperties?.Remove("assignee.any"); } }
         private List<string>? _explicitNullValueAssigneeAny = default!;
 #nullable restore
 #else
-        public List<string> AssigneeAny { get => _explicitNullValueAssigneeAny; set { _explicitNullValueAssigneeAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee.any"); else _explicitNullProperties?.Remove("assignee.any"); } }
+        public List<string> AssigneeAny { get => _explicitNullValueAssigneeAny; set { _explicitNullValueAssigneeAny = value; AdditionalData?.Remove("assignee.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee.any"); else _explicitNullProperties?.Remove("assignee.any"); } }
         private List<string> _explicitNullValueAssigneeAny = default!;
 #endif
         /// <summary>Filter by the users who commented on the resource. This array accepts a list of user GIDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CommentedOnByAny { get => _explicitNullValueCommentedOnByAny; set { _explicitNullValueCommentedOnByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commented_on_by.any"); else _explicitNullProperties?.Remove("commented_on_by.any"); } }
+        public List<string>? CommentedOnByAny { get => _explicitNullValueCommentedOnByAny; set { _explicitNullValueCommentedOnByAny = value; AdditionalData?.Remove("commented_on_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commented_on_by.any"); else _explicitNullProperties?.Remove("commented_on_by.any"); } }
         private List<string>? _explicitNullValueCommentedOnByAny = default!;
 #nullable restore
 #else
-        public List<string> CommentedOnByAny { get => _explicitNullValueCommentedOnByAny; set { _explicitNullValueCommentedOnByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commented_on_by.any"); else _explicitNullProperties?.Remove("commented_on_by.any"); } }
+        public List<string> CommentedOnByAny { get => _explicitNullValueCommentedOnByAny; set { _explicitNullValueCommentedOnByAny = value; AdditionalData?.Remove("commented_on_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commented_on_by.any"); else _explicitNullProperties?.Remove("commented_on_by.any"); } }
         private List<string> _explicitNullValueCommentedOnByAny = default!;
 #endif
         /// <summary>Filter results to resources created after a specified date and time.</summary>
-        public DateTimeOffset? CreatedAtAfter { get => _explicitNullValueCreatedAtAfter; set { _explicitNullValueCreatedAtAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at.after"); else _explicitNullProperties?.Remove("created_at.after"); } }
+        public DateTimeOffset? CreatedAtAfter { get => _explicitNullValueCreatedAtAfter; set { _explicitNullValueCreatedAtAfter = value; AdditionalData?.Remove("created_at.after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at.after"); else _explicitNullProperties?.Remove("created_at.after"); } }
         private DateTimeOffset? _explicitNullValueCreatedAtAfter = default!;
         /// <summary>Filter results to resources created before a specified date and time.</summary>
-        public DateTimeOffset? CreatedAtBefore { get => _explicitNullValueCreatedAtBefore; set { _explicitNullValueCreatedAtBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at.before"); else _explicitNullProperties?.Remove("created_at.before"); } }
+        public DateTimeOffset? CreatedAtBefore { get => _explicitNullValueCreatedAtBefore; set { _explicitNullValueCreatedAtBefore = value; AdditionalData?.Remove("created_at.before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at.before"); else _explicitNullProperties?.Remove("created_at.before"); } }
         private DateTimeOffset? _explicitNullValueCreatedAtBefore = default!;
         /// <summary>Filter by the users who created the resource. This array accepts a list of user GIDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CreatedByAny { get => _explicitNullValueCreatedByAny; set { _explicitNullValueCreatedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by.any"); else _explicitNullProperties?.Remove("created_by.any"); } }
+        public List<string>? CreatedByAny { get => _explicitNullValueCreatedByAny; set { _explicitNullValueCreatedByAny = value; AdditionalData?.Remove("created_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by.any"); else _explicitNullProperties?.Remove("created_by.any"); } }
         private List<string>? _explicitNullValueCreatedByAny = default!;
 #nullable restore
 #else
-        public List<string> CreatedByAny { get => _explicitNullValueCreatedByAny; set { _explicitNullValueCreatedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by.any"); else _explicitNullProperties?.Remove("created_by.any"); } }
+        public List<string> CreatedByAny { get => _explicitNullValueCreatedByAny; set { _explicitNullValueCreatedByAny = value; AdditionalData?.Remove("created_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by.any"); else _explicitNullProperties?.Remove("created_by.any"); } }
         private List<string> _explicitNullValueCreatedByAny = default!;
 #endif
         /// <summary>Filter by the users who are following the resource. This array accepts a list of user GIDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FollowersAny { get => _explicitNullValueFollowersAny; set { _explicitNullValueFollowersAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers.any"); else _explicitNullProperties?.Remove("followers.any"); } }
+        public List<string>? FollowersAny { get => _explicitNullValueFollowersAny; set { _explicitNullValueFollowersAny = value; AdditionalData?.Remove("followers.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers.any"); else _explicitNullProperties?.Remove("followers.any"); } }
         private List<string>? _explicitNullValueFollowersAny = default!;
 #nullable restore
 #else
-        public List<string> FollowersAny { get => _explicitNullValueFollowersAny; set { _explicitNullValueFollowersAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers.any"); else _explicitNullProperties?.Remove("followers.any"); } }
+        public List<string> FollowersAny { get => _explicitNullValueFollowersAny; set { _explicitNullValueFollowersAny = value; AdditionalData?.Remove("followers.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers.any"); else _explicitNullProperties?.Remove("followers.any"); } }
         private List<string> _explicitNullValueFollowersAny = default!;
 #endif
         /// <summary>Filter by the users who liked the resource. This array accepts a list of user GIDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LikedByAny { get => _explicitNullValueLikedByAny; set { _explicitNullValueLikedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked_by.any"); else _explicitNullProperties?.Remove("liked_by.any"); } }
+        public List<string>? LikedByAny { get => _explicitNullValueLikedByAny; set { _explicitNullValueLikedByAny = value; AdditionalData?.Remove("liked_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked_by.any"); else _explicitNullProperties?.Remove("liked_by.any"); } }
         private List<string>? _explicitNullValueLikedByAny = default!;
 #nullable restore
 #else
-        public List<string> LikedByAny { get => _explicitNullValueLikedByAny; set { _explicitNullValueLikedByAny = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked_by.any"); else _explicitNullProperties?.Remove("liked_by.any"); } }
+        public List<string> LikedByAny { get => _explicitNullValueLikedByAny; set { _explicitNullValueLikedByAny = value; AdditionalData?.Remove("liked_by.any"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked_by.any"); else _explicitNullProperties?.Remove("liked_by.any"); } }
         private List<string> _explicitNullValueLikedByAny = default!;
 #endif
         /// <summary>Filter results to resources modified after a specified date and time.</summary>
-        public DateTimeOffset? ModifiedAtAfter { get => _explicitNullValueModifiedAtAfter; set { _explicitNullValueModifiedAtAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at.after"); else _explicitNullProperties?.Remove("modified_at.after"); } }
+        public DateTimeOffset? ModifiedAtAfter { get => _explicitNullValueModifiedAtAfter; set { _explicitNullValueModifiedAtAfter = value; AdditionalData?.Remove("modified_at.after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at.after"); else _explicitNullProperties?.Remove("modified_at.after"); } }
         private DateTimeOffset? _explicitNullValueModifiedAtAfter = default!;
         /// <summary>Filter results to resources modified before a specified date and time.</summary>
-        public DateTimeOffset? ModifiedAtBefore { get => _explicitNullValueModifiedAtBefore; set { _explicitNullValueModifiedAtBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at.before"); else _explicitNullProperties?.Remove("modified_at.before"); } }
+        public DateTimeOffset? ModifiedAtBefore { get => _explicitNullValueModifiedAtBefore; set { _explicitNullValueModifiedAtBefore = value; AdditionalData?.Remove("modified_at.before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modified_at.before"); else _explicitNullProperties?.Remove("modified_at.before"); } }
         private DateTimeOffset? _explicitNullValueModifiedAtBefore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItemFilters"/> and sets the default values.

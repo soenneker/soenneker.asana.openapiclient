@@ -17,8 +17,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("task_resource_subtype") is { } nullNodeTaskResourceSubtype && nullNodeTaskResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskResourceSubtype = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("task_resource_subtype") is null) { _explicitNullValueTaskResourceSubtype = default!; _explicitNullProperties?.Remove("task_resource_subtype"); }
+            else if (parseNode.GetChildNode("task_resource_subtype") is { } nullNodeTaskResourceSubtype && nullNodeTaskResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskResourceSubtype = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Name of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The subtype of the task that will be created from this template.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItemTaskResourceSubtype? TaskResourceSubtype { get => _explicitNullValueTaskResourceSubtype; set { _explicitNullValueTaskResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_resource_subtype"); else _explicitNullProperties?.Remove("task_resource_subtype"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItemTaskResourceSubtype? TaskResourceSubtype { get => _explicitNullValueTaskResourceSubtype; set { _explicitNullValueTaskResourceSubtype = value; AdditionalData?.Remove("task_resource_subtype"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_resource_subtype"); else _explicitNullProperties?.Remove("task_resource_subtype"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItemTaskResourceSubtype? _explicitNullValueTaskResourceSubtype = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "task_resource_subtype", n => { TaskResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItemTaskResourceSubtype>(); } },
+                { "task_resource_subtype", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItemTaskResourceSubtype>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaskResourceSubtype = default; _explicitNullProperties?.Remove("task_resource_subtype"); AdditionalData["task_resource_subtype"] = unknown; } else { TaskResourceSubtype = parsed; AdditionalData.Remove("task_resource_subtype"); } } },
             };
         }
         /// <summary>

@@ -18,14 +18,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currency_code") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("current_number_value") is { } nullNodeCurrentNumberValue && nullNodeCurrentNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentNumberValue = null;
-            if (parseNode.GetChildNode("initial_number_value") is { } nullNodeInitialNumberValue && nullNodeInitialNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialNumberValue = null;
-            if (parseNode.GetChildNode("is_custom_weight") is { } nullNodeIsCustomWeight && nullNodeIsCustomWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomWeight = null;
-            if (parseNode.GetChildNode("precision") is { } nullNodePrecision && nullNodePrecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Precision = null;
-            if (parseNode.GetChildNode("progress_source") is { } nullNodeProgressSource && nullNodeProgressSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgressSource = null;
-            if (parseNode.GetChildNode("target_number_value") is { } nullNodeTargetNumberValue && nullNodeTargetNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberValue = null;
-            if (parseNode.GetChildNode("unit") is { } nullNodeUnit && nullNodeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unit = null;
+            if (parseNode.GetChildNode("currency_code") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currency_code"); }
+            else if (parseNode.GetChildNode("currency_code") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("current_number_value") is null) { _explicitNullValueCurrentNumberValue = default!; _explicitNullProperties?.Remove("current_number_value"); }
+            else if (parseNode.GetChildNode("current_number_value") is { } nullNodeCurrentNumberValue && nullNodeCurrentNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentNumberValue = null;
+            if (parseNode.GetChildNode("initial_number_value") is null) { _explicitNullValueInitialNumberValue = default!; _explicitNullProperties?.Remove("initial_number_value"); }
+            else if (parseNode.GetChildNode("initial_number_value") is { } nullNodeInitialNumberValue && nullNodeInitialNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialNumberValue = null;
+            if (parseNode.GetChildNode("is_custom_weight") is null) { _explicitNullValueIsCustomWeight = default!; _explicitNullProperties?.Remove("is_custom_weight"); }
+            else if (parseNode.GetChildNode("is_custom_weight") is { } nullNodeIsCustomWeight && nullNodeIsCustomWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomWeight = null;
+            if (parseNode.GetChildNode("precision") is null) { _explicitNullValuePrecision = default!; _explicitNullProperties?.Remove("precision"); }
+            else if (parseNode.GetChildNode("precision") is { } nullNodePrecision && nullNodePrecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Precision = null;
+            if (parseNode.GetChildNode("progress_source") is null) { _explicitNullValueProgressSource = default!; _explicitNullProperties?.Remove("progress_source"); }
+            else if (parseNode.GetChildNode("progress_source") is { } nullNodeProgressSource && nullNodeProgressSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgressSource = null;
+            if (parseNode.GetChildNode("target_number_value") is null) { _explicitNullValueTargetNumberValue = default!; _explicitNullProperties?.Remove("target_number_value"); }
+            else if (parseNode.GetChildNode("target_number_value") is { } nullNodeTargetNumberValue && nullNodeTargetNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNumberValue = null;
+            if (parseNode.GetChildNode("unit") is null) { _explicitNullValueUnit = default!; _explicitNullProperties?.Remove("unit"); }
+            else if (parseNode.GetChildNode("unit") is { } nullNodeUnit && nullNodeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,11 +43,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>ISO 4217 currency code to format this custom field. This will be null if the `unit` is not `currency`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currency_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currency_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_code"); else _explicitNullProperties?.Remove("currency_code"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>This string is the current value of a goal metric of type string.</summary>
@@ -51,7 +59,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string CurrentDisplayValue { get; private set; }
 #endif
         /// <summary>This number is the current value of a goal metric of type number.</summary>
-        public double? CurrentNumberValue { get => _explicitNullValueCurrentNumberValue; set { _explicitNullValueCurrentNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_number_value"); else _explicitNullProperties?.Remove("current_number_value"); } }
+        public double? CurrentNumberValue { get => _explicitNullValueCurrentNumberValue; set { _explicitNullValueCurrentNumberValue = value; AdditionalData?.Remove("current_number_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_number_value"); else _explicitNullProperties?.Remove("current_number_value"); } }
         private double? _explicitNullValueCurrentNumberValue = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,16 +70,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>This number is the start value of a goal metric of type number.</summary>
-        public double? InitialNumberValue { get => _explicitNullValueInitialNumberValue; set { _explicitNullValueInitialNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_number_value"); else _explicitNullProperties?.Remove("initial_number_value"); } }
+        public double? InitialNumberValue { get => _explicitNullValueInitialNumberValue; set { _explicitNullValueInitialNumberValue = value; AdditionalData?.Remove("initial_number_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initial_number_value"); else _explicitNullProperties?.Remove("initial_number_value"); } }
         private double? _explicitNullValueInitialNumberValue = default!;
         /// <summary>*Conditional*. Only relevant if `metric.progress_source` is one of `subgoal_progress`, `project_task_completion`, `project_milestone_completion`, or `task_completion`. If true, we use the supporting object&apos;s custom weight to calculate the goal&apos;s progress. If false, we treat all supporting objects as equally weighted</summary>
-        public bool? IsCustomWeight { get => _explicitNullValueIsCustomWeight; set { _explicitNullValueIsCustomWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_custom_weight"); else _explicitNullProperties?.Remove("is_custom_weight"); } }
+        public bool? IsCustomWeight { get => _explicitNullValueIsCustomWeight; set { _explicitNullValueIsCustomWeight = value; AdditionalData?.Remove("is_custom_weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_custom_weight"); else _explicitNullProperties?.Remove("is_custom_weight"); } }
         private bool? _explicitNullValueIsCustomWeight = default!;
         /// <summary>*Conditional*. Only relevant for goal metrics of type `Number`. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.</summary>
-        public int? Precision { get => _explicitNullValuePrecision; set { _explicitNullValuePrecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("precision"); else _explicitNullProperties?.Remove("precision"); } }
+        public int? Precision { get => _explicitNullValuePrecision; set { _explicitNullValuePrecision = value; AdditionalData?.Remove("precision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("precision"); else _explicitNullProperties?.Remove("precision"); } }
         private int? _explicitNullValuePrecision = default!;
         /// <summary>This field defines how the progress value of a goal metric is being calculated. A goal&apos;s progress can be provided manually by the user, calculated automatically from contributing subgoals, projects, or tasks, or managed by an integration with an external data source, such as Salesforce.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricProgressSource? ProgressSource { get => _explicitNullValueProgressSource; set { _explicitNullValueProgressSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("progress_source"); else _explicitNullProperties?.Remove("progress_source"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricProgressSource? ProgressSource { get => _explicitNullValueProgressSource; set { _explicitNullValueProgressSource = value; AdditionalData?.Remove("progress_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("progress_source"); else _explicitNullProperties?.Remove("progress_source"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricProgressSource? _explicitNullValueProgressSource = default!;
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
         public global::Soenneker.Asana.OpenApiClient.Models.NumberResourceSubtype? ResourceSubtype { get; private set; }
@@ -84,10 +92,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>This number is the end value of a goal metric of type number. This number cannot equal `initial_number_value`.</summary>
-        public double? TargetNumberValue { get => _explicitNullValueTargetNumberValue; set { _explicitNullValueTargetNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_value"); else _explicitNullProperties?.Remove("target_number_value"); } }
+        public double? TargetNumberValue { get => _explicitNullValueTargetNumberValue; set { _explicitNullValueTargetNumberValue = value; AdditionalData?.Remove("target_number_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_number_value"); else _explicitNullProperties?.Remove("target_number_value"); } }
         private double? _explicitNullValueTargetNumberValue = default!;
         /// <summary>A supported unit of measure for the goal metric, or none.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricUnit? Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricUnit? Unit { get => _explicitNullValueUnit; set { _explicitNullValueUnit = value; AdditionalData?.Remove("unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unit"); else _explicitNullProperties?.Remove("unit"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricUnit? _explicitNullValueUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric"/> and sets the default values.
@@ -124,11 +132,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "initial_number_value", n => { InitialNumberValue = n.GetDoubleValue(); } },
                 { "is_custom_weight", n => { IsCustomWeight = n.GetBoolValue(); } },
                 { "precision", n => { Precision = n.GetIntValue(); } },
-                { "progress_source", n => { ProgressSource = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricProgressSource>(); } },
+                { "progress_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricProgressSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProgressSource = default; _explicitNullProperties?.Remove("progress_source"); AdditionalData["progress_source"] = unknown; } else { ProgressSource = parsed; AdditionalData.Remove("progress_source"); } } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.NumberResourceSubtype>(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "target_number_value", n => { TargetNumberValue = n.GetDoubleValue(); } },
-                { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricUnit>(); } },
+                { "unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetricUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUnit = default; _explicitNullProperties?.Remove("unit"); AdditionalData["unit"] = unknown; } else { Unit = parsed; AdditionalData.Remove("unit"); } } },
             };
         }
         /// <summary>

@@ -18,13 +18,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contribution_weight") is { } nullNodeContributionWeight && nullNodeContributionWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContributionWeight = null;
+            if (parseNode.GetChildNode("contribution_weight") is null) { _explicitNullValueContributionWeight = default!; _explicitNullProperties?.Remove("contribution_weight"); }
+            else if (parseNode.GetChildNode("contribution_weight") is { } nullNodeContributionWeight && nullNodeContributionWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContributionWeight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The weight that the supporting resource&apos;s progress contributes to the supported goal&apos;s progress. This can be 0, 1, or any value in between.</summary>
-        public double? ContributionWeight { get => _explicitNullValueContributionWeight; set { _explicitNullValueContributionWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contribution_weight"); else _explicitNullProperties?.Remove("contribution_weight"); } }
+        public double? ContributionWeight { get => _explicitNullValueContributionWeight; set { _explicitNullValueContributionWeight = value; AdditionalData?.Remove("contribution_weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contribution_weight"); else _explicitNullProperties?.Remove("contribution_weight"); } }
         private double? _explicitNullValueContributionWeight = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

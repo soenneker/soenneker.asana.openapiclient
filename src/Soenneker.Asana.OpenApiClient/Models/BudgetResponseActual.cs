@@ -18,13 +18,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billable_status_filter") is { } nullNodeBillableStatusFilter && nullNodeBillableStatusFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableStatusFilter = null;
+            if (parseNode.GetChildNode("billable_status_filter") is null) { _explicitNullValueBillableStatusFilter = default!; _explicitNullProperties?.Remove("billable_status_filter"); }
+            else if (parseNode.GetChildNode("billable_status_filter") is { } nullNodeBillableStatusFilter && nullNodeBillableStatusFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableStatusFilter = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Billable status filter applied to time tracking entries contributing to the actual value. Determines which entries are included in aggregation. When not provided, defaults to `billable`.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter? BillableStatusFilter { get => _explicitNullValueBillableStatusFilter; set { _explicitNullValueBillableStatusFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_status_filter"); else _explicitNullProperties?.Remove("billable_status_filter"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter? BillableStatusFilter { get => _explicitNullValueBillableStatusFilter; set { _explicitNullValueBillableStatusFilter = value; AdditionalData?.Remove("billable_status_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_status_filter"); else _explicitNullProperties?.Remove("billable_status_filter"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter? _explicitNullValueBillableStatusFilter = default!;
         /// <summary>The units of the actual value. * When `budget_type` is `time`, units are `&quot;minutes&quot;`. * When `budget_type` is `cost`, units are the ISO 4217 currency code configured at the domain level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -61,7 +62,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billable_status_filter", n => { BillableStatusFilter = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter>(); } },
+                { "billable_status_filter", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseActualBillableStatusFilter>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillableStatusFilter = default; _explicitNullProperties?.Remove("billable_status_filter"); AdditionalData["billable_status_filter"] = unknown; } else { BillableStatusFilter = parsed; AdditionalData.Remove("billable_status_filter"); } } },
                 { "units", n => { Units = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };

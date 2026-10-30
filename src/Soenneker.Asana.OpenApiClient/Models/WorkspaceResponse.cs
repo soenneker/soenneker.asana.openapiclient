@@ -18,9 +18,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_domains") is { } nullNodeEmailDomains && nullNodeEmailDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDomains = null;
-            if (parseNode.GetChildNode("is_organization") is { } nullNodeIsOrganization && nullNodeIsOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOrganization = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("email_domains") is null) { _explicitNullValueEmailDomains = default!; _explicitNullProperties?.Remove("email_domains"); }
+            else if (parseNode.GetChildNode("email_domains") is { } nullNodeEmailDomains && nullNodeEmailDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDomains = null;
+            if (parseNode.GetChildNode("is_organization") is null) { _explicitNullValueIsOrganization = default!; _explicitNullProperties?.Remove("is_organization"); }
+            else if (parseNode.GetChildNode("is_organization") is { } nullNodeIsOrganization && nullNodeIsOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOrganization = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,11 +31,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The email domains that are associated with this workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailDomains { get => _explicitNullValueEmailDomains; set { _explicitNullValueEmailDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_domains"); else _explicitNullProperties?.Remove("email_domains"); } }
+        public List<string>? EmailDomains { get => _explicitNullValueEmailDomains; set { _explicitNullValueEmailDomains = value; AdditionalData?.Remove("email_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_domains"); else _explicitNullProperties?.Remove("email_domains"); } }
         private List<string>? _explicitNullValueEmailDomains = default!;
 #nullable restore
 #else
-        public List<string> EmailDomains { get => _explicitNullValueEmailDomains; set { _explicitNullValueEmailDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_domains"); else _explicitNullProperties?.Remove("email_domains"); } }
+        public List<string> EmailDomains { get => _explicitNullValueEmailDomains; set { _explicitNullValueEmailDomains = value; AdditionalData?.Remove("email_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_domains"); else _explicitNullProperties?.Remove("email_domains"); } }
         private List<string> _explicitNullValueEmailDomains = default!;
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -44,16 +47,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string Gid { get; private set; }
 #endif
         /// <summary>Whether the workspace is an *organization*.</summary>
-        public bool? IsOrganization { get => _explicitNullValueIsOrganization; set { _explicitNullValueIsOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_organization"); else _explicitNullProperties?.Remove("is_organization"); } }
+        public bool? IsOrganization { get => _explicitNullValueIsOrganization; set { _explicitNullValueIsOrganization = value; AdditionalData?.Remove("is_organization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_organization"); else _explicitNullProperties?.Remove("is_organization"); } }
         private bool? _explicitNullValueIsOrganization = default!;
         /// <summary>The name of the workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The base type of this resource.</summary>

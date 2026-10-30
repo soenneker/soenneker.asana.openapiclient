@@ -18,8 +18,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("export_request_parameters") is { } nullNodeExportRequestParameters && nullNodeExportRequestParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportRequestParameters = null;
-            if (parseNode.GetChildNode("workspace") is { } nullNodeWorkspace && nullNodeWorkspace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workspace = null;
+            if (parseNode.GetChildNode("export_request_parameters") is null) { _explicitNullValueExportRequestParameters = default!; _explicitNullProperties?.Remove("export_request_parameters"); }
+            else if (parseNode.GetChildNode("export_request_parameters") is { } nullNodeExportRequestParameters && nullNodeExportRequestParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportRequestParameters = null;
+            if (parseNode.GetChildNode("workspace") is null) { _explicitNullValueWorkspace = default!; _explicitNullProperties?.Remove("workspace"); }
+            else if (parseNode.GetChildNode("workspace") is { } nullNodeWorkspace && nullNodeWorkspace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workspace = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An object containing the parameters for the export request. The keys of this object are the GIDs of the resources to be exported. The values are objects with additional parameters for each resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>? ExportRequestParameters { get => _explicitNullValueExportRequestParameters; set { _explicitNullValueExportRequestParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_request_parameters"); else _explicitNullProperties?.Remove("export_request_parameters"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>? ExportRequestParameters { get => _explicitNullValueExportRequestParameters; set { _explicitNullValueExportRequestParameters = value; AdditionalData?.Remove("export_request_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_request_parameters"); else _explicitNullProperties?.Remove("export_request_parameters"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem>? _explicitNullValueExportRequestParameters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem> ExportRequestParameters { get => _explicitNullValueExportRequestParameters; set { _explicitNullValueExportRequestParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_request_parameters"); else _explicitNullProperties?.Remove("export_request_parameters"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem> ExportRequestParameters { get => _explicitNullValueExportRequestParameters; set { _explicitNullValueExportRequestParameters = value; AdditionalData?.Remove("export_request_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_request_parameters"); else _explicitNullProperties?.Remove("export_request_parameters"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.ResourceExportRequestExportRequestParametersItem> _explicitNullValueExportRequestParameters = default!;
 #endif
         /// <summary>Gid of a workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
+        public string? Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; AdditionalData?.Remove("workspace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
         private string? _explicitNullValueWorkspace = default!;
 #nullable restore
 #else
-        public string Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
+        public string Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; AdditionalData?.Remove("workspace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
         private string _explicitNullValueWorkspace = default!;
 #endif
         /// <summary>

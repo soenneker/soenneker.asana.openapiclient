@@ -18,7 +18,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("new_graph_export") is { } nullNodeNewGraphExport && nullNodeNewGraphExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewGraphExport = null;
+            if (parseNode.GetChildNode("new_graph_export") is null) { _explicitNullValueNewGraphExport = default!; _explicitNullProperties?.Remove("new_graph_export"); }
+            else if (parseNode.GetChildNode("new_graph_export") is { } nullNodeNewGraphExport && nullNodeNewGraphExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewGraphExport = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,11 +35,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *graph_export* object represents a request to export the data starting from a parent object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport? NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport? NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; AdditionalData?.Remove("new_graph_export"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport? _explicitNullValueNewGraphExport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport NewGraphExport { get => _explicitNullValueNewGraphExport; set { _explicitNullValueNewGraphExport = value; AdditionalData?.Remove("new_graph_export"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_graph_export"); else _explicitNullProperties?.Remove("new_graph_export"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GraphExportResponseNewGraphExport _explicitNullValueNewGraphExport = default!;
 #endif
         /// <summary>A *graph_export* object represents a request to export the data starting from a parent object</summary>

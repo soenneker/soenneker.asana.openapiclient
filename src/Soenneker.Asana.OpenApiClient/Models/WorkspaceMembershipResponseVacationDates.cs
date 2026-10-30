@@ -19,8 +19,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("end_on") is { } nullNodeEndOn && nullNodeEndOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndOn = null;
-            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+            if (parseNode.GetChildNode("end_on") is null) { _explicitNullValueEndOn = default!; _explicitNullProperties?.Remove("end_on"); }
+            else if (parseNode.GetChildNode("end_on") is { } nullNodeEndOn && nullNodeEndOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndOn = null;
+            if (parseNode.GetChildNode("start_on") is null) { _explicitNullValueStartOn = default!; _explicitNullProperties?.Remove("start_on"); }
+            else if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,22 +31,22 @@ namespace Soenneker.Asana.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
+        public string? EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; AdditionalData?.Remove("end_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
         private string? _explicitNullValueEndOn = default!;
 #nullable restore
 #else
-        public string EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
+        public string EndOn { get => _explicitNullValueEndOn; set { _explicitNullValueEndOn = value; AdditionalData?.Remove("end_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_on"); else _explicitNullProperties?.Remove("end_on"); } }
         private string _explicitNullValueEndOn = default!;
 #endif
         /// <summary>*Deprecated:* Use the [`/ooo_entries`](/reference/getoooentries) endpoints instead. The day on which the user&apos;s vacation in this workspace starts. This is a date with `YYYY-MM-DD` format.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; AdditionalData?.Remove("start_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
         private string? _explicitNullValueStartOn = default!;
 #nullable restore
 #else
-        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; AdditionalData?.Remove("start_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
         private string _explicitNullValueStartOn = default!;
 #endif
         /// <summary>

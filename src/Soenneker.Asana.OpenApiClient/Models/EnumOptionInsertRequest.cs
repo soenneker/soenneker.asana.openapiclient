@@ -17,9 +17,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("after_enum_option") is { } nullNodeAfterEnumOption && nullNodeAfterEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterEnumOption = null;
-            if (parseNode.GetChildNode("before_enum_option") is { } nullNodeBeforeEnumOption && nullNodeBeforeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeEnumOption = null;
-            if (parseNode.GetChildNode("enum_option") is { } nullNodeEnumOption && nullNodeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOption = null;
+            if (parseNode.GetChildNode("after_enum_option") is null) { _explicitNullValueAfterEnumOption = default!; _explicitNullProperties?.Remove("after_enum_option"); }
+            else if (parseNode.GetChildNode("after_enum_option") is { } nullNodeAfterEnumOption && nullNodeAfterEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterEnumOption = null;
+            if (parseNode.GetChildNode("before_enum_option") is null) { _explicitNullValueBeforeEnumOption = default!; _explicitNullProperties?.Remove("before_enum_option"); }
+            else if (parseNode.GetChildNode("before_enum_option") is { } nullNodeBeforeEnumOption && nullNodeBeforeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeEnumOption = null;
+            if (parseNode.GetChildNode("enum_option") is null) { _explicitNullValueEnumOption = default!; _explicitNullProperties?.Remove("enum_option"); }
+            else if (parseNode.GetChildNode("enum_option") is { } nullNodeEnumOption && nullNodeEnumOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumOption = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>An existing enum option within this custom field after which the new enum option should be inserted. Cannot be provided together with before_enum_option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
+        public string? AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; AdditionalData?.Remove("after_enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
         private string? _explicitNullValueAfterEnumOption = default!;
 #nullable restore
 #else
-        public string AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
+        public string AfterEnumOption { get => _explicitNullValueAfterEnumOption; set { _explicitNullValueAfterEnumOption = value; AdditionalData?.Remove("after_enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_enum_option"); else _explicitNullProperties?.Remove("after_enum_option"); } }
         private string _explicitNullValueAfterEnumOption = default!;
 #endif
         /// <summary>An existing enum option within this custom field before which the new enum option should be inserted. Cannot be provided together with after_enum_option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
+        public string? BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; AdditionalData?.Remove("before_enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
         private string? _explicitNullValueBeforeEnumOption = default!;
 #nullable restore
 #else
-        public string BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
+        public string BeforeEnumOption { get => _explicitNullValueBeforeEnumOption; set { _explicitNullValueBeforeEnumOption = value; AdditionalData?.Remove("before_enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_enum_option"); else _explicitNullProperties?.Remove("before_enum_option"); } }
         private string _explicitNullValueBeforeEnumOption = default!;
 #endif
         /// <summary>The gid of the enum option to relocate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
+        public string? EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; AdditionalData?.Remove("enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
         private string? _explicitNullValueEnumOption = default!;
 #nullable restore
 #else
-        public string EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
+        public string EnumOption { get => _explicitNullValueEnumOption; set { _explicitNullValueEnumOption = value; AdditionalData?.Remove("enum_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum_option"); else _explicitNullProperties?.Remove("enum_option"); } }
         private string _explicitNullValueEnumOption = default!;
 #endif
         /// <summary>

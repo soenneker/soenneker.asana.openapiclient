@@ -17,7 +17,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failed_gids") is { } nullNodeFailedGids && nullNodeFailedGids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedGids = null;
+            if (parseNode.GetChildNode("failed_gids") is null) { _explicitNullValueFailedGids = default!; _explicitNullProperties?.Remove("failed_gids"); }
+            else if (parseNode.GetChildNode("failed_gids") is { } nullNodeFailedGids && nullNodeFailedGids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedGids = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The GIDs from notification_gids that could not be updated, for example because the notification does not exist, does not belong to the caller, or has been deleted. GIDs not listed here were updated successfully. Empty when every GID succeeded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FailedGids { get => _explicitNullValueFailedGids; set { _explicitNullValueFailedGids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_gids"); else _explicitNullProperties?.Remove("failed_gids"); } }
+        public List<string>? FailedGids { get => _explicitNullValueFailedGids; set { _explicitNullValueFailedGids = value; AdditionalData?.Remove("failed_gids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_gids"); else _explicitNullProperties?.Remove("failed_gids"); } }
         private List<string>? _explicitNullValueFailedGids = default!;
 #nullable restore
 #else
-        public List<string> FailedGids { get => _explicitNullValueFailedGids; set { _explicitNullValueFailedGids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_gids"); else _explicitNullProperties?.Remove("failed_gids"); } }
+        public List<string> FailedGids { get => _explicitNullValueFailedGids; set { _explicitNullValueFailedGids = value; AdditionalData?.Remove("failed_gids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_gids"); else _explicitNullProperties?.Remove("failed_gids"); } }
         private List<string> _explicitNullValueFailedGids = default!;
 #endif
         /// <summary>

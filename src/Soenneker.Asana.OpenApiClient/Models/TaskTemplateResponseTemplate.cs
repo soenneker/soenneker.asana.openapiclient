@@ -18,20 +18,34 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
-            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
-            if (parseNode.GetChildNode("dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
-            if (parseNode.GetChildNode("dependents") is { } nullNodeDependents && nullNodeDependents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependents = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("due_time") is { } nullNodeDueTime && nullNodeDueTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueTime = null;
-            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
-            if (parseNode.GetChildNode("html_description") is { } nullNodeHtmlDescription && nullNodeHtmlDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlDescription = null;
-            if (parseNode.GetChildNode("memberships") is { } nullNodeMemberships && nullNodeMemberships.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memberships = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("relative_due_on") is { } nullNodeRelativeDueOn && nullNodeRelativeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeDueOn = null;
-            if (parseNode.GetChildNode("relative_start_on") is { } nullNodeRelativeStartOn && nullNodeRelativeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeStartOn = null;
-            if (parseNode.GetChildNode("subtasks") is { } nullNodeSubtasks && nullNodeSubtasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtasks = null;
-            if (parseNode.GetChildNode("task_resource_subtype") is { } nullNodeTaskResourceSubtype && nullNodeTaskResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskResourceSubtype = null;
+            if (parseNode.GetChildNode("attachments") is null) { _explicitNullValueAttachments = default!; _explicitNullProperties?.Remove("attachments"); }
+            else if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("dependencies") is null) { _explicitNullValueDependencies = default!; _explicitNullProperties?.Remove("dependencies"); }
+            else if (parseNode.GetChildNode("dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("dependents") is null) { _explicitNullValueDependents = default!; _explicitNullProperties?.Remove("dependents"); }
+            else if (parseNode.GetChildNode("dependents") is { } nullNodeDependents && nullNodeDependents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependents = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("due_time") is null) { _explicitNullValueDueTime = default!; _explicitNullProperties?.Remove("due_time"); }
+            else if (parseNode.GetChildNode("due_time") is { } nullNodeDueTime && nullNodeDueTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueTime = null;
+            if (parseNode.GetChildNode("followers") is null) { _explicitNullValueFollowers = default!; _explicitNullProperties?.Remove("followers"); }
+            else if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("html_description") is null) { _explicitNullValueHtmlDescription = default!; _explicitNullProperties?.Remove("html_description"); }
+            else if (parseNode.GetChildNode("html_description") is { } nullNodeHtmlDescription && nullNodeHtmlDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlDescription = null;
+            if (parseNode.GetChildNode("memberships") is null) { _explicitNullValueMemberships = default!; _explicitNullProperties?.Remove("memberships"); }
+            else if (parseNode.GetChildNode("memberships") is { } nullNodeMemberships && nullNodeMemberships.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memberships = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("relative_due_on") is null) { _explicitNullValueRelativeDueOn = default!; _explicitNullProperties?.Remove("relative_due_on"); }
+            else if (parseNode.GetChildNode("relative_due_on") is { } nullNodeRelativeDueOn && nullNodeRelativeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeDueOn = null;
+            if (parseNode.GetChildNode("relative_start_on") is null) { _explicitNullValueRelativeStartOn = default!; _explicitNullProperties?.Remove("relative_start_on"); }
+            else if (parseNode.GetChildNode("relative_start_on") is { } nullNodeRelativeStartOn && nullNodeRelativeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeStartOn = null;
+            if (parseNode.GetChildNode("subtasks") is null) { _explicitNullValueSubtasks = default!; _explicitNullProperties?.Remove("subtasks"); }
+            else if (parseNode.GetChildNode("subtasks") is { } nullNodeSubtasks && nullNodeSubtasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtasks = null;
+            if (parseNode.GetChildNode("task_resource_subtype") is null) { _explicitNullValueTaskResourceSubtype = default!; _explicitNullProperties?.Remove("task_resource_subtype"); }
+            else if (parseNode.GetChildNode("task_resource_subtype") is { } nullNodeTaskResourceSubtype && nullNodeTaskResourceSubtype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskResourceSubtype = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,121 +53,121 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Array of attachments that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; AdditionalData?.Remove("attachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>Array of custom fields that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Array of task templates that the task created from this template will depend on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; AdditionalData?.Remove("dependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem>? _explicitNullValueDependencies = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem> Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem> Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; AdditionalData?.Remove("dependencies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependenciesItem> _explicitNullValueDependencies = default!;
 #endif
         /// <summary>Array of task templates that will depend on the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>? Dependents { get => _explicitNullValueDependents; set { _explicitNullValueDependents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependents"); else _explicitNullProperties?.Remove("dependents"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>? Dependents { get => _explicitNullValueDependents; set { _explicitNullValueDependents = value; AdditionalData?.Remove("dependents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependents"); else _explicitNullProperties?.Remove("dependents"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem>? _explicitNullValueDependents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem> Dependents { get => _explicitNullValueDependents; set { _explicitNullValueDependents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependents"); else _explicitNullProperties?.Remove("dependents"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem> Dependents { get => _explicitNullValueDependents; set { _explicitNullValueDependents = value; AdditionalData?.Remove("dependents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependents"); else _explicitNullProperties?.Remove("dependents"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1DependentsItem> _explicitNullValueDependents = default!;
 #endif
         /// <summary>Description of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The time of day that the task will be due</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DueTime { get => _explicitNullValueDueTime; set { _explicitNullValueDueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_time"); else _explicitNullProperties?.Remove("due_time"); } }
+        public string? DueTime { get => _explicitNullValueDueTime; set { _explicitNullValueDueTime = value; AdditionalData?.Remove("due_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_time"); else _explicitNullProperties?.Remove("due_time"); } }
         private string? _explicitNullValueDueTime = default!;
 #nullable restore
 #else
-        public string DueTime { get => _explicitNullValueDueTime; set { _explicitNullValueDueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_time"); else _explicitNullProperties?.Remove("due_time"); } }
+        public string DueTime { get => _explicitNullValueDueTime; set { _explicitNullValueDueTime = value; AdditionalData?.Remove("due_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_time"); else _explicitNullProperties?.Remove("due_time"); } }
         private string _explicitNullValueDueTime = default!;
 #endif
         /// <summary>Array of users that will be added as followers to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem>? _explicitNullValueFollowers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1FollowersItem> _explicitNullValueFollowers = default!;
 #endif
         /// <summary>HTML description of the task that will be created from this template. See [rich text](/docs/rich-text#reading-rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
+        public string? HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; AdditionalData?.Remove("html_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
         private string? _explicitNullValueHtmlDescription = default!;
 #nullable restore
 #else
-        public string HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
+        public string HtmlDescription { get => _explicitNullValueHtmlDescription; set { _explicitNullValueHtmlDescription = value; AdditionalData?.Remove("html_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_description"); else _explicitNullProperties?.Remove("html_description"); } }
         private string _explicitNullValueHtmlDescription = default!;
 #endif
         /// <summary>Array of projects that the task created from this template will be added to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>? Memberships { get => _explicitNullValueMemberships; set { _explicitNullValueMemberships = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberships"); else _explicitNullProperties?.Remove("memberships"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>? Memberships { get => _explicitNullValueMemberships; set { _explicitNullValueMemberships = value; AdditionalData?.Remove("memberships"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberships"); else _explicitNullProperties?.Remove("memberships"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem>? _explicitNullValueMemberships = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem> Memberships { get => _explicitNullValueMemberships; set { _explicitNullValueMemberships = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberships"); else _explicitNullProperties?.Remove("memberships"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem> Memberships { get => _explicitNullValueMemberships; set { _explicitNullValueMemberships = value; AdditionalData?.Remove("memberships"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberships"); else _explicitNullProperties?.Remove("memberships"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1MembershipsItem> _explicitNullValueMemberships = default!;
 #endif
         /// <summary>Name of the task that will be created from this template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The number of days after the task has been instantiated on which that the task will be due</summary>
-        public int? RelativeDueOn { get => _explicitNullValueRelativeDueOn; set { _explicitNullValueRelativeDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative_due_on"); else _explicitNullProperties?.Remove("relative_due_on"); } }
+        public int? RelativeDueOn { get => _explicitNullValueRelativeDueOn; set { _explicitNullValueRelativeDueOn = value; AdditionalData?.Remove("relative_due_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative_due_on"); else _explicitNullProperties?.Remove("relative_due_on"); } }
         private int? _explicitNullValueRelativeDueOn = default!;
         /// <summary>The number of days after the task has been instantiated on which that the task will start</summary>
-        public int? RelativeStartOn { get => _explicitNullValueRelativeStartOn; set { _explicitNullValueRelativeStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative_start_on"); else _explicitNullProperties?.Remove("relative_start_on"); } }
+        public int? RelativeStartOn { get => _explicitNullValueRelativeStartOn; set { _explicitNullValueRelativeStartOn = value; AdditionalData?.Remove("relative_start_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative_start_on"); else _explicitNullProperties?.Remove("relative_start_on"); } }
         private int? _explicitNullValueRelativeStartOn = default!;
         /// <summary>Array of subtasks that will be added to the task created from this template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>? Subtasks { get => _explicitNullValueSubtasks; set { _explicitNullValueSubtasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtasks"); else _explicitNullProperties?.Remove("subtasks"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>? Subtasks { get => _explicitNullValueSubtasks; set { _explicitNullValueSubtasks = value; AdditionalData?.Remove("subtasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtasks"); else _explicitNullProperties?.Remove("subtasks"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>? _explicitNullValueSubtasks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem> Subtasks { get => _explicitNullValueSubtasks; set { _explicitNullValueSubtasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtasks"); else _explicitNullProperties?.Remove("subtasks"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem> Subtasks { get => _explicitNullValueSubtasks; set { _explicitNullValueSubtasks = value; AdditionalData?.Remove("subtasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtasks"); else _explicitNullProperties?.Remove("subtasks"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem> _explicitNullValueSubtasks = default!;
 #endif
         /// <summary>The subtype of the task that will be created from this template.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype? TaskResourceSubtype { get => _explicitNullValueTaskResourceSubtype; set { _explicitNullValueTaskResourceSubtype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_resource_subtype"); else _explicitNullProperties?.Remove("task_resource_subtype"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype? TaskResourceSubtype { get => _explicitNullValueTaskResourceSubtype; set { _explicitNullValueTaskResourceSubtype = value; AdditionalData?.Remove("task_resource_subtype"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task_resource_subtype"); else _explicitNullProperties?.Remove("task_resource_subtype"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype? _explicitNullValueTaskResourceSubtype = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplate"/> and sets the default values.
@@ -193,7 +207,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "relative_due_on", n => { RelativeDueOn = n.GetIntValue(); } },
                 { "relative_start_on", n => { RelativeStartOn = n.GetIntValue(); } },
                 { "subtasks", n => { Subtasks = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1SubtasksItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "task_resource_subtype", n => { TaskResourceSubtype = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype>(); } },
+                { "task_resource_subtype", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateTaskResourceSubtype>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaskResourceSubtype = default; _explicitNullProperties?.Remove("task_resource_subtype"); AdditionalData["task_resource_subtype"] = unknown; } else { TaskResourceSubtype = parsed; AdditionalData.Remove("task_resource_subtype"); } } },
             };
         }
         /// <summary>

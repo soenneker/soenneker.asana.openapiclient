@@ -18,9 +18,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("added_value") is { } nullNodeAddedValue && nullNodeAddedValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedValue = null;
-            if (parseNode.GetChildNode("new_value") is { } nullNodeNewValue && nullNodeNewValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewValue = null;
-            if (parseNode.GetChildNode("removed_value") is { } nullNodeRemovedValue && nullNodeRemovedValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedValue = null;
+            if (parseNode.GetChildNode("added_value") is null) { _explicitNullValueAddedValue = default!; _explicitNullProperties?.Remove("added_value"); }
+            else if (parseNode.GetChildNode("added_value") is { } nullNodeAddedValue && nullNodeAddedValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedValue = null;
+            if (parseNode.GetChildNode("new_value") is null) { _explicitNullValueNewValue = default!; _explicitNullProperties?.Remove("new_value"); }
+            else if (parseNode.GetChildNode("new_value") is { } nullNodeNewValue && nullNodeNewValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewValue = null;
+            if (parseNode.GetChildNode("removed_value") is null) { _explicitNullValueRemovedValue = default!; _explicitNullProperties?.Remove("removed_value"); }
+            else if (parseNode.GetChildNode("removed_value") is { } nullNodeRemovedValue && nullNodeRemovedValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemovedValue = null;
         }
 
         /// <summary>The type of action taken on the **field** which has been changed.  This can be one of `changed`, `added`, or `removed` depending on the nature of the change.</summary>
@@ -34,11 +37,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `added` _and_ the `added_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AddedValue { get => _explicitNullValueAddedValue; set { _explicitNullValueAddedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_value"); else _explicitNullProperties?.Remove("added_value"); } }
+        public UntypedNode? AddedValue { get => _explicitNullValueAddedValue; set { _explicitNullValueAddedValue = value; AdditionalData?.Remove("added_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_value"); else _explicitNullProperties?.Remove("added_value"); } }
         private UntypedNode? _explicitNullValueAddedValue = default!;
 #nullable restore
 #else
-        public UntypedNode AddedValue { get => _explicitNullValueAddedValue; set { _explicitNullValueAddedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_value"); else _explicitNullProperties?.Remove("added_value"); } }
+        public UntypedNode AddedValue { get => _explicitNullValueAddedValue; set { _explicitNullValueAddedValue = value; AdditionalData?.Remove("added_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_value"); else _explicitNullProperties?.Remove("added_value"); } }
         private UntypedNode _explicitNullValueAddedValue = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -54,21 +57,21 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `changed` _and_ the `new_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_value"); else _explicitNullProperties?.Remove("new_value"); } }
+        public UntypedNode? NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; AdditionalData?.Remove("new_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_value"); else _explicitNullProperties?.Remove("new_value"); } }
         private UntypedNode? _explicitNullValueNewValue = default!;
 #nullable restore
 #else
-        public UntypedNode NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_value"); else _explicitNullProperties?.Remove("new_value"); } }
+        public UntypedNode NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; AdditionalData?.Remove("new_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_value"); else _explicitNullProperties?.Remove("new_value"); } }
         private UntypedNode _explicitNullValueNewValue = default!;
 #endif
         /// <summary>*Conditional.* This property is only present when the value of the event&apos;s `change.action` is `removed` _and_ the `removed_value` is an Asana resource. This will be only the `gid` and `resource_type` of the resource when the events come from webhooks; this will be the compact representation (and can have fields expanded with [opt_fields](/docs/inputoutput-options)) when using the [get events](/reference/getevents) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RemovedValue { get => _explicitNullValueRemovedValue; set { _explicitNullValueRemovedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_value"); else _explicitNullProperties?.Remove("removed_value"); } }
+        public UntypedNode? RemovedValue { get => _explicitNullValueRemovedValue; set { _explicitNullValueRemovedValue = value; AdditionalData?.Remove("removed_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_value"); else _explicitNullProperties?.Remove("removed_value"); } }
         private UntypedNode? _explicitNullValueRemovedValue = default!;
 #nullable restore
 #else
-        public UntypedNode RemovedValue { get => _explicitNullValueRemovedValue; set { _explicitNullValueRemovedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_value"); else _explicitNullProperties?.Remove("removed_value"); } }
+        public UntypedNode RemovedValue { get => _explicitNullValueRemovedValue; set { _explicitNullValueRemovedValue = value; AdditionalData?.Remove("removed_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removed_value"); else _explicitNullProperties?.Remove("removed_value"); } }
         private UntypedNode _explicitNullValueRemovedValue = default!;
 #endif
         /// <summary>

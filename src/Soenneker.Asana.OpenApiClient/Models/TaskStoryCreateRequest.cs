@@ -18,11 +18,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("html_text") is { } nullNodeHtmlText && nullNodeHtmlText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlText = null;
-            if (parseNode.GetChildNode("is_pinned") is { } nullNodeIsPinned && nullNodeIsPinned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPinned = null;
-            if (parseNode.GetChildNode("parent_comment") is { } nullNodeParentComment && nullNodeParentComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentComment = null;
-            if (parseNode.GetChildNode("sticker_name") is { } nullNodeStickerName && nullNodeStickerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickerName = null;
-            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("html_text") is null) { _explicitNullValueHtmlText = default!; _explicitNullProperties?.Remove("html_text"); }
+            else if (parseNode.GetChildNode("html_text") is { } nullNodeHtmlText && nullNodeHtmlText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlText = null;
+            if (parseNode.GetChildNode("is_pinned") is null) { _explicitNullValueIsPinned = default!; _explicitNullProperties?.Remove("is_pinned"); }
+            else if (parseNode.GetChildNode("is_pinned") is { } nullNodeIsPinned && nullNodeIsPinned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPinned = null;
+            if (parseNode.GetChildNode("parent_comment") is null) { _explicitNullValueParentComment = default!; _explicitNullProperties?.Remove("parent_comment"); }
+            else if (parseNode.GetChildNode("parent_comment") is { } nullNodeParentComment && nullNodeParentComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentComment = null;
+            if (parseNode.GetChildNode("sticker_name") is null) { _explicitNullValueStickerName = default!; _explicitNullProperties?.Remove("sticker_name"); }
+            else if (parseNode.GetChildNode("sticker_name") is { } nullNodeStickerName && nullNodeStickerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickerName = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,24 +45,24 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>[Opt In](/docs/inputoutput-options). HTML formatted text for a comment. This will not include the name of the creator. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
+        public string? HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; AdditionalData?.Remove("html_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
         private string? _explicitNullValueHtmlText = default!;
 #nullable restore
 #else
-        public string HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
+        public string HtmlText { get => _explicitNullValueHtmlText; set { _explicitNullValueHtmlText = value; AdditionalData?.Remove("html_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_text"); else _explicitNullProperties?.Remove("html_text"); } }
         private string _explicitNullValueHtmlText = default!;
 #endif
         /// <summary>*Conditional*. Whether the story should be pinned on the resource.</summary>
-        public bool? IsPinned { get => _explicitNullValueIsPinned; set { _explicitNullValueIsPinned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pinned"); else _explicitNullProperties?.Remove("is_pinned"); } }
+        public bool? IsPinned { get => _explicitNullValueIsPinned; set { _explicitNullValueIsPinned = value; AdditionalData?.Remove("is_pinned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pinned"); else _explicitNullProperties?.Remove("is_pinned"); } }
         private bool? _explicitNullValueIsPinned = default!;
         /// <summary>The GID of the top-level comment envelope to reply to, exposed as `comment_gid` on story reads. This is not the story `gid`. Retrieve it with `GET /stories/{story_gid}?opt_fields=comment_gid`. The parent must belong to the task in the request URL and must not itself be a reply. Works with either `text` or `html_text`. Omit this input to create a top-level comment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentComment { get => _explicitNullValueParentComment; set { _explicitNullValueParentComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_comment"); else _explicitNullProperties?.Remove("parent_comment"); } }
+        public string? ParentComment { get => _explicitNullValueParentComment; set { _explicitNullValueParentComment = value; AdditionalData?.Remove("parent_comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_comment"); else _explicitNullProperties?.Remove("parent_comment"); } }
         private string? _explicitNullValueParentComment = default!;
 #nullable restore
 #else
-        public string ParentComment { get => _explicitNullValueParentComment; set { _explicitNullValueParentComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_comment"); else _explicitNullProperties?.Remove("parent_comment"); } }
+        public string ParentComment { get => _explicitNullValueParentComment; set { _explicitNullValueParentComment = value; AdditionalData?.Remove("parent_comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_comment"); else _explicitNullProperties?.Remove("parent_comment"); } }
         private string _explicitNullValueParentComment = default!;
 #endif
         /// <summary>The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.</summary>
@@ -77,16 +82,16 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public string ResourceType { get; private set; }
 #endif
         /// <summary>The name of the sticker in this story. `null` if there is no sticker.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.TaskStoryCreateRequestStickerName? StickerName { get => _explicitNullValueStickerName; set { _explicitNullValueStickerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_name"); else _explicitNullProperties?.Remove("sticker_name"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.TaskStoryCreateRequestStickerName? StickerName { get => _explicitNullValueStickerName; set { _explicitNullValueStickerName = value; AdditionalData?.Remove("sticker_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sticker_name"); else _explicitNullProperties?.Remove("sticker_name"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.TaskStoryCreateRequestStickerName? _explicitNullValueStickerName = default!;
         /// <summary>The plain text of the comment to add. Cannot be used with html_text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string _explicitNullValueText = default!;
 #endif
         /// <summary>
@@ -121,7 +126,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "parent_comment", n => { ParentComment = n.GetStringValue(); } },
                 { "resource_subtype", n => { ResourceSubtype = n.GetStringValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
-                { "sticker_name", n => { StickerName = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskStoryCreateRequestStickerName>(); } },
+                { "sticker_name", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskStoryCreateRequestStickerName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStickerName = default; _explicitNullProperties?.Remove("sticker_name"); AdditionalData["sticker_name"] = unknown; } else { StickerName = parsed; AdditionalData.Remove("sticker_name"); } } },
                 { "text", n => { Text = n.GetStringValue(); } },
             };
         }

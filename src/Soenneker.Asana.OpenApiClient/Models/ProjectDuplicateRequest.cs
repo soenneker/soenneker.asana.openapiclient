@@ -17,9 +17,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("include") is { } nullNodeInclude && nullNodeInclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Include = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("schedule_dates") is { } nullNodeScheduleDates && nullNodeScheduleDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleDates = null;
+            if (parseNode.GetChildNode("include") is null) { _explicitNullValueInclude = default!; _explicitNullProperties?.Remove("include"); }
+            else if (parseNode.GetChildNode("include") is { } nullNodeInclude && nullNodeInclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Include = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("schedule_dates") is null) { _explicitNullValueScheduleDates = default!; _explicitNullProperties?.Remove("schedule_dates"); }
+            else if (parseNode.GetChildNode("schedule_dates") is { } nullNodeScheduleDates && nullNodeScheduleDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleDates = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A comma-separated list of elements to include when duplicating a project.Some elements are automatically included and cannot be excluded,while others are **optional** and must be explicitly specified in this field.**Auto-included fields (non-configurable)**- Tasks- [Project Views](https://asana.com/features/project-management/project-views)(i.e., tabs in a project such as List, Board, Dashboard, etc.)- [Rules](https://help.asana.com/s/article/rules)*Note: The Owner of the Rules copied to the new project is the user who performs the API call.If the duplication is performed using a [Service Account](/docs/authentication#/service-account),note that Service Accounts cannot access the UI to modify or pause Rules.To prevent unwanted automation behavior, consider pausing Rules in the source project before duplication —their active/paused state is preserved in the new project.***Optional fields (configurable)**- allocations- forms- members- notes- permissions- task_assignee- task_attachments- task_dates- task_dependencies- task_followers- task_notes- task_projects- task_subtasks- task_tags- task_templates- task_type_default</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
+        public string? Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; AdditionalData?.Remove("include"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
         private string? _explicitNullValueInclude = default!;
 #nullable restore
 #else
-        public string Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
+        public string Include { get => _explicitNullValueInclude; set { _explicitNullValueInclude = value; AdditionalData?.Remove("include"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include"); else _explicitNullProperties?.Remove("include"); } }
         private string _explicitNullValueInclude = default!;
 #endif
         /// <summary>The name of the new project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires `should_skip_weekends` and either `start_on` or `due_on`, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates? ScheduleDates { get => _explicitNullValueScheduleDates; set { _explicitNullValueScheduleDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_dates"); else _explicitNullProperties?.Remove("schedule_dates"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates? ScheduleDates { get => _explicitNullValueScheduleDates; set { _explicitNullValueScheduleDates = value; AdditionalData?.Remove("schedule_dates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_dates"); else _explicitNullProperties?.Remove("schedule_dates"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates? _explicitNullValueScheduleDates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates ScheduleDates { get => _explicitNullValueScheduleDates; set { _explicitNullValueScheduleDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_dates"); else _explicitNullProperties?.Remove("schedule_dates"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates ScheduleDates { get => _explicitNullValueScheduleDates; set { _explicitNullValueScheduleDates = value; AdditionalData?.Remove("schedule_dates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_dates"); else _explicitNullProperties?.Remove("schedule_dates"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ProjectDuplicateRequestScheduleDates _explicitNullValueScheduleDates = default!;
 #endif
         /// <summary>

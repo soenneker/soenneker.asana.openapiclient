@@ -17,45 +17,49 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contribution_weight") is { } nullNodeContributionWeight && nullNodeContributionWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContributionWeight = null;
-            if (parseNode.GetChildNode("insert_after") is { } nullNodeInsertAfter && nullNodeInsertAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertAfter = null;
-            if (parseNode.GetChildNode("insert_before") is { } nullNodeInsertBefore && nullNodeInsertBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertBefore = null;
-            if (parseNode.GetChildNode("supporting_resource") is { } nullNodeSupportingResource && nullNodeSupportingResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingResource = null;
+            if (parseNode.GetChildNode("contribution_weight") is null) { _explicitNullValueContributionWeight = default!; _explicitNullProperties?.Remove("contribution_weight"); }
+            else if (parseNode.GetChildNode("contribution_weight") is { } nullNodeContributionWeight && nullNodeContributionWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContributionWeight = null;
+            if (parseNode.GetChildNode("insert_after") is null) { _explicitNullValueInsertAfter = default!; _explicitNullProperties?.Remove("insert_after"); }
+            else if (parseNode.GetChildNode("insert_after") is { } nullNodeInsertAfter && nullNodeInsertAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertAfter = null;
+            if (parseNode.GetChildNode("insert_before") is null) { _explicitNullValueInsertBefore = default!; _explicitNullProperties?.Remove("insert_before"); }
+            else if (parseNode.GetChildNode("insert_before") is { } nullNodeInsertBefore && nullNodeInsertBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsertBefore = null;
+            if (parseNode.GetChildNode("supporting_resource") is null) { _explicitNullValueSupportingResource = default!; _explicitNullProperties?.Remove("supporting_resource"); }
+            else if (parseNode.GetChildNode("supporting_resource") is { } nullNodeSupportingResource && nullNodeSupportingResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingResource = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines how much the supporting goal’s progress contributes to the parent goal’s overall progress. When used with automatically calculated [Goal Metrics](/reference/creategoalmetric) (such as `progress_source = subgoal_progress`), this value must be greater than 0 for the subgoal to count toward the parent goal’s progress.Accepts a number between 0 and 1 (inclusive). Defaults to `0`.</summary>
-        public double? ContributionWeight { get => _explicitNullValueContributionWeight; set { _explicitNullValueContributionWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contribution_weight"); else _explicitNullProperties?.Remove("contribution_weight"); } }
+        public double? ContributionWeight { get => _explicitNullValueContributionWeight; set { _explicitNullValueContributionWeight = value; AdditionalData?.Remove("contribution_weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contribution_weight"); else _explicitNullProperties?.Remove("contribution_weight"); } }
         private double? _explicitNullValueContributionWeight = default!;
         /// <summary>An id of a subgoal of this parent goal. The new subgoal will be added after the one specified here. `insert_before` and `insert_after` parameters cannot both be specified. Currently only supported when adding a subgoal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
+        public string? InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; AdditionalData?.Remove("insert_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
         private string? _explicitNullValueInsertAfter = default!;
 #nullable restore
 #else
-        public string InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
+        public string InsertAfter { get => _explicitNullValueInsertAfter; set { _explicitNullValueInsertAfter = value; AdditionalData?.Remove("insert_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_after"); else _explicitNullProperties?.Remove("insert_after"); } }
         private string _explicitNullValueInsertAfter = default!;
 #endif
         /// <summary>An id of a subgoal of this parent goal. The new subgoal will be added before the one specified here. `insert_before` and `insert_after` parameters cannot both be specified. Currently only supported when adding a subgoal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
+        public string? InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; AdditionalData?.Remove("insert_before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
         private string? _explicitNullValueInsertBefore = default!;
 #nullable restore
 #else
-        public string InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
+        public string InsertBefore { get => _explicitNullValueInsertBefore; set { _explicitNullValueInsertBefore = value; AdditionalData?.Remove("insert_before"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insert_before"); else _explicitNullProperties?.Remove("insert_before"); } }
         private string _explicitNullValueInsertBefore = default!;
 #endif
         /// <summary>The gid of the supporting resource to add to the parent goal. Must be the gid of a goal, project, task, or portfolio.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
+        public string? SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; AdditionalData?.Remove("supporting_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
         private string? _explicitNullValueSupportingResource = default!;
 #nullable restore
 #else
-        public string SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
+        public string SupportingResource { get => _explicitNullValueSupportingResource; set { _explicitNullValueSupportingResource = value; AdditionalData?.Remove("supporting_resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_resource"); else _explicitNullProperties?.Remove("supporting_resource"); } }
         private string _explicitNullValueSupportingResource = default!;
 #endif
         /// <summary>

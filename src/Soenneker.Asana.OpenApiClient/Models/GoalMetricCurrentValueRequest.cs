@@ -18,13 +18,14 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("current_number_value") is { } nullNodeCurrentNumberValue && nullNodeCurrentNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentNumberValue = null;
+            if (parseNode.GetChildNode("current_number_value") is null) { _explicitNullValueCurrentNumberValue = default!; _explicitNullProperties?.Remove("current_number_value"); }
+            else if (parseNode.GetChildNode("current_number_value") is { } nullNodeCurrentNumberValue && nullNodeCurrentNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentNumberValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. This number is the current value of a goal metric of type number.</summary>
-        public double? CurrentNumberValue { get => _explicitNullValueCurrentNumberValue; set { _explicitNullValueCurrentNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_number_value"); else _explicitNullProperties?.Remove("current_number_value"); } }
+        public double? CurrentNumberValue { get => _explicitNullValueCurrentNumberValue; set { _explicitNullValueCurrentNumberValue = value; AdditionalData?.Remove("current_number_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_number_value"); else _explicitNullProperties?.Remove("current_number_value"); } }
         private double? _explicitNullValueCurrentNumberValue = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

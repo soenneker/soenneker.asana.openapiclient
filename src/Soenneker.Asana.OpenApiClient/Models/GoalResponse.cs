@@ -18,24 +18,42 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("current_status_update") is { } nullNodeCurrentStatusUpdate && nullNodeCurrentStatusUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStatusUpdate = null;
-            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
-            if (parseNode.GetChildNode("custom_field_settings") is { } nullNodeCustomFieldSettings && nullNodeCustomFieldSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldSettings = null;
-            if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
-            if (parseNode.GetChildNode("due_on") is { } nullNodeDueOn && nullNodeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueOn = null;
-            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
-            if (parseNode.GetChildNode("html_notes") is { } nullNodeHtmlNotes && nullNodeHtmlNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlNotes = null;
-            if (parseNode.GetChildNode("is_workspace_level") is { } nullNodeIsWorkspaceLevel && nullNodeIsWorkspaceLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWorkspaceLevel = null;
-            if (parseNode.GetChildNode("liked") is { } nullNodeLiked && nullNodeLiked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Liked = null;
-            if (parseNode.GetChildNode("metric") is { } nullNodeMetric && nullNodeMetric.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metric = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
-            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
-            if (parseNode.GetChildNode("privacy_setting") is { } nullNodePrivacySetting && nullNodePrivacySetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacySetting = null;
-            if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
-            if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
-            if (parseNode.GetChildNode("time_period") is { } nullNodeTimePeriod && nullNodeTimePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimePeriod = null;
-            if (parseNode.GetChildNode("workspace") is { } nullNodeWorkspace && nullNodeWorkspace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workspace = null;
+            if (parseNode.GetChildNode("current_status_update") is null) { _explicitNullValueCurrentStatusUpdate = default!; _explicitNullProperties?.Remove("current_status_update"); }
+            else if (parseNode.GetChildNode("current_status_update") is { } nullNodeCurrentStatusUpdate && nullNodeCurrentStatusUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStatusUpdate = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("custom_field_settings") is null) { _explicitNullValueCustomFieldSettings = default!; _explicitNullProperties?.Remove("custom_field_settings"); }
+            else if (parseNode.GetChildNode("custom_field_settings") is { } nullNodeCustomFieldSettings && nullNodeCustomFieldSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldSettings = null;
+            if (parseNode.GetChildNode("default_access_level") is null) { _explicitNullValueDefaultAccessLevel = default!; _explicitNullProperties?.Remove("default_access_level"); }
+            else if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
+            if (parseNode.GetChildNode("due_on") is null) { _explicitNullValueDueOn = default!; _explicitNullProperties?.Remove("due_on"); }
+            else if (parseNode.GetChildNode("due_on") is { } nullNodeDueOn && nullNodeDueOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueOn = null;
+            if (parseNode.GetChildNode("followers") is null) { _explicitNullValueFollowers = default!; _explicitNullProperties?.Remove("followers"); }
+            else if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("html_notes") is null) { _explicitNullValueHtmlNotes = default!; _explicitNullProperties?.Remove("html_notes"); }
+            else if (parseNode.GetChildNode("html_notes") is { } nullNodeHtmlNotes && nullNodeHtmlNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HtmlNotes = null;
+            if (parseNode.GetChildNode("is_workspace_level") is null) { _explicitNullValueIsWorkspaceLevel = default!; _explicitNullProperties?.Remove("is_workspace_level"); }
+            else if (parseNode.GetChildNode("is_workspace_level") is { } nullNodeIsWorkspaceLevel && nullNodeIsWorkspaceLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWorkspaceLevel = null;
+            if (parseNode.GetChildNode("liked") is null) { _explicitNullValueLiked = default!; _explicitNullProperties?.Remove("liked"); }
+            else if (parseNode.GetChildNode("liked") is { } nullNodeLiked && nullNodeLiked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Liked = null;
+            if (parseNode.GetChildNode("metric") is null) { _explicitNullValueMetric = default!; _explicitNullProperties?.Remove("metric"); }
+            else if (parseNode.GetChildNode("metric") is { } nullNodeMetric && nullNodeMetric.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metric = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("owner") is null) { _explicitNullValueOwner = default!; _explicitNullProperties?.Remove("owner"); }
+            else if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("privacy_setting") is null) { _explicitNullValuePrivacySetting = default!; _explicitNullProperties?.Remove("privacy_setting"); }
+            else if (parseNode.GetChildNode("privacy_setting") is { } nullNodePrivacySetting && nullNodePrivacySetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacySetting = null;
+            if (parseNode.GetChildNode("start_on") is null) { _explicitNullValueStartOn = default!; _explicitNullProperties?.Remove("start_on"); }
+            else if (parseNode.GetChildNode("start_on") is { } nullNodeStartOn && nullNodeStartOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOn = null;
+            if (parseNode.GetChildNode("team") is null) { _explicitNullValueTeam = default!; _explicitNullProperties?.Remove("team"); }
+            else if (parseNode.GetChildNode("team") is { } nullNodeTeam && nullNodeTeam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Team = null;
+            if (parseNode.GetChildNode("time_period") is null) { _explicitNullValueTimePeriod = default!; _explicitNullProperties?.Remove("time_period"); }
+            else if (parseNode.GetChildNode("time_period") is { } nullNodeTimePeriod && nullNodeTimePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimePeriod = null;
+            if (parseNode.GetChildNode("workspace") is null) { _explicitNullValueWorkspace = default!; _explicitNullProperties?.Remove("workspace"); }
+            else if (parseNode.GetChildNode("workspace") is { } nullNodeWorkspace && nullNodeWorkspace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workspace = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,54 +61,54 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent&apos;s followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the object.The latest `status_update` posted to this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate? CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate? CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; AdditionalData?.Remove("current_status_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate? _explicitNullValueCurrentStatusUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate CurrentStatusUpdate { get => _explicitNullValueCurrentStatusUpdate; set { _explicitNullValueCurrentStatusUpdate = value; AdditionalData?.Remove("current_status_update"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_status_update"); else _explicitNullProperties?.Remove("current_status_update"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate _explicitNullValueCurrentStatusUpdate = default!;
 #endif
         /// <summary>Array of custom field values applied directly to the goal itself. These represent the values set on the goal, not the fields available for items in the goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Array of custom field definitions that are enabled for the goal. These represent which custom fields are available to be used on items within the goal, but do not include any values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>? CustomFieldSettings { get => _explicitNullValueCustomFieldSettings; set { _explicitNullValueCustomFieldSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field_settings"); else _explicitNullProperties?.Remove("custom_field_settings"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>? CustomFieldSettings { get => _explicitNullValueCustomFieldSettings; set { _explicitNullValueCustomFieldSettings = value; AdditionalData?.Remove("custom_field_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field_settings"); else _explicitNullProperties?.Remove("custom_field_settings"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>? _explicitNullValueCustomFieldSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem> CustomFieldSettings { get => _explicitNullValueCustomFieldSettings; set { _explicitNullValueCustomFieldSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field_settings"); else _explicitNullProperties?.Remove("custom_field_settings"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem> CustomFieldSettings { get => _explicitNullValueCustomFieldSettings; set { _explicitNullValueCustomFieldSettings = value; AdditionalData?.Remove("custom_field_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_field_settings"); else _explicitNullProperties?.Remove("custom_field_settings"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem> _explicitNullValueCustomFieldSettings = default!;
 #endif
         /// <summary>The default access level when inviting new members to the goal</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; AdditionalData?.Remove("default_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel? _explicitNullValueDefaultAccessLevel = default!;
         /// <summary>The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        public string? DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; AdditionalData?.Remove("due_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
         private string? _explicitNullValueDueOn = default!;
 #nullable restore
 #else
-        public string DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
+        public string DueOn { get => _explicitNullValueDueOn; set { _explicitNullValueDueOn = value; AdditionalData?.Remove("due_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_on"); else _explicitNullProperties?.Remove("due_on"); } }
         private string _explicitNullValueDueOn = default!;
 #endif
         /// <summary>Array of users who are members of this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>? _explicitNullValueFollowers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem> _explicitNullValueFollowers = default!;
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -104,18 +122,18 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The notes of the goal with formatting as HTML. See [rich text](/docs/rich-text).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        public string? HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; AdditionalData?.Remove("html_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
         private string? _explicitNullValueHtmlNotes = default!;
 #nullable restore
 #else
-        public string HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
+        public string HtmlNotes { get => _explicitNullValueHtmlNotes; set { _explicitNullValueHtmlNotes = value; AdditionalData?.Remove("html_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_notes"); else _explicitNullProperties?.Remove("html_notes"); } }
         private string _explicitNullValueHtmlNotes = default!;
 #endif
         /// <summary>*Conditional*. This property is only present when the `workspace` provided is an organization. Whether the goal belongs to the `workspace` (and is listed as part of the workspace’s goals) or not. If it isn’t a workspace-level goal, it is a team-level goal, and is associated with the goal’s team.</summary>
-        public bool? IsWorkspaceLevel { get => _explicitNullValueIsWorkspaceLevel; set { _explicitNullValueIsWorkspaceLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_workspace_level"); else _explicitNullProperties?.Remove("is_workspace_level"); } }
+        public bool? IsWorkspaceLevel { get => _explicitNullValueIsWorkspaceLevel; set { _explicitNullValueIsWorkspaceLevel = value; AdditionalData?.Remove("is_workspace_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_workspace_level"); else _explicitNullProperties?.Remove("is_workspace_level"); } }
         private bool? _explicitNullValueIsWorkspaceLevel = default!;
         /// <summary>True if the goal is liked by the authorized user, false if not.</summary>
-        public bool? Liked { get => _explicitNullValueLiked; set { _explicitNullValueLiked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked"); else _explicitNullProperties?.Remove("liked"); } }
+        public bool? Liked { get => _explicitNullValueLiked; set { _explicitNullValueLiked = value; AdditionalData?.Remove("liked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liked"); else _explicitNullProperties?.Remove("liked"); } }
         private bool? _explicitNullValueLiked = default!;
         /// <summary>Array of likes for users who have liked this goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,31 +146,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric? Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric? Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; AdditionalData?.Remove("metric"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric? _explicitNullValueMetric = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric Metric { get => _explicitNullValueMetric; set { _explicitNullValueMetric = value; AdditionalData?.Remove("metric"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metric"); else _explicitNullProperties?.Remove("metric"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseMetric _explicitNullValueMetric = default!;
 #endif
         /// <summary>The name of the goal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Free-form textual information associated with the goal (i.e. its description).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The number of users who have liked this goal.</summary>
@@ -160,15 +178,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>The privacy setting of the goal.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting? PrivacySetting { get => _explicitNullValuePrivacySetting; set { _explicitNullValuePrivacySetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_setting"); else _explicitNullProperties?.Remove("privacy_setting"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting? PrivacySetting { get => _explicitNullValuePrivacySetting; set { _explicitNullValuePrivacySetting = value; AdditionalData?.Remove("privacy_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_setting"); else _explicitNullProperties?.Remove("privacy_setting"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting? _explicitNullValuePrivacySetting = default!;
         /// <summary>The base type of this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,11 +199,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        public string? StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; AdditionalData?.Remove("start_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
         private string? _explicitNullValueStartOn = default!;
 #nullable restore
 #else
-        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
+        public string StartOn { get => _explicitNullValueStartOn; set { _explicitNullValueStartOn = value; AdditionalData?.Remove("start_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_on"); else _explicitNullProperties?.Remove("start_on"); } }
         private string _explicitNullValueStartOn = default!;
 #endif
         /// <summary>The current status of this goal. When the goal is open, its status can be `green`, `yellow`, and `red` to reflect &quot;On Track&quot;, &quot;At Risk&quot;, and &quot;Off Track&quot;, respectively. When the goal is closed, the value can be `missed`, `achieved`, `partial`, or `dropped`.*Note* you can only write to this property if `metric` is set.</summary>
@@ -199,31 +217,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.*Conditional*. This property is only present when the `workspace` provided is an organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam? Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam? _explicitNullValueTeam = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam Team { get => _explicitNullValueTeam; set { _explicitNullValueTeam = value; AdditionalData?.Remove("team"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team"); else _explicitNullProperties?.Remove("team"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTeam _explicitNullValueTeam = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod? TimePeriod { get => _explicitNullValueTimePeriod; set { _explicitNullValueTimePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_period"); else _explicitNullProperties?.Remove("time_period"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod? TimePeriod { get => _explicitNullValueTimePeriod; set { _explicitNullValueTimePeriod = value; AdditionalData?.Remove("time_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_period"); else _explicitNullProperties?.Remove("time_period"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod? _explicitNullValueTimePeriod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod TimePeriod { get => _explicitNullValueTimePeriod; set { _explicitNullValueTimePeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_period"); else _explicitNullProperties?.Remove("time_period"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod TimePeriod { get => _explicitNullValueTimePeriod; set { _explicitNullValueTimePeriod = value; AdditionalData?.Remove("time_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_period"); else _explicitNullProperties?.Remove("time_period"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseTimePeriod _explicitNullValueTimePeriod = default!;
 #endif
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace? Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace? Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; AdditionalData?.Remove("workspace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace? _explicitNullValueWorkspace = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace Workspace { get => _explicitNullValueWorkspace; set { _explicitNullValueWorkspace = value; AdditionalData?.Remove("workspace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace"); else _explicitNullProperties?.Remove("workspace"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.GoalResponseWorkspace _explicitNullValueWorkspace = default!;
 #endif
         /// <summary>
@@ -254,7 +272,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_access_level", n => { DefaultAccessLevel = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel>(); } },
+                { "default_access_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseDefaultAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultAccessLevel = default; _explicitNullProperties?.Remove("default_access_level"); AdditionalData["default_access_level"] = unknown; } else { DefaultAccessLevel = parsed; AdditionalData.Remove("default_access_level"); } } },
                 { "due_on", n => { DueOn = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseFollowersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
@@ -267,7 +285,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "num_likes", n => { NumLikes = n.GetIntValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseOwner.CreateFromDiscriminatorValue); } },
-                { "privacy_setting", n => { PrivacySetting = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting>(); } },
+                { "privacy_setting", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponsePrivacySetting>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrivacySetting = default; _explicitNullProperties?.Remove("privacy_setting"); AdditionalData["privacy_setting"] = unknown; } else { PrivacySetting = parsed; AdditionalData.Remove("privacy_setting"); } } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "start_on", n => { StartOn = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },

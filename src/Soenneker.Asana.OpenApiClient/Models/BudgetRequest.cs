@@ -18,36 +18,41 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actual") is { } nullNodeActual && nullNodeActual.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actual = null;
-            if (parseNode.GetChildNode("budget_type") is { } nullNodeBudgetType && nullNodeBudgetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetType = null;
-            if (parseNode.GetChildNode("estimate") is { } nullNodeEstimate && nullNodeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Estimate = null;
-            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("actual") is null) { _explicitNullValueActual = default!; _explicitNullProperties?.Remove("actual"); }
+            else if (parseNode.GetChildNode("actual") is { } nullNodeActual && nullNodeActual.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actual = null;
+            if (parseNode.GetChildNode("budget_type") is null) { _explicitNullValueBudgetType = default!; _explicitNullProperties?.Remove("budget_type"); }
+            else if (parseNode.GetChildNode("budget_type") is { } nullNodeBudgetType && nullNodeBudgetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetType = null;
+            if (parseNode.GetChildNode("estimate") is null) { _explicitNullValueEstimate = default!; _explicitNullProperties?.Remove("estimate"); }
+            else if (parseNode.GetChildNode("estimate") is { } nullNodeEstimate && nullNodeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Estimate = null;
+            if (parseNode.GetChildNode("parent") is null) { _explicitNullValueParent = default!; _explicitNullProperties?.Remove("parent"); }
+            else if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Defines the configuration of the actual portion of a budget. The actual value represents aggregated time tracking data attributed to the budget’s parent. This object controls which time entries are included based on their billable status. When no entries match the selected filter, the value will be 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual? Actual { get => _explicitNullValueActual; set { _explicitNullValueActual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actual"); else _explicitNullProperties?.Remove("actual"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual? Actual { get => _explicitNullValueActual; set { _explicitNullValueActual = value; AdditionalData?.Remove("actual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actual"); else _explicitNullProperties?.Remove("actual"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual? _explicitNullValueActual = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual Actual { get => _explicitNullValueActual; set { _explicitNullValueActual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actual"); else _explicitNullProperties?.Remove("actual"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual Actual { get => _explicitNullValueActual; set { _explicitNullValueActual = value; AdditionalData?.Remove("actual"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actual"); else _explicitNullProperties?.Remove("actual"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual _explicitNullValueActual = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the budget, in &quot;cost&quot; or &quot;time&quot;. The value of this property will dictate how the corresponding values for actual, estimate, and total are interpreted.</summary>
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType? BudgetType { get => _explicitNullValueBudgetType; set { _explicitNullValueBudgetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_type"); else _explicitNullProperties?.Remove("budget_type"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType? BudgetType { get => _explicitNullValueBudgetType; set { _explicitNullValueBudgetType = value; AdditionalData?.Remove("budget_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_type"); else _explicitNullProperties?.Remove("budget_type"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType? _explicitNullValueBudgetType = default!;
         /// <summary>Defines how the estimate portion of a budget is configured. This object controls whether the estimate is enabled, what data source it uses, and which tasks (by billable status) are included in calculating the estimate value. When disabled (enabled: false and source: none), the estimate is hidden and the API response will return `value: null` and `units: null` for this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate? Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate? Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; AdditionalData?.Remove("estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate? _explicitNullValueEstimate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; AdditionalData?.Remove("estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate _explicitNullValueEstimate = default!;
 #endif
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -61,11 +66,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Globally unique ID of the parent object: project. Can only be set on create, immutable thereafter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
         private string? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; AdditionalData?.Remove("parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
         private string _explicitNullValueParent = default!;
 #endif
         /// <summary>The base type of this resource.</summary>
@@ -79,11 +84,11 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Defines how the total portion of a budget is configured. The total represents a user-defined target value, not an aggregated one. This object specifies whether the total is displayed and the current value for the selected budget_type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestTotal _explicitNullValueTotal = default!;
 #endif
         /// <summary>
@@ -112,7 +117,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actual", n => { Actual = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual>(global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual.CreateFromDiscriminatorValue); } },
-                { "budget_type", n => { BudgetType = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType>(); } },
+                { "budget_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBudgetType = default; _explicitNullProperties?.Remove("budget_type"); AdditionalData["budget_type"] = unknown; } else { BudgetType = parsed; AdditionalData.Remove("budget_type"); } } },
                 { "estimate", n => { Estimate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate>(global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestEstimate.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },

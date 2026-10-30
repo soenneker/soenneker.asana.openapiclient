@@ -17,9 +17,12 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("after_section") is { } nullNodeAfterSection && nullNodeAfterSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterSection = null;
-            if (parseNode.GetChildNode("before_section") is { } nullNodeBeforeSection && nullNodeBeforeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeSection = null;
-            if (parseNode.GetChildNode("section") is { } nullNodeSection && nullNodeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Section = null;
+            if (parseNode.GetChildNode("after_section") is null) { _explicitNullValueAfterSection = default!; _explicitNullProperties?.Remove("after_section"); }
+            else if (parseNode.GetChildNode("after_section") is { } nullNodeAfterSection && nullNodeAfterSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfterSection = null;
+            if (parseNode.GetChildNode("before_section") is null) { _explicitNullValueBeforeSection = default!; _explicitNullProperties?.Remove("before_section"); }
+            else if (parseNode.GetChildNode("before_section") is { } nullNodeBeforeSection && nullNodeBeforeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeforeSection = null;
+            if (parseNode.GetChildNode("section") is null) { _explicitNullValueSection = default!; _explicitNullProperties?.Remove("section"); }
+            else if (parseNode.GetChildNode("section") is { } nullNodeSection && nullNodeSection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Section = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Insert the given section immediately after the section specified by this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
+        public string? AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; AdditionalData?.Remove("after_section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
         private string? _explicitNullValueAfterSection = default!;
 #nullable restore
 #else
-        public string AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
+        public string AfterSection { get => _explicitNullValueAfterSection; set { _explicitNullValueAfterSection = value; AdditionalData?.Remove("after_section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_section"); else _explicitNullProperties?.Remove("after_section"); } }
         private string _explicitNullValueAfterSection = default!;
 #endif
         /// <summary>Insert the given section immediately before the section specified by this parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
+        public string? BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; AdditionalData?.Remove("before_section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
         private string? _explicitNullValueBeforeSection = default!;
 #nullable restore
 #else
-        public string BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
+        public string BeforeSection { get => _explicitNullValueBeforeSection; set { _explicitNullValueBeforeSection = value; AdditionalData?.Remove("before_section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("before_section"); else _explicitNullProperties?.Remove("before_section"); } }
         private string _explicitNullValueBeforeSection = default!;
 #endif
         /// <summary>The section to reorder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
+        public string? Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; AdditionalData?.Remove("section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
         private string? _explicitNullValueSection = default!;
 #nullable restore
 #else
-        public string Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
+        public string Section { get => _explicitNullValueSection; set { _explicitNullValueSection = value; AdditionalData?.Remove("section"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("section"); else _explicitNullProperties?.Remove("section"); } }
         private string _explicitNullValueSection = default!;
 #endif
         /// <summary>

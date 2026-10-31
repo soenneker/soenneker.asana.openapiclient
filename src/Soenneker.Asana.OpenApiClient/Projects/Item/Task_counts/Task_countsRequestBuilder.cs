@@ -80,7 +80,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Task_counts
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Projects.Item.Task_counts.Task_countsRequestBuilder.Task_countsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/projects/{projectGid}/task_counts", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;

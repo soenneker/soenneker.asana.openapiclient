@@ -128,7 +128,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/webhooks?workspace={workspace}{&limit*,offset*,opt_fields,resource*}", RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/webhooks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/webhooks?workspace={workspace}{&limit*,offset*,opt_fields,resource*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;
@@ -149,7 +149,7 @@ namespace Soenneker.Asana.OpenApiClient.Webhooks
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/webhooks", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);

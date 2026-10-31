@@ -128,7 +128,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Ooo_entries.Ooo_entriesRequestBuilder.Ooo_entriesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/ooo_entries?user={user}&workspace={workspace}{&end_date*,limit*,offset*,opt_fields,start_date*}", RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/ooo_entries", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/ooo_entries?user={user}&workspace={workspace}{&end_date*,limit*,offset*,opt_fields,start_date*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;
@@ -149,7 +149,7 @@ namespace Soenneker.Asana.OpenApiClient.Ooo_entries
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/ooo_entries", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);

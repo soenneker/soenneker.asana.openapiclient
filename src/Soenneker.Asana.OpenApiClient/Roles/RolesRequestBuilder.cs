@@ -128,7 +128,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Roles.RolesRequestBuilder.RolesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/roles?workspace={workspace}{&archived*,limit*,offset*,opt_fields}", RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/roles", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/roles?workspace={workspace}{&archived*,limit*,offset*,opt_fields}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;
@@ -149,7 +149,7 @@ namespace Soenneker.Asana.OpenApiClient.Roles
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/roles", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json;charset=UTF-8", body);

@@ -82,7 +82,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.Rollup
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Asana.OpenApiClient.Tasks.Item.Rollup.RollupRequestBuilder.RollupRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://app.asana.com/api/1.0", "/tasks/{taskGid}/rollup", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=UTF-8");
             return requestInfo;

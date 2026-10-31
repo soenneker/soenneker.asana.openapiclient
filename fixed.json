@@ -214,6 +214,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessRequestResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -912,6 +923,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllocationResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -1408,6 +1430,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/BudgetResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -2199,6 +2232,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomFieldResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2627,6 +2671,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnumOptionData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3081,6 +3136,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphExportResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -3127,6 +3193,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceExportResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4332,6 +4409,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoalResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5665,6 +5753,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/MembershipResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -6365,6 +6464,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/OooEntryResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -6435,6 +6545,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationExportResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -7070,6 +7191,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8217,6 +8349,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8481,6 +8624,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectBriefResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -9167,6 +9321,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectStatusResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -9533,6 +9698,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -9960,6 +10136,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -10473,6 +10660,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -11093,6 +11291,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -11498,6 +11707,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -13167,6 +13387,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -13254,6 +13485,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -13418,6 +13660,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -14194,6 +14447,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecordItemResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -14685,6 +14949,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/RbacRoleResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -15270,6 +15545,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -15711,6 +15997,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusUpdateResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16578,6 +16875,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/StoryResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -17013,6 +17321,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/StoryResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -17448,6 +17767,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/StoryResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -17671,6 +18001,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -18431,6 +18772,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -18821,6 +19173,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -19094,6 +19457,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -19516,6 +19890,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -19990,6 +20375,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -21101,6 +21497,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -22691,6 +23098,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -23907,6 +24325,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25174,6 +25603,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimeTrackingCategoryResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -25330,6 +25770,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimeTrackingEntryBaseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -26025,6 +26476,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimesheetApprovalStatusResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -27256,6 +27718,17 @@
           },
           "500": {
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Response",
+            "content": {
+              "application/json; charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhookResponseData"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [

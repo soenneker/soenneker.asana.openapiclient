@@ -75,8 +75,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
         private bool? _explicitNullValueArchived = default!;
         /// <summary>Color of the project.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor? _explicitNullValueColor = default!;
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor _explicitNullValueColor = default!;
+#endif
         /// <summary>The time at which this resource was created.</summary>
         public DateTimeOffset? CreatedAt { get; private set; }
         /// <summary>A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.*Deprecated: new integrations should prefer the `status_update` resource.*A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: &quot;green&quot; for projects that are on track, &quot;yellow&quot; for projects at risk, and &quot;red&quot; for projects that are behind.*Deprecated: new integrations should prefer the `current_status_update` resource.*</summary>
@@ -284,7 +291,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "color", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueColor = default; _explicitNullProperties?.Remove("color"); AdditionalData["color"] = unknown; } else { Color = parsed; AdditionalData.Remove("color"); } } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "current_status", n => { CurrentStatus = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus>(global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus.CreateFromDiscriminatorValue); } },
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
@@ -323,7 +330,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestColor>("color", Color);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatus>("current_status", CurrentStatus);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectUpdateRequestCustomFieldsProperty>("custom_fields", CustomFields);

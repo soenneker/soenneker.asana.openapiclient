@@ -73,8 +73,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public bool? Archived { get => _explicitNullValueArchived; set { _explicitNullValueArchived = value; AdditionalData?.Remove("archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived"); else _explicitNullProperties?.Remove("archived"); } }
         private bool? _explicitNullValueArchived = default!;
         /// <summary>Color of the project.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor? _explicitNullValueColor = default!;
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor _explicitNullValueColor = default!;
+#endif
         /// <summary>True if the project is currently marked complete, false if not.</summary>
         public bool? Completed { get; private set; }
         /// <summary>The time at which this project was completed, or null if the project is not completed.</summary>
@@ -315,7 +322,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "color", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueColor = default; _explicitNullProperties?.Remove("color"); AdditionalData["color"] = unknown; } else { Color = parsed; AdditionalData.Remove("color"); } } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor.CreateFromDiscriminatorValue); } },
                 { "completed", n => { Completed = n.GetBoolValue(); } },
                 { "completed_at", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "completed_by", n => { CompletedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCompletedBy>(global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCompletedBy.CreateFromDiscriminatorValue); } },
@@ -360,7 +367,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseColor>("color", Color);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCreatedFromTemplate>("created_from_template", CreatedFromTemplate);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatus>("current_status", CurrentStatus);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectResponseCurrentStatusUpdate>("current_status_update", CurrentStatusUpdate);

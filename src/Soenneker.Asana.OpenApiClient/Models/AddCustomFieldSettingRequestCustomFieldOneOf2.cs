@@ -69,7 +69,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>*Conditional*. A unique identifier to associate this field with the template source of truth.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2AsanaCreatedField? AsanaCreatedField { get; private set; }
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2AsanaCreatedField AsanaCreatedField { get; private set; }
+#endif
         /// <summary>ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,8 +97,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         private string _explicitNullValueCustomLabel = default!;
 #endif
         /// <summary>Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition? CustomLabelPosition { get => _explicitNullValueCustomLabelPosition; set { _explicitNullValueCustomLabelPosition = value; AdditionalData?.Remove("custom_label_position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_label_position"); else _explicitNullProperties?.Remove("custom_label_position"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition? _explicitNullValueCustomLabelPosition = default!;
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition CustomLabelPosition { get => _explicitNullValueCustomLabelPosition; set { _explicitNullValueCustomLabelPosition = value; AdditionalData?.Remove("custom_label_position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_label_position"); else _explicitNullProperties?.Remove("custom_label_position"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition _explicitNullValueCustomLabelPosition = default!;
+#endif
         /// <summary>*Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -294,10 +307,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "asana_created_field", n => { AsanaCreatedField = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2AsanaCreatedField>(); } },
+                { "asana_created_field", n => { AsanaCreatedField = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2AsanaCreatedField>(global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2AsanaCreatedField.CreateFromDiscriminatorValue); } },
                 { "currency_code", n => { CurrencyCode = n.GetStringValue(); } },
                 { "custom_label", n => { CustomLabel = n.GetStringValue(); } },
-                { "custom_label_position", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCustomLabelPosition = default; _explicitNullProperties?.Remove("custom_label_position"); AdditionalData["custom_label_position"] = unknown; } else { CustomLabelPosition = parsed; AdditionalData.Remove("custom_label_position"); } } },
+                { "custom_label_position", n => { CustomLabelPosition = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition>(global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition.CreateFromDiscriminatorValue); } },
                 { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2DateValue>(global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2DateValue.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "display_value", n => { DisplayValue = n.GetStringValue(); } },
@@ -336,7 +349,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("currency_code", CurrencyCode);
             writer.WriteStringValue("custom_label", CustomLabel);
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition>("custom_label_position", CustomLabelPosition);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2CustomLabelPosition>("custom_label_position", CustomLabelPosition);
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2DateValue>("date_value", DateValue);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.AddCustomFieldSettingRequestCustomFieldOneOf2EnumOptionsItem>("enum_options", EnumOptions);

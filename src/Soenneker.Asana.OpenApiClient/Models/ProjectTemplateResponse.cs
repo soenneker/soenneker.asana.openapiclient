@@ -39,8 +39,15 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Color of the project template.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor? _explicitNullValueColor = default!;
+#nullable restore
+#else
+        public global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor _explicitNullValueColor = default!;
+#endif
         /// <summary>Free-form textual information associated with the project template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,7 +160,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueColor = default; _explicitNullProperties?.Remove("color"); AdditionalData["color"] = unknown; } else { Color = parsed; AdditionalData.Remove("color"); } } },
+                { "color", n => { Color = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "html_description", n => { HtmlDescription = n.GetStringValue(); } },
@@ -173,7 +180,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>("color", Color);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectTemplateResponseColor>("color", Color);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("html_description", HtmlDescription);
             writer.WriteStringValue("name", Name);

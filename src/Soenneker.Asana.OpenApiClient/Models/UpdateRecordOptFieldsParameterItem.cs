@@ -212,6 +212,10 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         CustomFieldsType,
         #pragma warning restore CS1591
+        [EnumMember(Value = "default_access_level")]
+        #pragma warning disable CS1591
+        DefaultAccessLevel,
+        #pragma warning restore CS1591
         [EnumMember(Value = "deleted_at")]
         #pragma warning disable CS1591
         DeletedAt,

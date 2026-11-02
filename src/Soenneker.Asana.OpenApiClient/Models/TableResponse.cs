@@ -18,6 +18,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("default_access_level") is null) { _explicitNullValueDefaultAccessLevel = default!; _explicitNullProperties?.Remove("default_access_level"); }
+            else if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
@@ -34,6 +36,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
 #else
         public List<global::Soenneker.Asana.OpenApiClient.Models.TableResponseCustomFieldSettingsItem> CustomFieldSettings { get; private set; }
 #endif
+        /// <summary>The default access level for users who join or are added as members of the table.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.TableResponseDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; AdditionalData?.Remove("default_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.TableResponseDefaultAccessLevel? _explicitNullValueDefaultAccessLevel = default!;
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,6 +102,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TableResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.TableResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_access_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TableResponseDefaultAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultAccessLevel = default; _explicitNullProperties?.Remove("default_access_level"); AdditionalData["default_access_level"] = unknown; } else { DefaultAccessLevel = parsed; AdditionalData.Remove("default_access_level"); } } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "modified_at", n => { ModifiedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -111,6 +117,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TableResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteStringValue("name", Name);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

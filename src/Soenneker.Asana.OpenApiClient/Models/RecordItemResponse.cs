@@ -22,6 +22,8 @@ namespace Soenneker.Asana.OpenApiClient.Models
             else if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
             if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
             else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("default_access_level") is null) { _explicitNullValueDefaultAccessLevel = default!; _explicitNullProperties?.Remove("default_access_level"); }
+            else if (parseNode.GetChildNode("default_access_level") is { } nullNodeDefaultAccessLevel && nullNodeDefaultAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAccessLevel = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
@@ -52,6 +54,9 @@ namespace Soenneker.Asana.OpenApiClient.Models
         public List<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCustomFieldsItem> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCustomFieldsItem> _explicitNullValueCustomFields = default!;
 #endif
+        /// <summary>The default access level for users who join or are added as members of the record. This isn&apos;t applied when the record is private.</summary>
+        public global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseDefaultAccessLevel? DefaultAccessLevel { get => _explicitNullValueDefaultAccessLevel; set { _explicitNullValueDefaultAccessLevel = value; AdditionalData?.Remove("default_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_access_level"); else _explicitNullProperties?.Remove("default_access_level"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseDefaultAccessLevel? _explicitNullValueDefaultAccessLevel = default!;
         /// <summary>The time at which this resource was deleted, or null if it has not been deleted.</summary>
         public DateTimeOffset? DeletedAt { get; private set; }
         /// <summary>Globally unique identifier of the resource, as a string.</summary>
@@ -137,6 +142,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCreatedBy>(global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCreatedBy.CreateFromDiscriminatorValue); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_access_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseDefaultAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultAccessLevel = default; _explicitNullProperties?.Remove("default_access_level"); AdditionalData["default_access_level"] = unknown; } else { DefaultAccessLevel = parsed; AdditionalData.Remove("default_access_level"); } } },
                 { "deleted_at", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },
                 { "is_in_archived_table", n => { IsInArchivedTable = n.GetBoolValue(); } },
@@ -157,6 +163,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCreatedBy>("created_by", CreatedBy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseCustomFieldsItem>("custom_fields", CustomFields);
+            writer.WriteEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RecordItemResponseDefaultAccessLevel>("default_access_level", DefaultAccessLevel);
             writer.WriteStringValue("name", Name);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

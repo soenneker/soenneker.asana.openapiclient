@@ -14006,6 +14006,7 @@
               "custom_fields.resource_subtype",
               "custom_fields.text_value",
               "custom_fields.type",
+              "default_access_level",
               "deleted_at",
               "is_in_archived_table",
               "modified_at",
@@ -14134,6 +14135,7 @@
               "custom_fields.resource_subtype",
               "custom_fields.text_value",
               "custom_fields.type",
+              "default_access_level",
               "deleted_at",
               "is_in_archived_table",
               "modified_at",
@@ -14395,6 +14397,7 @@
               "custom_fields.resource_subtype",
               "custom_fields.text_value",
               "custom_fields.type",
+              "default_access_level",
               "deleted_at",
               "is_in_archived_table",
               "modified_at",
@@ -14537,6 +14540,7 @@
               "custom_fields.resource_subtype",
               "custom_fields.text_value",
               "custom_fields.type",
+              "default_access_level",
               "deleted_at",
               "is_in_archived_table",
               "modified_at",
@@ -14647,6 +14651,7 @@
               "custom_fields.resource_subtype",
               "custom_fields.text_value",
               "custom_fields.type",
+              "default_access_level",
               "deleted_at",
               "is_in_archived_table",
               "modified_at",
@@ -17855,6 +17860,7 @@
               "custom_field_settings.custom_field.text_value",
               "custom_field_settings.custom_field.type",
               "custom_field_settings.is_important",
+              "default_access_level",
               "modified_at",
               "name",
               "offset",
@@ -17957,6 +17963,7 @@
               "custom_field_settings.custom_field.text_value",
               "custom_field_settings.custom_field.type",
               "custom_field_settings.is_important",
+              "default_access_level",
               "modified_at",
               "name",
               "workspace",
@@ -18070,6 +18077,7 @@
               "custom_field_settings.custom_field.text_value",
               "custom_field_settings.custom_field.type",
               "custom_field_settings.is_important",
+              "default_access_level",
               "modified_at",
               "name",
               "workspace",
@@ -18154,6 +18162,7 @@
               "custom_field_settings.custom_field.text_value",
               "custom_field_settings.custom_field.type",
               "custom_field_settings.is_important",
+              "default_access_level",
               "modified_at",
               "name",
               "workspace",
@@ -33106,6 +33115,9 @@
             "type": "string",
             "description": "An optional client-provided identifier used to deduplicate record creation within a table. If a record already exists in the table with the same \u0060unique_fingerprint\u0060, the request fails with a \u0060409 Conflict\u0060 error rather than creating a duplicate.",
             "example": "sfdc-opportunity-0061"
+          },
+          "default_access_level": {
+            "$ref": "#/components/schemas/RecordItemRequestDefaultAccessLevel"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
@@ -33120,6 +33132,9 @@
             "type": "string",
             "description": "The name of the record.",
             "example": "Q3 renewal"
+          },
+          "default_access_level": {
+            "$ref": "#/components/schemas/RecordItemUpdateRequestDefaultAccessLevel"
           },
           "custom_fields": {
             "$ref": "#/components/schemas/RecordItemUpdateRequestCustomFieldsProperty"
@@ -33202,6 +33217,9 @@
             "description": "True if the record\u0027s table is archived, false if not.",
             "readOnly": true,
             "example": false
+          },
+          "default_access_level": {
+            "$ref": "#/components/schemas/RecordItemResponseDefaultAccessLevel"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *record* is a single row in a table. Fields on a record are backed by the table\u0027s custom field settings.",
@@ -33253,6 +33271,9 @@
             "type": "string",
             "description": "The name of the table.",
             "example": "Vendor contracts"
+          },
+          "default_access_level": {
+            "$ref": "#/components/schemas/TableUpdateRequestDefaultAccessLevel"
           }
         }
       },
@@ -33333,6 +33354,9 @@
             },
             "description": "Array of custom field definitions that are enabled for the table. These represent which custom fields are available to records in the table, but do not include any values.",
             "readOnly": true
+          },
+          "default_access_level": {
+            "$ref": "#/components/schemas/TableResponseDefaultAccessLevel"
           }
         },
         "description": "A generic Asana Resource, containing a globally unique identifier.A generic Asana Resource, containing a globally unique identifier.\nA *table* is a container for structured records (rows), with columns defined by custom field settings.",
@@ -60385,6 +60409,171 @@
             {
               "value": "unknown",
               "name": "Unknown"
+            }
+          ]
+        }
+      },
+      "RecordItemRequestDefaultAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The default access level for users who join or are added as members of the record. This isn\u0027t applied when the record is private.",
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "RecordItemRequestDefaultAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "RecordItemUpdateRequestDefaultAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The default access level for users who join or are added as members of the record. This isn\u0027t applied when the record is private.",
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "RecordItemUpdateRequestDefaultAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "RecordItemResponseDefaultAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The default access level for users who join or are added as members of the record. This isn\u0027t applied when the record is private.",
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "RecordItemResponseDefaultAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "TableUpdateRequestDefaultAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The default access level for users who join or are added as members of the table.",
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "TableUpdateRequestDefaultAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            }
+          ]
+        }
+      },
+      "TableResponseDefaultAccessLevel": {
+        "enum": [
+          "admin",
+          "editor",
+          "commenter",
+          "viewer"
+        ],
+        "type": "string",
+        "description": "The default access level for users who join or are added as members of the table.",
+        "example": "viewer",
+        "x-ms-enum": {
+          "name": "TableResponseDefaultAccessLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "commenter",
+              "name": "Commenter"
+            },
+            {
+              "value": "viewer",
+              "name": "Viewer"
             }
           ]
         }
@@ -101874,6 +102063,7 @@
           "custom_fields.resource_subtype",
           "custom_fields.text_value",
           "custom_fields.type",
+          "default_access_level",
           "deleted_at",
           "is_in_archived_table",
           "modified_at",
@@ -102097,6 +102287,10 @@
               "name": "CustomFieldsType"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "deleted_at",
               "name": "DeletedAt"
             },
@@ -102221,6 +102415,7 @@
           "custom_fields.resource_subtype",
           "custom_fields.text_value",
           "custom_fields.type",
+          "default_access_level",
           "deleted_at",
           "is_in_archived_table",
           "modified_at",
@@ -102441,6 +102636,10 @@
               "name": "CustomFieldsType"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "deleted_at",
               "name": "DeletedAt"
             },
@@ -102532,6 +102731,7 @@
           "custom_fields.resource_subtype",
           "custom_fields.text_value",
           "custom_fields.type",
+          "default_access_level",
           "deleted_at",
           "is_in_archived_table",
           "modified_at",
@@ -102752,6 +102952,10 @@
               "name": "CustomFieldsType"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "deleted_at",
               "name": "DeletedAt"
             },
@@ -102843,6 +103047,7 @@
           "custom_fields.resource_subtype",
           "custom_fields.text_value",
           "custom_fields.type",
+          "default_access_level",
           "deleted_at",
           "is_in_archived_table",
           "modified_at",
@@ -103063,6 +103268,10 @@
               "name": "CustomFieldsType"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "deleted_at",
               "name": "DeletedAt"
             },
@@ -103154,6 +103363,7 @@
           "custom_fields.resource_subtype",
           "custom_fields.text_value",
           "custom_fields.type",
+          "default_access_level",
           "deleted_at",
           "is_in_archived_table",
           "modified_at",
@@ -103372,6 +103582,10 @@
             {
               "value": "custom_fields.type",
               "name": "CustomFieldsType"
+            },
+            {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
             },
             {
               "value": "deleted_at",
@@ -110898,6 +111112,7 @@
           "custom_field_settings.custom_field.text_value",
           "custom_field_settings.custom_field.type",
           "custom_field_settings.is_important",
+          "default_access_level",
           "modified_at",
           "name",
           "offset",
@@ -111032,6 +111247,10 @@
               "name": "CustomFieldSettingsIsImportant"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "modified_at",
               "name": "ModifiedAt"
             },
@@ -111094,6 +111313,7 @@
           "custom_field_settings.custom_field.text_value",
           "custom_field_settings.custom_field.type",
           "custom_field_settings.is_important",
+          "default_access_level",
           "modified_at",
           "name",
           "workspace",
@@ -111225,6 +111445,10 @@
               "name": "CustomFieldSettingsIsImportant"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "modified_at",
               "name": "ModifiedAt"
             },
@@ -111275,6 +111499,7 @@
           "custom_field_settings.custom_field.text_value",
           "custom_field_settings.custom_field.type",
           "custom_field_settings.is_important",
+          "default_access_level",
           "modified_at",
           "name",
           "workspace",
@@ -111406,6 +111631,10 @@
               "name": "CustomFieldSettingsIsImportant"
             },
             {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
+            },
+            {
               "value": "modified_at",
               "name": "ModifiedAt"
             },
@@ -111456,6 +111685,7 @@
           "custom_field_settings.custom_field.text_value",
           "custom_field_settings.custom_field.type",
           "custom_field_settings.is_important",
+          "default_access_level",
           "modified_at",
           "name",
           "workspace",
@@ -111585,6 +111815,10 @@
             {
               "value": "custom_field_settings.is_important",
               "name": "CustomFieldSettingsIsImportant"
+            },
+            {
+              "value": "default_access_level",
+              "name": "DefaultAccessLevel"
             },
             {
               "value": "modified_at",

@@ -43914,7 +43914,8 @@
             "$ref": "#/components/schemas/TaskTemplateResponseProjectResourceSubtype"
           }
         },
-        "description": "The project that this task template belongs to."
+        "description": "The project that this task template belongs to.",
+        "nullable": true
       },
       "TaskTemplateResponseTemplate": {
         "type": "object",

@@ -40,7 +40,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
         {
         }
         /// <summary>
-        /// Returns the compact records for all sections in the specified project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact records for all sections in the specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.SectionResponseArray"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -73,7 +73,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseArray>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.SectionResponseArray.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new section in a project.Returns the full record of the newly created section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a new section in a project.Returns the full record of the newly created section.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -108,7 +108,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the compact records for all sections in the specified project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact records for all sections in the specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new section in a project.Returns the full record of the newly created section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a new section in a project.Returns the full record of the newly created section.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -158,7 +158,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
             return new global::Soenneker.Asana.OpenApiClient.Projects.Item.Sections.SectionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the compact records for all sections in the specified project.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the compact records for all sections in the specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SectionsRequestBuilderGetQueryParameters 
@@ -188,7 +188,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections
 #endif
         }
         /// <summary>
-        /// Creates a new section in a project.Returns the full record of the newly created section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Creates a new section in a project.Returns the full record of the newly created section.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SectionsRequestBuilderPostQueryParameters 

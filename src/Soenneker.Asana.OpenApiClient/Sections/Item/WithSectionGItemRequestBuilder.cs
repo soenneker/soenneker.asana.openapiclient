@@ -46,7 +46,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
         {
         }
         /// <summary>
-        /// A specific, existing section can be deleted by making a DELETE request onthe URL for that section.Note that sections must be empty to be deleted.The last remaining section cannot be deleted.Returns an empty data block.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing section can be deleted by making a DELETE request onthe URL for that section.Note that sections must be empty to be deleted.The last remaining section cannot be deleted.Returns an empty data block.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -79,7 +79,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the complete record for a single section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete record for a single section.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -112,7 +112,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -147,7 +147,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.SectionResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// A specific, existing section can be deleted by making a DELETE request onthe URL for that section.Note that sections must be empty to be deleted.The last remaining section cannot be deleted.Returns an empty data block.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing section can be deleted by making a DELETE request onthe URL for that section.Note that sections must be empty to be deleted.The last remaining section cannot be deleted.Returns an empty data block.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -166,7 +166,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return requestInfo;
         }
         /// <summary>
-        /// Returns the complete record for a single section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete record for a single section.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -185,7 +185,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return requestInfo;
         }
         /// <summary>
-        /// A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -216,7 +216,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
             return new global::Soenneker.Asana.OpenApiClient.Sections.Item.WithSectionGItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the complete record for a single section.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:read&lt;/code&gt;Returns the complete record for a single section.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSectionGItemRequestBuilderGetQueryParameters 
@@ -233,7 +233,7 @@ namespace Soenneker.Asana.OpenApiClient.Sections.Item
 #endif
         }
         /// <summary>
-        /// A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;A specific, existing section can be updated by making a PUT request onthe URL for that project. Only the fields provided in the `data` blockwill be updated; any unspecified fields will remain unchanged. (note thatat this time, the only field that can be updated is the `name` field.)When using this method, it is best to specify only those fields you wishto change, or else you may overwrite changes made by another user sinceyou last retrieved the task.Returns the complete updated section record.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSectionGItemRequestBuilderPutQueryParameters 

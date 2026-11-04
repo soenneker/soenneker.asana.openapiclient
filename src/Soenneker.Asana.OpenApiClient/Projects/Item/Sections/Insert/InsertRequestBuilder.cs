@@ -34,7 +34,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections.Insert
         {
         }
         /// <summary>
-        /// Move sections relative to each other. One of`before_section` or `after_section` is required.Sections cannot be moved between projects.Returns an empty data block.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Move sections relative to each other. One of`before_section` or `after_section` is required.Sections cannot be moved between projects.Returns an empty data block.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData"/></returns>
         /// <param name="body">The request body</param>
@@ -69,7 +69,7 @@ namespace Soenneker.Asana.OpenApiClient.Projects.Item.Sections.Insert
             return await RequestAdapter.SendAsync<global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData>(requestInfo, global::Soenneker.Asana.OpenApiClient.Models.EmptyResponseData.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Move sections relative to each other. One of`before_section` or `after_section` is required.Sections cannot be moved between projects.Returns an empty data block.
+        /// &lt;b&gt;Required scope: &lt;/b&gt;&lt;code&gt;projects:write&lt;/code&gt;Move sections relative to each other. One of`before_section` or `after_section` is required.Sections cannot be moved between projects.Returns an empty data block.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -15268,7 +15268,7 @@
           "Sections"
         ],
         "summary": "Get a section",
-        "description": "Returns the complete record for a single section.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:read\u003C/code\u003E\n\nReturns the complete record for a single section.",
         "operationId": "GetSection",
         "parameters": [
           {
@@ -15313,14 +15313,17 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "put": {
         "tags": [
           "Sections"
         ],
         "summary": "Update a section",
-        "description": "A specific, existing section can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the \u0060data\u0060 block\nwill be updated; any unspecified fields will remain unchanged. (note that\nat this time, the only field that can be updated is the \u0060name\u0060 field.)\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated section record.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:write\u003C/code\u003E\n\nA specific, existing section can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the \u0060data\u0060 block\nwill be updated; any unspecified fields will remain unchanged. (note that\nat this time, the only field that can be updated is the \u0060name\u0060 field.)\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated section record.",
         "operationId": "UpdateSection",
         "parameters": [
           {
@@ -15380,14 +15383,17 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "delete": {
         "tags": [
           "Sections"
         ],
         "summary": "Delete a section",
-        "description": "A specific, existing section can be deleted by making a DELETE request on\nthe URL for that section.\n\nNote that sections must be empty to be deleted.\n\nThe last remaining section cannot be deleted.\n\nReturns an empty data block.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:write\u003C/code\u003E\n\nA specific, existing section can be deleted by making a DELETE request on\nthe URL for that section.\n\nNote that sections must be empty to be deleted.\n\nThe last remaining section cannot be deleted.\n\nReturns an empty data block.",
         "operationId": "DeleteSection",
         "responses": {
           "200": {
@@ -15408,7 +15414,10 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "parameters": [
         {
@@ -15430,7 +15439,7 @@
           "Sections"
         ],
         "summary": "Get sections in a project",
-        "description": "Returns the compact records for all sections in the specified project.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:read\u003C/code\u003E\n\nReturns the compact records for all sections in the specified project.",
         "operationId": "GetSectionsForProject",
         "parameters": [
           {
@@ -15484,14 +15493,17 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "post": {
         "tags": [
           "Sections"
         ],
         "summary": "Create a section in a project",
-        "description": "Creates a new section in a project.\nReturns the full record of the newly created section.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:write\u003C/code\u003E\n\nCreates a new section in a project.\nReturns the full record of the newly created section.",
         "operationId": "CreateSectionForProject",
         "parameters": [
           {
@@ -15562,7 +15574,10 @@
             },
             "x-client-success-response-status": "201"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "parameters": [
         {
@@ -15645,7 +15660,7 @@
           "Sections"
         ],
         "summary": "Move or Insert sections",
-        "description": "Move sections relative to each other. One of\n\u0060before_section\u0060 or \u0060after_section\u0060 is required.\n\nSections cannot be moved between projects.\n\nReturns an empty data block.",
+        "description": "\u003Cb\u003ERequired scope: \u003C/b\u003E\u003Ccode\u003Eprojects:write\u003C/code\u003E\n\nMove sections relative to each other. One of\n\u0060before_section\u0060 or \u0060after_section\u0060 is required.\n\nSections cannot be moved between projects.\n\nReturns an empty data block.",
         "operationId": "InsertSectionForProject",
         "requestBody": {
           "description": "The section\u0027s move action.",
@@ -15681,7 +15696,10 @@
           "500": {
             "$ref": "#/components/responses/InternalServerError"
           }
-        }
+        },
+        "security": [
+          {}
+        ]
       },
       "parameters": [
         {
@@ -129956,6 +129974,17 @@
         },
         "example": "987654",
         "x-env-variable": "release"
+      },
+      "teamspace_path_gid": {
+        "name": "teamspace_gid",
+        "in": "path",
+        "description": "Globally unique identifier for the Command teamspace.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "example": "67890",
+        "x-env-variable": "teamspace"
       },
       "coding_agent_session_path_gid": {
         "name": "session_gid",

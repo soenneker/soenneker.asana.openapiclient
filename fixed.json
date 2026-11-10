@@ -62240,7 +62240,8 @@
           "guest",
           "member",
           "admin",
-          "super_admin"
+          "super_admin",
+          "csm"
         ],
         "type": "string",
         "description": "The base role type of the role.",
@@ -62263,6 +62264,10 @@
             {
               "value": "super_admin",
               "name": "SuperAdmin"
+            },
+            {
+              "value": "csm",
+              "name": "Csm"
             }
           ]
         }
@@ -62299,7 +62304,8 @@
           "guest",
           "member",
           "admin",
-          "super_admin"
+          "super_admin",
+          "csm"
         ],
         "type": "string",
         "description": "The base role type of the role.",
@@ -62322,6 +62328,10 @@
             {
               "value": "super_admin",
               "name": "SuperAdmin"
+            },
+            {
+              "value": "csm",
+              "name": "Csm"
             }
           ]
         }
@@ -148708,7 +148718,8 @@
         "guest",
         "member",
         "admin",
-        "super_admin"
+        "super_admin",
+        "csm"
       ],
       "type": "string",
       "description": "The base role type of the role.",
@@ -148731,6 +148742,10 @@
           {
             "value": "super_admin",
             "name": "SuperAdmin"
+          },
+          {
+            "value": "csm",
+            "name": "Csm"
           }
         ]
       }

@@ -23,5 +23,13 @@ namespace Soenneker.Asana.OpenApiClient.Models
         #pragma warning disable CS1591
         Goal,
         #pragma warning restore CS1591
+        [EnumMember(Value = "team")]
+        #pragma warning disable CS1591
+        Team,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "record")]
+        #pragma warning disable CS1591
+        Record,
+        #pragma warning restore CS1591
     }
 }

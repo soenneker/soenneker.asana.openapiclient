@@ -54608,7 +54608,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -54631,6 +54633,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -55526,7 +55536,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -55549,6 +55561,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -56492,7 +56512,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -56515,6 +56537,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -62949,7 +62979,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -62972,6 +63004,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -64383,7 +64423,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -64406,6 +64448,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -65529,7 +65579,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -65552,6 +65604,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -65845,7 +65905,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -65868,6 +65930,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -66319,7 +66389,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -66342,6 +66414,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -66651,7 +66731,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -66674,6 +66756,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -66922,7 +67012,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -66945,6 +67037,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -67945,7 +68045,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -67968,6 +68070,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -68084,7 +68194,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -68107,6 +68219,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -69232,7 +69352,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -69255,6 +69377,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -69904,7 +70034,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -69927,6 +70059,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -70195,7 +70335,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -70218,6 +70360,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -70403,7 +70553,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -70426,6 +70578,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -71472,7 +71632,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -71495,6 +71657,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -72541,7 +72711,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -72564,6 +72736,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -73610,7 +73790,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -73633,6 +73815,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -74679,7 +74869,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -74702,6 +74894,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -75702,7 +75902,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -75725,6 +75927,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -75956,7 +76166,9 @@
           "task",
           "project",
           "portfolio",
-          "goal"
+          "goal",
+          "team",
+          "record"
         ],
         "type": "string",
         "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -75979,6 +76191,14 @@
             {
               "value": "goal",
               "name": "Goal"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "record",
+              "name": "Record"
             }
           ]
         }
@@ -130398,7 +130618,7 @@
     },
     {
       "name": "Custom fields",
-      "description": "_Note: Custom fields are a premium feature. Integrations which work with custom fields need to handle an assortment of use cases for free and premium users in context of free and premium organizations. For a detailed examination of which data users will have access in different circumstances, review the section below on access control._\n\nIn the Asana application, tasks, projects, and portfolios can hold user-specified [custom fields](https://asana.com/guide/help/premium/custom-fields) which provide extra information (e.g., a \u0022priority\u0022 property with an associated value, or a number representing the time required to complete a task). This lets a user define the type of information that each item within a project or portfolio can contain in addition to the built-in fields that Asana provides.\n\u0060display_value\u0060 is a read-only field that will always be a string. For apps that use custom fields, this is a great way to safely display/export the value of a custom field, regardless of its type. We suggest apps use this field in order to future-proof for changes to custom fields.\n\n#### Characteristics of custom fields\n\n* There is metadata that defines the custom field. This metadata can be shared across an entire workspace, or be specific to a project or portfolio.\n* Creating a custom field setting on a project or portfolio means each direct child will have the custom field. This is conceptually akin to adding columns in a database or a spreadsheet: every task (row) in the project (table) can contain information for that field, including \u0022blank\u0022 values (i.e., \u0060null\u0060 data). For portfolio custom fields, every project (row) in the portfolio (table) will contain information for the custom field.\n* Custom field settings only go one child deep. This means that a custom field setting on a portfolio will give each project the custom field, but not each task within those projects.\n* Tasks have custom field _values_ assigned to them.\n\n#### Types of custom fields\n\nIntegrations using custom fields need to be aware of the seven basic types that a custom field can adopt. These types are:\n\n* \u0060text\u0060 - an arbitrary, relatively short string of text\n* \u0060number\u0060 - a number with a defined level of precision\n* \u0060enum\u0060 - a selection of a single option from a defined list of options (i.e., mutually exclusive selections)\n* \u0060multi_enum\u0060 - a selection of one or more options from a defined list of options (i.e., mutually inclusive selections)\n* \u0060date\u0060 - a reference date with an optional time value\n* \u0060people\u0060 - a list of active contributors (i.e., where their relationship to the work is defined in the custom field title)\n* \u0060reference\u0060 - a reference to another Asana object (task, project, portfolio, goal, etc.)\n#### Example use case\n\nConsider an organization that has defined a custom field for \u0022Priority\u0022. This field is of \u0060enum\u0060 type and can have user-defined values of \u0060Low\u0060, \u0060Medium\u0060, or \u0060High\u0060. This is the field metadata, and it is visible within, and shared across, the entire organization.\n\nA project is then created in the organization, called \u0022Bugs\u0022, and the \u0022Priority\u0022 custom field is associated with that project. This will allow all tasks within the \u0022Bugs\u0022 project to have an associated \u0022Priority\u0022.\n\nA new task is created within \u0022Bugs\u0022. This task, then, has a field named \u0022Priority\u0022 which can take on the custom field value of one of \u0060[null]\u0060, \u0060Low\u0060, \u0060Medium\u0060, and \u0060High\u0060.\n\n#### Custom fields in the API\n\nThese custom fields are accessible via the API through a number of endpoints at the top level (e.g. \u0060/custom_fields\u0060 and \u0060/custom_field_settings\u0060) and through requests on workspaces, portfolios, projects, and tasks resources. The API also provides a way to fetch both the metadata and data which define each particular custom field, so that a client application may render proper UI to display or edit the values.\n\nText fields are currently limited to 1024 characters. On tasks, their custom field value will have a \u0060text_value\u0060 property to represent this field.\n\nNumber fields can have an arbitrary \u0060precision\u0060 associated with them; for example, a precision of \u00602\u0060 would round its value to the second (hundredths) place (e.g., \u00601.2345\u0060 would round to \u00601.23\u0060). On tasks, the custom field value will have a \u0060number_value\u0060 property to represent this field.\n\n#### Enum fields\n\nEnum fields represent a selection from a list of options. On the metadata, they will contain all of the options in an array. Each option has 4 properties:\n\n* \u0060gid\u0060 - the GID of this enum option. Note that this is the GID of the individual _option_. The custom field itself has a separate \u0060gid\u0060.\n* \u0060name\u0060 - the name of the option (e.g., \u0022Choice #1\u0022)\n* \u0060enabled\u0060 - whether this field is enabled. Disabled fields are not available to choose from when disabled, and are visually hidden in the Asana application, but they remain in the metadata for custom field values which were set to the option before the option was disabled.\n* \u0060color\u0060 - a color associated with this choice.\n\nOn the task\u0027s custom field value, the enum will have an \u0060enum_value\u0060 property which will be the same as one of the choices from the list defined in the custom field metadata.\n\n#### Reference custom fields\n\nA \u0060reference\u0060 custom field stores a list of references to other Asana objects.\n\nThe \u0060input_restrictions\u0060 field on the custom field definition specifies which object types are allowed as values. Possible values include: \u0060task\u0060, \u0060project\u0060, \u0060portfolio\u0060, and \u0060goal\u0060. \u0060input_restrictions\u0060 cannot be an empty array, it must have at least one object type.\n\n#### Querying an organization for its custom fields\n\nFor custom fields shared across the workspace or organization, the workspace [can be queried](/reference/getcustomfieldsforworkspace) for its list of defined custom fields. Like other collection queries, the fields will be returned as a compact record; slightly different from most other compact records is the fact that the compact record for custom fields includes \u0060type\u0060 as well as \u0060gid\u0060 and \u0060name\u0060.\n\n#### Accessing custom field definitions\n\nThe [custom fields](/reference/getcustomfield) reference describes how the metadata which defines a custom field is accessed. A GET request with a \u0060gid\u0060 can be issued on the \u0060/custom_fields\u0060 endpoint to fetch the full definition of a single custom field given its \u0060gid\u0060 from (for instance) listing all custom fields on a workspace, or getting the \u0060gid\u0060 from a custom field settings object or a task.\n\n#### Associating custom fields with a project or portfolio\n\nA mapping between a custom field and a project or portfolio is handled with a [custom field settings](/reference/custom-field-settings) object. This object contains a reference for each of the custom fields and the project or portfolio, as well as additional information about the status of that particular custom field (e.g., \u0060is_important\u0060, which defines whether or not the custom field will appear in the list/grid on the Asana application).\n\n#### Accessing custom field values on tasks or projects\n\nThe [tasks](/reference/gettask) reference has information on how custom fields look on tasks. custom fields will return as an array on the property \u0060custom_fields\u0060, and each entry will contain, side-by-side, the compact representation of the custom field metadata and a \u0060{typename}_value\u0060 property that stores the value set for the custom field.\n\nOf particular note is that the top-level \u0060gid\u0060 of each entry in the \u0060custom_fields\u0060 array is the \u0060gid\u0060 of the custom field metadata, as it is the compact representation of this metadata. This can be used to refer to the full metadata by making a request to the \u0060/custom_fields/{custom_fields_id}\u0060 endpoint as described above.\n\nCustom fields can be set just as in the Asana-defined fields on a task via \u0060POST\u0060 or \u0060PUT\u0060 requests. You can see an example in the [update a task](/reference/updatetask) endpoint.\n\nCustom fields on projects follow this same pattern.\n\n#### Warning: Program defensively with regards to custom field definitions\n\nAsana application users have the ability to change the definitions of custom field metadata. This means that as you write scripts or applications to work with them, it is possible for the definitions to change at any time, which may cause an application using them to break or malfunction if it makes assumptions about the metadata for a particular custom field. When using custom fields, it is a good idea to program *defensively*, meaning you your application should double-check that the custom field metadata are what it expects.\n\nStoring the state of the custom field metadata for too long if you dynamically create a model for it can cause your model to become out of sync with the model stored in Asana. For example, if you encounter an \u0060enum\u0060 value on a task that does not match any option in your metadata model, your metadata model has become out of date with the custom field metadata.\n\n#### Enabled and disabled values\n\nWhen information that is contained in a custom field value loses a logical association with its metadata definition, the value becomes disabled. This can happen in a couple of simple ways, for example, if you remove the custom field metadata from a project, or move a task with a custom field to a different project which does not have the custom field metadata associated with it. The value remains on the task, and the custom field metadata can still be found and examined, but as the context in which the custom field makes sense is gone, the custom field cannot change its value; it can only be cleared.\n\n_Note: Tasks that are associated with multiple projects do not become disabled, so long as at least one of the projects is still associated with the custom field metadata. In other words, tasks with multiple projects will retain logically associated to the set of custom field metadata represented by all of their projects._\n\nMoving the task back under a project with that custom field applied to it or applying the custom field metadata to the current project will return the custom field value to an enabled state. In this scenario, the custom field will be re-enabled and editable again.\n\nIn the Asana application, disabled fields are grayed out and not allowed to change, other than to be discarded. In the API, we return a property \u0060enabled: false\u0060 to inform the external application that the value has been disabled.\n\nNote that the API enforces the same operations on disabled custom field values as hold in the Asana application: they may not have their values changed, since the lack of context for the values of a custom field in general doesn\u0027t provide enough information to know what new values should be. Setting the custom field value to \u0060null\u0060 will clear and remove the custom field value from the task.\n\n#### Custom field access control\n\nCustom fields are a complex feature of the Asana platform, and their access in the Asana application and in the API vary based on the status of the user and project. When building your application, it is best to be defensive and not assume the given user will have read or write access to a custom field, and fail gracefully when this occurs."
+      "description": "_Note: Custom fields are a premium feature. Integrations which work with custom fields need to handle an assortment of use cases for free and premium users in context of free and premium organizations. For a detailed examination of which data users will have access in different circumstances, review the section below on access control._\n\nIn the Asana application, tasks, projects, and portfolios can hold user-specified [custom fields](https://asana.com/guide/help/premium/custom-fields) which provide extra information (e.g., a \u0022priority\u0022 property with an associated value, or a number representing the time required to complete a task). This lets a user define the type of information that each item within a project or portfolio can contain in addition to the built-in fields that Asana provides.\n\u0060display_value\u0060 is a read-only field that will always be a string. For apps that use custom fields, this is a great way to safely display/export the value of a custom field, regardless of its type. We suggest apps use this field in order to future-proof for changes to custom fields.\n\n#### Characteristics of custom fields\n\n* There is metadata that defines the custom field. This metadata can be shared across an entire workspace, or be specific to a project or portfolio.\n* Creating a custom field setting on a project or portfolio means each direct child will have the custom field. This is conceptually akin to adding columns in a database or a spreadsheet: every task (row) in the project (table) can contain information for that field, including \u0022blank\u0022 values (i.e., \u0060null\u0060 data). For portfolio custom fields, every project (row) in the portfolio (table) will contain information for the custom field.\n* Custom field settings only go one child deep. This means that a custom field setting on a portfolio will give each project the custom field, but not each task within those projects.\n* Tasks have custom field _values_ assigned to them.\n\n#### Types of custom fields\n\nIntegrations using custom fields need to be aware of the seven basic types that a custom field can adopt. These types are:\n\n* \u0060text\u0060 - an arbitrary, relatively short string of text\n* \u0060number\u0060 - a number with a defined level of precision\n* \u0060enum\u0060 - a selection of a single option from a defined list of options (i.e., mutually exclusive selections)\n* \u0060multi_enum\u0060 - a selection of one or more options from a defined list of options (i.e., mutually inclusive selections)\n* \u0060date\u0060 - a reference date with an optional time value\n* \u0060people\u0060 - a list of active contributors (i.e., where their relationship to the work is defined in the custom field title)\n* \u0060reference\u0060 - a reference to another Asana object (task, project, portfolio, goal, team, record)\n#### Example use case\n\nConsider an organization that has defined a custom field for \u0022Priority\u0022. This field is of \u0060enum\u0060 type and can have user-defined values of \u0060Low\u0060, \u0060Medium\u0060, or \u0060High\u0060. This is the field metadata, and it is visible within, and shared across, the entire organization.\n\nA project is then created in the organization, called \u0022Bugs\u0022, and the \u0022Priority\u0022 custom field is associated with that project. This will allow all tasks within the \u0022Bugs\u0022 project to have an associated \u0022Priority\u0022.\n\nA new task is created within \u0022Bugs\u0022. This task, then, has a field named \u0022Priority\u0022 which can take on the custom field value of one of \u0060[null]\u0060, \u0060Low\u0060, \u0060Medium\u0060, and \u0060High\u0060.\n\n#### Custom fields in the API\n\nThese custom fields are accessible via the API through a number of endpoints at the top level (e.g. \u0060/custom_fields\u0060 and \u0060/custom_field_settings\u0060) and through requests on workspaces, portfolios, projects, and tasks resources. The API also provides a way to fetch both the metadata and data which define each particular custom field, so that a client application may render proper UI to display or edit the values.\n\nText fields are currently limited to 1024 characters. On tasks, their custom field value will have a \u0060text_value\u0060 property to represent this field.\n\nNumber fields can have an arbitrary \u0060precision\u0060 associated with them; for example, a precision of \u00602\u0060 would round its value to the second (hundredths) place (e.g., \u00601.2345\u0060 would round to \u00601.23\u0060). On tasks, the custom field value will have a \u0060number_value\u0060 property to represent this field.\n\n#### Enum fields\n\nEnum fields represent a selection from a list of options. On the metadata, they will contain all of the options in an array. Each option has 4 properties:\n\n* \u0060gid\u0060 - the GID of this enum option. Note that this is the GID of the individual _option_. The custom field itself has a separate \u0060gid\u0060.\n* \u0060name\u0060 - the name of the option (e.g., \u0022Choice #1\u0022)\n* \u0060enabled\u0060 - whether this field is enabled. Disabled fields are not available to choose from when disabled, and are visually hidden in the Asana application, but they remain in the metadata for custom field values which were set to the option before the option was disabled.\n* \u0060color\u0060 - a color associated with this choice.\n\nOn the task\u0027s custom field value, the enum will have an \u0060enum_value\u0060 property which will be the same as one of the choices from the list defined in the custom field metadata.\n\n#### Reference custom fields\n\nA \u0060reference\u0060 custom field stores a list of references to other Asana objects.\n\nThe \u0060input_restrictions\u0060 field on the custom field definition specifies which object types are allowed as values. Possible values include: \u0060task\u0060, \u0060project\u0060, \u0060portfolio\u0060, \u0060goal\u0060, \u0060team\u0060, and \u0060record\u0060. \u0060input_restrictions\u0060 cannot be an empty array, it must have at least one object type.\n\n#### Querying an organization for its custom fields\n\nFor custom fields shared across the workspace or organization, the workspace [can be queried](/reference/getcustomfieldsforworkspace) for its list of defined custom fields. Like other collection queries, the fields will be returned as a compact record; slightly different from most other compact records is the fact that the compact record for custom fields includes \u0060type\u0060 as well as \u0060gid\u0060 and \u0060name\u0060.\n\n#### Accessing custom field definitions\n\nThe [custom fields](/reference/getcustomfield) reference describes how the metadata which defines a custom field is accessed. A GET request with a \u0060gid\u0060 can be issued on the \u0060/custom_fields\u0060 endpoint to fetch the full definition of a single custom field given its \u0060gid\u0060 from (for instance) listing all custom fields on a workspace, or getting the \u0060gid\u0060 from a custom field settings object or a task.\n\n#### Associating custom fields with a project or portfolio\n\nA mapping between a custom field and a project or portfolio is handled with a [custom field settings](/reference/custom-field-settings) object. This object contains a reference for each of the custom fields and the project or portfolio, as well as additional information about the status of that particular custom field (e.g., \u0060is_important\u0060, which defines whether or not the custom field will appear in the list/grid on the Asana application).\n\n#### Accessing custom field values on tasks or projects\n\nThe [tasks](/reference/gettask) reference has information on how custom fields look on tasks. custom fields will return as an array on the property \u0060custom_fields\u0060, and each entry will contain, side-by-side, the compact representation of the custom field metadata and a \u0060{typename}_value\u0060 property that stores the value set for the custom field.\n\nOf particular note is that the top-level \u0060gid\u0060 of each entry in the \u0060custom_fields\u0060 array is the \u0060gid\u0060 of the custom field metadata, as it is the compact representation of this metadata. This can be used to refer to the full metadata by making a request to the \u0060/custom_fields/{custom_fields_id}\u0060 endpoint as described above.\n\nCustom fields can be set just as in the Asana-defined fields on a task via \u0060POST\u0060 or \u0060PUT\u0060 requests. You can see an example in the [update a task](/reference/updatetask) endpoint.\n\nCustom fields on projects follow this same pattern.\n\n#### Warning: Program defensively with regards to custom field definitions\n\nAsana application users have the ability to change the definitions of custom field metadata. This means that as you write scripts or applications to work with them, it is possible for the definitions to change at any time, which may cause an application using them to break or malfunction if it makes assumptions about the metadata for a particular custom field. When using custom fields, it is a good idea to program *defensively*, meaning you your application should double-check that the custom field metadata are what it expects.\n\nStoring the state of the custom field metadata for too long if you dynamically create a model for it can cause your model to become out of sync with the model stored in Asana. For example, if you encounter an \u0060enum\u0060 value on a task that does not match any option in your metadata model, your metadata model has become out of date with the custom field metadata.\n\n#### Enabled and disabled values\n\nWhen information that is contained in a custom field value loses a logical association with its metadata definition, the value becomes disabled. This can happen in a couple of simple ways, for example, if you remove the custom field metadata from a project, or move a task with a custom field to a different project which does not have the custom field metadata associated with it. The value remains on the task, and the custom field metadata can still be found and examined, but as the context in which the custom field makes sense is gone, the custom field cannot change its value; it can only be cleared.\n\n_Note: Tasks that are associated with multiple projects do not become disabled, so long as at least one of the projects is still associated with the custom field metadata. In other words, tasks with multiple projects will retain logically associated to the set of custom field metadata represented by all of their projects._\n\nMoving the task back under a project with that custom field applied to it or applying the custom field metadata to the current project will return the custom field value to an enabled state. In this scenario, the custom field will be re-enabled and editable again.\n\nIn the Asana application, disabled fields are grayed out and not allowed to change, other than to be discarded. In the API, we return a property \u0060enabled: false\u0060 to inform the external application that the value has been disabled.\n\nNote that the API enforces the same operations on disabled custom field values as hold in the Asana application: they may not have their values changed, since the lack of context for the values of a custom field in general doesn\u0027t provide enough information to know what new values should be. Setting the custom field value to \u0060null\u0060 will clear and remove the custom field value from the task.\n\n#### Custom field access control\n\nCustom fields are a complex feature of the Asana platform, and their access in the Asana application and in the API vary based on the status of the user and project. When building your application, it is best to be defensive and not assume the given user will have read or write access to a custom field, and fail gracefully when this occurs."
     },
     {
       "name": "Custom types",
@@ -144906,7 +145126,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -144929,6 +145151,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -145824,7 +146054,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -145847,6 +146079,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -149589,7 +149829,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -149612,6 +149854,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -149728,7 +149978,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -149751,6 +150003,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -149867,7 +150127,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -149890,6 +150152,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -150363,7 +150633,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -150386,6 +150658,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -150669,7 +150949,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -150692,6 +150974,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }
@@ -150899,7 +151189,9 @@
         "task",
         "project",
         "portfolio",
-        "goal"
+        "goal",
+        "team",
+        "record"
       ],
       "type": "string",
       "description": "*Conditional*. Only relevant for custom fields of type \u0060reference\u0060. This array of strings reflects the allowed types of objects that can be written to a \u0060reference\u0060 custom field value.",
@@ -150922,6 +151214,14 @@
           {
             "value": "goal",
             "name": "Goal"
+          },
+          {
+            "value": "team",
+            "name": "Team"
+          },
+          {
+            "value": "record",
+            "name": "Record"
           }
         ]
       }

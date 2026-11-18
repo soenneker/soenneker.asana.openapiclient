@@ -267,7 +267,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(23)
             {
                 { "current_status_update", n => { CurrentStatusUpdate = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCurrentStatusUpdate.CreateFromDiscriminatorValue); } },
                 { "custom_field_settings", n => { CustomFieldSettings = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem>(global::Soenneker.Asana.OpenApiClient.Models.GoalResponseCustomFieldSettingsItem.CreateFromDiscriminatorValue)?.AsList(); } },

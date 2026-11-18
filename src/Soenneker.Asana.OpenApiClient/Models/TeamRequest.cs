@@ -154,7 +154,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "edit_team_name_or_description_access_level", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TeamRequestEditTeamNameOrDescriptionAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEditTeamNameOrDescriptionAccessLevel = default; _explicitNullProperties?.Remove("edit_team_name_or_description_access_level"); AdditionalData["edit_team_name_or_description_access_level"] = unknown; } else { EditTeamNameOrDescriptionAccessLevel = parsed; AdditionalData.Remove("edit_team_name_or_description_access_level"); } } },

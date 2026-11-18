@@ -151,7 +151,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "dates_rollup_progress", n => { DatesRollupProgress = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress>(global::Soenneker.Asana.OpenApiClient.Models.JobResponseDatesRollupProgress.CreateFromDiscriminatorValue); } },
                 { "gid", n => { Gid = n.GetStringValue(); } },

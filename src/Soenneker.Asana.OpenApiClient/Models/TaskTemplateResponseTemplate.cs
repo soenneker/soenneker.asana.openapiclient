@@ -192,7 +192,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1AttachmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem>(global::Soenneker.Asana.OpenApiClient.Models.TaskTemplateResponseTemplateAllOf1CustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },

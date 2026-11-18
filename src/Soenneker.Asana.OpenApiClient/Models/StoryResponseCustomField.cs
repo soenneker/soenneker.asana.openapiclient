@@ -186,7 +186,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "date_value", n => { DateValue = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue>(global::Soenneker.Asana.OpenApiClient.Models.StoryResponseCustomFieldDateValue.CreateFromDiscriminatorValue); } },
                 { "display_value", n => { DisplayValue = n.GetStringValue(); } },

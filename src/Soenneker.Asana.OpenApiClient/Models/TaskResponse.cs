@@ -351,7 +351,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(45)
             {
                 { "actual_time_minutes", n => { ActualTimeMinutes = n.GetDoubleValue(); } },
                 { "approval_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.TaskResponseApprovalStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApprovalStatus = default; _explicitNullProperties?.Remove("approval_status"); AdditionalData["approval_status"] = unknown; } else { ApprovalStatus = parsed; AdditionalData.Remove("approval_status"); } } },

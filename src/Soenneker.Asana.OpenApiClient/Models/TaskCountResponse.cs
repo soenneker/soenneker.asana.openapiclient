@@ -75,7 +75,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "num_completed_milestones", n => { NumCompletedMilestones = n.GetIntValue(); } },
                 { "num_completed_tasks", n => { NumCompletedTasks = n.GetIntValue(); } },

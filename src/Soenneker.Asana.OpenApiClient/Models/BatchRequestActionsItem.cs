@@ -86,7 +86,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItemDataProperty>(global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItemDataProperty.CreateFromDiscriminatorValue); } },
                 { "method", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BatchRequestActionsItemMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMethod = default; _explicitNullProperties?.Remove("method"); AdditionalData["method"] = unknown; } else { Method = parsed; AdditionalData.Remove("method"); } } },

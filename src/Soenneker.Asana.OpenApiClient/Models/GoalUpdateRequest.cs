@@ -215,7 +215,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty>(global::Soenneker.Asana.OpenApiClient.Models.GoalUpdateRequestCustomFieldsProperty.CreateFromDiscriminatorValue); } },
                 { "due_on", n => { DueOn = n.GetStringValue(); } },

@@ -180,7 +180,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(27)
             {
                 { "allowed_guest_invites", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleUpdateRequestPermissionsAllowedGuestInvites>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAllowedGuestInvites = default; _explicitNullProperties?.Remove("allowed_guest_invites"); AdditionalData["allowed_guest_invites"] = unknown; } else { AllowedGuestInvites = parsed; AdditionalData.Remove("allowed_guest_invites"); } } },
                 { "assign_roles", n => { AssignRoles = n.GetBoolValue(); } },

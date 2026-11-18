@@ -70,7 +70,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "billable_status_filter", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetResponseEstimateBillableStatusFilter>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillableStatusFilter = default; _explicitNullProperties?.Remove("billable_status_filter"); AdditionalData["billable_status_filter"] = unknown; } else { BillableStatusFilter = parsed; AdditionalData.Remove("billable_status_filter"); } } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },

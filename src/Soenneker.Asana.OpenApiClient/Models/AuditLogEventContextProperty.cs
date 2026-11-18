@@ -108,7 +108,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "api_authentication_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.AuditLogEventContextPropertyApiAuthenticationMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApiAuthenticationMethod = default; _explicitNullProperties?.Remove("api_authentication_method"); AdditionalData["api_authentication_method"] = unknown; } else { ApiAuthenticationMethod = parsed; AdditionalData.Remove("api_authentication_method"); } } },
                 { "client_ip_address", n => { ClientIpAddress = n.GetStringValue(); } },

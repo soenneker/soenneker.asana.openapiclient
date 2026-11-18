@@ -123,7 +123,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "base_role_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.RbacRoleRequestBaseRoleType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBaseRoleType = default; _explicitNullProperties?.Remove("base_role_type"); AdditionalData["base_role_type"] = unknown; } else { BaseRoleType = parsed; AdditionalData.Remove("base_role_type"); } } },
                 { "creation_time", n => { CreationTime = n.GetDateTimeOffsetValue(); } },

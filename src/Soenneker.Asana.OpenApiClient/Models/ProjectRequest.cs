@@ -300,7 +300,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(31)
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "color", n => { Color = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestColor>(global::Soenneker.Asana.OpenApiClient.Models.ProjectRequestColor.CreateFromDiscriminatorValue); } },

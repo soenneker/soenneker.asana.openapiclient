@@ -114,7 +114,7 @@ namespace Soenneker.Asana.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "actual", n => { Actual = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual>(global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestActual.CreateFromDiscriminatorValue); } },
                 { "budget_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Asana.OpenApiClient.Models.BudgetRequestBudgetType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBudgetType = default; _explicitNullProperties?.Remove("budget_type"); AdditionalData["budget_type"] = unknown; } else { BudgetType = parsed; AdditionalData.Remove("budget_type"); } } },

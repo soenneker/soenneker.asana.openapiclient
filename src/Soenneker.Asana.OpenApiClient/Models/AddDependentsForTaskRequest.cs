@@ -2,15 +2,14 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Soenneker.Asana.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
+namespace Soenneker.Asana.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AddDependentsPostRequestBody : IAdditionalDataHolder, IParsable
+    public partial class AddDependentsForTaskRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -24,32 +23,32 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A set of dependent tasks.</summary>
+        /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest? _explicitNullValueData = default!;
+        public global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest _explicitNullValueData = default!;
+        public global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData _explicitNullValueData = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents.AddDependentsPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequest"/> and sets the default values.
         /// </summary>
-        public AddDependentsPostRequestBody()
+        public AddDependentsForTaskRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents.AddDependentsPostRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents.AddDependentsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents.AddDependentsPostRequestBody(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +58,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest>(global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData>(global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,7 +68,7 @@ namespace Soenneker.Asana.OpenApiClient.Tasks.Item.AddDependents
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.ModifyDependentsRequest>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Asana.OpenApiClient.Models.AddDependentsForTaskRequestData>("data", Data);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -21948,12 +21948,7 @@
           "content": {
             "application/json; charset=UTF-8": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/ModifyDependenciesRequest"
-                  }
-                }
+                "$ref": "#/components/schemas/AddDependenciesForTaskRequest"
               }
             }
           },
@@ -22266,12 +22261,7 @@
           "content": {
             "application/json; charset=UTF-8": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/ModifyDependentsRequest"
-                  }
-                }
+                "$ref": "#/components/schemas/AddDependentsForTaskRequest"
               }
             }
           },
@@ -54074,6 +54064,22 @@
           }
         }
       },
+      "AddDependenciesForTaskRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AddDependenciesForTaskRequestData"
+          }
+        }
+      },
+      "AddDependentsForTaskRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AddDependentsForTaskRequestData"
+          }
+        }
+      },
       "BatchResponseHeadersProperty": {
         "type": "object",
         "description": "A map of HTTP headers specific to this result. This is primarily used for returning a \u0060Location\u0060 header to accompany a \u0060201 Created\u0060 result.  The parent HTTP response will contain all common headers.",
@@ -54407,6 +54413,30 @@
             "type": "string",
             "description": "Globally unique identifier for the workspace.",
             "example": "98765"
+          }
+        }
+      },
+      "AddDependenciesForTaskRequestData": {
+        "type": "object",
+        "properties": {
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An array of task gids that a task depends on."
+          }
+        }
+      },
+      "AddDependentsForTaskRequestData": {
+        "type": "object",
+        "properties": {
+          "dependents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An array of task gids that are dependents of the given task."
           }
         }
       },
@@ -131704,6 +131734,9 @@
       "x-docs-overrides": {
         "properties.resource_type.example": "custom_type_status_option"
       }
+    },
+    "DependencyTypeRequest": {
+      "type": "object"
     },
     "EffectiveTaskMembership": {
       "type": "object",
